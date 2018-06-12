@@ -1,0 +1,165 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/mai/2018, 0:48:24
+    Author     : joaoc
+*/
+
+.tab-pane .tab-header-area .tab-header-background{
+    -fx-opacity: 0;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-focus-color: #ff9900;
+    -fx-focus-faint-color: #ff9900;
+}
+
+
+.tab .tab-label { 
+    -fx-pref-width: 100;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ff9900;
+    -fx-font-size: 15px;
+}
+
+.list-view{
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:even{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: #dba000;
+    -fx-font-size: 20px;
+}
+
+.list-view .list-cell:odd{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: #dba000;
+    -fx-font-size: 20px;
+}
+
+.list-view .list-cell:even:selected{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-border-color: orange;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:odd:selected{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-border-color: orange;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:even:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:odd:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+
+
+.list-view .scroll-bar:vertical{
+    -fx-background-color: transparent;
+    -fx-color: #dba000;
+}
+
+.list-view .scroll-bar:vertical .thumb:hover{
+    -fx-color: orange;
+}
+
+.list-view .scroll-bar:vertical .thumb:selected{
+    -fx-color: orange;
+}
+
+.list-view .thumb{
+    -fx-color: #dba000;
+}
+
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: orange;
+}
+
+.scroll-bar > .increment-button:hover,
+.scroll-bar > .decrement-button:hover{
+    -fx-background-color: transparent;
+}
+
+.buttonSearchCloseIcon {
+    -glyph-size: 15;
+    -glyph-name: CLOSE;
+}
+
+.buttonSearchUpIcon {
+    -glyph-size: 15;
+    -glyph-name: CARET_UP;
+}
+
+.buttonSearchDownIcon {
+    -glyph-size: 15;
+    -glyph-name: CARET_DOWN;
+}
+
+.buttonSearchClose, .buttonUpSearch, .buttonDownSearch {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.searchBoxLabel {
+    -fx-padding: 0 2 0 7;
+}
+
+.searchBoxLabelIcon {
+    -glyph-size: 13;
+    -glyph-name: SEARCH;
+}
+
+.text-input {
+    -fx-border-color: orange;
+    -fx-border-radius: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+GridPane{
+    -fx-background-image: url('../pics/kostage.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}

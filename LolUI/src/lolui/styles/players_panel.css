@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/mai/2018, 0:43:33
+    Author     : joaoc
+*/
+
+.list-view{
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:even{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: #dba000;
+    -fx-font-size: 20px;
+}
+
+.list-view .list-cell:odd{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: #dba000;
+    -fx-font-size: 20px;
+}
+
+.list-view .list-cell:even:selected{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-border-color: orange;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:odd:selected{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-border-color: orange;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:even:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:odd:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+
+
+.list-view .scroll-bar:vertical{
+    -fx-background-color: transparent;
+    -fx-color: #dba000;
+}
+
+.list-view .scroll-bar:vertical .thumb:hover{
+    -fx-color: orange;
+}
+
+.list-view .scroll-bar:vertical .thumb:selected{
+    -fx-color: orange;
+}
+
+.list-view .thumb{
+    -fx-color: #dba000;
+}
+
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: orange;
+}
+
+.scroll-bar > .increment-button:hover,
+.scroll-bar > .decrement-button:hover{
+    -fx-background-color: transparent;
+}
+
+.text-input {
+    -fx-border-color: orange;
+    -fx-border-radius: 15px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/team_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolesportsprojeto.FXMLTeamsMainController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <ListView fx:id="listaEquipas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <GridPane.margin>
+            <Insets right="25.0" />
+         </GridPane.margin>
+         <top>
+            <Pane prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="searchBar" alignment="CENTER" focusTraversable="false" layoutX="188.0" layoutY="18.0" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" promptText="Search">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="142.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/lupa.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+      <BorderPane fx:id="borderRight" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <top>
+            <Pane prefHeight="198.0" prefWidth="726.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imglogoTeam" fitHeight="180.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" onMouseEntered="#animateImagesOnEnter" onMouseExited="#animateImagesOnExit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/teams/skt.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane layoutX="200.0" layoutY="10.0" prefHeight="121.0" prefWidth="540.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="268.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.60009765625" minWidth="10.0" prefWidth="181.60009765625" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.39990234375" minWidth="10.0" prefWidth="90.39990234375" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="lblNomeEquipa" text="SK Telecom" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                        <Label text="Trophies Number" textFill="WHITE" GridPane.columnIndex="1" />
+                        <Label text="Team's KDA" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="lblTrofeus" text="12" textFill="WHITE" GridPane.columnIndex="2" />
+                        <Label fx:id="lblKDA" text="1.65" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ImageView fx:id="imgCountry" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@pics/countries/kr.png" />
+                           </image></ImageView>
+                        <Label fx:id="lblSiglaEquipa" text="SKT" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Pane>
+         </top>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Players">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="370.0" prefWidth="750.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgPlayerTop" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/players/huni.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgPlayerJungle" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/players/peanut.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgPlayerMid" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/players/faker.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgPlayerADC" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/players/bang.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgPlayerSupport" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/players/wolf.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/positions/jng.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/positions/top.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/positions/mid.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/positions/adc.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lblNomeTop" text="Huni" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblNomeMid" text="Faker" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblNomeADC" text="Bang" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblNomeJungle" text="Peanut" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblNomeSupport" text="Wolf" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                    <ImageView fx:id="infoTop" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/info.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="infoJungle" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/info.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="infoMid" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/info.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="infoADC" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/info.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fx:id="infoSupport" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/info.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/positions/sup.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Incoming Games">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableIncomingGames" layoutX="7.0" prefHeight="370.0" prefWidth="719.0">
+                                <columns>
+                                  <TableColumn fx:id="dataTIG" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Date" />
+                                  <TableColumn fx:id="blueTeamTIG" maxWidth="80.0" minWidth="80.0" text="Blue Team" />
+                                    <TableColumn fx:id="vsTIG" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="vs" />
+                                    <TableColumn fx:id="redTeamTIG" maxWidth="80.0" minWidth="80.0" text="Red Team" />
+                                    <TableColumn fx:id="torneioTIG" maxWidth="2000.0" minWidth="200.0" prefWidth="200.0" text="Tournament" />
+                                    <TableColumn fx:id="rondaTIG" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Round" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Results">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableResultados" layoutX="7.0" prefHeight="370.0" prefWidth="719.0">
+                                <columns>
+                                  <TableColumn fx:id="dataTR" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Date" />
+                                  <TableColumn fx:id="blueTeamTR" maxWidth="80.0" minWidth="80.0" text="Blue Team" />
+                                    <TableColumn fx:id="vitoriasBlueTeamTR" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="#1" />
+                                    <TableColumn fx:id="vsTR" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="vs" />
+                                    <TableColumn fx:id="vitoriasRedTeamTR" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="#2" />
+                                    <TableColumn fx:id="redTeamTR" maxWidth="80.0" minWidth="80.0" text="Red Team" />
+                                    <TableColumn fx:id="torneioTR" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Tournament" />
+                                    <TableColumn fx:id="rondaTR" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Round" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <GridPane.margin>
+            <Insets right="25.0" />
+         </GridPane.margin>
+      </BorderPane>
+   </children>
+</GridPane>

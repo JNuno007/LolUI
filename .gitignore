@@ -44,3 +44,4 @@ src/hibernate/
 src/hibernate.cfg.xml
 src/hibernate.reveng.xml
 dist/lib/
+/LolUI/nbproject/private/
