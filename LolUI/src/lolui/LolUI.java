@@ -46,6 +46,8 @@ public class LolUI extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
+        Torneio torneio = new Torneio();
     }
     
 }

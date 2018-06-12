@@ -5,6 +5,7 @@
  */
 package lolui;
 
+
 import hibernate.HibernateGenericLib;
 import java.net.URL;
 import java.text.DecimalFormat;
