@@ -49,6 +49,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -63,12 +64,18 @@ import lolbll.EncontroServices;
 import lolbll.EquipaServices;
 import lolbll.JogoServices;
 import lolbll.TorneioServices;
-import loldal.model.Encontro;
-import loldal.model.Equipa;
-import loldal.model.Jogo;
-import loldal.model.Membroequipa;
-import loldal.model.Ronda;
-import loldal.model.Torneio;
+import model.Encontro;
+import model.Equipa;
+import model.Jogo;
+import model.Membroequipa;
+import model.Ronda;
+import model.Torneio;
+//import loldal.model.Encontro;
+//import loldal.model.Equipa;
+//import loldal.model.Jogo;
+//import loldal.model.Membroequipa;
+//import loldal.model.Ronda;
+//import loldal.model.Torneio;
 
 /**
  * FXML Controller class
@@ -134,6 +141,8 @@ public class FXMLTeamsMainController extends Application implements Initializabl
     @FXML private TableColumn <Encontro, Encontro> redTeamTIG;
     @FXML private TableColumn <Encontro, String> torneioTIG;
     @FXML private TableColumn <Encontro, Ronda> rondaTIG;
+    
+    
     
     private List<Equipa> teams;
     private ObservableList<Equipa> teamsObs;
@@ -650,7 +659,5 @@ public class FXMLTeamsMainController extends Application implements Initializabl
         scaleTransition.setToY(1f);
         scaleTransition.playFromStart();
     }
-
-    
         
 }

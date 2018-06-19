@@ -31,15 +31,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import lolbll.EstatisticasMembroJogoServices;
-import loldal.model.Champion;
-import loldal.model.Equipa;
-import loldal.model.Estatisticasmembrojogo;
-import loldal.model.Membroequipa;
+import model.Champion;
+import model.Equipa;
+import model.Estatisticasmembrojogo;
+import model.Jogo;
+import model.Membroequipa;
 
 /**
  * FXML Controller class
@@ -55,7 +56,7 @@ public class FXMLPopUpPlayerController implements Initializable {
     @FXML private ImageView imgPosition;
     @FXML private ImageView imgTeam;
     @FXML private ImageView imgInfoKKDDAA;
-    @FXML private ImageView imginfoKDA;
+    @FXML private ImageView imgInfoKDA;
     @FXML private ImageView imgTopChamp1;
     @FXML private ImageView imgTopChamp2;
     @FXML private ImageView imgTopChamp3;
@@ -145,8 +146,7 @@ public class FXMLPopUpPlayerController implements Initializable {
         }
         
         Map<Champion, Integer> mapa = new HashMap<>();
-        // -- CRIAR MÉTODO NA BLL
-        List<Estatisticasmembrojogo> top3 = EstatisticasMembroJogoServices.listaEstatisticas(me);          
+        List<Estatisticasmembrojogo> top3 = HibernateGenericLib.executeHQLQuery(" from Estatisticasmembrojogo where membroequipa=" + me.getId());          
         for(Estatisticasmembrojogo c: top3){
             if(!mapa.containsKey(c.getChampion())){
                 mapa.put(c.getChampion(), 1);
@@ -198,8 +198,7 @@ public class FXMLPopUpPlayerController implements Initializable {
         }
         
         //listas de jogos onde o Membroequipa participou
-        // -- CRIAR MÉTODO NA BLL
-        List<Estatisticasmembrojogo> listaJogosDoPlayer = EstatisticasMembroJogoServices.listaEstatisticas(me);
+        List<Estatisticasmembrojogo> listaJogosDoPlayer = HibernateGenericLib.executeHQLQuery(" from Estatisticasmembrojogo where membroequipa=" + me.getId());
         
         for(Estatisticasmembrojogo stat : listaJogosDoPlayer){
             totKills += stat.getKills().intValue();
@@ -245,5 +244,13 @@ public class FXMLPopUpPlayerController implements Initializable {
             result.add(highest.poll());
         }
         return result;
+    }
+        
+    @FXML public void setInfoKDA(){
+        Tooltip.install(this.imgInfoKDA, new Tooltip("KDA\nENORME"));
+    }
+    
+    @FXML public void setInfoKKDDAA(){
+        Tooltip.install(this.imgInfoKKDDAA, new Tooltip("KKDDAA\nENORME"));
     }
 }
