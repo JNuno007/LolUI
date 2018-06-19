@@ -13,6 +13,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import lolbll.HibernateBLL;
+import loldal.model.Torneio;
 
 /**
  *
@@ -36,8 +38,7 @@ public class LolUI extends Application {
     
     @Override
     public void stop(){
-        HibernateGenericLib.closeSession();
-        StandardServiceRegistryBuilder.destroy(HibernateUtil.getSessionFactory().getSessionFactoryOptions().getServiceRegistry());
+        HibernateBLL.close();
         Platform.exit();
     }
 

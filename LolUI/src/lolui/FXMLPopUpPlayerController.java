@@ -35,11 +35,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import lolesportsprojeto.model.Champion;
-import lolesportsprojeto.model.Equipa;
-import lolesportsprojeto.model.Estatisticasmembrojogo;
-import lolesportsprojeto.model.Jogo;
-import lolesportsprojeto.model.Membroequipa;
+import lolbll.EstatisticasMembroJogoServices;
+import loldal.model.Champion;
+import loldal.model.Equipa;
+import loldal.model.Estatisticasmembrojogo;
+import loldal.model.Membroequipa;
 
 /**
  * FXML Controller class
@@ -145,7 +145,8 @@ public class FXMLPopUpPlayerController implements Initializable {
         }
         
         Map<Champion, Integer> mapa = new HashMap<>();
-        List<Estatisticasmembrojogo> top3 = HibernateGenericLib.executeHQLQuery(" from Estatisticasmembrojogo where membroequipa=" + me.getId());          
+        // -- CRIAR MÉTODO NA BLL
+        List<Estatisticasmembrojogo> top3 = EstatisticasMembroJogoServices.listaEstatisticas(me);          
         for(Estatisticasmembrojogo c: top3){
             if(!mapa.containsKey(c.getChampion())){
                 mapa.put(c.getChampion(), 1);
@@ -197,7 +198,8 @@ public class FXMLPopUpPlayerController implements Initializable {
         }
         
         //listas de jogos onde o Membroequipa participou
-        List<Estatisticasmembrojogo> listaJogosDoPlayer = HibernateGenericLib.executeHQLQuery(" from Estatisticasmembrojogo where membroequipa=" + me.getId());
+        // -- CRIAR MÉTODO NA BLL
+        List<Estatisticasmembrojogo> listaJogosDoPlayer = EstatisticasMembroJogoServices.listaEstatisticas(me);
         
         for(Estatisticasmembrojogo stat : listaJogosDoPlayer){
             totKills += stat.getKills().intValue();

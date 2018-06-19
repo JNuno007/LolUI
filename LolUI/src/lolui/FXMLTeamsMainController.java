@@ -59,13 +59,16 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import javafx.util.Duration;
-import lolesportsprojeto.model.Encontro;
-import lolesportsprojeto.model.Equipa;
-import lolesportsprojeto.model.Jogo;
-import lolesportsprojeto.model.Membroequipa;
-import lolesportsprojeto.model.Ronda;
-import lolesportsprojeto.model.Torneio;
-import org.hibernate.Session;
+import lolbll.EncontroServices;
+import lolbll.EquipaServices;
+import lolbll.JogoServices;
+import lolbll.TorneioServices;
+import loldal.model.Encontro;
+import loldal.model.Equipa;
+import loldal.model.Jogo;
+import loldal.model.Membroequipa;
+import loldal.model.Ronda;
+import loldal.model.Torneio;
 
 /**
  * FXML Controller class
@@ -151,8 +154,8 @@ public class FXMLTeamsMainController extends Application implements Initializabl
     }   
     
    public void preencherListaEquipas(){
-       
-       teams = HibernateGenericLib.executeHQLQuery(" from Equipa");
+       // --BLL
+       teams = EquipaServices.listaEquipas();
        teams.sort(Comparator.comparing((equipa) -> equipa.getNome()));
        teamsObs = FXCollections.observableArrayList(teams);
        this.listaEquipas.setItems(teamsObs);
@@ -289,7 +292,8 @@ public class FXMLTeamsMainController extends Application implements Initializabl
     }
     
     public void atribuirNumTrofeus(Equipa eq){
-        List<Torneio> temp = HibernateGenericLib.executeHQLQuery("from Torneio where equipa = " + eq.getId());
+        // -- BLL
+        List<Torneio> temp = TorneioServices.listaNumTrofeusEquipa(eq);
         this.lblTrofeus.setText("" + temp.size());
     }
     
@@ -303,8 +307,10 @@ public class FXMLTeamsMainController extends Application implements Initializabl
         DecimalFormat df2 = new DecimalFormat(".##");
         
         //listas de jogos onde a Equipa jogou no lado da Equipa1 e do lado da Equipa2, respectivamente
-        List<Jogo> listaJogosEquipa1 = HibernateGenericLib.executeHQLQuery("from Jogo where equipaByEquipa1 = " + eq.getId());
-        List<Jogo> listaJogosEquipa2 = HibernateGenericLib.executeHQLQuery("from Jogo where equipaByEquipa2 = " + eq.getId());
+        // -- BLL
+        List<Jogo> listaJogosEquipa1 = JogoServices.listaJogosEquipa1(eq);
+        // -- BLL
+        List<Jogo> listaJogosEquipa2 = JogoServices.listaJogosEquipa2(eq);
         
         for(Jogo j : listaJogosEquipa1){
             totKills += j.getKillsequipa1().intValue();
@@ -325,7 +331,8 @@ public class FXMLTeamsMainController extends Application implements Initializabl
     
     public List<Encontro> getEncontrosFromTeam(Equipa eq){
         //Todos os Encontros
-        List<Encontro> encontrosFromTeam = HibernateGenericLib.executeHQLQuery("from Encontro WHERE equipaByEquipa1 = " + eq.getId() + " OR equipaByEquipa2 = " + eq.getId());
+        // -- BLL
+        List<Encontro> encontrosFromTeam = EncontroServices.listaEncontrosFromTeam(eq);
         return encontrosFromTeam;
     }
     
@@ -558,11 +565,10 @@ public class FXMLTeamsMainController extends Application implements Initializabl
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.setTitle("Pop Up");
         stage.setResizable(false);
         stage.setY(350);
         stage.setX(700);
-        stage.getIcons().add(new Image(LolEsportsProjeto.class.getResourceAsStream("pics/lol.png")));
+        stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.infoTop.getScene().getWindow());

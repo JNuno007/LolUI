@@ -5,7 +5,6 @@
  */
 package lolui;
 
-
 import hibernate.HibernateGenericLib;
 import java.net.URL;
 import java.text.DecimalFormat;
@@ -29,9 +28,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import lolesportsprojeto.model.Champion;
-import lolesportsprojeto.model.Estatisticasmembrojogo;
-import lolesportsprojeto.model.Membroequipa;
+import lolbll.EstatisticasMembroJogoServices;
+import lolbll.MembroEquipaServices;
+import loldal.model.Champion;
+import loldal.model.Estatisticasmembrojogo;
+import loldal.model.Membroequipa;
 
 /**
  * FXML Controller class
@@ -92,12 +93,15 @@ public class FXMLPlayersMainController implements Initializable {
     }
     
      public void preencherListaJogadores(){
-       listaPesquisa = HibernateGenericLib.executeHQLQuery(" from Membroequipa where cargo = 'player'");
-       Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getEquipa().toString());
-       comparator = comparator.thenComparing(Comparator.comparing(m -> m.getNome()));
-       Stream<Membroequipa> membroStream = listaPesquisa.stream().sorted(comparator);
-       List<Membroequipa> listaOrdenada = membroStream.collect(Collectors.toList());
-       membrosEquipaObs = FXCollections.observableArrayList(listaOrdenada);
+         // -- CRIAR MÉTODO NA BLL
+         
+       listaPesquisa = MembroEquipaServices.listaJogadores();
+       //listaPesquisa = HibernateGenericLib.executeHQLQuery(" from Membroequipa where cargo = 'player'");
+//       Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getEquipa().toString());
+//       comparator = comparator.thenComparing(Comparator.comparing(m -> m.getNome()));
+//       Stream<Membroequipa> membroStream = listaPesquisa.stream().sorted(comparator);
+//       List<Membroequipa> listaOrdenada = membroStream.collect(Collectors.toList());
+       membrosEquipaObs = FXCollections.observableArrayList(listaPesquisa);
        this.listaJogadores.setItems(membrosEquipaObs);
    }
     
@@ -167,7 +171,10 @@ public class FXMLPlayersMainController implements Initializable {
         DecimalFormat df2 = new DecimalFormat(".##");
         
         //listas de jogos onde o Membroequipa participou
-        List<Estatisticasmembrojogo> listaJogosDoPlayer = HibernateGenericLib.executeHQLQuery(" from Estatisticasmembrojogo where membroequipa=" + me.getId());
+        // -- CRIAR MÉTODO NA BLL
+        //List<Estatisticasmembrojogo> listaJogosDoPlayer = HibernateGenericLib.executeHQLQuery(" from Estatisticasmembrojogo where membroequipa=" + me.getId());
+        
+        List<Estatisticasmembrojogo> listaJogosDoPlayer = EstatisticasMembroJogoServices.listaEstatisticas(me);
         
         for(Estatisticasmembrojogo jogo : listaJogosDoPlayer){
             totKills += jogo.getKills().intValue();
@@ -202,8 +209,6 @@ public class FXMLPlayersMainController implements Initializable {
         });
     }
     
-    
-    
     public void top3Champs(Membroequipa me){
         //Criar Mapa Jogador -> mapa Champs(key), Numero de vezes que jogou inteiro
         //Select da BD para sacar o top 3 dos Champs
@@ -214,7 +219,8 @@ public class FXMLPlayersMainController implements Initializable {
         Map<Champion, Integer> mapa = new HashMap<>();
         
         if(me!=null){
-            List<Estatisticasmembrojogo> top3 = HibernateGenericLib.executeHQLQuery(" from Estatisticasmembrojogo where membroequipa=" + me.getId());
+            // -- CRIAR MÉTODO NA BLL
+            List<Estatisticasmembrojogo> top3 = EstatisticasMembroJogoServices.top3(me);
             for(Estatisticasmembrojogo c: top3){
                 if(!mapa.containsKey(c.getChampion())){
                     mapa.put(c.getChampion(), 1);

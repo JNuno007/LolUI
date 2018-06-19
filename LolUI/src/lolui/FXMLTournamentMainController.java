@@ -6,6 +6,7 @@
 package lolui;
 
 import hibernate.HibernateGenericLib;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,21 +16,27 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import lolesportsprojeto.model.Champion;
-import lolesportsprojeto.model.Encontro;
-import lolesportsprojeto.model.Equipa;
-import lolesportsprojeto.model.Item;
-import lolesportsprojeto.model.Ronda;
-import lolesportsprojeto.model.Torneio;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import lolbll.TorneioServices;
+import loldal.model.Encontro;
+import loldal.model.Equipa;
+import loldal.model.Ronda;
+import loldal.model.Torneio;
+//import org.hibernate.Session;
+//import org.hibernate.Transaction;
 
 /**
  * FXML Controller class
@@ -42,6 +49,24 @@ public class FXMLTournamentMainController implements Initializable {
      * Initializes the controller class.
      */
     //Torneios de 8
+    
+    //GridPane -> Encontros do Torneio
+    @FXML
+    private GridPane gridT8R1E1;
+    @FXML
+    private GridPane gridT8R1E2;
+    @FXML
+    private GridPane gridT8R1E3;
+    @FXML
+    private GridPane gridT8R1E4;
+    
+    @FXML
+    private GridPane gridT8R2E1;
+    @FXML
+    private GridPane gridT8R2E2;
+    
+    @FXML
+    private GridPane gridT8R3E1;
     
     //Ronda 1
     
@@ -294,7 +319,8 @@ public class FXMLTournamentMainController implements Initializable {
     }
     
     public void listarTorneios(){
-       listaPesquisa = HibernateGenericLib.executeHQLQuery("from Torneio");
+        // -- CRIAR MÉTODO NA BLL
+       listaPesquisa = TorneioServices.listaTorneios();
        listaPesquisa.sort(Comparator.comparing((torneio) -> torneio.getDatafim()));
        Collections.reverse(listaPesquisa);
        torneiosObs = FXCollections.observableArrayList(listaPesquisa);
@@ -585,4 +611,89 @@ public class FXMLTournamentMainController implements Initializable {
    public void atribuirLabel(String st , Label lbl){
        lbl.setText(st);
    }
+   
+   @FXML public void handleGridAction(MouseEvent event) throws IOException{
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLPopUpTeam.fxml"));
+        Parent root = loader.load();
+        FXMLPopUpTeamController controller = loader.getController();
+        this.preparePopUpElements(event, controller);
+        //Metodo para preencher a Janela de PopUp
+        this.prepareStage(root);
+    }
+    
+    public void prepareStage(Parent root){
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setResizable(false);
+        stage.setY(350);
+        stage.setX(225);
+        stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(this.imgT16R1E8Eq2.getScene().getWindow());
+        stage.showAndWait();
+    }
+    
+     public void preparePopUpElements(MouseEvent event, FXMLPopUpTeamController controller){
+        
+         Encontro en = new Encontro();
+         
+        if(event.getSource() == gridT8R1E1){
+            System.out.println("ENTREI");
+            en = this.getEncontroByGripPane(0, 0);
+        }
+        
+        if(event.getSource() == gridT8R1E2){
+           en = this.getEncontroByGripPane(0, 1);
+        }
+        
+        if(event.getSource() == gridT8R1E3){
+           en = this.getEncontroByGripPane(0, 2);
+        }
+        
+        if(event.getSource() == gridT8R1E4){
+           en = this.getEncontroByGripPane(0, 3);
+        }
+         
+        if(event.getSource() == gridT8R2E1){
+           en = this.getEncontroByGripPane(1, 0);
+        }
+        
+        if(event.getSource() == gridT8R2E2){
+           en = this.getEncontroByGripPane(1, 1);
+        }
+      
+        if(event.getSource() == gridT8R3E1){
+           en = this.getEncontroByGripPane(2, 0);
+        }
+
+        Equipa eq1 = en.getEquipaByEquipa1();
+        Equipa eq2 = en.getEquipaByEquipa2();
+        String winsEq1 = en.getVitoriaequipa1().toString();
+        String winsEq2 = en.getVitoriaequipa2().toString();
+        String siglaEq1 = eq1.getSigla();
+        String siglaEq2 = eq2.getSigla();
+        
+        controller.setLogoTeams(eq1, eq2);
+        controller.setTeamWins(winsEq1, winsEq2);
+        controller.setTeamSigla(siglaEq1, siglaEq2);
+        controller.setTeamMemberNames(eq1, eq2);
+        controller.setTeamsStats(en, 0);
+    }
+     
+    public Encontro getEncontroByGripPane(int nronda, int nencontro){
+        List<Ronda> rondas = new ArrayList<>();
+        rondas.addAll(t.getRondas());
+        rondas.sort(Comparator.comparing((ronda) -> ronda.getId()));
+        List<Encontro> encontros = new ArrayList<>();
+        encontros.addAll(rondas.get(nronda).getEncontros());
+        encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+        
+        Encontro en = encontros.get(nencontro);
+        
+        return en;
+    }
+    
 }
