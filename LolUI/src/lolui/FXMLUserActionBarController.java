@@ -15,12 +15,19 @@ import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 /**
@@ -171,5 +178,27 @@ public class FXMLUserActionBarController implements Initializable {
             Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
         }
         mainPane.setCenter(currentGrid);
+    }
+    
+    @FXML public void handleImageAction(MouseEvent event) throws IOException{
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
+        Parent root = loader.load();
+        FXMLLoginController controller = loader.getController();
+        this.prepareStage(root);
+    }
+    
+    public void prepareStage(Parent root){
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setResizable(false);
+        stage.setY(350);
+        stage.setX(700);
+        stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(this.imgAdmin.getScene().getWindow());
+        stage.showAndWait();
     }
 }

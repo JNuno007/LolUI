@@ -75,7 +75,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ImageView>
-                  <ImageView fx:id="imgAdmin" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                  <ImageView fx:id="imgAdmin" fitHeight="75.0" fitWidth="75.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                      <image>
                         <Image url="@pics/admin.png" />
                      </image>
