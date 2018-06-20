@@ -36,11 +36,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.Champion;
-import model.Equipa;
-import model.Estatisticasmembrojogo;
-import model.Jogo;
-import model.Membroequipa;
+import loldal.model.Champion;
+import loldal.model.Equipa;
+import loldal.model.Estatisticasmembrojogo;
+import loldal.model.Membroequipa;
+//import model.Champion;
+//import model.Equipa;
+//import model.Estatisticasmembrojogo;
+//import model.Jogo;
+//import model.Membroequipa;
 
 /**
  * FXML Controller class

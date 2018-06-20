@@ -28,9 +28,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import model.Champion;
-import model.Estatisticasmembrojogo;
-import model.Membroequipa;
+import loldal.model.Champion;
+import loldal.model.Estatisticasmembrojogo;
+import loldal.model.Membroequipa;
+//import model.Champion;
+//import model.Estatisticasmembrojogo;
+//import model.Membroequipa;
+
 
 /**
  * FXML Controller class

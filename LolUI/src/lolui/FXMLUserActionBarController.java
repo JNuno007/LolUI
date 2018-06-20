@@ -160,16 +160,16 @@ public class FXMLUserActionBarController implements Initializable {
         mainPane.setCenter(currentGrid);
     }
     
-//    public void btnAdminClicked(){
-//        this.imgAdmin.setOnMouseClicked((event) -> {
-//            try {
-//                currentGrid = FXMLLoader.load(getClass().getResource("FXMLAdminMain.fxml"));
-//            } catch (IOException ex) {
-//                Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//            mainPane.setCenter(currentGrid);
-//        });
-//    }
+    public void btnAdminClicked(){
+        this.imgAdmin.setOnMouseClicked((event) -> {
+            try {
+                currentGrid = FXMLLoader.load(getClass().getResource("FXMLAdminMain.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            mainPane.setCenter(currentGrid);
+        });
+    }
     
     public void btnTournamentsClicked(){
         try {
@@ -179,26 +179,26 @@ public class FXMLUserActionBarController implements Initializable {
         }
         mainPane.setCenter(currentGrid);
     }
-    
-    @FXML public void handleImageAction(MouseEvent event) throws IOException{
-        
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
-        Parent root = loader.load();
-        FXMLLoginController controller = loader.getController();
-        this.prepareStage(root);
-    }
-    
-    public void prepareStage(Parent root){
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setResizable(false);
-        stage.setY(350);
-        stage.setX(700);
-        stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
-        stage.setScene(scene);
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.initOwner(this.imgAdmin.getScene().getWindow());
-        stage.showAndWait();
-    }
+//    
+//    @FXML public void handleImageAction(MouseEvent event) throws IOException{
+//        
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
+//        Parent root = loader.load();
+//        FXMLLoginController controller = loader.getController();
+//        this.prepareStage(root);
+//    }
+//    
+//    public void prepareStage(Parent root){
+//        Scene scene = new Scene(root);
+//        Stage stage = new Stage();
+//        stage.initStyle(StageStyle.UNDECORATED);
+//        stage.setResizable(false);
+//        stage.setY(350);
+//        stage.setX(700);
+//        stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
+//        stage.setScene(scene);
+//        stage.initModality(Modality.APPLICATION_MODAL);
+//        stage.initOwner(this.imgAdmin.getScene().getWindow());
+//        stage.showAndWait();
+//    }
 }
