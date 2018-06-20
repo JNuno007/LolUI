@@ -54,7 +54,6 @@ public class FXMLUserActionBarController implements Initializable {
     @FXML
     private ImageView imgAdmin;
     
-    
     //Textos das imagens
     @FXML
     private Label lblTournament;
@@ -77,9 +76,13 @@ public class FXMLUserActionBarController implements Initializable {
     @FXML
     private GridPane currentGrid;
     
+    private static boolean loggedIn;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ScaleTransition st = new ScaleTransition();
+        
+        System.out.println(loggedIn);
         
         fadeInAnimation();
         
@@ -87,10 +90,10 @@ public class FXMLUserActionBarController implements Initializable {
         st.setDuration(Duration.seconds(1));
         st.setToX(-1500);
         st.play();
+        
     } 
     
     public void fadeInAnimation(){
-        
         FadeTransition ft = new FadeTransition(Duration.millis(1000),imgTournament);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
@@ -186,6 +189,8 @@ public class FXMLUserActionBarController implements Initializable {
         Parent root = loader.load();
         FXMLLoginController controller = loader.getController();
         this.prepareStage(root);
+        System.out.println("handleImageAction: " + loggedIn);
+        
     }
     
     public void prepareStage(Parent root){
@@ -200,6 +205,10 @@ public class FXMLUserActionBarController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgAdmin.getScene().getWindow());
         stage.showAndWait();
+        
+        if(loggedIn){
+            this.carregaPainelAdmin();
+        }
     }
     
     public void carregaPainelAdmin(){
@@ -209,6 +218,12 @@ public class FXMLUserActionBarController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         mainPane.setCenter(currentGrid);
+    }
+    
+    public static void setLoggedIn(boolean bool){
+        loggedIn = bool;
+        System.out.println("loggedIn: " + loggedIn);
     }
 }

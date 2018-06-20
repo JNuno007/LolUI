@@ -17,12 +17,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 /**
  * FXML Controller class
@@ -40,23 +40,22 @@ public class FXMLLoginController implements Initializable {
     @FXML
     private GridPane currentGrid;
     
+    @FXML
+    private Button btnLogin;
+       
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
     
-    @FXML public void closePopUp(MouseEvent event){
+    @FXML public void closePopUp(){
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
     
     @FXML public void loginSuccessefull(MouseEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLUserActionBar.fxml"));
-        Parent root = loader.load();
-        FXMLUserActionBarController controller = loader.getController();
-        
-        this.closePopUp(event);
-        controller.carregaPainelAdmin();
+       FXMLUserActionBarController.setLoggedIn(true);
+       this.closePopUp();
     }
     
 }
