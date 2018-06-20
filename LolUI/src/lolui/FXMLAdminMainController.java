@@ -7,7 +7,12 @@ package lolui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.effect.GaussianBlur;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 
 /**
  * FXML Controller class
@@ -16,12 +21,18 @@ import javafx.fxml.Initializable;
  */
 public class FXMLAdminMainController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML private GridPane gridpane;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        for (Node node : gridpane.getChildren()) {  
+            node.setEffect(new GaussianBlur());
+            node.setOnMouseEntered((MouseEvent t) -> {
+                node.setEffect(null);
+            });
+            node.setOnMouseExited((MouseEvent t) -> {
+                node.setEffect(new GaussianBlur());
+            });
+        }
     }    
-    
 }

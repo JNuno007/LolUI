@@ -8,10 +8,7 @@ and open the template in the editor.
     Author     : joaoc
 */
 
-ImageView{
-    -fx-opacity: 0.3;
-}
 
-ImageView:hover{
-    -fx-opacity: 1;
+GridPane{
+    -fx-background-image: url('../pics/smoky.jpg');
 }

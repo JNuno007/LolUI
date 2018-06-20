@@ -10,9 +10,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
@@ -48,16 +50,13 @@ public class FXMLLoginController implements Initializable {
         stage.close();
     }
     
-    // -- Testar o painel ADMIN MAIN
-    @FXML public void goToAdminMain() throws IOException{
-       mainPane = FXMLLoader.load(getClass().getResource("FXMLUserActionBar.fxml"));
-       
-       try {
-            currentGrid = FXMLLoader.load(getClass().getResource("FXMLAdminMain.fxml"));
-        } catch (IOException ex) {
-            Logger.getLogger(FXMLLoginController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        mainPane.setCenter(currentGrid);
+    @FXML public void loginSuccessefull(MouseEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLUserActionBar.fxml"));
+        Parent root = loader.load();
+        FXMLUserActionBarController controller = loader.getController();
+        
+        this.closePopUp(event);
+        controller.carregaPainelAdmin();
     }
     
 }
