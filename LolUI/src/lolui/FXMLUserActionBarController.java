@@ -136,6 +136,7 @@ public class FXMLUserActionBarController implements Initializable {
         
         ft.setOnFinished((event) -> {
         try {
+            lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
             currentGrid = FXMLLoader.load(getClass().getResource("FXMLTournamentMain.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
@@ -147,6 +148,10 @@ public class FXMLUserActionBarController implements Initializable {
     
     public void btnTeamsClicked(){
         try {
+            lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblPlayer.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblAdmin.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
             currentGrid = FXMLLoader.load(getClass().getResource("FXMLTeamsMain.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
@@ -156,6 +161,10 @@ public class FXMLUserActionBarController implements Initializable {
     
     public void btnPlayersClicked(){
         try {
+            lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblPlayer.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblAdmin.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
             currentGrid = FXMLLoader.load(getClass().getResource("FXMLPlayersMain.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
@@ -176,6 +185,10 @@ public class FXMLUserActionBarController implements Initializable {
     
     public void btnTournamentsClicked(){
         try {
+            lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblPlayer.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+            lblAdmin.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
             currentGrid = FXMLLoader.load(getClass().getResource("FXMLTournamentMain.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
@@ -184,7 +197,10 @@ public class FXMLUserActionBarController implements Initializable {
     }
     
     @FXML public void handleImageAction(MouseEvent event) throws IOException{
-        
+        lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+        lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+        lblPlayer.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
+        lblAdmin.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
         Parent root = loader.load();
         FXMLLoginController controller = loader.getController();

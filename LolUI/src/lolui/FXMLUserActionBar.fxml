@@ -39,22 +39,22 @@
                         <Image url="@pics/lol.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblTournament" style="-fx-font-weight: bold;" text="Tournaments" textFill="#dba000" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="lblTournament" alignment="CENTER" prefHeight="27.0" prefWidth="126.0" style="-fx-font-weight: bold;" text="Tournaments" textFill="#dba000" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblTeams" style="-fx-font-weight: bold;" text="Teams" textAlignment="CENTER" textFill="#dba000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="lblTeams" alignment="CENTER" prefHeight="27.0" prefWidth="68.0" style="-fx-font-weight: bold;" text="Teams" textAlignment="CENTER" textFill="#dba000" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblPlayer" style="-fx-font-weight: bold;" text="Players" textAlignment="CENTER" textFill="#dba000" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="lblPlayer" alignment="CENTER" prefHeight="27.0" prefWidth="79.0" style="-fx-font-weight: bold;" text="Players" textAlignment="CENTER" textFill="#dba000" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblAdmin" style="-fx-font-weight: bold;" text="Admin" textAlignment="CENTER" textFill="#dba000" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Label fx:id="lblAdmin" alignment="CENTER" prefHeight="27.0" prefWidth="76.0" style="-fx-font-weight: bold;" text="Admin" textAlignment="CENTER" textFill="#dba000" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
