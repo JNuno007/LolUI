@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageMatchTournamentController">
+   <center>
+      <GridPane maxHeight="530.0" maxWidth="1500.0" minHeight="530.0" minWidth="1500.0" prefHeight="530.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <ListView fx:id="listaTorneios" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@styles/tournament_panel.css" BorderPane.alignment="CENTER" />
+               </center>
+               <GridPane.margin>
+                  <Insets right="25.0" />
+               </GridPane.margin>
+               <top>
+                  <Pane prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="searchBar" alignment="CENTER" layoutX="188.0" layoutY="18.0" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="142.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pics/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="25.0" />
+               </GridPane.margin>
+               <center>
+                  <StackPane maxHeight="530.0" maxWidth="750.0" minHeight="530.0" minWidth="750.0" prefHeight="530.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane maxHeight="570.0" maxWidth="750.0" minHeight="570.0" minWidth="750.0" prefHeight="570.0" prefWidth="750.0">
+                           <children>
+                              <ImageView fitHeight="530.0" fitWidth="750.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pics/fluxogram16edited.png" />
+                                 </image>
+                              </ImageView>
+                              <GridPane layoutX="50.0" layoutY="248.0" maxHeight="55.0" maxWidth="155.0" minHeight="43.0" minWidth="130.0" onMouseEntered="#onClickGrid" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R4E1Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R4E1Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R4E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R4E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="210.0" layoutY="374.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R3E2Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R3E2Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R3E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R3E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="210.0" layoutY="124.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R3E1Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R3E1Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R3E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="375.0" layoutY="307.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R2E3Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R2E3Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="375.0" layoutY="438.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R2E4Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R2E4Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="375.0" layoutY="189.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R2E2Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R2E2Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="375.0" layoutY="57.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R2E1Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R2E1Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="472.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E8Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E8Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E8Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E8Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="407.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E7Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E7Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E7Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E7Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="339.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E6Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E6Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E6Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E6Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="274.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E5Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E5Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E5Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E5Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="221.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E4Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E4Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="155.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E3Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E3Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="90.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E2Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E2Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="540.0" layoutY="25.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT16R1E1Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT16R1E1Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT16R1E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <ImageView fitHeight="601.0" fitWidth="726.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pics/fluxogram8edited.png" />
+                                 </image>
+                              </ImageView>
+                              <GridPane fx:id="gridT8R1E4" layoutX="519.0" layoutY="395.0" maxHeight="55.0" maxWidth="155.0" minHeight="55.0" minWidth="160.0" onMouseClicked="#handleGridAction" prefHeight="55.0" prefWidth="155.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT8R1E4Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT8R1E4Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                              <GridPane fx:id="gridT8R1E3" layoutX="519.0" layoutY="295.0" maxHeight="55.0" maxWidth="155.0" minHeight="55.0" minWidth="160.0" onMouseClicked="#handleGridAction" prefHeight="55.0" prefWidth="155.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT8R1E3Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT8R1E3Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                              <GridPane fx:id="gridT8R1E2" layoutX="519.0" layoutY="197.0" maxHeight="55.0" maxWidth="155.0" minHeight="55.0" minWidth="160.0" onMouseClicked="#handleGridAction" prefHeight="55.0" prefWidth="155.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT8R1E2Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT8R1E2Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                              <GridPane fx:id="gridT8R1E1" layoutX="519.0" layoutY="100.0" maxHeight="55.0" maxWidth="155.0" minHeight="55.0" minWidth="160.0" onMouseClicked="#handleGridAction" prefHeight="55.0" prefWidth="155.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT8R1E1Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT8R1E1Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R1E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                              <GridPane fx:id="gridT8R2E2" layoutX="273.0" layoutY="345.0" maxHeight="55.0" maxWidth="155.0" minHeight="55.0" minWidth="160.0" onMouseClicked="#handleGridAction" prefHeight="55.0" prefWidth="155.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT8R2E2Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT8R2E2Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R2E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                              <GridPane fx:id="gridT8R2E1" layoutX="273.0" layoutY="148.0" maxHeight="55.0" maxWidth="155.0" minHeight="55.0" minWidth="160.0" onMouseClicked="#handleGridAction" prefHeight="55.0" prefWidth="155.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT8R2E1Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT8R2E1Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R2E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                              <GridPane fx:id="gridT8R3E1" layoutX="27.0" layoutY="247.0" maxHeight="55.0" maxWidth="155.0" minHeight="55.0" minWidth="160.0" onMouseClicked="#handleGridAction" prefHeight="55.0" prefWidth="155.0" stylesheets="@styles/tournament_panel.css">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="63.4000244140625" minWidth="10.0" prefWidth="20.400012207031253" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="49.79999999999998" minWidth="10.0" prefWidth="49.79999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.20001220703125" minWidth="10.0" prefWidth="25.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="imgT8R3E1Eq1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgT8R3E1Eq2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                       <image>
+                                          <Image url="@pics/lol.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R3E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Label fx:id="lblT8R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="676.0" layoutY="26.0" text="Manage Match Tournament">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Line endX="1500.0" layoutY="70.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

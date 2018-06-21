@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="680.0" layoutY="28.0" text="Create Team">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Line endX="1500.0" layoutY="70.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <GridPane maxWidth="1500.0" minWidth="1500.0" prefHeight="530.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="750.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="750.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField layoutX="135.0" layoutY="59.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
+                              <Label layoutX="304.0" layoutY="14.0" text="Team Information">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <center>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane prefHeight="111.0" prefWidth="375.0">
+                                 <children>
+                                    <TextField layoutX="134.0" layoutY="60.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ComboBox layoutX="113.0" layoutY="61.0" prefHeight="35.0" prefWidth="150.0" promptText="Country" />
+                                    <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="29.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/countries/ar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                     </center>
+                     <bottom>
+                        <AnchorPane prefHeight="278.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="333.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pics/players/unknown.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="319.0" layoutY="167.0" mnemonicParsing="false" prefHeight="35.0" text="Select Team Image" />
+                              <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pics/back.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <top>
+                        <AnchorPane prefHeight="50.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="287.0" layoutY="11.0" text="Select Team Members">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <center>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/positions/top.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/positions/jng.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/positions/mid.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/positions/adc.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/positions/sup.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                 <children>
+                                    <Button layoutX="69.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="35.0" text="Save and Create" />
+                                 </children>
+                              </Pane>
+                              <ComboBox prefHeight="35.0" prefWidth="252.0" GridPane.columnIndex="1" />
+                              <ComboBox prefHeight="35.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox prefHeight="35.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ComboBox prefHeight="35.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <ComboBox prefHeight="35.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ComboBox prefHeight="35.0" prefWidth="253.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                           </children>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
