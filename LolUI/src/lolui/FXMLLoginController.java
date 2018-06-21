@@ -20,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -42,7 +43,8 @@ public class FXMLLoginController implements Initializable {
     
     @FXML
     private Button btnLogin;
-       
+    
+   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

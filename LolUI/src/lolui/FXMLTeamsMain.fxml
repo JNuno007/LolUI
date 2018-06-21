@@ -61,7 +61,7 @@
                         <Image url="@pics/teams/skt.png" />
                      </image>
                   </ImageView>
-                  <GridPane layoutX="200.0" layoutY="10.0" prefHeight="121.0" prefWidth="540.0">
+                  <GridPane layoutX="238.0" layoutY="10.0" prefHeight="121.0" prefWidth="502.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="268.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.60009765625" minWidth="10.0" prefWidth="181.60009765625" />

@@ -5,7 +5,6 @@
  */
 package lolui;
 
-import hibernate.HibernateGenericLib;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,7 +29,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import lolbll.TorneioServices;
 //import model.Encontro;
 //import model.Equipa;
 //import model.Ronda;
