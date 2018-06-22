@@ -42,7 +42,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <ImageView fx:id="imgLogoEquipa2" fitHeight="124.0" fitWidth="120.0" layoutX="828.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgLogoEquipa2" fitHeight="116.0" fitWidth="180.0" layoutX="828.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@pics/teams/msf.png" />
                </image>

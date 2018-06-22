@@ -17,8 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageMatchTournamentController">
+<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/loadingscreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageMatchTournamentController">
    <center>
       <GridPane maxHeight="530.0" maxWidth="1500.0" minHeight="530.0" minWidth="1500.0" prefHeight="530.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -31,7 +30,7 @@
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0">
                <center>
-                  <ListView fx:id="listaTorneios" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@styles/tournament_panel.css" BorderPane.alignment="CENTER" />
+                  <ListView fx:id="listaTorneios" maxHeight="365.0" maxWidth="356.0" minHeight="200.0" minWidth="200.0" prefHeight="365.0" prefWidth="356.0" stylesheets="@styles/tournament_panel.css" BorderPane.alignment="CENTER" />
                </center>
                <GridPane.margin>
                   <Insets right="25.0" />
@@ -52,6 +51,20 @@
                      </children>
                   </Pane>
                </top>
+               <bottom>
+                  <Pane prefHeight="40.0" prefWidth="726.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="49.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pics/back.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </bottom>
             </BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                <GridPane.margin>
@@ -703,7 +716,7 @@
    <top>
       <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="676.0" layoutY="26.0" text="Manage Match Tournament">
+            <Label layoutX="676.0" layoutY="26.0" text="Manage Match Tournament" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>

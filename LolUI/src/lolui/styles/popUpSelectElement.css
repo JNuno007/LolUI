@@ -4,12 +4,15 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 22/mai/2018, 11:05:13
+    Created on : 22/jun/2018, 11:37:42
     Author     : joaoc
 */
 
-.root{
-    -fx-background-image: url('../pics/wallpaper.jpg');
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
 }
 
+.scroll-pane {
+   -fx-background-image: url('../pics/wallpaper.jpg');
+}
 

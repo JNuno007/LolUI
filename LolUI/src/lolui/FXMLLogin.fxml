@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -10,12 +12,14 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="273.0" prefWidth="518.0" stylesheets="@styles/loadingscreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLLoginController">
+<AnchorPane prefHeight="273.0" prefWidth="518.0" stylesheets="@styles/login_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLLoginController">
    <children>
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="219.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@pics/conifg.png" />
+            <Image url="@pics/admin.png" />
          </image>
       </ImageView>
       <GridPane layoutX="108.0" layoutY="119.0" prefHeight="134.0" prefWidth="45.0">
@@ -42,7 +46,6 @@
             </ImageView>
          </children>
       </GridPane>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="106.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true" />
       <GridPane layoutX="158.0" layoutY="119.0" prefHeight="134.0" prefWidth="211.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.2" minWidth="10.0" prefWidth="219.2" />
@@ -55,14 +58,19 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField promptText="Username" />
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-               <children>
-                  <Button fx:id="btnLogin" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#loginSuccessefull" prefHeight="26.0" prefWidth="211.0" text="Login" />
-               </children>
-            </AnchorPane>
-            <TextField promptText="Username" />
-            <PasswordField promptText="Password" GridPane.rowIndex="2" />
+            <TextField fx:id="username" promptText="Username" />
+            <PasswordField fx:id="password" promptText="Password" GridPane.rowIndex="2" />
+            <Line fx:id="lineUser" endX="100.0" layoutX="10.0" startX="-100.0" style="-fx-stroke: orange;" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="7.0" />
+               </GridPane.margin>
+            </Line>
+            <Line fx:id="linePass" endX="100.0" startX="-100.0" style="-fx-stroke: orange;" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="7.0" />
+               </GridPane.margin>
+            </Line>
+            <Button fx:id="btnLogin" mnemonicParsing="false" onMouseClicked="#loginSuccessefull" prefHeight="26.0" prefWidth="211.0" text="Login" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="219.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
@@ -72,6 +80,16 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </ImageView>
+      <Label fx:id="lblWarning" alignment="CENTER" layoutX="151.0" layoutY="93.0" prefHeight="24.0" prefWidth="250.0" style="-fx-text-fill: white;" text="Label" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgWarning" fitHeight="20.0" fitWidth="20.0" layoutX="121.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@pics/prohibited_icon.png" />
+         </image>
       </ImageView>
    </children>
 </AnchorPane>

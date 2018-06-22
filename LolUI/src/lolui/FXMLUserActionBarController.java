@@ -201,12 +201,15 @@ public class FXMLUserActionBarController implements Initializable {
         lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
         lblPlayer.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
         lblAdmin.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
-        Parent root = loader.load();
-        FXMLLoginController controller = loader.getController();
-        this.prepareStage(root);
-        System.out.println("handleImageAction: " + loggedIn);
         
+        if(!loggedIn){
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
+            Parent root = loader.load();
+            FXMLLoginController controller = loader.getController();
+            this.prepareStage(root);
+        }else{
+            this.carregaPainelAdmin();
+        }
     }
     
     public void prepareStage(Parent root){
