@@ -18,6 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -75,6 +76,9 @@ public class FXMLUserActionBarController implements Initializable {
     
     @FXML
     private GridPane currentGrid;
+    
+    @FXML
+    private MenuButton accountMenu;
     
     private static boolean loggedIn;
     
@@ -208,6 +212,7 @@ public class FXMLUserActionBarController implements Initializable {
             FXMLLoginController controller = loader.getController();
             this.prepareStage(root);
         }else{
+            accountMenu.setVisible(true);
             this.carregaPainelAdmin();
         }
     }
@@ -226,8 +231,18 @@ public class FXMLUserActionBarController implements Initializable {
         stage.showAndWait();
         
         if(loggedIn){
+            accountMenu.setVisible(true);
             this.carregaPainelAdmin();
         }
+    }
+    
+    //Método Logout
+    @FXML
+    public void logout(){
+       this.btnTournamentsClicked();
+       loggedIn = false;
+       accountMenu.setVisible(false);
+       
     }
     
     public void carregaPainelAdmin(){

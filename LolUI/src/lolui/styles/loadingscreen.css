@@ -12,4 +12,40 @@ and open the template in the editor.
     -fx-background-image: url('../pics/wallpaper.jpg');
 }
 
+MenuButton{
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+}
+
+MenuButton > .arrow-button > .arrow{
+    -fx-color:orange;
+}
+
+MenuItem{
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+    -fx-width:150px;
+}
+
+.context-menu {
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+    -fx-padding:6px;
+}
+
+.menu-item .label {
+    -fx-text-fill: white;
+}
+
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-text-fill: white;
+}
+
+.menu-item:focused, .menu-item:hovered {
+    fx-text-fill: white;
+    -fx-background-color: orange;
+}
 
