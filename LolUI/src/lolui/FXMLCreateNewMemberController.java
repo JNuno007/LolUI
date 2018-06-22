@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author vaaz
  */
-public class FXMLManageTournamentInfoController implements Initializable {
+public class FXMLCreateNewMemberController implements Initializable {
 
     /**
      * Initializes the controller class.
