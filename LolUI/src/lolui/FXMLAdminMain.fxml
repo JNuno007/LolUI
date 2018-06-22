@@ -21,9 +21,9 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <AnchorPane fx:id="teamMain" onMouseClicked="#teamMainClick" prefHeight="600.0" prefWidth="375.0">
+      <AnchorPane fx:id="teamMain" maxHeight="600.0" maxWidth="500.0" minHeight="600.0" minWidth="500.0" onMouseClicked="#teamMainClick" prefHeight="600.0" prefWidth="500.0">
          <children>
-            <ImageView fitHeight="600.0" fitWidth="375.0" layoutX="63.0">
+            <ImageView fitHeight="600.0" fitWidth="490.0" layoutX="5.0">
                <image>
                   <Image url="@pics/admin/team.png" />
                </image>
@@ -87,9 +87,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <ImageView fitHeight="204.0" fitWidth="99.0" GridPane.rowIndex="1">
+                  <ImageView fitHeight="115.0" fitWidth="208.0" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@pics/admin/team.png" />
+                        <Image url="@pics/admin/team_short.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" prefHeight="62.0" prefWidth="161.0" text="Team Config" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
@@ -125,9 +125,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <ImageView fitHeight="204.0" fitWidth="99.0" GridPane.rowIndex="1">
+                  <ImageView fitHeight="114.0" fitWidth="115.0" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@pics/admin/player.png" />
+                        <Image url="@pics/admin/player_short.png" />
                      </image>
                   </ImageView>
                   <Label prefHeight="62.0" prefWidth="161.0" text="Player Config" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
@@ -163,9 +163,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <ImageView fitHeight="204.0" fitWidth="99.0" GridPane.rowIndex="1">
+                  <ImageView fitHeight="116.0" fitWidth="121.0" GridPane.rowIndex="1">
                      <image>
-                        <Image url="@pics/admin/tourn_logo.png" />
+                        <Image url="@pics/admin/tourn_logo_short.png" />
                      </image>
                   </ImageView>
                   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="82.0" prefWidth="336.0" text="Manage Matches" GridPane.rowIndex="4">
