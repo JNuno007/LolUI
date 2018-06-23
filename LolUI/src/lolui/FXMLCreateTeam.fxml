@@ -45,7 +45,7 @@
                      <top>
                         <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                            <children>
-                              <TextField layoutX="135.0" layoutY="59.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
+                              <TextField layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
                               <Label layoutX="304.0" layoutY="14.0" text="Team Information" textFill="WHITE">
                                  <font>
                                     <Font size="18.0" />
@@ -66,13 +66,13 @@
                            <children>
                               <Pane prefHeight="111.0" prefWidth="375.0">
                                  <children>
-                                    <TextField layoutX="134.0" layoutY="60.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
+                                    <TextField layoutX="122.0" layoutY="57.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
                                  </children>
                               </Pane>
                               <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                  <children>
-                                    <ComboBox layoutX="113.0" layoutY="61.0" prefHeight="35.0" prefWidth="150.0" promptText="Country" />
-                                    <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="29.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                                    <ComboBox layoutX="103.0" layoutY="61.0" prefHeight="35.0" prefWidth="150.0" promptText="Country" />
+                                    <ImageView fitHeight="35.0" fitWidth="50.0" layoutX="43.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@pics/countries/ar.png" />
                                        </image>
@@ -85,12 +85,12 @@
                      <bottom>
                         <AnchorPane prefHeight="278.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="332.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="333.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@pics/players/unknown.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="308.0" layoutY="167.0" maxHeight="35.0" maxWidth="125.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" text="Select Team Image" />
+                              <Button layoutX="312.0" layoutY="164.0" maxHeight="35.0" maxWidth="125.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" text="Select Team Image" />
                               <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@pics/back.png" />
@@ -180,7 +180,7 @@
                               </Pane>
                               <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
                                  <children>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="192.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@pics/positions/strategy.png" />
                                        </image></ImageView>
@@ -188,7 +188,11 @@
                               </Pane>
                               <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
                                  <children>
-                                    <Button layoutX="69.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="35.0" text="Save and Create" />
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="188.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/save.png" />
+                                       </image>
+                                    </ImageView>
                                  </children>
                               </Pane>
                               <ComboBox prefHeight="35.0" prefWidth="252.0" GridPane.columnIndex="1" />
