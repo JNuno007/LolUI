@@ -61,7 +61,7 @@ public class FXMLCreateNewMemberController implements Initializable {
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setResizable(false);
         stage.setY(350);
-        stage.setX(700);
+        stage.setX(650);
         stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
