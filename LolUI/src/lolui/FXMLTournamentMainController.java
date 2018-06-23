@@ -30,14 +30,14 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lolbll.TorneioServices;
-import model.Encontro;
-import model.Equipa;
-import model.Ronda;
-import model.Torneio;
-//import loldal.model.Encontro;
-//import loldal.model.Equipa;
-//import loldal.model.Ronda;
-//import loldal.model.Torneio;
+//import model.Encontro;
+//import model.Equipa;
+//import model.Ronda;
+//import model.Torneio;
+import loldal.model.Encontro;
+import loldal.model.Equipa;
+import loldal.model.Ronda;
+import loldal.model.Torneio;
 
 /**
  * FXML Controller class
