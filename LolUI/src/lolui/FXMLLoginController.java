@@ -34,8 +34,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import lolbll.AdminServices;
-import model.Admin;
-//import loldal.model.Admin;
+//import model.Admin;
+import loldal.model.Admin;
 
 /**
  * FXML Controller class

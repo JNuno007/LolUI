@@ -16,16 +16,16 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="parentBorderPane" maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/create_team_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLCreateTeamController">
    <top>
       <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="680.0" layoutY="28.0" text="Create Team">
+            <Label layoutX="680.0" layoutY="28.0" text="Create Team" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Line endX="1500.0" layoutY="70.0" />
+            <Line endX="1500.0" layoutY="70.0" stroke="ORANGE" />
          </children>
       </AnchorPane>
    </top>
@@ -46,7 +46,7 @@
                         <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                            <children>
                               <TextField layoutX="135.0" layoutY="59.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
-                              <Label layoutX="304.0" layoutY="14.0" text="Team Information">
+                              <Label layoutX="304.0" layoutY="14.0" text="Team Information" textFill="WHITE">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -85,12 +85,12 @@
                      <bottom>
                         <AnchorPane prefHeight="278.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="333.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="332.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@pics/players/unknown.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="319.0" layoutY="167.0" mnemonicParsing="false" prefHeight="35.0" text="Select Team Image" />
+                              <Button layoutX="308.0" layoutY="167.0" maxHeight="35.0" maxWidth="125.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" text="Select Team Image" />
                               <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@pics/back.png" />
@@ -107,7 +107,7 @@
                      <top>
                         <AnchorPane prefHeight="50.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                            <children>
-                              <Label layoutX="287.0" layoutY="11.0" text="Select Team Members">
+                              <Label layoutX="287.0" layoutY="11.0" text="Select Team Members" textFill="WHITE">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

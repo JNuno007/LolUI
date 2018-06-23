@@ -18,11 +18,11 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/loadingscreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLCreateNewTournamentController">
+<BorderPane fx:id="parentBorderPane" maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/manage_info_member_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageInfoMemberController">
    <top>
       <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
          <children>
-            <Line endX="1500.0" layoutY="60.0" />
+            <Line endX="1500.0" layoutY="60.0" stroke="ORANGE" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Creating new member" textFill="WHITE">
                <font>
                   <Font size="24.0" />
@@ -54,7 +54,7 @@
                               <Font size="16.0" />
                            </font>
                         </TextField>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="79.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="84.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@pics/lupa.png" />
                            </image>

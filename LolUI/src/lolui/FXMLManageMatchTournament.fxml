@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/loadingscreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageMatchTournamentController">
+<BorderPane fx:id="parentBorderPane" maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/manage_match_tournament_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageMatchTournamentController">
    <center>
       <GridPane maxHeight="530.0" maxWidth="1500.0" minHeight="530.0" minWidth="1500.0" prefHeight="530.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -43,7 +43,7 @@
                               <Font size="16.0" />
                            </font>
                         </TextField>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="142.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="196.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@pics/lupa.png" />
                            </image>
@@ -54,7 +54,7 @@
                <bottom>
                   <Pane prefHeight="40.0" prefWidth="726.0" BorderPane.alignment="CENTER">
                      <children>
-                        <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="49.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgBack" fitHeight="38.0" fitWidth="41.0" layoutX="49.0" layoutY="-5.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@pics/back.png" />
                            </image>
@@ -75,12 +75,12 @@
                      <children>
                         <Pane maxHeight="570.0" maxWidth="750.0" minHeight="570.0" minWidth="750.0" prefHeight="570.0" prefWidth="750.0">
                            <children>
-                              <ImageView fitHeight="530.0" fitWidth="750.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="530.0" fitWidth="750.0" layoutX="50.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@pics/fluxogram16edited.png" />
                                  </image>
                               </ImageView>
-                              <GridPane layoutX="50.0" layoutY="248.0" maxHeight="55.0" maxWidth="155.0" minHeight="43.0" minWidth="130.0" onMouseEntered="#onClickGrid" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="50.0" layoutY="266.0" maxHeight="55.0" maxWidth="155.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -107,7 +107,7 @@
                                     <Label fx:id="lblT16R4E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="210.0" layoutY="374.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="210.0" layoutY="392.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -134,7 +134,7 @@
                                     <Label fx:id="lblT16R3E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="210.0" layoutY="124.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="210.0" layoutY="142.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -161,7 +161,7 @@
                                     <Label fx:id="lblT16R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="375.0" layoutY="307.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="375.0" layoutY="325.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -188,7 +188,7 @@
                                     <Label fx:id="lblT16R2E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="375.0" layoutY="438.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="375.0" layoutY="456.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -215,7 +215,7 @@
                                     <Label fx:id="lblT16R2E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="375.0" layoutY="189.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="375.0" layoutY="207.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -242,7 +242,7 @@
                                     <Label fx:id="lblT16R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="375.0" layoutY="57.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="375.0" layoutY="75.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -269,7 +269,7 @@
                                     <Label fx:id="lblT16R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="472.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="490.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -296,7 +296,7 @@
                                     <Label fx:id="lblT16R1E8Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="407.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="425.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -323,7 +323,7 @@
                                     <Label fx:id="lblT16R1E7Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="339.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="357.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -350,7 +350,7 @@
                                     <Label fx:id="lblT16R1E6Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="274.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="292.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -377,7 +377,7 @@
                                     <Label fx:id="lblT16R1E5Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="221.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="239.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -404,7 +404,7 @@
                                     <Label fx:id="lblT16R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="155.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="173.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -431,7 +431,7 @@
                                     <Label fx:id="lblT16R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="90.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="108.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -458,7 +458,7 @@
                                     <Label fx:id="lblT16R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
-                              <GridPane layoutX="540.0" layoutY="25.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                              <GridPane layoutX="540.0" layoutY="43.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -721,7 +721,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Line endX="1500.0" layoutY="70.0" />
+            <Line endX="1500.0" layoutY="70.0" stroke="ORANGE" />
          </children>
       </AnchorPane>
    </top>
