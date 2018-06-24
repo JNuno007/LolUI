@@ -10,14 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -39,14 +41,22 @@ public class FXMLCountrySelectionController implements Initializable {
     
     @FXML private TextField searchBar;
     
+    private ImageView countrySelected;
+    
     private List<Pais> paises;
+    
+    private List<Pais> listaFiltrada;
+    
+    private Pais pais;
+    
+    private int pos;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         mainPane.setCenter(gridPane);
         this.pesquisarNaLista();
-        System.out.println("INITIALIZE DEPOIS DE SET CENTER");
+        
     }
 
     // -- Criar GridPane de Paises
@@ -79,7 +89,8 @@ public class FXMLCountrySelectionController implements Initializable {
                 }
             }
         }
-        System.out.println("DEPOIS DO FOR");
+        listaFiltrada = paises;
+        this.selecionaPais();
     }
     
     public void pesquisarNaLista(){
@@ -89,6 +100,7 @@ public class FXMLCountrySelectionController implements Initializable {
            if(texto.isEmpty()){
                this.limpaGrid();
                this.preencheGridPaises();
+               System.out.println(listaFiltrada.size());
            }else{
                this.limpaGrid();
                for(Pais p: paises){
@@ -125,7 +137,8 @@ public class FXMLCountrySelectionController implements Initializable {
                 }
             }
         }
-        System.out.println("DEPOIS DO FOR");
+        listaFiltrada = list;
+        this.selecionaPais();
     }
     
     public void limpaGrid(){
@@ -136,5 +149,44 @@ public class FXMLCountrySelectionController implements Initializable {
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
+    
+     public void selecionaPais(){
+        for(Node node: gridPane.getChildren()){
+            node.setCursor(Cursor.HAND);
+            node.setOnMouseClicked((event) -> {
+               countrySelected = (ImageView)node;
+               int column = GridPane.getColumnIndex(node);
+               int row = GridPane.getRowIndex(node) + 1;
+               if(row > 1){
+                  pos = 6 * (row-1) + column;
+                  pais = listaFiltrada.get(pos);
+                  this.closePopUp();
+               }else{
+                  pos = column;
+                  pais = listaFiltrada.get(pos);
+                  this.closePopUp();
+               }
+            });
+            node.setOnMouseEntered((event) -> {
+               int column = GridPane.getColumnIndex(node);
+               int row = GridPane.getRowIndex(node) + 1;
+               if(row > 1){
+                  pos = 6 * (row-1) + column;
+               }else{
+                  pos = column;
+               }
+               Tooltip.install(node, new Tooltip(listaFiltrada.get(pos).getNome()));
+            });
+        }
+     }
+     
+    public Image getCountryImageSelected(){
+        return countrySelected.getImage();
+    }
+    
+    public Pais getPaisSelected(){
+       return pais;
+    }
+    
     
 }

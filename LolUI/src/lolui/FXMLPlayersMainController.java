@@ -6,6 +6,8 @@
 package lolui;
 
 import hibernate.HibernateGenericLib;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -96,8 +98,9 @@ public class FXMLPlayersMainController implements Initializable {
     
      public void preencherListaJogadores(){
        listaPesquisa = HibernateGenericLib.executeHQLQuery(" from Membroequipa where cargo = 'player'");
-       Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getEquipa().toString());
-       comparator = comparator.thenComparing(Comparator.comparing(m -> m.getNome()));
+       //Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getEquipa().toString());
+       //comparator = comparator.thenComparing(Comparator.comparing(m -> m.getNome()));
+       Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getNome());
        Stream<Membroequipa> membroStream = listaPesquisa.stream().sorted(comparator);
        List<Membroequipa> listaOrdenada = membroStream.collect(Collectors.toList());
        membrosEquipaObs = FXCollections.observableArrayList(listaOrdenada);
@@ -124,7 +127,7 @@ public class FXMLPlayersMainController implements Initializable {
     }
     
     public void atribuirTeamPlayer(Membroequipa me){
-        if(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png")!=null){
+        if(me.getEquipa()!=null && FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png")!=null){
             this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png"))); 
         }else{
             this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/unknown.png")));
@@ -147,7 +150,7 @@ public class FXMLPlayersMainController implements Initializable {
         this.listaJogadores.getSelectionModel().selectedItemProperty().addListener((observable) -> {
             me = (Membroequipa) listaJogadores.getSelectionModel().getSelectedItem();
             if(me!=null){
-               this.atribuirImagemPlayer(me);
+                this.atribuirImagemPlayer(me);
                 this.atribuirPaisPlayer(me);
                 this.atribuirNomePlayer(me);
                 this.atribuirIdadePlayer(me);
