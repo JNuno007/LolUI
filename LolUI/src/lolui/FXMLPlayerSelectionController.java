@@ -23,7 +23,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lolbll.MembroEquipaServices;
 import loldal.model.Membroequipa;
-import loldal.model.Pais;
 
 /**
  * FXML Controller class
@@ -35,78 +34,81 @@ public class FXMLPlayerSelectionController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    
-    @FXML private BorderPane mainPane;
-    
-    @FXML private GridPane gridPane;
-    
-    @FXML private ImageView imgBack;
-    
-    @FXML private TextField searchBar;
-    
+    @FXML
+    private BorderPane mainPane;
+
+    @FXML
+    private GridPane gridPane;
+
+    @FXML
+    private ImageView imgBack;
+
+    @FXML
+    private TextField searchBar;
+
     private ImageView memberSelected;
-    
+
     private Membroequipa me;
-    
+
     private List<Membroequipa> lista;
-    
+
     private List<Membroequipa> listaFiltrada;
-    
+
     private int pos;
-    
+
     private String posicao;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mainPane.setCenter(gridPane);
         this.preencheListaMembrosDisponiveis();
         this.pesquisarNaLista();
-    }    
-    
-    public void preencheListaMembrosDisponiveis(){
+    }
+
+    public void preencheListaMembrosDisponiveis() {
         lista = MembroEquipaServices.getAllMembrosDisponiveis();
         System.out.println(lista.size());
     }
-    
-    @FXML public void closePopUp(){
+
+    @FXML
+    public void closePopUp() {
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
-    
-    public void preencheGridPane(String posicao){
+
+    public void preencheGridPane(String posicao) {
         List<Membroequipa> listaGrid = new ArrayList<>();
-        
-        if(posicao.equals("null")){
-            for(Membroequipa me: lista){
-                if(me.getPosicao() == null){
+
+        if (posicao.equals("null")) {
+            for (Membroequipa me : lista) {
+                if (me.getPosicao() == null) {
                     listaGrid.add(me);
                 }
             }
-        }else{
-            for(Membroequipa me: lista){
-                if(me.getPosicao()!=null && me.getPosicao().getSigla().equals(posicao)){
+        } else {
+            for (Membroequipa me : lista) {
+                if (me.getPosicao() != null && me.getPosicao().getSigla().equals(posicao)) {
                     listaGrid.add(me);
                 }
-            }  
+            }
         }
-        
-        
+
         int column = 0;
         int row = 0;
-        
-        for(Membroequipa m: listaGrid){
-            
-            if(FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + m.getNome() + ".png")!=null){
+
+        for (Membroequipa m : listaGrid) {
+
+            if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
                 ImageView image = new ImageView();
-                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/"+ m.getNome() +".png")));
-            
+                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+
                 image.setFitHeight(50);
                 image.setFitWidth(75);
 
                 gridPane.add(image, column, row);
                 column++;
-                
-                if(column == 6){
+
+                if (column == 6) {
                     column = 0;
                     row++;
                 }
@@ -115,84 +117,84 @@ public class FXMLPlayerSelectionController implements Initializable {
         listaFiltrada = listaGrid;
         this.selecionaMembro();
     }
-    
-    public void selecionaMembro(){
-        for(Node node: gridPane.getChildren()){
+
+    public void selecionaMembro() {
+        for (Node node : gridPane.getChildren()) {
             node.setCursor(Cursor.HAND);
             node.setOnMouseClicked((event) -> {
-               memberSelected = (ImageView)node;
-               int column = GridPane.getColumnIndex(node);
-               int row = GridPane.getRowIndex(node) + 1;
-               if(row > 1){
-                  pos = 6 * (row-1) + column;
-                  me = listaFiltrada.get(pos);
-                  this.closePopUp();
-               }else{
-                  pos = column;
-                  me = listaFiltrada.get(pos);
-                  this.closePopUp();
-               }
+                memberSelected = (ImageView) node;
+                int column = GridPane.getColumnIndex(node);
+                int row = GridPane.getRowIndex(node) + 1;
+                if (row > 1) {
+                    pos = 6 * (row - 1) + column;
+                    me = listaFiltrada.get(pos);
+                    this.closePopUp();
+                } else {
+                    pos = column;
+                    me = listaFiltrada.get(pos);
+                    this.closePopUp();
+                }
             });
             node.setOnMouseEntered((event) -> {
-               int column = GridPane.getColumnIndex(node);
-               int row = GridPane.getRowIndex(node) + 1;
-               if(row > 1){
-                  pos = 6 * (row-1) + column;
-               }else{
-                  pos = column;
-               }
-               Tooltip.install(node, new Tooltip(listaFiltrada.get(pos).getNome()));
+                int column = GridPane.getColumnIndex(node);
+                int row = GridPane.getRowIndex(node) + 1;
+                if (row > 1) {
+                    pos = 6 * (row - 1) + column;
+                } else {
+                    pos = column;
+                }
+                Tooltip.install(node, new Tooltip(listaFiltrada.get(pos).getNome()));
             });
         }
     }
-    
-    public void pesquisarNaLista(){
-       searchBar.setOnKeyReleased((event) -> {
-           List<Membroequipa> temp = new ArrayList<>();
-           String texto = searchBar.getText();
-           if(texto.isEmpty()){
-               this.limpaGrid();
-               this.preencheGridPane(posicao);
-               System.out.println(listaFiltrada.size());
-           }else{
-               this.limpaGrid();
-               if(posicao.equals("null")){
-                    for(Membroequipa me: lista){
-                        if(me.getPosicao() == null && me.getNome().toLowerCase().contains(texto.toLowerCase())){
+
+    public void pesquisarNaLista() {
+        searchBar.setOnKeyReleased((event) -> {
+            List<Membroequipa> temp = new ArrayList<>();
+            String texto = searchBar.getText();
+            if (texto.isEmpty()) {
+                this.limpaGrid();
+                this.preencheGridPane(posicao);
+                System.out.println(listaFiltrada.size());
+            } else {
+                this.limpaGrid();
+                if (posicao.equals("null")) {
+                    for (Membroequipa me : lista) {
+                        if (me.getPosicao() == null && me.getNome().toLowerCase().contains(texto.toLowerCase())) {
                             temp.add(me);
                         }
                     }
-                }else{
-                    for(Membroequipa me: lista){
-                        if(me.getPosicao()!=null && me.getPosicao().getSigla().equals(posicao) && me.getNome().toLowerCase().contains(texto.toLowerCase())){
+                } else {
+                    for (Membroequipa me : lista) {
+                        if (me.getPosicao() != null && me.getPosicao().getSigla().equals(posicao) && me.getNome().toLowerCase().contains(texto.toLowerCase())) {
                             temp.add(me);
                         }
-                    }  
+                    }
                 }
-               this.preencheGridMembrosFiltrada(temp);
-           }
+                this.preencheGridMembrosFiltrada(temp);
+            }
         });
     }
-    
-    public void preencheGridMembrosFiltrada(List<Membroequipa> list){
+
+    public void preencheGridMembrosFiltrada(List<Membroequipa> list) {
         int column = 0;
         int row = 0;
-        
+
         this.limpaGrid();
-        
-        for(Membroequipa me: list){
-            
-            if(FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
+
+        for (Membroequipa me : list) {
+
+            if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png") != null) {
                 ImageView image = new ImageView();
-                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/"+ me.getNome() +".png")));
-            
+                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")));
+
                 image.setFitHeight(50);
                 image.setFitWidth(75);
 
                 gridPane.add(image, column, row);
                 column++;
-                
-                if(column == 6){
+
+                if (column == 6) {
                     column = 0;
                     row++;
                 }
@@ -201,17 +203,17 @@ public class FXMLPlayerSelectionController implements Initializable {
         listaFiltrada = list;
         this.selecionaMembro();
     }
-    
-    public void limpaGrid(){
-       gridPane.getChildren().removeIf(node -> Objects.equals(GridPane.getRowIndex(node), GridPane.getRowIndex(node)));
+
+    public void limpaGrid() {
+        gridPane.getChildren().removeIf(node -> Objects.equals(GridPane.getRowIndex(node), GridPane.getRowIndex(node)));
     }
-    
-    public Image getMemberImageSelected(){
+
+    public Image getMemberImageSelected() {
         return memberSelected.getImage();
     }
-    
-    public Membroequipa getMembroSelected(){
-       return me;
+
+    public Membroequipa getMembroSelected() {
+        return me;
     }
 
     public void setPosicao(String posicao) {

@@ -9,10 +9,10 @@ and open the template in the editor.
 */
 
 .scroll-pane > .viewport {
-   -fx-background-color: transparent;
+    -fx-background-color: transparent;
 }
 
 .scroll-pane {
-   -fx-background-image: url('../pics/wallpaper.jpg');
+    -fx-background-image: url('../pics/wallpaper.jpg');
 }
 

@@ -31,22 +31,27 @@ import javafx.stage.StageStyle;
  */
 public class FXMLAdminMainController implements Initializable {
 
-    @FXML private GridPane gridpane;
-    
-     //AnchorPanes
-    
-    @FXML private AnchorPane teamMain;
-    @FXML private AnchorPane playerMain;
-    @FXML private AnchorPane tournamentMain;
-    @FXML private AnchorPane teamOptions;
-    @FXML private AnchorPane playerOptions;
-    @FXML private AnchorPane tournamentOptions;
-       
-    
+    @FXML
+    private GridPane gridpane;
+
+    //AnchorPanes
+    @FXML
+    private AnchorPane teamMain;
+    @FXML
+    private AnchorPane playerMain;
+    @FXML
+    private AnchorPane tournamentMain;
+    @FXML
+    private AnchorPane teamOptions;
+    @FXML
+    private AnchorPane playerOptions;
+    @FXML
+    private AnchorPane tournamentOptions;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         for (Node node : gridpane.getChildren()) {
-            if(node.isVisible()){
+            if (node.isVisible()) {
                 node.setEffect(new GaussianBlur());
                 node.setOnMouseEntered((MouseEvent t) -> {
                     node.setEffect(null);
@@ -57,9 +62,10 @@ public class FXMLAdminMainController implements Initializable {
                 });
             }
         }
-    } 
-    
-    @FXML public void teamMainClick(){
+    }
+
+    @FXML
+    public void teamMainClick() {
         teamMain.setVisible(false);
         playerMain.setVisible(true);
         tournamentMain.setVisible(true);
@@ -67,8 +73,9 @@ public class FXMLAdminMainController implements Initializable {
         playerOptions.setVisible(false);
         tournamentOptions.setVisible(false);
     }
-    
-    @FXML public void playerMainClick(){
+
+    @FXML
+    public void playerMainClick() {
         teamMain.setVisible(true);
         playerMain.setVisible(false);
         tournamentMain.setVisible(true);
@@ -76,8 +83,9 @@ public class FXMLAdminMainController implements Initializable {
         playerOptions.setVisible(true);
         tournamentOptions.setVisible(false);
     }
-    
-    @FXML public void tournamentMainClick(){
+
+    @FXML
+    public void tournamentMainClick() {
         teamMain.setVisible(true);
         playerMain.setVisible(true);
         tournamentMain.setVisible(false);
@@ -85,10 +93,11 @@ public class FXMLAdminMainController implements Initializable {
         playerOptions.setVisible(false);
         tournamentOptions.setVisible(true);
     }
-    
+
     //CREATE NEW TEAM
-    @FXML public void createTeamAction(MouseEvent event) throws IOException{
-        
+    @FXML
+    public void createTeamAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLCreateTeam.fxml"));
         Parent root = loader.load();
         FXMLCreateTeamController controller = loader.getController();
@@ -96,8 +105,8 @@ public class FXMLAdminMainController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareCreateTeamStage(root);
     }
-    
-    public void prepareCreateTeamStage(Parent root){
+
+    public void prepareCreateTeamStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -114,12 +123,11 @@ public class FXMLAdminMainController implements Initializable {
 //    private void prepareCreateTeamElements(MouseEvent event, FXMLPopUpTeamController controller) {
 //        //TODO
 //    }
-    
     // ---------------------------------------------------------------------------------------------
-    
     //MANAGE INFO TEAM
-    @FXML public void manageInfoTeamAction(MouseEvent event) throws IOException{
-        
+    @FXML
+    public void manageInfoTeamAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLManageInfoTeam.fxml"));
         Parent root = loader.load();
         FXMLManageInfoTeamController controller = loader.getController();
@@ -127,8 +135,8 @@ public class FXMLAdminMainController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareManageInfoTeamStage(root);
     }
-    
-    public void prepareManageInfoTeamStage(Parent root){
+
+    public void prepareManageInfoTeamStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -145,13 +153,11 @@ public class FXMLAdminMainController implements Initializable {
 //    private void prepareManageInfoTeamElements(MouseEvent event, FXMLPopUpTeamController controller) {
 //        //TODO
 //    }
-    
     // -----------------------------------------------------------------------------------------------
-    
     //CREATE NEW TOURNAMENT
-    
-     @FXML public void createTournamentAction(MouseEvent event) throws IOException{
-        
+    @FXML
+    public void createTournamentAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLCreateNewTournament.fxml"));
         Parent root = loader.load();
         FXMLCreateNewTournamentController controller = loader.getController();
@@ -159,8 +165,8 @@ public class FXMLAdminMainController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareCreateTournamenStage(root);
     }
-    
-    public void prepareCreateTournamenStage(Parent root){
+
+    public void prepareCreateTournamenStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -177,11 +183,10 @@ public class FXMLAdminMainController implements Initializable {
 //    private void prepareCreateTournamenElements(MouseEvent event, FXMLPopUpTeamController controller) {
 //        //TODO
 //    }
-    
     //MANAGE INFO TOURNAMENT
-    
-    @FXML public void manageInfoTournamentAction(MouseEvent event) throws IOException{
-        
+    @FXML
+    public void manageInfoTournamentAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLManageInfoTournament.fxml"));
         Parent root = loader.load();
         FXMLManageInfoTournamentController controller = loader.getController();
@@ -189,8 +194,8 @@ public class FXMLAdminMainController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareCreateTournamenStage(root);
     }
-    
-    public void prepareManageInfoTournamenStage(Parent root){
+
+    public void prepareManageInfoTournamenStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -207,11 +212,10 @@ public class FXMLAdminMainController implements Initializable {
 //    private void prepareManageInfoTournamenElements(MouseEvent event, FXMLPopUpTeamController controller) {
 //        //TODO
 //    }
-    
     //MANAGE TOURNAMENT MATCHES
-    
-    @FXML public void manageMatchTournamentAction(MouseEvent event) throws IOException{
-        
+    @FXML
+    public void manageMatchTournamentAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLManageMatchTournament.fxml"));
         Parent root = loader.load();
         FXMLManageMatchTournamentController controller = loader.getController();
@@ -219,8 +223,8 @@ public class FXMLAdminMainController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareManageMatchTournamenStage(root);
     }
-    
-    public void prepareManageMatchTournamenStage(Parent root){
+
+    public void prepareManageMatchTournamenStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -237,13 +241,11 @@ public class FXMLAdminMainController implements Initializable {
 //    private void prepareManageMatchTournamenElements(MouseEvent event, FXMLPopUpTeamController controller) {
 //        //TODO
 //    }
-    
     // ----------------------------------------------------------------------------
-    
     // CREATE NEW MEMBER
-    
-    @FXML public void createMemberAction(MouseEvent event) throws IOException{
-        
+    @FXML
+    public void createMemberAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLCreateNewMember.fxml"));
         Parent root = loader.load();
         FXMLCreateNewMemberController controller = loader.getController();
@@ -251,8 +253,8 @@ public class FXMLAdminMainController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareCreateMemberStage(root);
     }
-    
-    public void prepareCreateMemberStage(Parent root){
+
+    public void prepareCreateMemberStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -269,11 +271,10 @@ public class FXMLAdminMainController implements Initializable {
 //    private void prepareCreateMemberElements(MouseEvent event, FXMLPopUpTeamController controller) {
 //        //TODO
 //    }
-    
     //MANAGE INFO MEMBER
-    
-    @FXML public void manageInfoMemberAction(MouseEvent event) throws IOException{
-        
+    @FXML
+    public void manageInfoMemberAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLManageInfoMember.fxml"));
         Parent root = loader.load();
         FXMLManageInfoMemberController controller = loader.getController();
@@ -281,8 +282,8 @@ public class FXMLAdminMainController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareManageInfoMemberStage(root);
     }
-    
-    public void prepareManageInfoMemberStage(Parent root){
+
+    public void prepareManageInfoMemberStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -299,5 +300,4 @@ public class FXMLAdminMainController implements Initializable {
 //    private void prepareManageInfoMemberElements(MouseEvent event, FXMLPopUpTeamController controller) {
 //        //TODO
 //    }
-    
 }

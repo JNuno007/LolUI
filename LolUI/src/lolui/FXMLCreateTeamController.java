@@ -9,7 +9,6 @@ import java.io.File;
 import lolui.exceptions.InsertEquipaDBException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -48,93 +47,113 @@ import loldal.model.Pais;
  */
 public class FXMLCreateTeamController implements Initializable {
 
-    @FXML private ImageView imgBack;
-    
-    @FXML private BorderPane parentBorderPane;
-    
-    @FXML private TextField txtUsername;
-    
-    @FXML private TextField txtInitials;
-    
-    @FXML private ImageView countrySelected;
-    
-    @FXML private ImageView teamLogo;
-    
+    @FXML
+    private ImageView imgBack;
+
+    @FXML
+    private BorderPane parentBorderPane;
+
+    @FXML
+    private TextField txtUsername;
+
+    @FXML
+    private TextField txtInitials;
+
+    @FXML
+    private ImageView countrySelected;
+
+    @FXML
+    private ImageView teamLogo;
+
     //FXML da grelha direita
-    
-    @FXML private Button btnTop; 
-    
-    @FXML private Button btnJng; 
-    
-    @FXML private Button btnMid; 
-    
-    @FXML private Button btnAdc; 
-    
-    @FXML private Button btnSup; 
-    
-    @FXML private Button btnCoach; 
-    
-    @FXML private ImageView imgTop;
-    
-    @FXML private ImageView imgJng;
-    
-    @FXML private ImageView imgMid;
-    
-    @FXML private ImageView imgAdc;
-    
-    @FXML private ImageView imgSup;
-    
-    @FXML private ImageView imgCoach;
-    
-    @FXML private Button btnSelectImage;
-    
+    @FXML
+    private Button btnTop;
+
+    @FXML
+    private Button btnJng;
+
+    @FXML
+    private Button btnMid;
+
+    @FXML
+    private Button btnAdc;
+
+    @FXML
+    private Button btnSup;
+
+    @FXML
+    private Button btnCoach;
+
+    @FXML
+    private ImageView imgTop;
+
+    @FXML
+    private ImageView imgJng;
+
+    @FXML
+    private ImageView imgMid;
+
+    @FXML
+    private ImageView imgAdc;
+
+    @FXML
+    private ImageView imgSup;
+
+    @FXML
+    private ImageView imgCoach;
+
+    @FXML
+    private Button btnSelectImage;
+
     private FileChooser fileChooser;
-    
+
     private File fileImagem;
-    
+
     private Pais pais;
-    
+
     private Set<Membroequipa> listaMembroEquipa;
-    
+
     private Membroequipa membro;
-    
+
     private String teamName;
-    
+
     private String initials;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         listaMembroEquipa = new HashSet<>();
         parentBorderPane.getStyleClass().add("borderPane");
-        
+
         btnSelectImage.setOnAction(
-            new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(final ActionEvent e) {
-                    fileChooser = new FileChooser();
-                    setExtFilters(fileChooser);
-                    fileImagem = fileChooser.showOpenDialog((Stage)txtUsername.getScene().getWindow());
-                    if (fileImagem != null) {
-                        teamLogo.setImage(new Image(fileImagem.toURI().toString()));
-                    }
+                new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(final ActionEvent e) {
+                fileChooser = new FileChooser();
+                setExtFilters(fileChooser);
+                fileImagem = fileChooser.showOpenDialog((Stage) txtUsername.getScene().getWindow());
+                if (fileImagem != null) {
+                    teamLogo.setImage(new Image(fileImagem.toURI().toString()));
                 }
+            }
         });
-    }    
-    
-    private void setExtFilters(FileChooser chooser){
+    }
+
+    private void setExtFilters(FileChooser chooser) {
         chooser.getExtensionFilters().addAll(
-            new FileChooser.ExtensionFilter("PNG", "*.png")
+                new FileChooser.ExtensionFilter("PNG", "*.png")
         );
     }
-    
-    @FXML public void closePopUp(){
+
+    @FXML
+    public void closePopUp() {
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
-    
-    @FXML public void createCountryAction(MouseEvent event) throws IOException{
-        
+
+    @FXML
+    public void createCountryAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLCountrySelection.fxml"));
         Parent root = loader.load();
         FXMLCountrySelectionController controller = loader.getController();
@@ -143,8 +162,8 @@ public class FXMLCreateTeamController implements Initializable {
         //Metodo para preencher a Janela de PopUp
         this.prepareCountryStage(root, controller);
     }
-    
-    public void prepareCountryStage(Parent root, FXMLCountrySelectionController controller){
+
+    public void prepareCountryStage(Parent root, FXMLCountrySelectionController controller) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -156,48 +175,49 @@ public class FXMLCreateTeamController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
         stage.showAndWait();
-        if(controller.getPaisSelected()!=null){
+        if (controller.getPaisSelected() != null) {
             countrySelected.setImage(controller.getCountryImageSelected());
             this.pais = controller.getPaisSelected();
             System.out.println(this.pais.getNome());
         }
-        
+
     }
-    
-    @FXML public void selectMemberAction(MouseEvent event) throws IOException{
-        
+
+    @FXML
+    public void selectMemberAction(MouseEvent event) throws IOException {
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLPlayerSelection.fxml"));
         Parent root = loader.load();
         FXMLPlayerSelectionController controller = loader.getController();
-        if(event.getSource() == btnTop){
+        if (event.getSource() == btnTop) {
             controller.preencheGridPane("TOP");
             controller.setPosicao("TOP");
         }
-        if(event.getSource() == btnJng){
+        if (event.getSource() == btnJng) {
             controller.preencheGridPane("JNG");
             controller.setPosicao("JNG");
         }
-        if(event.getSource() == btnMid){
+        if (event.getSource() == btnMid) {
             controller.preencheGridPane("MID");
             controller.setPosicao("MID");
         }
-        if(event.getSource() == btnAdc){
+        if (event.getSource() == btnAdc) {
             controller.preencheGridPane("ADC");
             controller.setPosicao("ADC");
         }
-        if(event.getSource() == btnSup){
+        if (event.getSource() == btnSup) {
             controller.preencheGridPane("SUP");
             controller.setPosicao("SUP");
         }
-        if(event.getSource() == btnCoach){
+        if (event.getSource() == btnCoach) {
             controller.preencheGridPane("null");
             controller.setPosicao("null");
         }
         //Metodo para preencher a Janela de PopUp
         this.prepareSelectMemberStage(root, controller);
     }
-    
-    public void prepareSelectMemberStage(Parent root, FXMLPlayerSelectionController controller){
+
+    public void prepareSelectMemberStage(Parent root, FXMLPlayerSelectionController controller) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -210,41 +230,42 @@ public class FXMLCreateTeamController implements Initializable {
         stage.initOwner(this.imgBack.getScene().getWindow());
         stage.showAndWait();
         //TODO
-        if(controller.getMembroSelected()!=null){
+        if (controller.getMembroSelected() != null) {
             membro = controller.getMembroSelected();
             listaMembroEquipa.add(membro);
             this.setImagefromMemberSelected(membro, controller);
         }
     }
-    
-    public void setImagefromMemberSelected(Membroequipa m, FXMLPlayerSelectionController controller){
-        if(m.getPosicao()!=null && m.getPosicao().getSigla().equals("TOP")){
+
+    public void setImagefromMemberSelected(Membroequipa m, FXMLPlayerSelectionController controller) {
+        if (m.getPosicao() != null && m.getPosicao().getSigla().equals("TOP")) {
             imgTop.setImage(controller.getMemberImageSelected());
             btnTop.setText("Edit");
         }
-        if(m.getPosicao()!=null && m.getPosicao().getSigla().equals("JNG")){
+        if (m.getPosicao() != null && m.getPosicao().getSigla().equals("JNG")) {
             imgJng.setImage(controller.getMemberImageSelected());
             btnJng.setText("Edit");
         }
-        if(m.getPosicao()!=null && m.getPosicao().getSigla().equals("MID")){
+        if (m.getPosicao() != null && m.getPosicao().getSigla().equals("MID")) {
             imgMid.setImage(controller.getMemberImageSelected());
             btnMid.setText("Edit");
         }
-        if(m.getPosicao()!=null && m.getPosicao().getSigla().equals("ADC")){
+        if (m.getPosicao() != null && m.getPosicao().getSigla().equals("ADC")) {
             imgAdc.setImage(controller.getMemberImageSelected());
             btnAdc.setText("Edit");
         }
-        if(m.getPosicao()!=null && m.getPosicao().getSigla().equals("SUP")){
+        if (m.getPosicao() != null && m.getPosicao().getSigla().equals("SUP")) {
             imgSup.setImage(controller.getMemberImageSelected());
             btnSup.setText("Edit");
         }
-        if(m.getPosicao()==null){
+        if (m.getPosicao() == null) {
             imgCoach.setImage(controller.getMemberImageSelected());
             btnCoach.setText("Edit");
         }
     }
-    
-    @FXML public void saveOnClick(){
+
+    @FXML
+    public void saveOnClick() {
         try {
             this.verificaEquipa();
             this.getUserInput();
@@ -261,7 +282,7 @@ public class FXMLCreateTeamController implements Initializable {
             alert.setHeaderText("Something went wrong.");
             alert.setContentText(ex.getMessage());
             alert.showAndWait();
-        } catch (Exception e){
+        } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
             alert.setHeaderText("Database internal error.");
@@ -269,90 +290,88 @@ public class FXMLCreateTeamController implements Initializable {
             alert.showAndWait();
         }
     }
-    
-    private void gravarImagemDir(){
+
+    private void gravarImagemDir() {
         try {
-            File file = new File(".\\src\\lolui\\pics\\teams\\" + initials.toLowerCase() +".png");
-            ImageIO.write(SwingFXUtils.fromFXImage(teamLogo.getImage(),null),"png", file);
+            File file = new File(".\\src\\lolui\\pics\\teams\\" + initials.toLowerCase() + ".png");
+            ImageIO.write(SwingFXUtils.fromFXImage(teamLogo.getImage(), null), "png", file);
         } catch (IOException ex) {
             Logger.getLogger(FXMLCreateNewMemberController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public void gravarEquipa(){
-        int contPlayers=0;
+
+    public void gravarEquipa() {
+        int contPlayers = 0;
         //criar Equipa e inserir os dados da equipa
         Equipa equipa = new Equipa();
         equipa.setNome(teamName);
         equipa.setSigla(initials);
         equipa.setPais(pais);
-        
-        if(listaMembroEquipa.size() > 0){
+
+        if (listaMembroEquipa.size() > 0) {
             equipa.setMembroequipas(listaMembroEquipa);
-            
-            for(Membroequipa m: listaMembroEquipa){
+
+            for (Membroequipa m : listaMembroEquipa) {
                 m.setEquipa(equipa);
-                if(m.getPosicao()!=null){
+                if (m.getPosicao() != null) {
                     contPlayers++;
                 }
             }
-            
-            if(contPlayers == 5){
+
+            if (contPlayers == 5) {
                 equipa.setAtivo(true);
-            }else{
+            } else {
                 equipa.setAtivo(false);
             }
         }
         //gravar equipa na DB
         EquipaServices.saveEquipa(equipa);
     }
-    
-    public void getUserInput(){
+
+    public void getUserInput() {
         //Recebemos o nome da equipa
         teamName = txtUsername.getText();
         //Recebemos as initials da equipa
         initials = txtInitials.getText();
     }
-    
-    public void verificaEquipa() throws InsertEquipaDBException{
+
+    public void verificaEquipa() throws InsertEquipaDBException {
         List<Equipa> lista = EquipaServices.listaEquipas();
         //Verificar parametros nome da equipa
-        
-        if(txtUsername.getText().isEmpty()){
+
+        if (txtUsername.getText().isEmpty()) {
             throw new InsertEquipaDBException("The team name is empty");
         }
-        
-        if(txtUsername.getText().length() > 20){
+
+        if (txtUsername.getText().length() > 20) {
             throw new InsertEquipaDBException("The team name is too long, maximum 20 characters");
         }
-        
-        for(Equipa e: lista){
-            if(e.getNome().toLowerCase().equals(txtUsername.getText().toLowerCase())){
+
+        for (Equipa e : lista) {
+            if (e.getNome().toLowerCase().equals(txtUsername.getText().toLowerCase())) {
                 throw new InsertEquipaDBException("The team name is already in use");
             }
         }
-        
+
         //Verificar parametros initials da equipa
-        
-        if(txtInitials.getText().isEmpty()){
+        if (txtInitials.getText().isEmpty()) {
             throw new InsertEquipaDBException("The team initials are empty");
         }
-        
-        if(txtInitials.getText().length() > 4 || txtInitials.getText().contains(" ")){
+
+        if (txtInitials.getText().length() > 4 || txtInitials.getText().contains(" ")) {
             throw new InsertEquipaDBException("The team initials cannot contain spaces and must have a maximum of 4 characters");
         }
-        
-        for(Equipa e: lista){
-            if(e.getSigla().toLowerCase().equals(txtInitials.getText().toLowerCase())){
+
+        for (Equipa e : lista) {
+            if (e.getSigla().toLowerCase().equals(txtInitials.getText().toLowerCase())) {
                 throw new InsertEquipaDBException("The team initials are already in use");
             }
         }
-        
+
         //Verificar se pais existe
-        
-        if(pais == null){
+        if (pais == null) {
             throw new InsertEquipaDBException("Choose the team's country");
         }
     }
-    
+
 }

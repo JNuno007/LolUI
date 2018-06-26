@@ -16,7 +16,7 @@ Button{
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
     -fx-text-fill: orange;
-    
+
 }
 
 Button:hover{

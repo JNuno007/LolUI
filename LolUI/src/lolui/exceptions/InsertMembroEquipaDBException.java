@@ -14,5 +14,5 @@ public class InsertMembroEquipaDBException extends Exception {
     public InsertMembroEquipaDBException(String message) {
         super(message);
     }
-    
+
 }

@@ -19,16 +19,18 @@ import javafx.stage.Stage;
  */
 public class FXMLManageInfoTeamController implements Initializable {
 
-    @FXML private ImageView imgBack;
-    
+    @FXML
+    private ImageView imgBack;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }  
-    
-    @FXML public void closePopUp(){
+    }
+
+    @FXML
+    public void closePopUp() {
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
-    
+
 }

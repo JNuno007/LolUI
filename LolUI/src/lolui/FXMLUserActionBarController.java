@@ -19,7 +19,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
-import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -41,116 +40,114 @@ public class FXMLUserActionBarController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    
     //Id's das imagens
     @FXML
     private ImageView imgTournament;
-    
+
     @FXML
     private ImageView imgTeams;
-            
+
     @FXML
     private ImageView imgPlayer;
-    
+
     @FXML
     private ImageView imgAdmin;
-    
+
     //Textos das imagens
     @FXML
     private Label lblTournament;
-    
+
     @FXML
     private Label lblTeams;
-    
+
     @FXML
     private Label lblPlayer;
-            
+
     @FXML
     private Label lblAdmin;
-            
+
     @FXML
     private Line line;
-    
+
     @FXML
     private BorderPane mainPane;
-    
+
     @FXML
     private GridPane currentGrid;
-    
+
     @FXML
     private MenuButton accountMenu;
-    
+
     private static boolean loggedIn;
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ScaleTransition st = new ScaleTransition();
-        
+
         System.out.println(loggedIn);
-        
+
         fadeInAnimation();
-        
+
         st.setNode(line);
         st.setDuration(Duration.seconds(1));
         st.setToX(-1500);
         st.play();
-        
-    } 
-    
-    public void fadeInAnimation(){
-        FadeTransition ft = new FadeTransition(Duration.millis(1000),imgTournament);
+
+    }
+
+    public void fadeInAnimation() {
+        FadeTransition ft = new FadeTransition(Duration.millis(1000), imgTournament);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
-        ft = new FadeTransition(Duration.millis(1000),imgTeams);
+
+        ft = new FadeTransition(Duration.millis(1000), imgTeams);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
-        ft = new FadeTransition(Duration.millis(1000),imgPlayer);
+
+        ft = new FadeTransition(Duration.millis(1000), imgPlayer);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
-        ft = new FadeTransition(Duration.millis(1000),imgAdmin);
+
+        ft = new FadeTransition(Duration.millis(1000), imgAdmin);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
-        ft = new FadeTransition(Duration.millis(1000),lblTournament);
+
+        ft = new FadeTransition(Duration.millis(1000), lblTournament);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
-        ft = new FadeTransition(Duration.millis(1000),lblTeams);
+
+        ft = new FadeTransition(Duration.millis(1000), lblTeams);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
-        ft = new FadeTransition(Duration.millis(1000),lblPlayer);
+
+        ft = new FadeTransition(Duration.millis(1000), lblPlayer);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
-        ft = new FadeTransition(Duration.millis(1000),lblAdmin);
+
+        ft = new FadeTransition(Duration.millis(1000), lblAdmin);
         ft.setFromValue(0.1);
         ft.setToValue(1.0);
         ft.play();
-        
+
         ft.setOnFinished((event) -> {
-        try {
-            lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
-            currentGrid = FXMLLoader.load(getClass().getResource("FXMLTournamentMain.fxml"));
-        } catch (IOException ex) {
-            Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
+                currentGrid = FXMLLoader.load(getClass().getResource("FXMLTournamentMain.fxml"));
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
+            }
             mainPane.setCenter(currentGrid);
         });
     }
-    
-    
-    public void btnTeamsClicked(){
+
+    public void btnTeamsClicked() {
         try {
             lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
             lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
@@ -162,8 +159,8 @@ public class FXMLUserActionBarController implements Initializable {
         }
         mainPane.setCenter(currentGrid);
     }
-    
-    public void btnPlayersClicked(){
+
+    public void btnPlayersClicked() {
         try {
             lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
             lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
@@ -175,7 +172,7 @@ public class FXMLUserActionBarController implements Initializable {
         }
         mainPane.setCenter(currentGrid);
     }
-    
+
 //    public void btnAdminClicked(){
 //        this.imgAdmin.setOnMouseClicked((event) -> {
 //            try {
@@ -186,8 +183,7 @@ public class FXMLUserActionBarController implements Initializable {
 //            mainPane.setCenter(currentGrid);
 //        });
 //    }
-    
-    public void btnTournamentsClicked(){
+    public void btnTournamentsClicked() {
         try {
             lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
             lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
@@ -199,25 +195,26 @@ public class FXMLUserActionBarController implements Initializable {
         }
         mainPane.setCenter(currentGrid);
     }
-    
-    @FXML public void handleImageAction(MouseEvent event) throws IOException{
+
+    @FXML
+    public void handleImageAction(MouseEvent event) throws IOException {
         lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
         lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
         lblPlayer.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
         lblAdmin.setStyle("-fx-border-color: orange; -fx-border-width: 1px; -fx-border-radius: 5px;-fx-font-weight: bold");
-        
-        if(!loggedIn){
+
+        if (!loggedIn) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLLogin.fxml"));
             Parent root = loader.load();
             FXMLLoginController controller = loader.getController();
             this.prepareStage(root);
-        }else{
+        } else {
             accountMenu.setVisible(true);
             this.carregaPainelAdmin();
         }
     }
-    
-    public void prepareStage(Parent root){
+
+    public void prepareStage(Parent root) {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
@@ -229,34 +226,34 @@ public class FXMLUserActionBarController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgAdmin.getScene().getWindow());
         stage.showAndWait();
-        
-        if(loggedIn){
+
+        if (loggedIn) {
             accountMenu.setVisible(true);
             this.carregaPainelAdmin();
         }
     }
-    
+
     //Método Logout
     @FXML
-    public void logout(){
-       this.btnTournamentsClicked();
-       loggedIn = false;
-       accountMenu.setVisible(false);
-       
+    public void logout() {
+        this.btnTournamentsClicked();
+        loggedIn = false;
+        accountMenu.setVisible(false);
+
     }
-    
-    public void carregaPainelAdmin(){
+
+    public void carregaPainelAdmin() {
         System.out.println("NO METODO carregaPainelAdmin");
         try {
             currentGrid = FXMLLoader.load(getClass().getResource("FXMLAdminMain.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(FXMLUserActionBarController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         mainPane.setCenter(currentGrid);
     }
-    
-    public static void setLoggedIn(boolean bool){
+
+    public static void setLoggedIn(boolean bool) {
         loggedIn = bool;
         System.out.println("loggedIn: " + loggedIn);
     }

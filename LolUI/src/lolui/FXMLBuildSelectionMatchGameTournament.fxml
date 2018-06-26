@@ -15,488 +15,488 @@
 
 
 <BorderPane maxHeight="300.0" maxWidth="700.0" minHeight="300.0" minWidth="700.0" prefHeight="300.0" prefWidth="700.0" stylesheets="@styles/loadingscreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLMatchGameTournamentController">
-   <center>
-      <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="700.0" stylesheets="@styles/popUpSelectElement.css" BorderPane.alignment="CENTER">
-         <content>
-            <BorderPane>
-               <top>
-                  <GridPane prefHeight="766.0" prefWidth="650.0" BorderPane.alignment="CENTER">
-                    <columnConstraints>
-                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <image>
-                              <Image url="@pics/items/caulfield's%20warhammer.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </GridPane>
-               </top>
-            </BorderPane>
-         </content>
-      </ScrollPane>
-   </center>
-   <top>
-      <Pane prefHeight="67.0" prefWidth="580.0" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="searchBar" alignment="CENTER" layoutX="28.0" layoutY="14.0" maxWidth="350.0" minWidth="150.0" prefHeight="19.0" prefWidth="200.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="291.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <image>
-                  <Image url="@pics/items/item.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="338.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <image>
-                  <Image url="@pics/items/item.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="382.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <image>
-                  <Image url="@pics/items/item.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="428.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <image>
-                  <Image url="@pics/items/item.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="473.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <image>
-                  <Image url="@pics/items/item.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="245.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <image>
-                  <Image url="@pics/items/item.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="556.0" layoutY="21.0" mnemonicParsing="false" text="Validate Build" />
-         </children>
-      </Pane>
-   </top>
+    <center>
+        <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="700.0" stylesheets="@styles/popUpSelectElement.css" BorderPane.alignment="CENTER">
+            <content>
+                <BorderPane>
+                    <top>
+                        <GridPane prefHeight="766.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="32.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </top>
+                </BorderPane>
+            </content>
+        </ScrollPane>
+    </center>
+    <top>
+        <Pane prefHeight="67.0" prefWidth="580.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="searchBar" alignment="CENTER" layoutX="28.0" layoutY="14.0" maxWidth="350.0" minWidth="150.0" prefHeight="19.0" prefWidth="200.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="291.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <image>
+                        <Image url="@pics/items/item.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="338.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <image>
+                        <Image url="@pics/items/item.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="382.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <image>
+                        <Image url="@pics/items/item.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="428.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <image>
+                        <Image url="@pics/items/item.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="473.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <image>
+                        <Image url="@pics/items/item.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="245.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <image>
+                        <Image url="@pics/items/item.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="556.0" layoutY="21.0" mnemonicParsing="false" text="Validate Build" />
+            </children>
+        </Pane>
+    </top>
 </BorderPane>

@@ -8,10 +8,10 @@
 <AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" stylesheets="@styles/loadingscreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLMainScreenController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <ImageView fx:id="logo" fitHeight="300.0" fitWidth="400.0" layoutX="641.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@pics/lol.png" />
-         </image>
-      </ImageView>
+        <ImageView fx:id="logo" fitHeight="300.0" fitWidth="400.0" layoutX="641.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pics/lol.png" />
+            </image>
+        </ImageView>
     </children>
 </AnchorPane>

@@ -10,7 +10,7 @@ package lolui.exceptions;
  * @author joaoc
  */
 public class InsertEquipaDBException extends Exception {
-    
+
     public InsertEquipaDBException(String message) {
         super(message);
     }

@@ -20,20 +20,22 @@ import javafx.stage.Stage;
  */
 public class FXMLCreateNewTournamentController implements Initializable {
 
-    @FXML private ImageView imgBack;
-    
-    @FXML private BorderPane parentBorderPane;
-    
-    
+    @FXML
+    private ImageView imgBack;
+
+    @FXML
+    private BorderPane parentBorderPane;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         parentBorderPane.getStyleClass().add("borderPane");
-    }    
-    
-    @FXML public void closePopUp(){
+    }
+
+    @FXML
+    public void closePopUp() {
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
-    
+
 }

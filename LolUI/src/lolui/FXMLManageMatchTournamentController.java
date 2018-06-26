@@ -20,23 +20,27 @@ import javafx.stage.Stage;
  */
 public class FXMLManageMatchTournamentController implements Initializable {
 
-    @FXML private ImageView imgBack;
-    
-    @FXML private BorderPane parentBorderPane;
-    
+    @FXML
+    private ImageView imgBack;
+
+    @FXML
+    private BorderPane parentBorderPane;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         parentBorderPane.getStyleClass().add("borderPane");
-    }  
-    
-    @FXML public void closePopUp(){
+    }
+
+    @FXML
+    public void closePopUp() {
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
-     
+
     //TODO
-    @FXML public void handleGridAction(){
-        
+    @FXML
+    public void handleGridAction() {
+
     }
-    
+
 }

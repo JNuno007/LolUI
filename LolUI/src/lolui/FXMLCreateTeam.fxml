@@ -17,259 +17,260 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="parentBorderPane" maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/create_team_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLCreateTeamController">
-   <top>
-      <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="680.0" layoutY="28.0" text="Create Team" textFill="WHITE">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Line endX="1500.0" layoutY="70.0" stroke="ORANGE" />
-         </children>
-      </AnchorPane>
-   </top>
-   <center>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <center>
-            <GridPane maxWidth="1500.0" minWidth="1500.0" prefHeight="530.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="750.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="750.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0">
-                     <top>
-                        <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <TextField fx:id="txtUsername" layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
-                              <Label layoutX="304.0" layoutY="14.0" text="Team Information" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                     </top>
-                     <center>
-                        <GridPane BorderPane.alignment="CENTER">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Pane prefHeight="111.0" prefWidth="375.0">
-                                 <children>
-                                    <TextField fx:id="txtInitials" layoutX="122.0" layoutY="57.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                                 <children>
-                                    <ImageView fx:id="countrySelected" fitHeight="35.0" fitWidth="50.0" layoutX="43.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/countries/ar.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Button layoutX="110.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="35.0" prefWidth="135.0" text="Country" />
-                                 </children>
-                              </Pane>
-                           </children>
-                        </GridPane>
-                     </center>
-                     <bottom>
-                        <AnchorPane prefHeight="278.0" prefWidth="750.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <GridPane layoutX="300.0" layoutY="14.0">
-                                 <columnConstraints>
-                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-                                 </columnConstraints>
-                                 <rowConstraints>
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                 </rowConstraints>
-                                 <children>
-                                    <ImageView fx:id="teamLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/players/unknown.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Select Team Image" GridPane.rowIndex="1" />
-                                 </children>
-                              </GridPane>
-                              <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@pics/back.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                     </bottom>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
-                     <top>
-                        <AnchorPane prefHeight="50.0" prefWidth="750.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <Label layoutX="287.0" layoutY="11.0" text="Select Team Members" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                     </top>
-                     <center>
-                        <GridPane BorderPane.alignment="CENTER">
-                          <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <Pane prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/positions/top.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                 <children>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/positions/jng.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                                 <children>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/positions/mid.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-                                 <children>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/positions/adc.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
-                                 <children>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/positions/sup.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
-                                 <children>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="192.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/positions/strategy.png" />
-                                       </image></ImageView>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
-                                 <children>
-                                    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="188.0" layoutY="10.0" onMouseClicked="#saveOnClick" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@pics/save.png" />
-                                       </image>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </ImageView>
-                                 </children>
-                              </Pane>
-                              <Button fx:id="btnTop" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" />
-                              <Button fx:id="btnJng" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Button fx:id="btnMid" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Button fx:id="btnAdc" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Button fx:id="btnSup" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Button fx:id="btnCoach" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <ImageView fx:id="imgTop" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                                 <image>
-                                    <Image url="@pics/positions/top.png" />
-                                 </image>
-                                 <GridPane.margin>
-                                    <Insets left="15.0" />
-                                 </GridPane.margin>
-                              </ImageView>
-                              <ImageView fx:id="imgJng" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <image>
-                                    <Image url="@pics/positions/top.png" />
-                                 </image>
-                                 <GridPane.margin>
-                                    <Insets left="15.0" />
-                                 </GridPane.margin>
-                              </ImageView>
-                              <ImageView fx:id="imgMid" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                 <image>
-                                    <Image url="@pics/positions/top.png" />
-                                 </image>
-                                 <GridPane.margin>
-                                    <Insets left="15.0" />
-                                 </GridPane.margin>
-                              </ImageView>
-                              <ImageView fx:id="imgAdc" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                                 <image>
-                                    <Image url="@pics/positions/top.png" />
-                                 </image>
-                                 <GridPane.margin>
-                                    <Insets left="15.0" />
-                                 </GridPane.margin>
-                              </ImageView>
-                              <ImageView fx:id="imgSup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                                 <image>
-                                    <Image url="@pics/positions/top.png" />
-                                 </image>
-                                 <GridPane.margin>
-                                    <Insets left="15.0" />
-                                 </GridPane.margin>
-                              </ImageView>
-                              <ImageView fx:id="imgCoach" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                                 <image>
-                                    <Image url="@pics/positions/top.png" />
-                                 </image>
-                                 <GridPane.margin>
-                                    <Insets left="15.0" />
-                                 </GridPane.margin>
-                              </ImageView>
-                           </children>
-                        </GridPane>
-                     </center>
-                  </BorderPane>
-               </children>
-            </GridPane>
-         </center>
-      </BorderPane>
-   </center>
+    <top>
+        <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="680.0" layoutY="28.0" text="Create Team" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <Line endX="1500.0" layoutY="70.0" stroke="ORANGE" />
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <center>
+                <GridPane maxWidth="1500.0" minWidth="1500.0" prefHeight="530.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="750.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="750.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                            <top>
+                                <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <TextField fx:id="txtUsername" layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
+                                        <Label layoutX="304.0" layoutY="14.0" text="Team Information" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </top>
+                            <center>
+                                <GridPane BorderPane.alignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Pane prefHeight="111.0" prefWidth="375.0">
+                                            <children>
+                                                <TextField fx:id="txtInitials" layoutX="122.0" layoutY="57.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                            <children>
+                                                <ImageView fx:id="countrySelected" fitHeight="35.0" fitWidth="50.0" layoutX="43.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/countries/ar.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Button layoutX="110.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="35.0" prefWidth="135.0" text="Country" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </GridPane>
+                            </center>
+                            <bottom>
+                                <AnchorPane prefHeight="278.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <GridPane layoutX="300.0" layoutY="14.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <ImageView fx:id="teamLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/players/unknown.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Select Team Image" GridPane.rowIndex="1" />
+                                            </children>
+                                        </GridPane>
+                                        <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@pics/back.png" />
+                                            </image>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                            </bottom>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                            <top>
+                                <AnchorPane prefHeight="50.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Label layoutX="287.0" layoutY="11.0" text="Select Team Members" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </top>
+                            <center>
+                                <GridPane BorderPane.alignment="CENTER">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Pane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/positions/top.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/positions/jng.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/positions/mid.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/positions/adc.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="186.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/positions/sup.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                            <children>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="192.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/positions/strategy.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                            <children>
+                                                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="188.0" layoutY="10.0" onMouseClicked="#saveOnClick" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@pics/save.png" />
+                                                    </image>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                        <Button fx:id="btnTop" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" />
+                                        <Button fx:id="btnJng" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <Button fx:id="btnMid" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <Button fx:id="btnAdc" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <Button fx:id="btnSup" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                        <Button fx:id="btnCoach" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                        <ImageView fx:id="imgTop" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                            <image>
+                                                <Image url="@pics/positions/top.png" />
+                                            </image>
+                                            <GridPane.margin>
+                                                <Insets left="15.0" />
+                                            </GridPane.margin>
+                                        </ImageView>
+                                        <ImageView fx:id="imgJng" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                            <image>
+                                                <Image url="@pics/positions/top.png" />
+                                            </image>
+                                            <GridPane.margin>
+                                                <Insets left="15.0" />
+                                            </GridPane.margin>
+                                        </ImageView>
+                                        <ImageView fx:id="imgMid" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                            <image>
+                                                <Image url="@pics/positions/top.png" />
+                                            </image>
+                                            <GridPane.margin>
+                                                <Insets left="15.0" />
+                                            </GridPane.margin>
+                                        </ImageView>
+                                        <ImageView fx:id="imgAdc" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                            <image>
+                                                <Image url="@pics/positions/top.png" />
+                                            </image>
+                                            <GridPane.margin>
+                                                <Insets left="15.0" />
+                                            </GridPane.margin>
+                                        </ImageView>
+                                        <ImageView fx:id="imgSup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                            <image>
+                                                <Image url="@pics/positions/top.png" />
+                                            </image>
+                                            <GridPane.margin>
+                                                <Insets left="15.0" />
+                                            </GridPane.margin>
+                                        </ImageView>
+                                        <ImageView fx:id="imgCoach" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                            <image>
+                                                <Image url="@pics/positions/top.png" />
+                                            </image>
+                                            <GridPane.margin>
+                                                <Insets left="15.0" />
+                                            </GridPane.margin>
+                                        </ImageView>
+                                    </children>
+                                </GridPane>
+                            </center>
+                        </BorderPane>
+                    </children>
+                </GridPane>
+            </center>
+        </BorderPane>
+    </center>
 </BorderPane>

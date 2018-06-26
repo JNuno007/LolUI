@@ -30,46 +30,43 @@ import javafx.util.Duration;
  * @author joaoc
  */
 public class FXMLMainScreenController implements Initializable {
-    
+
     @FXML
     private Button btn;
-    
+
     @FXML
     private Label label;
-    
+
     @FXML
     private ImageView logo;
-    
+
     Scene scene;
-    
+
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
-         //loadMainScreen(event);
+        //loadMainScreen(event);
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         TranslateTransition transition = new TranslateTransition();
         ScaleTransition st = new ScaleTransition();
-        
-        
+
         //mover o logo para cima
         transition.setDuration(Duration.seconds(1));
         //transition.setNode(logo);
         transition.setToY(-365);
         transition.setToX(10);
-        
-  //    transition.play();      
-        
 
-       //dar scale negativa ao logo
-       st.setDuration(Duration.seconds(1));
-       st.setByX(-0.5f);
-       st.setByY(-0.5f);
-       
-       ParallelTransition pt = new ParallelTransition(logo, transition, st);
-       pt.play();
-       pt.setOnFinished((ActionEvent event) -> {
+        //    transition.play();      
+        //dar scale negativa ao logo
+        st.setDuration(Duration.seconds(1));
+        st.setByX(-0.5f);
+        st.setByY(-0.5f);
+
+        ParallelTransition pt = new ParallelTransition(logo, transition, st);
+        pt.play();
+        pt.setOnFinished((ActionEvent event) -> {
             Parent root = null;
             try {
                 root = FXMLLoader.load(getClass().getResource("FXMLUserActionBar.fxml"));
@@ -80,13 +77,10 @@ public class FXMLMainScreenController implements Initializable {
             Stage stage = (Stage) logo.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-       });
+        });
         //transition.setAutoReverse(true);
         //transition.setCycleCount(2);
-       
-      
-        
-        
-    }  
-    
+
+    }
+
 }
