@@ -190,6 +190,11 @@ public class FXMLCreateNewMemberController implements Initializable {
             this.getUserInput();
             this.gravarMembroEquipa();
             this.gravarImagemDir();
+            Alert alert = new Alert(AlertType.CONFIRMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Operation Successfull");
+            alert.setContentText("Your new member was created!");
+            alert.showAndWait();
         }catch(InsertMembroEquipaDBException e){
             //Dialog
             Alert alert = new Alert(AlertType.WARNING);

@@ -6,8 +6,11 @@
 package lolui;
 
 import hibernate.HibernateGenericLib;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -18,6 +21,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javafx.collections.FXCollections;
@@ -112,7 +117,7 @@ public class FXMLPlayersMainController implements Initializable {
     
     public void atribuirImagemPlayer(Membroequipa me){
         if(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
-            imgTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png"))); 
+            imgTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")));
          }else{
             imgTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
         }
