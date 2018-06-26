@@ -233,46 +233,95 @@ public class FXMLTeamsMainController extends Application implements Initializabl
    
    public void atribuirImagensJogadores(Equipa eq){
        
-       for(Membroequipa me : (Collection<Membroequipa>)eq.getMembroequipas()){
-            if(me.getCargo().equals("player") && me.getPosicao().toString().equals("TOP")){
-                if(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
-                    this.imgPlayerTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png"))); 
-                }else{
-                    this.imgPlayerTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+        if(eq.isAtivo()){
+            for(Membroequipa me : (Collection<Membroequipa>)eq.getMembroequipas()){
+                this.preencheStatsPlayerExistente(me, "TOP", imgPlayerTop, this.infoTop);
+                this.preencheStatsPlayerExistente(me, "JNG", imgPlayerJungle, this.infoJungle);
+                this.preencheStatsPlayerExistente(me, "MID", imgPlayerMid, this.infoMid);
+                this.preencheStatsPlayerExistente(me, "ADC", imgPlayerADC, this.infoADC);
+                this.preencheStatsPlayerExistente(me, "SUP", imgPlayerSupport, this.infoSupport);
+            }
+        }else{
+            this.atribuirImagensInativos(eq);
+        }   
+    }
+   
+    public void preencheStatsPlayerExistente(Membroequipa me, String pos, ImageView img, ImageView info){
+        if(me.getCargo().equals("player") && me.getPosicao().toString().equals(pos)){
+            if(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
+                img.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png"))); 
+            }else{
+                img.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+            }
+            info.setVisible(true);
+        }
+    }
+    
+    public void preencheStatsPlayerInexistente(ImageView img, Label lbl, ImageView info){
+        img.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+        lbl.setText("[Player not assigned]");
+        info.setVisible(false);
+    }
+    
+    public void atribuirImagensInativos(Equipa eq){
+        boolean topFound = false;
+        boolean jngFound = false;
+        boolean midFound = false;
+        boolean adcFound = false;
+        boolean supFound = false;
+        
+        for(Membroequipa me : (Collection<Membroequipa>)eq.getMembroequipas()){
+            for(int i = 0; i < 5 ; i++){
+                switch(i){
+                    //caso TOP
+                    case 0: 
+                        if(me.getPosicao().toString().equals("TOP")){
+                           topFound = true;
+                           this.preencheStatsPlayerExistente(me, "TOP", imgPlayerTop, this.infoTop);
+                        }
+                        break;
+                    case 1:
+                        if(me.getPosicao().toString().equals("JNG")){
+                           jngFound = true; 
+                           this.preencheStatsPlayerExistente(me, "JNG", imgPlayerJungle, this.infoJungle);
+                        }
+                        break;
+                    case 2:
+                        if(me.getPosicao().toString().equals("MID")){
+                          midFound = true;  
+                          this.preencheStatsPlayerExistente(me, "MID", imgPlayerMid, this.infoMid);
+                        }
+                        break;
+                    case 3:
+                        if(me.getPosicao().toString().equals("ADC")){
+                          adcFound = true; 
+                          this.preencheStatsPlayerExistente(me, "ADC", imgPlayerADC, this.infoADC);
+                        }
+                        break;
+                    case 4:
+                        if(me.getPosicao().toString().equals("SUP")){
+                           supFound = true; 
+                           this.preencheStatsPlayerExistente(me, "SUP", imgPlayerSupport, this.infoSupport);
+                        }
+                        break;
                 }
             }
-            
-            if(me.getCargo().equals("player") && me.getPosicao().toString().equals("JNG")){
-                if(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
-                    this.imgPlayerJungle.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png"))); 
-                }else{
-                    this.imgPlayerJungle.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
-                }
-            }
-            
-            if(me.getCargo().equals("player") && me.getPosicao().toString().equals("MID")){
-                if(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
-                    this.imgPlayerMid.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png"))); 
-                }else{
-                    this.imgPlayerMid.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
-                }
-            }
-            
-            if(me.getCargo().equals("player") && me.getPosicao().toString().equals("ADC")){
-                if(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
-                    this.imgPlayerADC.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png"))); 
-                }else{
-                    this.imgPlayerADC.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
-                }
-            }
-            
-            if(me.getCargo().equals("player") && me.getPosicao().toString().equals("SUP")){
-                if(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")!=null){
-                    this.imgPlayerSupport.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png"))); 
-                }else{
-                    this.imgPlayerSupport.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
-                }
-            }
+        }
+        
+        if(!topFound){
+            this.preencheStatsPlayerInexistente(imgPlayerTop, lblNomeTop, this.infoTop);
+        }
+        if(!jngFound){
+            this.preencheStatsPlayerInexistente(imgPlayerJungle, lblNomeJungle, this.infoJungle);
+        }
+        if(!midFound){
+            this.preencheStatsPlayerInexistente(imgPlayerMid, lblNomeMid, this.infoMid);
+        }
+        if(!adcFound){
+            this.preencheStatsPlayerInexistente(imgPlayerADC, lblNomeADC, this.infoADC);
+        }
+        if(!supFound){
+            this.preencheStatsPlayerInexistente(imgPlayerSupport, lblNomeSupport, this.infoSupport);
         }
     }
    
@@ -321,21 +370,26 @@ public class FXMLTeamsMainController extends Application implements Initializabl
         // -- BLL
         List<Jogo> listaJogosEquipa2 = JogoServices.listaJogosEquipa2(eq);
         
-        for(Jogo j : listaJogosEquipa1){
-            totKills += j.getKillsequipa1().intValue();
-            totAssists += j.getAssistsequipa1().intValue();
-            totDeaths += j.getDeathsequipa1().intValue();
+        if(listaJogosEquipa1.isEmpty() && listaJogosEquipa2.isEmpty()){
+            this.lblKDA.setText("0");
+        }else{
+            for(Jogo j : listaJogosEquipa1){
+                totKills += j.getKillsequipa1().intValue();
+                totAssists += j.getAssistsequipa1().intValue();
+                totDeaths += j.getDeathsequipa1().intValue();
+            }
+
+            for(Jogo j : listaJogosEquipa2){
+                totKills += j.getKillsequipa2().intValue();
+                totAssists += j.getAssistsequipa2().intValue();
+                totDeaths += j.getDeathequipa2().intValue();
+            }
+
+            kdaRatio = (float)(totKills + totAssists) / totDeaths;
+
+            this.lblKDA.setText(df2.format(kdaRatio));
         }
         
-        for(Jogo j : listaJogosEquipa2){
-            totKills += j.getKillsequipa2().intValue();
-            totAssists += j.getAssistsequipa2().intValue();
-            totDeaths += j.getDeathequipa2().intValue();
-        }
-        
-        kdaRatio = (float)(totKills + totAssists) / totDeaths;
-        
-        this.lblKDA.setText(df2.format(kdaRatio));
     }
     
     public List<Encontro> getEncontrosFromTeam(Equipa eq){
@@ -507,56 +561,9 @@ public class FXMLTeamsMainController extends Application implements Initializabl
         
         this.observableIncomingGames = FXCollections.observableArrayList(encontrosPendentes);
         
-        
-        
         //Atribuir os dados da ObservableList à tabela
         this.tableIncomingGames.setItems(observableIncomingGames);
-        
     }
-    
-    
-    
-//    private Callback rondaEditCell(){
-//        
-//        Callback <TableColumn<Encontro, String>, TableCell<Encontro, String>> cellFactory;
-//        
-//        cellFactory = new Callback<TableColumn<Encontro, String>, TableCell<Encontro, String>>(){
-//            
-//            @Override
-//            public TableCell call(final TableColumn<Encontro, String> param){
-//                final TableCell<Encontro, String> cell = new TableCell<Encontro, String>(){
-//                    
-//                    //STRING(?)
-//                    //final Button button = new Button();
-//                    String x = "sa";
-//                    
-//                    @Override
-//                    public void updateItem(String item, boolean empty)
-//                    {
-//                        super.updateItem(item, empty);
-//                        if(empty)
-//                        {
-//                            setGraphic(null);
-//                            setText(null);
-//                        }
-//                        else
-//                        {
-//                            /* On edit button, opens an edit category window with the row category info and the list of existent categories */
-//                            
-//                            
-//                            
-//                            setText(x);
-//                        }
-//                    }
-//                };
-//                
-//                cell.setAlignment(Pos.CENTER);
-//                return cell;
-//            }
-//        };
-//        
-//        return cellFactory;
-//    }
     
     @FXML public void handleImageAction(MouseEvent event) throws IOException{
         

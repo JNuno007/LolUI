@@ -5,23 +5,39 @@
  */
 package lolui;
 
+import java.io.File;
+import lolui.exceptions.InsertEquipaDBException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.imageio.ImageIO;
+import lolbll.EquipaServices;
+import loldal.model.Equipa;
 import loldal.model.Membroequipa;
 import loldal.model.Pais;
 
@@ -41,6 +57,8 @@ public class FXMLCreateTeamController implements Initializable {
     @FXML private TextField txtInitials;
     
     @FXML private ImageView countrySelected;
+    
+    @FXML private ImageView teamLogo;
     
     //FXML da grelha direita
     
@@ -68,15 +86,47 @@ public class FXMLCreateTeamController implements Initializable {
     
     @FXML private ImageView imgCoach;
     
+    @FXML private Button btnSelectImage;
+    
+    private FileChooser fileChooser;
+    
+    private File fileImagem;
+    
     private Pais pais;
     
+    private Set<Membroequipa> listaMembroEquipa;
+    
     private Membroequipa membro;
+    
+    private String teamName;
+    
+    private String initials;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        listaMembroEquipa = new HashSet<>();
         parentBorderPane.getStyleClass().add("borderPane");
+        
+        btnSelectImage.setOnAction(
+            new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(final ActionEvent e) {
+                    fileChooser = new FileChooser();
+                    setExtFilters(fileChooser);
+                    fileImagem = fileChooser.showOpenDialog((Stage)txtUsername.getScene().getWindow());
+                    if (fileImagem != null) {
+                        teamLogo.setImage(new Image(fileImagem.toURI().toString()));
+                    }
+                }
+        });
     }    
+    
+    private void setExtFilters(FileChooser chooser){
+        chooser.getExtensionFilters().addAll(
+            new FileChooser.ExtensionFilter("PNG", "*.png")
+        );
+    }
     
     @FXML public void closePopUp(){
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
@@ -162,6 +212,7 @@ public class FXMLCreateTeamController implements Initializable {
         //TODO
         if(controller.getMembroSelected()!=null){
             membro = controller.getMembroSelected();
+            listaMembroEquipa.add(membro);
             this.setImagefromMemberSelected(membro, controller);
         }
     }
@@ -190,6 +241,117 @@ public class FXMLCreateTeamController implements Initializable {
         if(m.getPosicao()==null){
             imgCoach.setImage(controller.getMemberImageSelected());
             btnCoach.setText("Edit");
+        }
+    }
+    
+    @FXML public void saveOnClick(){
+        try {
+            this.verificaEquipa();
+            this.getUserInput();
+            this.gravarEquipa();
+            this.gravarImagemDir();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Operation Successfull");
+            alert.setContentText("Your new team was created!");
+            alert.showAndWait();
+        } catch (InsertEquipaDBException ex) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Something went wrong.");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        } catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Database internal error.");
+            alert.setContentText("Please contact support");
+            alert.showAndWait();
+        }
+    }
+    
+    private void gravarImagemDir(){
+        try {
+            File file = new File(".\\src\\lolui\\pics\\teams\\" + initials.toLowerCase() +".png");
+            ImageIO.write(SwingFXUtils.fromFXImage(teamLogo.getImage(),null),"png", file);
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLCreateNewMemberController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void gravarEquipa(){
+        int contPlayers=0;
+        //criar Equipa e inserir os dados da equipa
+        Equipa equipa = new Equipa();
+        equipa.setNome(teamName);
+        equipa.setSigla(initials);
+        equipa.setPais(pais);
+        
+        if(listaMembroEquipa.size() > 0){
+            equipa.setMembroequipas(listaMembroEquipa);
+            
+            for(Membroequipa m: listaMembroEquipa){
+                m.setEquipa(equipa);
+                if(m.getPosicao()!=null){
+                    contPlayers++;
+                }
+            }
+            
+            if(contPlayers == 5){
+                equipa.setAtivo(true);
+            }else{
+                equipa.setAtivo(false);
+            }
+        }
+        //gravar equipa na DB
+        EquipaServices.saveEquipa(equipa);
+    }
+    
+    public void getUserInput(){
+        //Recebemos o nome da equipa
+        teamName = txtUsername.getText();
+        //Recebemos as initials da equipa
+        initials = txtInitials.getText();
+    }
+    
+    public void verificaEquipa() throws InsertEquipaDBException{
+        List<Equipa> lista = EquipaServices.listaEquipas();
+        //Verificar parametros nome da equipa
+        
+        if(txtUsername.getText().isEmpty()){
+            throw new InsertEquipaDBException("The team name is empty");
+        }
+        
+        if(txtUsername.getText().length() > 20){
+            throw new InsertEquipaDBException("The team name is too long, maximum 20 characters");
+        }
+        
+        for(Equipa e: lista){
+            if(e.getNome().toLowerCase().equals(txtUsername.getText().toLowerCase())){
+                throw new InsertEquipaDBException("The team name is already in use");
+            }
+        }
+        
+        //Verificar parametros initials da equipa
+        
+        if(txtInitials.getText().isEmpty()){
+            throw new InsertEquipaDBException("The team initials are empty");
+        }
+        
+        if(txtInitials.getText().length() > 4 || txtInitials.getText().contains(" ")){
+            throw new InsertEquipaDBException("The team initials cannot contain spaces and must have a maximum of 4 characters");
+        }
+        
+        for(Equipa e: lista){
+            if(e.getSigla().toLowerCase().equals(txtInitials.getText().toLowerCase())){
+                throw new InsertEquipaDBException("The team initials are already in use");
+            }
+        }
+        
+        //Verificar se pais existe
+        
+        if(pais == null){
+            throw new InsertEquipaDBException("Choose the team's country");
         }
     }
     

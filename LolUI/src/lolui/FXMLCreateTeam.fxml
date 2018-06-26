@@ -45,7 +45,7 @@
                      <top>
                         <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                            <children>
-                              <TextField layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
+                              <TextField fx:id="txtUsername" layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
                               <Label layoutX="304.0" layoutY="14.0" text="Team Information" textFill="WHITE">
                                  <font>
                                     <Font size="18.0" />
@@ -66,7 +66,7 @@
                            <children>
                               <Pane prefHeight="111.0" prefWidth="375.0">
                                  <children>
-                                    <TextField layoutX="122.0" layoutY="57.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
+                                    <TextField fx:id="txtInitials" layoutX="122.0" layoutY="57.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
                                  </children>
                               </Pane>
                               <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
@@ -85,12 +85,23 @@
                      <bottom>
                         <AnchorPane prefHeight="278.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="333.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@pics/players/unknown.png" />
-                                 </image>
-                              </ImageView>
-                              <Button layoutX="300.0" layoutY="164.0" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Select Team Image" />
+                              <GridPane layoutX="300.0" layoutY="14.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ImageView fx:id="teamLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pics/players/unknown.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Select Team Image" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
                               <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@pics/back.png" />
@@ -188,10 +199,13 @@
                               </Pane>
                               <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
                                  <children>
-                                    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="188.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="188.0" layoutY="10.0" onMouseClicked="#saveOnClick" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@pics/save.png" />
                                        </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </ImageView>
                                  </children>
                               </Pane>
