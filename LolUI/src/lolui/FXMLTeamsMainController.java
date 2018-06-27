@@ -176,7 +176,7 @@ public class FXMLTeamsMainController extends Application implements Initializabl
     public void preencherListaEquipas() {
         // --BLL
         teams = EquipaServices.listaEquipas();
-        teams.sort(Comparator.comparing((equipa) -> equipa.getNome()));
+        teams.sort(Comparator.comparing((equipa) -> equipa.getNome().toLowerCase()));
         teamsObs = FXCollections.observableArrayList(teams);
         this.listaEquipas.setItems(teamsObs);
     }

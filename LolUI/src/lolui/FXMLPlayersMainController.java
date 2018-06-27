@@ -28,6 +28,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import lolbll.MembroEquipaServices;
 import loldal.model.Champion;
 import loldal.model.Estatisticasmembrojogo;
 import loldal.model.Membroequipa;
@@ -102,10 +103,10 @@ public class FXMLPlayersMainController implements Initializable {
     }
 
     public void preencherListaJogadores() {
-        listaPesquisa = HibernateGenericLib.executeHQLQuery(" from Membroequipa where cargo = 'player'");
+        listaPesquisa = MembroEquipaServices.listaJogadores();
         //Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getEquipa().toString());
         //comparator = comparator.thenComparing(Comparator.comparing(m -> m.getNome()));
-        Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getNome());
+        Comparator<Membroequipa> comparator = Comparator.comparing(m -> m.getNome().toLowerCase());
         Stream<Membroequipa> membroStream = listaPesquisa.stream().sorted(comparator);
         List<Membroequipa> listaOrdenada = membroStream.collect(Collectors.toList());
         membrosEquipaObs = FXCollections.observableArrayList(listaOrdenada);

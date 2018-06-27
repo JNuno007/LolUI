@@ -162,7 +162,6 @@ public class FXMLCreateNewMemberController implements Initializable {
         Parent root = loader.load();
         FXMLCountrySelectionController controller = loader.getController();
         controller.preencheGridPaises();
-        //this.preparePopUpElements(event, controller);
         //Metodo para preencher a Janela de PopUp
         this.prepareCountryStage(root, controller);
     }
@@ -207,7 +206,6 @@ public class FXMLCreateNewMemberController implements Initializable {
             alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
-
     }
 
     public void getUserInput() {
