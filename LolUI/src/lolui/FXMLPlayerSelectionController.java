@@ -117,6 +117,51 @@ public class FXMLPlayerSelectionController implements Initializable {
         listaFiltrada = listaGrid;
         this.selecionaMembro();
     }
+    
+    public void preencheGridPaneComMembroExra(String posicao, Membroequipa membro) {
+        List<Membroequipa> listaGrid = new ArrayList<>();
+
+        if (posicao.equals("null")) {
+            for (Membroequipa me : lista) {
+                if (me.getPosicao() == null) {
+                    listaGrid.add(me);
+                }
+            }
+        } else {
+            for (Membroequipa me : lista) {
+                if (me.getPosicao() != null && me.getPosicao().getSigla().equals(posicao)) {
+                    listaGrid.add(me);
+                }
+            }
+        }
+        if(membro != null){
+            listaGrid.add(membro);
+        }
+
+        int column = 0;
+        int row = 0;
+
+        for (Membroequipa m : listaGrid) {
+
+            if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
+                ImageView image = new ImageView();
+                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+
+                image.setFitHeight(50);
+                image.setFitWidth(75);
+
+                gridPane.add(image, column, row);
+                column++;
+
+                if (column == 6) {
+                    column = 0;
+                    row++;
+                }
+            }
+        }
+        listaFiltrada = listaGrid;
+        this.selecionaMembro();
+    }
 
     public void selecionaMembro() {
         for (Node node : gridPane.getChildren()) {

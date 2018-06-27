@@ -31,8 +31,8 @@
             <children>
                 <Pane prefHeight="200.0" prefWidth="200.0">
                     <children>
-                        <ListView layoutX="50.0" layoutY="70.0" prefHeight="362.0" prefWidth="360.0" />
-                        <TextField fx:id="searchBar" alignment="CENTER" layoutX="50.0" layoutY="14.0" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
+                        <ListView fx:id="listViewEquipas" layoutX="50.0" layoutY="70.0" maxHeight="350.0" maxWidth="375.0" minHeight="350.0" minWidth="375.0" prefHeight="350.0" prefWidth="375.0" />
+                        <TextField fx:id="searchBar" alignment="CENTER" layoutX="50.0" layoutY="14.0" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" prefHeight="35.0" prefWidth="150.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -42,6 +42,7 @@
                                 <Image url="@pics/lupa.png" />
                             </image>
                         </ImageView>
+                  <ComboBox layoutX="225.0" layoutY="13.0" maxHeight="35.0" maxWidth="200.0" minHeight="35.0" minWidth="200.0" prefHeight="35.0" prefWidth="200.0" />
                     </children>
                 </Pane>
                 <GridPane GridPane.columnIndex="1">
@@ -55,22 +56,22 @@
                     <children>
                         <Pane prefHeight="173.0" prefWidth="499.0">
                             <children>
-                                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="32.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="previousTeamLogo" fitHeight="100.0" fitWidth="100.0" layoutX="32.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/teams/skt.png" />
                                     </image>
                                 </ImageView>
-                                <Label layoutX="168.0" layoutY="44.0" text="South Korean Telecom" textFill="WHITE">
+                                <Label fx:id="previousName" layoutX="168.0" layoutY="44.0" text="South Korean Telecom" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <Label layoutX="168.0" layoutY="76.0" text="SKT" textFill="WHITE">
+                                <Label fx:id="previousInitials" layoutX="168.0" layoutY="76.0" text="SKT" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="168.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="previousCountry" fitHeight="50.0" fitWidth="50.0" layoutX="168.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/countries/br.png" />
                                     </image>
@@ -84,21 +85,26 @@
                         </Pane>
                         <Pane prefHeight="237.0" prefWidth="499.0" GridPane.rowIndex="1">
                             <children>
-                                <TextField layoutX="32.0" layoutY="70.0" prefHeight="35.0" prefWidth="409.0" promptText="Name" />
-                                <TextField layoutX="32.0" layoutY="119.0" prefHeight="35.0" prefWidth="197.0" promptText="Initials" />
-                                <ComboBox layoutX="244.0" layoutY="119.0" prefHeight="35.0" prefWidth="197.0" promptText="Country" />
-                                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="187.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                                <TextField fx:id="newName" layoutX="32.0" layoutY="70.0" prefHeight="35.0" prefWidth="409.0" promptText="Name" />
+                                <TextField fx:id="newInitials" layoutX="32.0" layoutY="119.0" prefHeight="35.0" prefWidth="136.0" promptText="Initials" />
+                                <ImageView fx:id="newTeamLogo" fitHeight="100.0" fitWidth="100.0" layoutX="187.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/teams/skt.png" />
                                     </image>
                                 </ImageView>
-                                <Button layoutX="179.0" layoutY="252.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="116.0" text="Change Image" />
+                                <Button fx:id="btnSelectImage" layoutX="179.0" layoutY="252.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="116.0" text="Change Image" />
                                 <Label layoutX="32.0" layoutY="37.0" text="New Information" textAlignment="CENTER" textFill="WHITE">
                                     <font>
                                         <Font size="18.0" />
                                     </font>
                                 </Label>
                                 <Line endX="310.0" layoutX="131.0" layoutY="14.0" startX="-100.0" stroke="#e29d09" />
+                        <ImageView fx:id="newCountry" fitHeight="35.0" fitWidth="50.0" layoutX="250.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pics/countries/ar.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="306.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="35.0" prefWidth="135.0" text="Country" />
                             </children>
                         </Pane>
                     </children>
@@ -119,8 +125,9 @@
                         <GridPane BorderPane.alignment="CENTER">
                             <columnConstraints>
                                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="161.4000244140625" minWidth="10.0" prefWidth="30.199951171875" />
-                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="303.800048828125" minWidth="10.0" prefWidth="303.800048828125" />
-                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="333.199951171875" minWidth="10.0" prefWidth="333.199951171875" />
+                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="85.2000732421875" minWidth="10.0" prefWidth="69.00004882812499" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="90.2000732421875" minWidth="10.0" prefWidth="66.59995117187498" />
                             </columnConstraints>
                             <rowConstraints>
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -162,42 +169,72 @@
                                         <Image url="@pics/positions/strategy.png" />
                                     </image>
                                 </ImageView>
-                                <Label alignment="CENTER" prefHeight="35.0" prefWidth="350.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <Label alignment="CENTER" prefHeight="35.0" prefWidth="313.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" />
-                                <Label alignment="CENTER" prefHeight="35.0" prefWidth="369.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                <Label alignment="CENTER" prefHeight="35.0" prefWidth="347.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                <Label alignment="CENTER" prefHeight="35.0" prefWidth="343.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                <Label alignment="CENTER" prefHeight="35.0" prefWidth="355.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                <Label fx:id="junglerLbl" alignment="CENTER" prefHeight="35.0" prefWidth="350.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label fx:id="topLbl" alignment="CENTER" prefHeight="35.0" prefWidth="313.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" />
+                                <Label fx:id="midLbl" alignment="CENTER" prefHeight="35.0" prefWidth="369.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label fx:id="adcLbl" alignment="CENTER" prefHeight="35.0" prefWidth="347.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Label fx:id="supportLbl" alignment="CENTER" prefHeight="35.0" prefWidth="343.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <Label fx:id="coachLbl" alignment="CENTER" prefHeight="35.0" prefWidth="355.0" text="Label" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                <ImageView fx:id="changeTopImg" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#selectMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                                     <image>
                                         <Image url="@pics/exchange.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <ImageView fx:id="changeJunglerImg" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#selectMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                     <image>
                                         <Image url="@pics/exchange.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                <ImageView fx:id="changeMidImg" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#selectMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                                     <image>
                                         <Image url="@pics/exchange.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                <ImageView fx:id="changeAdcImg" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#selectMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                                     <image>
                                         <Image url="@pics/exchange.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                <ImageView fx:id="changeSupportImg" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#selectMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                                     <image>
                                         <Image url="@pics/exchange.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                <ImageView fx:id="changeCoachImg" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#selectMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6">
                                     <image>
                                         <Image url="@pics/exchange.png" />
                                     </image>
                                 </ImageView>
+                        <ImageView fx:id="removeTopImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#removeMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@pics/prohibited_icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="removeJungleImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#removeMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@pics/prohibited_icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="removeMidImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#removeMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@pics/prohibited_icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="removeSupportImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#removeMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@pics/prohibited_icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="removeCoachImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#removeMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@pics/prohibited_icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="removeAdcImg" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#removeMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <image>
+                              <Image url="@pics/prohibited_icon.png" />
+                           </image>
+                        </ImageView>
                             </children>
                         </GridPane>
                     </center>
