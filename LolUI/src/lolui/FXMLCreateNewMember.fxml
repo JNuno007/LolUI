@@ -251,8 +251,8 @@
                                         </AnchorPane>
                                     </children>
                                 </GridPane>
-                                <Button layoutX="326.0" layoutY="321.0" maxWidth="125.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="125.0" text="Choose a Team" />
-                                <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="264.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+                                <Button layoutX="326.0" layoutY="321.0" maxWidth="125.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="125.0" text="Choose a Team" />
+                                <ImageView fx:id="imgNewTeamLogoPlayer" fitHeight="45.0" fitWidth="45.0" layoutX="264.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/teams/unknown.png" />
                                     </image>

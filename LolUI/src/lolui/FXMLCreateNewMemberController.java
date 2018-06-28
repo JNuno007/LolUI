@@ -39,6 +39,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javax.imageio.ImageIO;
+import lolbll.EquipaServices;
 import lolbll.MembroEquipaServices;
 import lolbll.PosicaoServices;
 import loldal.model.Equipa;
@@ -67,6 +68,9 @@ public class FXMLCreateNewMemberController implements Initializable {
 
     @FXML
     private ImageView info;
+    
+    @FXML
+    private ImageView imgNewTeamLogoPlayer;
 
     @FXML
     private Spinner<Integer> spinnerAge;
@@ -147,6 +151,54 @@ public class FXMLCreateNewMemberController implements Initializable {
             Logger.getLogger(FXMLCreateNewMemberController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    @FXML
+    public void createTeamAction(MouseEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLTeamSelection.fxml"));
+        Parent root = loader.load();
+        FXMLTeamSelectionController controller = loader.getController();
+        
+        if(rbTop.isSelected()){
+            controller.equipasDisponiveis("TOP");
+        }
+        if(rbJungler.isSelected()){
+            controller.equipasDisponiveis("JNG");
+        }
+        if(rbMid.isSelected()){
+            controller.equipasDisponiveis("MID");
+        }
+        if(rbAdc.isSelected()){
+            controller.equipasDisponiveis("ADC");
+        }
+        if(rbSup.isSelected()){
+            controller.equipasDisponiveis("SUP");
+        }
+        if(rbCoach.isSelected()){
+            controller.equipasDisponiveis(null);
+        }
+        //Metodo para preencher a Janela de PopUp
+        this.prepareTeamStage(root, controller);
+    }
+
+    public void prepareTeamStage(Parent root, FXMLTeamSelectionController controller) {
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setResizable(false);
+        stage.setY(350);
+        stage.setX(650);
+        stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.showAndWait();
+        if (controller.getEquipaSelected()!= null) {
+            imgNewTeamLogoPlayer.setImage(controller.getTeamImageSelected());
+            this.equipa = controller.getEquipaSelected();
+            System.out.println(this.equipa.getNome());
+        }
+    }
 
     @FXML
     public void closePopUp() {
@@ -198,6 +250,7 @@ public class FXMLCreateNewMemberController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("Your new member was created!");
             alert.showAndWait();
+            this.closePopUp();
         } catch (InsertMembroEquipaDBException e) {
             //Dialog
             Alert alert = new Alert(AlertType.WARNING);
@@ -247,6 +300,8 @@ public class FXMLCreateNewMemberController implements Initializable {
         m.setTotalkills(new BigDecimal(0));
         if (equipa != null) {
             m.setEquipa(equipa);
+            equipa.getMembroequipas().add(m);
+            EquipaServices.saveEquipa(equipa);
         }
         MembroEquipaServices.criarMembroEquipa(m);
     }

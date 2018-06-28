@@ -286,31 +286,31 @@ public class FXMLTeamsMainController extends Application implements Initializabl
                 switch (i) {
                     //caso TOP
                     case 0:
-                        if (me.getPosicao().toString().equals("TOP")) {
+                        if (me.getPosicao()!= null && me.getPosicao().toString().equals("TOP")) {
                             topFound = true;
                             this.preencheStatsPlayerExistente(me, "TOP", imgPlayerTop, this.infoTop);
                         }
                         break;
                     case 1:
-                        if (me.getPosicao().toString().equals("JNG")) {
+                        if (me.getPosicao()!= null && me.getPosicao().toString().equals("JNG")) {
                             jngFound = true;
                             this.preencheStatsPlayerExistente(me, "JNG", imgPlayerJungle, this.infoJungle);
                         }
                         break;
                     case 2:
-                        if (me.getPosicao().toString().equals("MID")) {
+                        if (me.getPosicao()!= null && me.getPosicao().toString().equals("MID")) {
                             midFound = true;
                             this.preencheStatsPlayerExistente(me, "MID", imgPlayerMid, this.infoMid);
                         }
                         break;
                     case 3:
-                        if (me.getPosicao().toString().equals("ADC")) {
+                        if (me.getPosicao()!= null && me.getPosicao().toString().equals("ADC")) {
                             adcFound = true;
                             this.preencheStatsPlayerExistente(me, "ADC", imgPlayerADC, this.infoADC);
                         }
                         break;
                     case 4:
-                        if (me.getPosicao().toString().equals("SUP")) {
+                        if (me.getPosicao()!= null && me.getPosicao().toString().equals("SUP")) {
                             supFound = true;
                             this.preencheStatsPlayerExistente(me, "SUP", imgPlayerSupport, this.infoSupport);
                         }

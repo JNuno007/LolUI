@@ -590,22 +590,24 @@ public class FXMLManageInfoTeamController implements Initializable {
         }
         if(membro.getPosicao() == null){
             coachLbl.setText(membro.getNome());
+        }else{
+            if(membro.getPosicao().getSigla().equals("TOP")){
+                topLbl.setText(membro.getNome());
+            }
+            if(membro.getPosicao().getSigla().equals("JNG")){
+                junglerLbl.setText(membro.getNome());
+            }
+            if(membro.getPosicao().getSigla().equals("MID")){
+                midLbl.setText(membro.getNome());
+            }
+            if(membro.getPosicao().getSigla().equals("ADC")){
+                adcLbl.setText(membro.getNome());
+            }
+            if(membro.getPosicao().getSigla().equals("SUP")){
+                supportLbl.setText(membro.getNome());
+            }
         }
-        if(membro.getPosicao().getSigla().equals("TOP")){
-            topLbl.setText(membro.getNome());
-        }
-        if(membro.getPosicao().getSigla().equals("JNG")){
-            junglerLbl.setText(membro.getNome());
-        }
-        if(membro.getPosicao().getSigla().equals("MID")){
-            midLbl.setText(membro.getNome());
-        }
-        if(membro.getPosicao().getSigla().equals("ADC")){
-            adcLbl.setText(membro.getNome());
-        }
-        if(membro.getPosicao().getSigla().equals("SUP")){
-            supportLbl.setText(membro.getNome());
-        }
+        
         listaNovosMembros.add(membro);
     }
     
@@ -736,5 +738,4 @@ public class FXMLManageInfoTeamController implements Initializable {
             alert.showAndWait();
         }
     }
-    
 }
