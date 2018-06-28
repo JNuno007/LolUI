@@ -291,7 +291,7 @@ public class FXMLCreateTeamController implements Initializable {
         }
     }
 
-    private void gravarImagemDir() {
+    public void gravarImagemDir() {
         try {
             File file = new File(".\\src\\lolui\\pics\\teams\\" + initials.toLowerCase() + ".png");
             ImageIO.write(SwingFXUtils.fromFXImage(teamLogo.getImage(), null), "png", file);

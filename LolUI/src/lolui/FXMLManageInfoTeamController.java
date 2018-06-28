@@ -12,8 +12,12 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -21,6 +25,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -32,11 +37,13 @@ import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.imageio.ImageIO;
 import lolbll.EquipaServices;
 import lolbll.MembroEquipaServices;
 import loldal.model.Equipa;
 import loldal.model.Membroequipa;
 import loldal.model.Pais;
+import lolui.exceptions.InsertEquipaDBException;
 
 /**
  * FXML Controller class
@@ -80,10 +87,12 @@ public class FXMLManageInfoTeamController implements Initializable {
     private List<Equipa> listaPesquisa;
     private ObservableList<Equipa> equipasObs;
     private Equipa equipaAtual;
-    private List<Membroequipa> listaMembrosAtuais;
-    private List<Membroequipa> listaNovosMembros;
+    private Set<Membroequipa> listaMembrosAtuais;
+    private Set<Membroequipa> listaNovosMembros;
     private Pais pais;
     private Membroequipa membro;
+    private String teamName;
+    private String initials;
 
     
     
@@ -126,7 +135,8 @@ public class FXMLManageInfoTeamController implements Initializable {
     
     @FXML
     public void removeMemberAction(MouseEvent event) throws IOException {
-
+        this.imprimeLista();
+        System.out.println("======");
         if (event.getSource() == this.removeTopImg) {
             removeTopImg.setVisible(false);
             this.removeMemberFromTempList("TOP");
@@ -163,6 +173,8 @@ public class FXMLManageInfoTeamController implements Initializable {
             this.removeMemberFromTempList("COACH");
             this.coachLbl.setText("[Coach not assigned]");
         }
+        this.imprimeLista();
+        System.out.println("==========");
     }
     
     public void removeMemberFromTempList(String pos){
@@ -215,6 +227,7 @@ public class FXMLManageInfoTeamController implements Initializable {
      public void atribuirElementos() {
         this.listViewEquipas.getSelectionModel().selectedItemProperty().addListener((observable) -> {
             equipaAtual = (Equipa) listViewEquipas.getSelectionModel().getSelectedItem();
+            System.out.println(equipaAtual.getMembroequipas());
             if (equipaAtual != null) {
                 //Atribuir Elementos Atuais
                 this.pais = null;
@@ -297,7 +310,8 @@ public class FXMLManageInfoTeamController implements Initializable {
         boolean teamHasAdc = false;
         boolean teamHasSupport = false;
         
-        this.listaNovosMembros = this.listaMembrosAtuais = MembroEquipaServices.getAllMembrosFromTeam(equipa);
+        this.listaNovosMembros = MembroEquipaServices.getAllMembrosFromTeam(equipa);
+        this.listaMembrosAtuais = MembroEquipaServices.getAllMembrosFromTeam(equipa);
         
         if(listaMembrosAtuais.size() == 6){
             for(Membroequipa me: listaMembrosAtuais){
@@ -410,6 +424,13 @@ public class FXMLManageInfoTeamController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLPlayerSelection.fxml"));
         Parent root = loader.load();
         FXMLPlayerSelectionController controller = loader.getController();
+        
+        System.out.println("LISTA ATUAL");
+        for(Membroequipa me : this.listaMembrosAtuais){
+            System.out.println(me.getNome());
+        }
+        System.out.println("====");
+        
         if (event.getSource() == changeTopImg) {
             for (Membroequipa me: listaMembrosAtuais){
                 if(me.getPosicao() != null && me.getPosicao().getSigla().equals("TOP")){
@@ -466,6 +487,12 @@ public class FXMLManageInfoTeamController implements Initializable {
         }
         //Metodo para preencher a Janela de PopUp
         this.prepareSelectMemberStage(root, controller);
+        
+        System.out.println("LISTA ATUAL");
+        for(Membroequipa me : this.listaMembrosAtuais){
+            System.out.println(me.getNome());
+        }
+        System.out.println("====");
     }
 
     public void prepareSelectMemberStage(Parent root, FXMLPlayerSelectionController controller) {
@@ -483,13 +510,14 @@ public class FXMLManageInfoTeamController implements Initializable {
         //TODO
         if (controller.getMembroSelected() != null) {
             this.imprimeLista();
+            System.out.println("===============");
             membro = controller.getMembroSelected();
             if(membro.getPosicao() == null){
                 coachLbl.setText(membro.getNome());
-                this.replaceMember(membro);
                 removeCoachImg.setVisible(true);
             }else{
                 if(membro.getPosicao().getSigla().equals("TOP")){
+                    topLbl.setText(membro.getNome());
                     removeTopImg.setVisible(true);
                 }
                 if(membro.getPosicao().getSigla().equals("JNG")){
@@ -589,6 +617,124 @@ public class FXMLManageInfoTeamController implements Initializable {
         );
     }
     
+    public void verificaEquipa() throws InsertEquipaDBException {
+        List<Equipa> lista = EquipaServices.listaEquipas();
+        //Verificar parametros nome da equipa
+
+        if (newName.getText().isEmpty()) {
+            throw new InsertEquipaDBException("The team name is empty");
+        }
+
+        if (newName.getText().length() > 20) {
+            throw new InsertEquipaDBException("The team name is too long, maximum 20 characters");
+        }
+
+        for (Equipa e : lista) {
+            if (e.getNome().toLowerCase().equals(newName.getText().toLowerCase()) && !e.equals(equipaAtual)) {
+                throw new InsertEquipaDBException("The team name is already in use");
+            }
+        }
+
+        //Verificar parametros initials da equipa
+        if (newInitials.getText().isEmpty()) {
+            throw new InsertEquipaDBException("The team initials are empty");
+        }
+
+        if (newInitials.getText().length() > 4 || newInitials.getText().contains(" ")) {
+            throw new InsertEquipaDBException("The team initials cannot contain spaces and must have a maximum of 4 characters");
+        }
+
+        for (Equipa e : lista) {
+            if (e.getSigla().toLowerCase().equals(newInitials.getText().toLowerCase()) && !e.equals(equipaAtual)) {
+                throw new InsertEquipaDBException("The team initials are already in use");
+            }
+        }
+    }
     
+    public void getUserInput() {
+        //Recebemos o nome da equipa
+        teamName = newName.getText();
+        //Recebemos as initials da equipa
+        initials = newInitials.getText();
+        if(pais == null){
+            pais = equipaAtual.getPais();
+        }
+    }
+    
+    public void gravarImagemDir() {
+        try {
+            File file = new File(".\\src\\lolui\\pics\\teams\\" + initials.toLowerCase() + ".png");
+            ImageIO.write(SwingFXUtils.fromFXImage(newTeamLogo.getImage(), null), "png", file);
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLCreateNewMemberController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void gravarEquipa() {
+        int contPlayers = 0;
+        //criar Equipa e inserir os dados da equipa
+        equipaAtual.setNome(teamName);
+        equipaAtual.setSigla(initials);
+        equipaAtual.setPais(pais);
+
+        System.out.println(listaNovosMembros);
+        
+        equipaAtual.setMembroequipas(listaNovosMembros);
+
+        for(Membroequipa me:listaMembrosAtuais){
+            boolean found = false;
+            for(Membroequipa m :listaNovosMembros){
+                if(me.equals(m)){
+                    found = true;
+                }
+            }
+            if(!found){
+                me.setEquipa(null);
+            }
+        }
+        
+        for (Membroequipa m : listaNovosMembros) {
+            m.setEquipa(equipaAtual);
+            if (m.getPosicao() != null) {
+                contPlayers++;
+            }
+        }
+
+        if (contPlayers == 5) {
+            equipaAtual.setAtivo(true);
+        } else {
+            equipaAtual.setAtivo(false);
+        }
+
+        //gravar equipa na DB
+        EquipaServices.saveEquipa(equipaAtual);
+    }
+    
+    @FXML
+    public void saveOnClick() {
+        try {
+            this.verificaEquipa();
+            this.getUserInput();
+            this.gravarEquipa();
+            this.gravarImagemDir();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Operation Successfull");
+            alert.setContentText("Your new team was created!");
+            alert.showAndWait();
+        } catch (InsertEquipaDBException ex) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Something went wrong.");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Database internal error.");
+            alert.setContentText("Please contact support");
+            alert.showAndWait();
+        }
+    }
     
 }

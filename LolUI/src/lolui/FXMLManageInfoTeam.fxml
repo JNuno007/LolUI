@@ -265,10 +265,13 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </ImageView>
-                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1435.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1435.0" layoutY="15.0" onMouseClicked="#saveOnClick" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@pics/save.png" />
                     </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </ImageView>
             </children>
         </AnchorPane>
