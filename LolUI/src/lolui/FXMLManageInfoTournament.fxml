@@ -4,6 +4,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
@@ -295,20 +296,20 @@
                                     </GridPane.margin>
                                 </Button>
                                 <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-                                    <center>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-                                            <children>
-                                                <RadioButton layoutX="68.0" layoutY="14.0" mnemonicParsing="false">
-                                                    <toggleGroup>
-                                                        <ToggleGroup fx:id="toggle" />
-                                                    </toggleGroup>
-                                                </RadioButton>
-                                                <RadioButton layoutX="163.0" layoutY="14.0" mnemonicParsing="false" toggleGroup="$toggle" />
-                                                <Label layoutX="185.0" layoutY="14.0" text="16 Teams" textFill="WHITE" />
-                                                <Label layoutX="93.0" layoutY="14.0" text="8 Teams" textFill="WHITE" />
-                                            </children>
-                                        </AnchorPane>
-                                    </center>
+                           <center>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <RadioButton layoutX="68.0" layoutY="14.0" mnemonicParsing="false">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="toggle" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton layoutX="163.0" layoutY="14.0" mnemonicParsing="false" toggleGroup="$toggle" />
+                                    <Label layoutX="185.0" layoutY="14.0" text="16 Teams" textFill="WHITE" />
+                                    <Label layoutX="93.0" layoutY="14.0" text="8 Teams" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                           </center>
                                 </BorderPane>
                                 <Spinner maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" prefHeight="35.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
                                     <GridPane.margin>
@@ -354,6 +355,7 @@
                                         <Insets right="70.0" />
                                     </GridPane.margin>
                                 </Label>
+                        <DatePicker GridPane.rowIndex="6" />
                             </children>
                         </GridPane>
                     </center>

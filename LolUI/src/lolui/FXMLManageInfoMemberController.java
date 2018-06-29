@@ -616,9 +616,11 @@ public class FXMLManageInfoMemberController implements Initializable {
                 EquipaServices.saveEquipa(me.getEquipa());
                 equipa.getMembroequipas().add(me);
                 EquipaServices.saveEquipa(equipa);
+                EquipaServices.atualizarEstadoEquipa();
             }else{
                 equipa.getMembroequipas().add(me);
                 EquipaServices.saveEquipa(equipa);
+                EquipaServices.atualizarEstadoEquipa();
             }
         }
     }

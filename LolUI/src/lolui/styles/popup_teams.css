@@ -10,6 +10,9 @@ and open the template in the editor.
 
 BorderPane{
     -fx-background-image: url('../pics/wallpaper.jpg');
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
 }
 
 Button{
