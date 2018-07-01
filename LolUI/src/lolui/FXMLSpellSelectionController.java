@@ -14,10 +14,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -42,12 +44,21 @@ public class FXMLSpellSelectionController implements Initializable {
 
     @FXML
     private TextField searchBar;
+    
+    //Items selecionados
+    @FXML private ImageView imgSpell1;
+    @FXML private ImageView imgSpell2;
+    
+    private Spell spell1;
+    private Spell spell2;
 
     private ImageView spellSelected;
     
     private List<Spell> spells;
 
     private List<Spell> listaFiltrada;
+    
+    private List<Spell> spellsSelecionados;
 
     private Spell spell;
 
@@ -57,6 +68,7 @@ public class FXMLSpellSelectionController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         mainPane.setCenter(gridPane);
         this.pesquisarNaLista();
+        spellsSelecionados = new ArrayList<>();
     }    
     
     public void preencheGridSpells() {
@@ -145,6 +157,13 @@ public class FXMLSpellSelectionController implements Initializable {
         stage.close();
     }
     
+    @FXML
+    public void closePopUpAndClear() {
+        spellsSelecionados = null;
+        Stage stage = (Stage) this.imgBack.getScene().getWindow();
+        stage.close();
+    }
+    
     public void selecionaSpell() {
         for (Node node : gridPane.getChildren()) {
             node.setCursor(Cursor.HAND);
@@ -155,11 +174,13 @@ public class FXMLSpellSelectionController implements Initializable {
                 if (row > 1) {
                     pos = 6 * (row - 1) + column;
                     spell = listaFiltrada.get(pos);
-                    this.closePopUp();
+                    //this.closePopUp();
+                    this.preencheSpellsSelecionados(spell, spellSelected);
                 } else {
                     pos = column;
                     spell = listaFiltrada.get(pos);
-                    this.closePopUp();
+                    //this.closePopUp();
+                    this.preencheSpellsSelecionados(spell, spellSelected);
                 }
             });
             node.setOnMouseEntered((event) -> {
@@ -174,13 +195,57 @@ public class FXMLSpellSelectionController implements Initializable {
             });
         }
     }
-
-    public Image getSpellImageSelected() {
-        return spellSelected.getImage();
+    
+    public void preencheSpellsSelecionados(Spell spell, ImageView spellSelected){
+        if(spell1 == null){
+            spell1 = spell;
+            imgSpell1.setImage(spellSelected.getImage());
+        }else{
+            if(spell2 == null){
+                spell2 = spell;
+                imgSpell2.setImage(spellSelected.getImage());
+            }
+        }
     }
-
-    public Spell getSpellSelected() {
-        return spell;
+    
+    public void eliminaItemSelecionado(MouseEvent event){
+        if(event.getSource() == imgSpell1){
+            spell1 = null;
+            imgSpell1.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+        }
+        if(event.getSource() == imgSpell2){
+            spell2 = null;
+            imgSpell2.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+        }
     }
+    
+    public void preencheLista(){
+        if(spell1 !=null && spell1!=spell2){
+            spellsSelecionados.add(spell1);
+        }
+        
+        if(spell2 != null && spell1!=spell2){
+            spellsSelecionados.add(spell2);
+        }
+    }
+    
+    public void confirmClick(){
+        if(spell1 == spell2){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Something went wrong.");
+            alert.setContentText("Please choose 2 different spells");
+            alert.showAndWait();
+        }else{
+            spellsSelecionados.clear();
+            this.preencheLista();
+            this.closePopUp();
+        }
+    }
+    
+    public List<Spell> getSpellsList(){
+        return spellsSelecionados;
+    }
+    
     
 }

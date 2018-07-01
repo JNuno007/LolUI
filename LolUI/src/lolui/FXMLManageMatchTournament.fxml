@@ -80,7 +80,7 @@
                                                 <Image url="@pics/fluxogram16edited.png" />
                                             </image>
                                         </ImageView>
-                                        <GridPane fx:id="gridT16R4E1" layoutX="50.0" layoutY="266.0" maxHeight="55.0" maxWidth="155.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R4E1" layoutX="50.0" layoutY="266.0" maxHeight="55.0" maxWidth="155.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -106,8 +106,11 @@
                                                 <Label fx:id="lblT16R4E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R4E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R3E2" layoutX="210.0" layoutY="392.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R3E2" layoutX="210.0" layoutY="392.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -133,8 +136,11 @@
                                                 <Label fx:id="lblT16R3E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R3E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R3E1" layoutX="210.0" layoutY="142.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R3E1" layoutX="210.0" layoutY="142.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -160,8 +166,11 @@
                                                 <Label fx:id="lblT16R3E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R2E3" layoutX="375.0" layoutY="325.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R2E3" layoutX="375.0" layoutY="325.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -187,8 +196,11 @@
                                                 <Label fx:id="lblT16R2E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R2E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R2E4" layoutX="375.0" layoutY="456.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R2E4" layoutX="375.0" layoutY="456.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -214,8 +226,11 @@
                                                 <Label fx:id="lblT16R2E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R2E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R2E2" layoutX="375.0" layoutY="207.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R2E2" layoutX="375.0" layoutY="207.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -241,8 +256,11 @@
                                                 <Label fx:id="lblT16R2E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R2E1" layoutX="375.0" layoutY="75.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R2E1" layoutX="375.0" layoutY="75.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -268,8 +286,11 @@
                                                 <Label fx:id="lblT16R2E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E8" layoutX="540.0" layoutY="490.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E8" layoutX="540.0" layoutY="490.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -295,8 +316,11 @@
                                                 <Label fx:id="lblT16R1E8Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E8Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E7" layoutX="540.0" layoutY="425.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E7" layoutX="540.0" layoutY="425.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -322,8 +346,11 @@
                                                 <Label fx:id="lblT16R1E7Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E7Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E6" layoutX="540.0" layoutY="357.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E6" layoutX="540.0" layoutY="357.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -349,8 +376,11 @@
                                                 <Label fx:id="lblT16R1E6Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E6Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E5" layoutX="540.0" layoutY="292.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E5" layoutX="540.0" layoutY="292.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -376,8 +406,11 @@
                                                 <Label fx:id="lblT16R1E5Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E5Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E4" layoutX="540.0" layoutY="239.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E4" layoutX="540.0" layoutY="239.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -403,8 +436,11 @@
                                                 <Label fx:id="lblT16R1E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E3" layoutX="540.0" layoutY="173.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E3" layoutX="540.0" layoutY="173.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -430,8 +466,11 @@
                                                 <Label fx:id="lblT16R1E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E2" layoutX="540.0" layoutY="108.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E2" layoutX="540.0" layoutY="108.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -457,8 +496,11 @@
                                                 <Label fx:id="lblT16R1E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
-                                        <GridPane fx:id="gridT16R1E1" layoutX="540.0" layoutY="43.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
+                                        <GridPane fx:id="gridT16R1E1" layoutX="540.0" layoutY="43.0" maxHeight="43.0" maxWidth="130.0" minHeight="43.0" minWidth="130.0" onMouseClicked="#handleGridAction" prefHeight="43.0" prefWidth="130.0" stylesheets="@styles/tournament_panel.css">
                                             <columnConstraints>
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.5999755859375" minWidth="10.0" prefWidth="18.80001220703125" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="54.0000244140625" minWidth="10.0" prefWidth="44.39998779296875" />
@@ -484,6 +526,9 @@
                                                 <Label fx:id="lblT16R1E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                                 <Label fx:id="lblT16R1E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                             </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </GridPane>
                                     </children>
                                 </Pane>

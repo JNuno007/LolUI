@@ -22,11 +22,11 @@
             <children>
                 <TabPane layoutX="50.0" layoutY="200.0" prefHeight="250.0" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0" tabMaxWidth="150.0" tabMinHeight="30.0" tabMinWidth="150.0">
                     <tabs>
-                        <Tab text="Blue Team">
+                        <Tab fx:id="tabBlueTeam" text="Blue Team">
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                     <children>
-                                        <GridPane fx:id="gridPane" layoutX="47.0" layoutY="4.0" prefHeight="200.0" prefWidth="1216.0">
+                                        <GridPane fx:id="gridPaneBlueTeam" layoutX="47.0" layoutY="4.0" prefHeight="200.0" prefWidth="1216.0">
                                             <columnConstraints>
                                                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="79.60002136230469" minWidth="10.0" prefWidth="72.13334655761719" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.5999755859375" minWidth="10.0" prefWidth="25.999996948242185" />
@@ -51,27 +51,27 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
-                                                <Label text="Player 2" textFill="WHITE" GridPane.rowIndex="2">
+                                                <Label fx:id="lblBlueTeamJng" text="Player 2" textFill="WHITE" GridPane.rowIndex="2">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 1" textFill="WHITE" GridPane.rowIndex="1">
+                                                <Label fx:id="lblBlueTeamTop" text="Player 1" textFill="WHITE" GridPane.rowIndex="1">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 3" textFill="WHITE" GridPane.rowIndex="3">
+                                                <Label fx:id="lblBlueTeamMid" text="Player 3" textFill="WHITE" GridPane.rowIndex="3">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 4" textFill="WHITE" GridPane.rowIndex="4">
+                                                <Label fx:id="lblBlueTeamAdc" text="Player 4" textFill="WHITE" GridPane.rowIndex="4">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 5" textFill="WHITE" GridPane.rowIndex="5">
+                                                <Label fx:id="lblBlueTeamSup" text="Player 5" textFill="WHITE" GridPane.rowIndex="5">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
@@ -108,7 +108,7 @@
                                                 </Label>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -116,7 +116,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -124,7 +124,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -132,7 +132,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -140,7 +140,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -148,7 +148,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -160,7 +160,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -168,7 +168,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -176,7 +176,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -184,7 +184,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -192,7 +192,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -200,7 +200,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -212,7 +212,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -220,7 +220,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -228,7 +228,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -236,7 +236,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -244,7 +244,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -252,7 +252,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -264,7 +264,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -272,7 +272,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -280,7 +280,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -288,7 +288,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -296,7 +296,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -304,7 +304,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -316,7 +316,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -324,7 +324,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -332,7 +332,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -340,7 +340,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -348,7 +348,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -356,7 +356,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -373,7 +373,7 @@
                                                 </Label>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -381,7 +381,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2BlueTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -393,7 +393,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -401,7 +401,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2BlueTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -413,7 +413,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -421,7 +421,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2BlueTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -433,7 +433,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -441,7 +441,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2BlueTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -453,7 +453,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -461,7 +461,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2BlueTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -476,7 +476,7 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                                <ImageView fx:id="imgChampBlueTeamTop" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -484,7 +484,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                                <ImageView fx:id="imgChampBlueTeamJng" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -492,7 +492,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                                <ImageView fx:id="imgChampBlueTeamMid" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -500,7 +500,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                                <ImageView fx:id="imgChampBlueTeamAdc" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -508,7 +508,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                                <ImageView fx:id="imgChampBlueTeamSup" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -521,7 +521,7 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                                <ImageView fx:id="imgRunaBlueTeamTop" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -529,7 +529,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                                <ImageView fx:id="imgRunaBlueTeamJng" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -537,7 +537,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                                                <ImageView fx:id="imgRunaBlueTeamMid" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -545,7 +545,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                                <ImageView fx:id="imgRunaBlueTeamAdc" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -553,7 +553,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                                <ImageView fx:id="imgRunaBlueTeamSup" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -581,37 +581,37 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinCSBlueTeamTop" prefHeight="26.0" prefWidth="75.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinCSBlueTeamJng" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinCSBlueTeamMid" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinCSBlueTeamAdc" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinCSBlueTeamSup" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinKillsBlueTeamTop" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinKillsBlueTeamJng" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinKillsBlueTeamMid" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinKillsBlueTeamAdc" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinKillsBlueTeamSup" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinDeathsBlueTeamTop" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinDeathsBlueTeamJng" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinDeathsBlueTeamMid" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinDeathsBlueTeamAdc" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinDeathsBlueTeamSup" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinAssistsBlueTeamTop" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinAssistsBlueTeamJng" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinAssistsBlueTeamMid" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinAssistsBlueTeamAdc" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinAssistsBlueTeamSup" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
                                             </children>
                                         </GridPane>
                                     </children>
                                 </AnchorPane>
                             </content>
                         </Tab>
-                        <Tab text="Red Team">
+                        <Tab fx:id="tabRedTeam" text="Red Team">
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                     <children>
-                                        <GridPane layoutX="47.0" layoutY="4.0" prefHeight="200.0" prefWidth="1216.0">
+                                        <GridPane fx:id="gridPaneRedTeam" layoutX="47.0" layoutY="4.0" prefHeight="200.0" prefWidth="1216.0">
                                             <columnConstraints>
                                                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="79.60002136230469" minWidth="10.0" prefWidth="72.13334655761719" />
                                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="71.5999755859375" minWidth="10.0" prefWidth="25.999996948242185" />
@@ -636,27 +636,27 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
-                                                <Label text="Player 2" textFill="WHITE" GridPane.rowIndex="2">
+                                                <Label fx:id="lblRedTeamJng" text="Player 2" textFill="WHITE" GridPane.rowIndex="2">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 1" textFill="WHITE" GridPane.rowIndex="1">
+                                                <Label fx:id="lblRedTeamTop" text="Player 1" textFill="WHITE" GridPane.rowIndex="1">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 3" textFill="WHITE" GridPane.rowIndex="3">
+                                                <Label fx:id="lblRedTeamMid" text="Player 3" textFill="WHITE" GridPane.rowIndex="3">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 4" textFill="WHITE" GridPane.rowIndex="4">
+                                                <Label fx:id="lblRedTeamAdc" text="Player 4" textFill="WHITE" GridPane.rowIndex="4">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
                                                 </Label>
-                                                <Label text="Player 5" textFill="WHITE" GridPane.rowIndex="5">
+                                                <Label fx:id="lblRedTeamSup" text="Player 5" textFill="WHITE" GridPane.rowIndex="5">
                                                     <font>
                                                         <Font size="16.0" />
                                                     </font>
@@ -693,7 +693,7 @@
                                                 </Label>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -701,7 +701,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -709,7 +709,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -717,7 +717,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -725,7 +725,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -733,7 +733,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -745,7 +745,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -753,7 +753,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -761,7 +761,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -769,7 +769,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -777,7 +777,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -785,7 +785,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -797,7 +797,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -805,7 +805,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -813,7 +813,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -821,7 +821,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -829,7 +829,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -837,7 +837,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -849,7 +849,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -857,7 +857,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -865,7 +865,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -873,7 +873,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -881,7 +881,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -889,7 +889,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -901,7 +901,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="56.0" prefWidth="187.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem1RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -909,7 +909,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem2RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="38.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -917,7 +917,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem3RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -925,7 +925,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem4RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -933,7 +933,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem5RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="141.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -941,7 +941,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgItem6RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="176.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -958,7 +958,7 @@
                                                 </Label>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -966,7 +966,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2RedTeamTop" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -978,7 +978,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -986,7 +986,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2RedTeamJng" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -998,7 +998,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -1006,7 +1006,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2RedTeamMid" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -1018,7 +1018,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -1026,7 +1026,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2RedTeamAdc" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -1038,7 +1038,7 @@
                                                 </Pane>
                                                 <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
                                                     <children>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell1RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="21.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -1046,7 +1046,7 @@
                                                                 <Cursor fx:constant="HAND" />
                                                             </cursor>
                                                         </ImageView>
-                                                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                                                        <ImageView fx:id="imgSpell2RedTeamSup" fitHeight="35.0" fitWidth="35.0" layoutX="64.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                             <image>
                                                                 <Image url="@pics/item.png" />
                                                             </image>
@@ -1061,7 +1061,7 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                                <ImageView fx:id="imgChampRedTeamTop" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -1069,7 +1069,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                                <ImageView fx:id="imgChampRedTeamJng" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -1077,7 +1077,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                                <ImageView fx:id="imgChampRedTeamMid" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -1085,7 +1085,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                                <ImageView fx:id="imgChampRedTeamAdc" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -1093,7 +1093,7 @@
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                                <ImageView fx:id="imgChampRedTeamSup" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5">
                                                     <image>
                                                         <Image url="@pics/item.png" />
                                                     </image>
@@ -1106,41 +1106,41 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                                <ImageView fx:id="imgRunaRedTeamTop" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
                                                     <image>
-                                                        <Image url="@pics/items/item.png" />
+                                                        <Image url="@pics/item.png" />
                                                     </image>
                                                     <cursor>
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                                <ImageView fx:id="imgRunaRedTeamJng" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
                                                     <image>
-                                                        <Image url="@pics/items/item.png" />
+                                                        <Image url="@pics/item.png" />
                                                     </image>
                                                     <cursor>
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                                                <ImageView fx:id="imgRunaRedTeamMid" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
                                                     <image>
-                                                        <Image url="@pics/items/item.png" />
+                                                        <Image url="@pics/item.png" />
                                                     </image>
                                                     <cursor>
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                                <ImageView fx:id="imgRunaRedTeamAdc" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
                                                     <image>
-                                                        <Image url="@pics/items/item.png" />
+                                                        <Image url="@pics/item.png" />
                                                     </image>
                                                     <cursor>
                                                         <Cursor fx:constant="HAND" />
                                                     </cursor>
                                                 </ImageView>
-                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                                <ImageView fx:id="imgRunaRedTeamSup" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5">
                                                     <image>
-                                                        <Image url="@pics/items/item.png" />
+                                                        <Image url="@pics/item.png" />
                                                     </image>
                                                     <cursor>
                                                         <Cursor fx:constant="HAND" />
@@ -1166,26 +1166,26 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="1" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="3" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
-                                                <Spinner editable="true" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinCSRedTeamTop" prefHeight="26.0" prefWidth="77.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinCSRedTeamJng" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinCSRedTeamMid" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinCSRedTeamAdc" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinCSRedTeamSup" prefHeight="26.0" prefWidth="76.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinKillsRedTeamTop" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinKillsRedTeamJng" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinKillsRedTeamMid" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinKillsRedTeamAdc" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinKillsRedTeamSup" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinDeathsRedTeamTop" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinDeathsRedTeamJng" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinDeathsRedTeamMid" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinDeathsRedTeamAdc" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinDeathsRedTeamSup" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="spinAssistsRedTeamTop" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="spinAssistsRedTeamJng" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="spinAssistsRedTeamMid" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="spinAssistsRedTeamAdc" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="spinAssistsRedTeamSup" prefHeight="26.0" prefWidth="73.0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
                                             </children>
                                         </GridPane>
                                     </children>
@@ -1212,7 +1212,7 @@
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
                         <ComboBox prefHeight="26.0" prefWidth="198.0" promptText="Tournament" GridPane.columnIndex="1" />
                         <ComboBox prefHeight="26.0" prefWidth="199.0" promptText="Round" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <ComboBox prefHeight="26.0" prefWidth="198.0" promptText="Winner" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="cbWinner" prefHeight="26.0" prefWidth="198.0" promptText="Winner" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                         <ComboBox prefHeight="26.0" prefWidth="198.0" promptText="Match" GridPane.columnIndex="5" />

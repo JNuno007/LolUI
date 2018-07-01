@@ -354,7 +354,7 @@ public class FXMLManageMatchTournamentController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLMatchGameTournament.fxml"));
         Parent root = loader.load();
         FXMLMatchGameTournamentController controller = loader.getController();
-        //this.preparePopUpEl\ements(event, controller);
+        this.preparePopUpElements(event, controller);
         //Metodo para preencher a Janela de PopUp
         this.prepareStage(root);
     }
@@ -373,11 +373,114 @@ public class FXMLManageMatchTournamentController implements Initializable {
         stage.showAndWait();
     }
 
-    public void preparePopUpElements(MouseEvent event, FXMLPopUpTeamController controller) {
+    public void preparePopUpElements(MouseEvent event, FXMLMatchGameTournamentController controller) {
 
         Encontro en = new Encontro();
-
         
+        if (event.getSource() == gridT8R1E1) {
+            System.out.println("ENTREI");
+            en = this.getEncontroByGripPane(0, 0);
+        }
+
+        if (event.getSource() == gridT8R1E2) {
+            en = this.getEncontroByGripPane(0, 1);
+        }
+
+        if (event.getSource() == gridT8R1E3) {
+            en = this.getEncontroByGripPane(0, 2);
+        }
+
+        if (event.getSource() == gridT8R1E4) {
+            en = this.getEncontroByGripPane(0, 3);
+        }
+
+        if (event.getSource() == gridT8R2E1) {
+            en = this.getEncontroByGripPane(1, 0);
+        }
+
+        if (event.getSource() == gridT8R2E2) {
+            en = this.getEncontroByGripPane(1, 1);
+        }
+
+        if (event.getSource() == gridT8R3E1) {
+            en = this.getEncontroByGripPane(2, 0);
+        }
+        
+        if(event.getSource() == gridT16R1E1){
+            en = this.getEncontroByGripPane(0, 0);
+        }
+        
+        if(event.getSource() == gridT16R1E2){
+            en = this.getEncontroByGripPane(0, 1);
+        }
+        
+        if(event.getSource() == gridT16R1E3){
+            en = this.getEncontroByGripPane(0, 2);
+        }
+        
+        if(event.getSource() == gridT16R1E4){
+            en = this.getEncontroByGripPane(0, 3);
+        }
+        
+        if(event.getSource() == gridT16R1E5){
+            en = this.getEncontroByGripPane(0, 4);
+        }
+        
+        if(event.getSource() == gridT16R1E6){
+            en = this.getEncontroByGripPane(0, 5);
+        }
+        
+        if(event.getSource() == gridT16R1E7){
+            en = this.getEncontroByGripPane(0, 6);
+        }
+        
+        if(event.getSource() == gridT16R1E8){
+            en = this.getEncontroByGripPane(0, 7);
+        }
+        
+        if(event.getSource() == gridT16R2E1){
+            en = this.getEncontroByGripPane(1, 0);
+        }
+        
+        if(event.getSource() == gridT16R2E2){
+            en = this.getEncontroByGripPane(1, 1);
+        }
+        
+        if(event.getSource() == gridT16R2E3){
+            en = this.getEncontroByGripPane(1, 2);
+        }
+        
+        if(event.getSource() == gridT16R2E4){
+            en = this.getEncontroByGripPane(1, 3);
+        }
+        
+        if(event.getSource() == gridT16R3E1){
+            en = this.getEncontroByGripPane(2, 0);
+        }
+        
+        if(event.getSource() == gridT16R3E2){
+            en = this.getEncontroByGripPane(2, 1);
+        }
+        
+        if(event.getSource() == gridT16R4E1){
+            en = this.getEncontroByGripPane(3, 0);
+        }
+
+        controller.preencheTabsLabelsComboboxesEquipas(en);
+        
+    }
+    
+    public Encontro getEncontroByGripPane(int nronda, int nencontro) {
+        List<Ronda> rondas = new ArrayList<>();
+        rondas.addAll(t.getRondas());
+        rondas.sort(Comparator.comparing((ronda) -> ronda.getId()));
+        List<Encontro> encontros = new ArrayList<>();
+        encontros.addAll(rondas.get(nronda).getEncontros());
+        encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+
+        Encontro en = encontros.get(nencontro);
+
+        return en;
     }
 
     public void listarTorneios() {

@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -50,18 +51,67 @@
    <top>
       <Pane maxHeight="80.0" maxWidth="700.0" minHeight="60.0" minWidth="700.0" prefHeight="60.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="searchBar" alignment="CENTER" layoutX="250.0" layoutY="14.0" maxWidth="350.0" minWidth="150.0" prefHeight="19.0" prefWidth="200.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
+            <TextField fx:id="searchBar" alignment="CENTER" layoutX="18.0" layoutY="14.0" maxWidth="350.0" minWidth="150.0" prefHeight="19.0" prefWidth="200.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
+            <ImageView fx:id="imgItem1" fitHeight="40.0" fitWidth="40.0" layoutX="226.0" layoutY="10.0" onMouseClicked="#eliminaItemListaTemp" pickOnBounds="true">
+               <image>
+                  <Image url="@pics/item.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgItem2" fitHeight="40.0" fitWidth="40.0" layoutX="277.0" layoutY="10.0" onMouseClicked="#eliminaItemListaTemp" pickOnBounds="true">
+               <image>
+                  <Image url="@pics/item.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgItem3" fitHeight="40.0" fitWidth="40.0" layoutX="328.0" layoutY="10.0" onMouseClicked="#eliminaItemListaTemp" pickOnBounds="true">
+               <image>
+                  <Image url="@pics/item.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgItem4" fitHeight="40.0" fitWidth="40.0" layoutX="378.0" layoutY="10.0" onMouseClicked="#eliminaItemListaTemp" pickOnBounds="true">
+               <image>
+                  <Image url="@pics/item.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgItem5" fitHeight="40.0" fitWidth="40.0" layoutX="428.0" layoutY="10.0" onMouseClicked="#eliminaItemListaTemp" pickOnBounds="true">
+               <image>
+                  <Image url="@pics/item.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgItem6" fitHeight="40.0" fitWidth="40.0" layoutX="478.0" layoutY="10.0" onMouseClicked="#eliminaItemListaTemp" pickOnBounds="true">
+               <image>
+                  <Image url="@pics/item.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button layoutX="549.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#confirmClick" prefHeight="25.0" prefWidth="93.0" text="Confirm" />
          </children>
       </Pane>
    </top>
    <bottom>
       <AnchorPane maxHeight="40.0" maxWidth="680.0" minHeight="40.0" minWidth="680.0" prefHeight="40.0" prefWidth="680.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#closePopUpAndClear" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@pics/back.png" />
                </image>
