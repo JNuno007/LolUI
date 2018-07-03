@@ -46,8 +46,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lolbll.BuildServices;
+import lolbll.EncontroServices;
 import lolbll.EstatisticasMembroJogoServices;
+import lolbll.HibernateBLL;
 import lolbll.JogoServices;
+import lolbll.RondaServices;
 import lolbll.RunaEscolhidaServices;
 import lolbll.RunesServices;
 import lolbll.SpellEscolhidoServices;
@@ -494,6 +497,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
     private TextField spinAssistsRedTeamSup;
     
     private Encontro encontro;
+    
+    private URL url;
+    
+    private ResourceBundle rb;
 
     /**
      * Initializes the controller class.
@@ -505,12 +512,20 @@ public class FXMLMatchGameTournamentController implements Initializable {
         champsSelecionados = new ArrayList<>();
         this.prepareLists();
         this.prepareTextFieldListeners();
+        this.url = url;
+        this.rb = rb;
     }
 
     @FXML
-    public void closePopUp() {
+    public void closePopUp() throws IOException {
+        
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLManageMatchTournament.fxml"));
+        Parent root = loader.load();
+        FXMLManageMatchTournamentController controller = loader.getController();
+        controller.initialize(url, rb);
+        
     }
     
     public void prepareLists(){
@@ -1713,6 +1728,18 @@ public class FXMLMatchGameTournamentController implements Initializable {
             this.warningAlert();
             this.advertWarningAlert();
             this.matchInput();
+            this.atualizaElementosTorneio();
+            try {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Success");
+                alert.setHeaderText("Operation Successfull");
+                alert.setContentText("Your new member was created!");
+                alert.showAndWait();
+                HibernateBLL.clearCache();
+                this.closePopUp();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLMatchGameTournamentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }catch (InsereMatchStatsException ex) {
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Warning");
@@ -1726,9 +1753,27 @@ public class FXMLMatchGameTournamentController implements Initializable {
             alert.setContentText(ex.getMessage());
             Optional<ButtonType> result = alert.showAndWait();
             if(result.get() == ButtonType.OK){
-                this.gravarMatchBD();
+                
+                try {
+                    this.gravarMatchBD();
+                    this.atualizaElementosTorneio();
+                    Alert alert2 = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert2.setTitle("Success");
+                    alert2.setHeaderText("Operation Successfull");
+                    alert2.setContentText("The match was created!");
+                    alert2.showAndWait();
+                    HibernateBLL.clearCache();
+                    this.closePopUp();
+                } catch (IOException ex1) {
+                    Logger.getLogger(FXMLMatchGameTournamentController.class.getName()).log(Level.SEVERE, null, ex1);
+                }
             }
         }
+    }
+    
+    public void atualizaElementosTorneio(){
+        EncontroServices.verificaEncontroConcluído(encontro);
+        RondaServices.verificaRondaConcluida(encontro.getRonda());
     }
 
     //TODO

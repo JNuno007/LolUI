@@ -40,6 +40,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javax.imageio.ImageIO;
 import lolbll.EquipaServices;
+import lolbll.HibernateBLL;
 import lolbll.MembroEquipaServices;
 import lolbll.PosicaoServices;
 import loldal.model.Equipa;
@@ -250,6 +251,7 @@ public class FXMLCreateNewMemberController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("Your new member was created!");
             alert.showAndWait();
+            HibernateBLL.clearCache();
             this.closePopUp();
         } catch (InsertMembroEquipaDBException e) {
             //Dialog

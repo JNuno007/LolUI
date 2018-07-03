@@ -41,6 +41,7 @@ import javafx.stage.StageStyle;
 import lolbll.EncontroServices;
 import lolbll.EquipaServices;
 import lolbll.EquipaTorneioServices;
+import lolbll.HibernateBLL;
 import lolbll.RegiaoServices;
 import lolbll.RondaServices;
 import lolbll.TorneioServices;
@@ -1072,6 +1073,7 @@ public class FXMLCreateNewTournamentController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("Your new member was created!");
             alert.showAndWait();
+            HibernateBLL.clearCache();
             this.closePopUp();
         } catch (InsertTournamentDBException ex) {
             Alert alert = new Alert(Alert.AlertType.WARNING);

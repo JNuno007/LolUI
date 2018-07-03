@@ -331,6 +331,10 @@ public class FXMLManageMatchTournamentController implements Initializable {
     private List<Torneio> listaPesquisa;
 
     private Torneio t;
+    
+    URL url;
+    
+    ResourceBundle rb;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -339,7 +343,11 @@ public class FXMLManageMatchTournamentController implements Initializable {
         this.listarTorneios();
         this.pesquisarNaLista();
         this.atribuirElementos();
-
+        this.url = url;
+        this.rb = rb;
+        paneT8.setVisible(false);
+        paneT16.setVisible(false);
+        System.out.println("AQUI ESTOU");
     }
 
     @FXML
@@ -371,6 +379,7 @@ public class FXMLManageMatchTournamentController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgT16R1E8Eq2.getScene().getWindow());
         stage.showAndWait();
+        this.initialize(url, rb);
     }
 
     public void preparePopUpElements(MouseEvent event, FXMLMatchGameTournamentController controller) {
@@ -530,6 +539,7 @@ public class FXMLManageMatchTournamentController implements Initializable {
                     this.ativaGridT8();
                     this.atribuirImagens8(t);
                     this.atribuirResultados8(t);
+                    this.inativaGridEncontroWinnerT8(t);
                 } else {
                     if (t.getNumrondas().intValue() == 4) {
                         this.paneT8.setVisible(false);
@@ -537,6 +547,7 @@ public class FXMLManageMatchTournamentController implements Initializable {
                         this.ativaGridT16();
                         this.atribuirImagens16(t);
                         this.atribuirResultados16(t);
+                        this.inativaGridEncontroWinnerT16(t);
                     }
                 }
             }
@@ -820,6 +831,126 @@ public class FXMLManageMatchTournamentController implements Initializable {
             //resultado Equipa 1 e Equipa 2, do Encontro 1
             this.atribuirLabel(encontros.get(0).getVitoriaequipa1().toString(), lblT16R4E1Eq1);
             this.atribuirLabel(encontros.get(0).getVitoriaequipa2().toString(), lblT16R4E1Eq2);
+        }
+    }
+    
+    public void inativaGridEncontroWinnerT8(Torneio t){
+        List<Ronda> rondas = new ArrayList<>();
+        rondas.addAll(t.getRondas());
+        rondas.sort(Comparator.comparing((ronda) -> ronda.getId()));
+        List<Encontro> encontros = new ArrayList<>();
+        encontros.addAll(rondas.get(0).getEncontros());
+        encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+        
+        if(t.getRondaatual().intValue() >= 1){
+            if(encontros.get(0).getEquipaByVencedor()!=null){
+                gridT8R1E1.setDisable(true);
+            }
+            if(encontros.get(1).getEquipaByVencedor()!=null){
+                gridT8R1E2.setDisable(true);
+            }
+            if(encontros.get(2).getEquipaByVencedor()!=null){
+                gridT8R1E3.setDisable(true);
+            }
+            if(encontros.get(3).getEquipaByVencedor()!=null){
+                gridT8R1E4.setDisable(true);
+            }
+        }
+        if(t.getRondaatual().intValue() >= 2){
+            encontros.clear();
+            encontros.addAll(rondas.get(1).getEncontros());
+            encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+            
+            if(encontros.get(0).getEquipaByVencedor()!=null){
+                gridT8R2E1.setDisable(true);
+            }
+            if(encontros.get(1).getEquipaByVencedor()!=null){
+                gridT8R2E2.setDisable(true);
+            }
+        }
+        if(t.getRondaatual().intValue() >= 3){
+            encontros.clear();
+            encontros.addAll(rondas.get(2).getEncontros());
+            encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+            
+            if(encontros.get(0).getEquipaByVencedor()!=null){
+                gridT8R3E1.setDisable(true);
+            }
+        }
+    }
+    
+    public void inativaGridEncontroWinnerT16(Torneio t){
+        List<Ronda> rondas = new ArrayList<>();
+        rondas.addAll(t.getRondas());
+        rondas.sort(Comparator.comparing((ronda) -> ronda.getId()));
+        List<Encontro> encontros = new ArrayList<>();
+        encontros.addAll(rondas.get(0).getEncontros());
+        encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+        
+        if(t.getRondaatual().intValue() >= 1){
+            if(encontros.get(0).getEquipaByVencedor()!=null){
+                gridT16R1E1.setDisable(true);
+            }
+            if(encontros.get(1).getEquipaByVencedor()!=null){
+                gridT16R1E2.setDisable(true);
+            }
+            if(encontros.get(2).getEquipaByVencedor()!=null){
+                gridT16R1E3.setDisable(true);
+            }
+            if(encontros.get(3).getEquipaByVencedor()!=null){
+                gridT16R1E4.setDisable(true);
+            }
+            if(encontros.get(4).getEquipaByVencedor()!=null){
+                gridT16R1E5.setDisable(true);
+            }
+            if(encontros.get(5).getEquipaByVencedor()!=null){
+                gridT16R1E6.setDisable(true);
+            }
+            if(encontros.get(6).getEquipaByVencedor()!=null){
+                gridT16R1E7.setDisable(true);
+            }
+            if(encontros.get(7).getEquipaByVencedor()!=null){
+                gridT16R1E8.setDisable(true);
+            }
+        }
+        if(t.getRondaatual().intValue() >= 2){
+            encontros.clear();
+            encontros.addAll(rondas.get(1).getEncontros());
+            encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+            
+            if(encontros.get(0).getEquipaByVencedor()!=null){
+                gridT16R2E1.setDisable(true);
+            }
+            if(encontros.get(1).getEquipaByVencedor()!=null){
+                gridT16R2E2.setDisable(true);
+            }
+            if(encontros.get(2).getEquipaByVencedor()!=null){
+                gridT16R2E3.setDisable(true);
+            }
+            if(encontros.get(3).getEquipaByVencedor()!=null){
+                gridT16R2E4.setDisable(true);
+            }
+        }
+        if(t.getRondaatual().intValue() >= 3){
+            encontros.clear();
+            encontros.addAll(rondas.get(2).getEncontros());
+            encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+            
+            if(encontros.get(0).getEquipaByVencedor()!=null){
+                gridT16R3E1.setDisable(true);
+            }
+            if(encontros.get(1).getEquipaByVencedor()!=null){
+                gridT16R3E2.setDisable(true);
+            }
+        }
+        if(t.getRondaatual().intValue() >= 4){
+            encontros.clear();
+            encontros.addAll(rondas.get(3).getEncontros());
+            encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
+            
+            if(encontros.get(0).getEquipaByVencedor()!=null){
+                gridT16R4E1.setDisable(true);
+            }
         }
     }
 

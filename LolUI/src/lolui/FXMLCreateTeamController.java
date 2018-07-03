@@ -36,6 +36,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javax.imageio.ImageIO;
 import lolbll.EquipaServices;
+import lolbll.HibernateBLL;
 import loldal.model.Equipa;
 import loldal.model.Membroequipa;
 import loldal.model.Pais;
@@ -276,6 +277,8 @@ public class FXMLCreateTeamController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("Your new team was created!");
             alert.showAndWait();
+            HibernateBLL.clearCache();
+            this.closePopUp();
         } catch (InsertEquipaDBException ex) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");

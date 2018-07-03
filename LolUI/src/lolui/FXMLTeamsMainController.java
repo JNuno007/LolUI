@@ -418,7 +418,7 @@ public class FXMLTeamsMainController extends Application implements Initializabl
         List<Encontro> encontrosConcluidos = new ArrayList<>();
 
         for (Encontro e : encontrosFromTeam) {
-            if (e.getEstado().equals("CRIADO")) {//NEEDS CHANGE - ESTADO = 'CONCLUIDO'
+            if (e.getEstado().equals("FINALIZADO")) {//NEEDS CHANGE - ESTADO = 'CONCLUIDO'
                 encontrosConcluidos.add(e);
             }
         }

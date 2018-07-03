@@ -19,6 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import lolbll.AdminServices;
+import lolbll.HibernateBLL;
 import loldal.model.Admin;
 
 /**
@@ -148,6 +149,7 @@ public class FXMLCreateNewAdminController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("The new Admin " + newAdmin.getUsername() + " has been created!");
             alert.showAndWait();
+            HibernateBLL.clearCache();
             closePopUp();
         }
     }
