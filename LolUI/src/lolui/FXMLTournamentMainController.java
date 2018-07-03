@@ -364,6 +364,8 @@ public class FXMLTournamentMainController implements Initializable {
 
         });
     }
+    
+    
 
     public void atribuirElementos() {
         this.listaTorneios.getSelectionModel().selectedItemProperty().addListener((observable) -> {

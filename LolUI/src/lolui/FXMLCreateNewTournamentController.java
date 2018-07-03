@@ -1062,8 +1062,13 @@ public class FXMLCreateNewTournamentController implements Initializable {
             }
 
     }
+    @FXML
+    public void saveOnClick() {
+        this.save();
+        HibernateBLL.clearCache();
+    }
     
-    public void saveOnClick(){
+    public void save(){
         try {
             this.verificaTorneio();
             this.getUserInput();

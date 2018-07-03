@@ -238,9 +238,7 @@ public class FXMLCreateNewMemberController implements Initializable {
         }
 
     }
-
-    @FXML
-    public void saveOnClick() {
+    public void save(){
         try {
             this.verificaMembroEquipa();
             this.getUserInput();
@@ -261,6 +259,12 @@ public class FXMLCreateNewMemberController implements Initializable {
             alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
+    }
+
+    @FXML
+    public void saveOnClick() {
+        this.save();
+        HibernateBLL.clearCache();
     }
 
     public void getUserInput() {

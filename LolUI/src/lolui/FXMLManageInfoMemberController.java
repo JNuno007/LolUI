@@ -640,6 +640,11 @@ public class FXMLManageInfoMemberController implements Initializable {
     
     @FXML
     public void saveOnClick() {
+        this.save();
+        HibernateBLL.clearCache();
+    }
+    
+    public void save() {
         try {
             this.verificaMembroEquipa();
             this.getUserInput();

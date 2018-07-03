@@ -55,6 +55,7 @@ import lolbll.RunaEscolhidaServices;
 import lolbll.RunesServices;
 import lolbll.SpellEscolhidoServices;
 import lolbll.SpellServices;
+import lolbll.TorneioServices;
 import loldal.model.Build;
 import loldal.model.Champion;
 import loldal.model.Encontro;
@@ -1761,7 +1762,13 @@ public class FXMLMatchGameTournamentController implements Initializable {
         }
     }
     
-    public void saveOnClick(){
+    @FXML
+    public void saveOnClick() {
+        this.save();
+        HibernateBLL.clearCache();
+    }
+    
+    public void save(){
         try{
             this.warningAlert();
             this.advertWarningAlert();
@@ -1857,7 +1864,9 @@ public class FXMLMatchGameTournamentController implements Initializable {
         
         this.gravaEstatisticasMembroEquipa1(jogo);
         this.gravaEstatisticasMembroEquipa2(jogo);
-       
+        
+        encontro.getRonda().getTorneio().setEstado("COMECADO");
+        TorneioServices.saveTorneio(encontro.getRonda().getTorneio());
         
         //Fazer método que verifique se a ronda está terminada
         /*
