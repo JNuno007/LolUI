@@ -99,6 +99,18 @@ public class FXMLSpellSelectionController implements Initializable {
         this.selecionaSpell();
     }
     
+    public void preencheSpellSelecionadosInicio(List<Spell> list){
+        if(list.size()>0){
+            spell1 = list.get(0);
+            imgSpell1.setImage(new Image(getClass().getResourceAsStream("pics/spells/" + list.get(0).getNome().toLowerCase() + ".png")));
+        }
+        
+        if(list.size()>1){
+            spell2 = list.get(1);
+            imgSpell2.setImage(new Image(getClass().getResourceAsStream("pics/spells/" + list.get(1).getNome().toLowerCase() + ".png")));
+        }
+    }
+    
     public void pesquisarNaLista() {
         searchBar.setOnKeyReleased((event) -> {
             List<Spell> temp = new ArrayList<>();
@@ -230,7 +242,7 @@ public class FXMLSpellSelectionController implements Initializable {
     }
     
     public void confirmClick(){
-        if(spell1 == spell2){
+        if(spell1 == spell2 && spell1!=null && spell2!=null){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning");
             alert.setHeaderText("Something went wrong.");

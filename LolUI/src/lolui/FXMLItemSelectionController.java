@@ -43,15 +43,21 @@ public class FXMLItemSelectionController implements Initializable {
 
     @FXML
     private TextField searchBar;
-    
+
     //Items selecionados
-    @FXML private ImageView imgItem1;
-    @FXML private ImageView imgItem2;
-    @FXML private ImageView imgItem3;
-    @FXML private ImageView imgItem4;
-    @FXML private ImageView imgItem5;
-    @FXML private ImageView imgItem6;
-    
+    @FXML
+    private ImageView imgItem1;
+    @FXML
+    private ImageView imgItem2;
+    @FXML
+    private ImageView imgItem3;
+    @FXML
+    private ImageView imgItem4;
+    @FXML
+    private ImageView imgItem5;
+    @FXML
+    private ImageView imgItem6;
+
     private Item item1;
     private Item item2;
     private Item item3;
@@ -60,7 +66,7 @@ public class FXMLItemSelectionController implements Initializable {
     private Item item6;
 
     private ImageView itemSelected;
-    
+
     private List<Item> items;
 
     private List<Item> listaFiltrada;
@@ -68,31 +74,30 @@ public class FXMLItemSelectionController implements Initializable {
     private Item item;
 
     private int pos;
-    
+
     private List<Item> itemsSelecionados;
-   
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mainPane.setCenter(gridPane);
         this.pesquisarNaLista();
+        //itemsSelecionados = new ArrayList<>();
         itemsSelecionados = new ArrayList<>();
-    }   
-    
+    }
+
     @FXML
     public void closePopUp() {
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
     }
-    
-      @FXML
-    public void closePopUpAndClear(){
+
+    @FXML
+    public void closePopUpAndClear() {
         itemsSelecionados = null;
         this.closePopUp();
     }
-    
-    
-     public void preencheGridItems() {
+
+    public void preencheGridItems() {
         items = ItemServices.getListaItems();
 
         int column = 0;
@@ -119,8 +124,8 @@ public class FXMLItemSelectionController implements Initializable {
         listaFiltrada = items;
         this.selecionaItem();
     }
-     
-     public void pesquisarNaLista() {
+
+    public void pesquisarNaLista() {
         searchBar.setOnKeyReleased((event) -> {
             List<Item> temp = new ArrayList<>();
             String texto = searchBar.getText();
@@ -139,8 +144,8 @@ public class FXMLItemSelectionController implements Initializable {
             }
         });
     }
-     
-     public void preencheGridPaisesFiltrada(List<Item> list) {
+
+    public void preencheGridPaisesFiltrada(List<Item> list) {
         int column = 0;
         int row = 0;
 
@@ -167,12 +172,12 @@ public class FXMLItemSelectionController implements Initializable {
         listaFiltrada = list;
         this.selecionaItem();
     }
-     
-     public void limpaGrid() {
+
+    public void limpaGrid() {
         gridPane.getChildren().removeIf(node -> Objects.equals(GridPane.getRowIndex(node), GridPane.getRowIndex(node)));
     }
-     
-     public void selecionaItem() {
+
+    public void selecionaItem() {
         for (Node node : gridPane.getChildren()) {
             node.setCursor(Cursor.HAND);
             node.setOnMouseClicked((event) -> {
@@ -201,30 +206,61 @@ public class FXMLItemSelectionController implements Initializable {
             });
         }
     }
-     
-    public void preencheItemsSelecionados(Item item, ImageView itemSelected){
-        
-        if(item1 == null){
+
+    public void preencheItemSelecionadosInicio(List<Item> list) {
+
+        if (list.size()>0) {
+            item1 = list.get(0);
+            imgItem1.setImage(new Image(getClass().getResourceAsStream("pics/items/" + list.get(0).getNome().toLowerCase() + ".png")));
+        }
+        if (list.size()>1) {
+            item2 = list.get(1);
+            imgItem2.setImage(new Image(getClass().getResourceAsStream("pics/items/" + list.get(1).getNome().toLowerCase() + ".png")));
+        }
+        if (list.size()>2) {
+            item3 = list.get(2);
+            imgItem3.setImage(new Image(getClass().getResourceAsStream("pics/items/" + list.get(2).getNome().toLowerCase() + ".png")));
+
+        }
+        if (list.size()>3) {
+            item4 = list.get(3);
+            imgItem4.setImage(new Image(getClass().getResourceAsStream("pics/items/" + list.get(3).getNome().toLowerCase() + ".png")));
+        }
+        if (list.size()>4) {
+            item5 = list.get(4);
+            imgItem5.setImage(new Image(getClass().getResourceAsStream("pics/items/" + list.get(4).getNome().toLowerCase() + ".png")));
+        }
+        if (list.size()>5) {
+            item6 = list.get(5);
+            imgItem6.setImage(new Image(getClass().getResourceAsStream("pics/items/" + list.get(5).getNome().toLowerCase() + ".png")));
+        }
+
+//this.preencheLista();
+    }
+
+    public void preencheItemsSelecionados(Item item, ImageView itemSelected) {
+
+        if (item1 == null) {
             item1 = item;
             imgItem1.setImage(itemSelected.getImage());
-        }else{
-            if(item2 == null){
+        } else {
+            if (item2 == null) {
                 item2 = item;
                 imgItem2.setImage(itemSelected.getImage());
-            }else{
-                if(item3 == null){
+            } else {
+                if (item3 == null) {
                     item3 = item;
                     imgItem3.setImage(itemSelected.getImage());
-                }else{
-                    if(item4 == null){
+                } else {
+                    if (item4 == null) {
                         item4 = item;
                         imgItem4.setImage(itemSelected.getImage());
-                    }else{
-                        if(item5 == null){
+                    } else {
+                        if (item5 == null) {
                             item5 = item;
                             imgItem5.setImage(itemSelected.getImage());
-                        }else{
-                            if(item6 == null){
+                        } else {
+                            if (item6 == null) {
                                 item6 = item;
                                 imgItem6.setImage(itemSelected.getImage());
                             }
@@ -234,63 +270,77 @@ public class FXMLItemSelectionController implements Initializable {
             }
         }
     }
-    
-    public void eliminaItemListaTemp(MouseEvent event){
-        if(event.getSource()==imgItem1){
+
+    public void eliminaItemListaTemp(MouseEvent event) {
+        if (event.getSource() == imgItem1) {
             item1 = null;
             imgItem1.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+            System.out.println(item1);
         }
-        if(event.getSource()==imgItem2){
+        if (event.getSource() == imgItem2) {
             item2 = null;
             imgItem2.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+            System.out.println(item1);
         }
-        if(event.getSource()==imgItem3){
+        if (event.getSource() == imgItem3) {
             item3 = null;
             imgItem3.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+            System.out.println(item1);
         }
-        if(event.getSource()==imgItem4){
+        if (event.getSource() == imgItem4) {
             item4 = null;
             imgItem4.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+            System.out.println(item1);
         }
-        if(event.getSource()==imgItem5){
+        if (event.getSource() == imgItem5) {
             item5 = null;
             imgItem5.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+            System.out.println(item1);
         }
-        if(event.getSource()==imgItem6){
+        if (event.getSource() == imgItem6) {
             item6 = null;
             imgItem6.setImage(new Image(getClass().getResourceAsStream("pics/item.png")));
+            System.out.println(item1);
         }
-        
+
     }
-    
-    public void preencheLista(){
-        if(item1 != null){
+
+    public void preencheLista() {
+        if (item1 != null) {
             itemsSelecionados.add(item1);
         }
-        if(item2 != null){
+        if (item2 != null) {
             itemsSelecionados.add(item2);
         }
-        if(item3 != null){
+        if (item3 != null) {
             itemsSelecionados.add(item3);
         }
-        if(item4 != null){
+        if (item4 != null) {
             itemsSelecionados.add(item4);
         }
-        if(item5 != null){
+        if (item5 != null) {
             itemsSelecionados.add(item5);
         }
-        if(item6 != null){
+        if (item6 != null) {
             itemsSelecionados.add(item6);
         }
+        
+        if(item1 == null && item2 == null && item3 == null && item4 == null && item5 == null && item6 == null){
+            itemsSelecionados.clear();
+        }
     }
-    
-    public void confirmClick(){
+
+    public void confirmClick() {
         this.preencheLista();
         this.closePopUp();
     }
-   
-    public List<Item> getItemList(){
+
+    public List<Item> getItemList() {
         return itemsSelecionados;
+    }
+
+    public void setItemList(List<Item> items) {
+        itemsSelecionados = items;
     }
 
 }

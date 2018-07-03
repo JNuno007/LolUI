@@ -309,7 +309,7 @@ public class FXMLCreateTeamController implements Initializable {
         equipa.setPais(pais);
 
         if (listaMembroEquipa.size() > 0) {
-            equipa.setMembroequipas(listaMembroEquipa);
+            //equipa.setMembroequipas(listaMembroEquipa);
 
             for (Membroequipa m : listaMembroEquipa) {
                 m.setEquipa(equipa);
