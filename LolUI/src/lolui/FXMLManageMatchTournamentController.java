@@ -842,6 +842,9 @@ public class FXMLManageMatchTournamentController implements Initializable {
         encontros.addAll(rondas.get(0).getEncontros());
         encontros.sort(Comparator.comparing((encontro) -> encontro.getId()));
         
+        
+        System.out.println(t.getRondas());
+        
         if(t.getRondaatual().intValue() >= 1){
             if(encontros.get(0).getEquipaByVencedor()!=null){
                 gridT8R1E1.setDisable(true);

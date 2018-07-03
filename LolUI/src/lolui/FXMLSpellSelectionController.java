@@ -249,9 +249,17 @@ public class FXMLSpellSelectionController implements Initializable {
             alert.setContentText("Please choose 2 different spells");
             alert.showAndWait();
         }else{
-            spellsSelecionados.clear();
-            this.preencheLista();
-            this.closePopUp();
+            if((spell1!=null && spell2==null) || (spell1==null && spell2!=null)){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Warning");
+                alert.setHeaderText("Something went wrong.");
+                alert.setContentText("Please choose 2 spells");
+                alert.showAndWait();
+            }else{
+                spellsSelecionados.clear();
+                this.preencheLista();
+                this.closePopUp();
+            }
         }
     }
     

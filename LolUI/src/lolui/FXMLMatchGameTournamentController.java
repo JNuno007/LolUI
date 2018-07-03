@@ -521,11 +521,6 @@ public class FXMLMatchGameTournamentController implements Initializable {
         
         Stage stage = (Stage) this.imgBack.getScene().getWindow();
         stage.close();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLManageMatchTournament.fxml"));
-        Parent root = loader.load();
-        FXMLManageMatchTournamentController controller = loader.getController();
-        controller.initialize(url, rb);
-        
     }
     
     public void prepareLists(){
@@ -950,29 +945,33 @@ public class FXMLMatchGameTournamentController implements Initializable {
 //            this.pais = controller.getPaisSelected();
 //            System.out.println(this.pais.getNome());
 //        }
+        
         if (tab == 0) {
             if (player == 1) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                System.out.println(championBlueTeamTop);
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championBlueTeamTop == null) {
                         championBlueTeamTop = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampBlueTeamTop);
                     } else {
-                        champsSelecionados.remove(championBlueTeamTop);
-                        championBlueTeamTop = controller.getChampionSelected();
-                        champsSelecionados.add(controller.getChampionSelected());
-                        this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampBlueTeamTop);
+                            champsSelecionados.remove(championBlueTeamTop);
+                            championBlueTeamTop = controller.getChampionSelected();
+                            champsSelecionados.add(controller.getChampionSelected());
+                            this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampBlueTeamTop);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
             if (player == 2) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championBlueTeamJng == null) {
                         championBlueTeamJng = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -984,15 +983,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampBlueTeamJng);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
             if (player == 3) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championBlueTeamMid == null) {
                         championBlueTeamMid = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1004,15 +1005,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampBlueTeamMid);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
             if (player == 4) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championBlueTeamAdc == null) {
                         championBlueTeamAdc = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1024,15 +1027,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampBlueTeamAdc);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
             if (player == 5) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championBlueTeamSup == null) {
                         championBlueTeamSup = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1044,17 +1049,19 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampBlueTeamSup);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
         }
         if (tab == 1) {
             if (player == 1) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championRedTeamTop == null) {
                         championRedTeamTop = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1066,15 +1073,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampRedTeamTop);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
             if (player == 2) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championRedTeamJng == null) {
                         championRedTeamJng = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1086,15 +1095,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampRedTeamJng);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                       Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait(); 
+                    }
                 }
             }
             if (player == 3) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championRedTeamMid == null) {
                         championRedTeamMid = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1106,15 +1117,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampRedTeamMid);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
             if (player == 4) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championRedTeamAdc == null) {
                         championRedTeamAdc = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1126,15 +1139,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampRedTeamAdc);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
             if (player == 5) {
-                if (!champsSelecionados.contains(controller.getChampionSelected())) {
+                if (controller.getChampionSelected()!= null && !champsSelecionados.contains(controller.getChampionSelected())) {
                     if (championRedTeamSup == null) {
                         championRedTeamSup = controller.getChampionSelected();
                         champsSelecionados.add(controller.getChampionSelected());
@@ -1146,14 +1161,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
                         this.preencheChampionsPlayer(controller.getChampionSelected(), imgChampRedTeamSup);
                     }
                 } else {
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Warning");
-                    alert.setHeaderText("Something went wrong.");
-                    alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
-                    alert.showAndWait();
+                    if(champsSelecionados.contains(controller.getChampionSelected())){
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning");
+                        alert.setHeaderText("Something went wrong.");
+                        alert.setContentText("The champion " + controller.getChampionSelected() + " is already selected by another player.");
+                        alert.showAndWait();
+                    }
                 }
             }
         }
+        System.out.println(champsSelecionados);
     }
 
     @FXML
@@ -1186,46 +1204,66 @@ public class FXMLMatchGameTournamentController implements Initializable {
 //        }
         if (tab == 0) {
             if (player == 1) {
-                runaBlueTeamTop = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamTop);
+                if(controller.getRunaSelected()!=null){
+                    runaBlueTeamTop = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamTop);
+                }
             }
             if (player == 2) {
-                runaBlueTeamJng = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamJng);
+                if(controller.getRunaSelected()!=null){
+                    runaBlueTeamJng = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamJng);
+                }
             }
             if (player == 3) {
-                runaBlueTeamMid = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamMid);
+                if(controller.getRunaSelected()!=null){
+                    runaBlueTeamMid = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamMid);
+                }
             }
             if (player == 4) {
-                runaBlueTeamAdc = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamAdc);
+                if(controller.getRunaSelected()!=null){
+                    runaBlueTeamAdc = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamAdc);
+                }
             }
             if (player == 5) {
-                runaBlueTeamSup = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamSup);
+                if(controller.getRunaSelected()!=null){
+                    runaBlueTeamSup = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaBlueTeamSup);
+                }
             }
         }
         if (tab == 1) {
             if (player == 1) {
-                runaRedTeamTop = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamTop);
+                if(controller.getRunaSelected()!=null){
+                    runaRedTeamTop = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamTop);
+                }
             }
             if (player == 2) {
-                runaRedTeamJng = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamJng);
+                if(controller.getRunaSelected()!=null){
+                    runaRedTeamJng = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamJng);
+                }
             }
             if (player == 3) {
-                runaRedTeamMid = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamMid);
+                if(controller.getRunaSelected()!=null){
+                    runaRedTeamMid = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamMid);
+                }
             }
             if (player == 4) {
-                runaRedTeamAdc = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamAdc);
+                if(controller.getRunaSelected()!=null){
+                    runaRedTeamAdc = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamAdc);
+                }
             }
             if (player == 5) {
-                runaRedTeamSup = controller.getRunaSelected();
-                this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamSup);
+                if(controller.getRunaSelected()!=null){
+                    runaRedTeamSup = controller.getRunaSelected();
+                    this.preencheRunaPlayer(controller.getRunaSelected(), imgRunaRedTeamSup);
+                }
             }
         }
 
@@ -1753,7 +1791,6 @@ public class FXMLMatchGameTournamentController implements Initializable {
             alert.setContentText(ex.getMessage());
             Optional<ButtonType> result = alert.showAndWait();
             if(result.get() == ButtonType.OK){
-                
                 try {
                     this.gravarMatchBD();
                     this.atualizaElementosTorneio();
@@ -1820,6 +1857,7 @@ public class FXMLMatchGameTournamentController implements Initializable {
         
         this.gravaEstatisticasMembroEquipa1(jogo);
         this.gravaEstatisticasMembroEquipa2(jogo);
+       
         
         //Fazer método que verifique se a ronda está terminada
         /*

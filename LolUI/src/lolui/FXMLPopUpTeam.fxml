@@ -17,7 +17,7 @@
     <top>
         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fx:id="imgLogoEquipa1" fitHeight="116.0" fitWidth="180.0" layoutX="391.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="imgLogoEquipa1" fitHeight="120.0" fitWidth="180.0" layoutX="391.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@pics/teams/skt.png" />
                     </image>
@@ -42,7 +42,7 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <ImageView fx:id="imgLogoEquipa2" fitHeight="116.0" fitWidth="180.0" layoutX="828.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="imgLogoEquipa2" fitHeight="120.0" fitWidth="180.0" layoutX="849.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@pics/teams/msf.png" />
                     </image>
@@ -386,11 +386,11 @@
                                 </ImageView>
                             </children>
                         </GridPane>
-                        <Label fx:id="lblEquipa1NomeTop" layoutX="121.0" layoutY="71.0" text="Huni" textFill="WHITE" />
-                        <Label fx:id="lblEquipa1NomeJungler" layoutX="120.0" layoutY="106.0" text="Faker" textFill="WHITE" />
-                        <Label fx:id="lblEquipa1NomeMid" layoutX="120.0" layoutY="142.0" text="Cenas" textFill="WHITE" />
-                        <Label fx:id="lblEquipa1NomeAdc" layoutX="121.0" layoutY="182.0" text="Coisa" textFill="WHITE" />
-                        <Label fx:id="lblEquipa1NomeSup" layoutX="121.0" layoutY="219.0" text="eTal" textFill="WHITE" />
+                        <Label fx:id="lblEquipa1NomeTop" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="78.0" layoutY="71.0" maxHeight="20.0" maxWidth="100.0" minHeight="20.0" minWidth="100.0" prefHeight="20.0" prefWidth="100.0" text="Huni" textAlignment="RIGHT" textFill="WHITE" />
+                        <Label fx:id="lblEquipa1NomeJungler" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="78.0" layoutY="106.0" maxHeight="20.0" maxWidth="100.0" minHeight="20.0" minWidth="100.0" prefHeight="20.0" prefWidth="100.0" text="Faker" textAlignment="RIGHT" textFill="WHITE" />
+                        <Label fx:id="lblEquipa1NomeMid" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="78.0" layoutY="142.0" maxHeight="20.0" maxWidth="100.0" minHeight="20.0" minWidth="100.0" prefHeight="20.0" prefWidth="100.0" text="Cenas" textAlignment="RIGHT" textFill="WHITE" />
+                        <Label fx:id="lblEquipa1NomeAdc" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="79.0" layoutY="182.0" maxHeight="20.0" maxWidth="100.0" minHeight="20.0" minWidth="100.0" prefHeight="20.0" prefWidth="100.0" text="Coisa" textAlignment="RIGHT" textFill="WHITE" />
+                        <Label fx:id="lblEquipa1NomeSup" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="79.0" layoutY="219.0" maxHeight="20.0" maxWidth="100.0" minHeight="20.0" minWidth="100.0" prefHeight="20.0" prefWidth="100.0" text="eTal" textAlignment="RIGHT" textFill="WHITE" />
                         <GridPane layoutX="702.0" layoutY="60.0" prefHeight="182.0" prefWidth="543.0">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="-Infinity" prefWidth="51.066668701171864" />
