@@ -15,14 +15,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="273.0" prefWidth="518.0" stylesheets="@styles/login_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLLoginController">
+<AnchorPane prefHeight="300.0" prefWidth="520.0" stylesheets="@styles/login_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLLoginController">
     <children>
         <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="219.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@pics/admin.png" />
             </image>
         </ImageView>
-        <GridPane layoutX="108.0" layoutY="119.0" prefHeight="134.0" prefWidth="45.0">
+        <GridPane layoutX="108.0" layoutY="146.0" prefHeight="134.0" prefWidth="45.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.2" minWidth="10.0" prefWidth="219.2" />
             </columnConstraints>
@@ -46,7 +46,7 @@
                 </ImageView>
             </children>
         </GridPane>
-        <GridPane layoutX="158.0" layoutY="119.0" prefHeight="134.0" prefWidth="211.0">
+        <GridPane layoutX="158.0" layoutY="146.0" prefHeight="134.0" prefWidth="211.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.2" minWidth="10.0" prefWidth="219.2" />
             </columnConstraints>
@@ -70,10 +70,10 @@
                         <Insets bottom="7.0" />
                     </GridPane.margin>
                 </Line>
-                <Button fx:id="btnLogin" mnemonicParsing="false" onMouseClicked="#loginSuccessefull" prefHeight="26.0" prefWidth="211.0" text="Login" GridPane.rowIndex="4" />
+                <Button fx:id="btnLogin" mnemonicParsing="false" onMouseClicked="#loginSuccessefull" prefHeight="26.0" prefWidth="211.0" text="Login" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
             </children>
         </GridPane>
-        <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="219.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="246.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@pics/back.png" />
             </image>
@@ -81,12 +81,12 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ImageView>
-        <Label fx:id="lblWarning" alignment="CENTER" layoutX="151.0" layoutY="93.0" prefHeight="24.0" prefWidth="250.0" style="-fx-text-fill: white;" text="Label" textAlignment="CENTER" visible="false">
+        <Label fx:id="lblWarning" alignment="CENTER" layoutX="149.0" layoutY="102.0" prefHeight="24.0" prefWidth="250.0" style="-fx-text-fill: white;" text="Label" textAlignment="CENTER" visible="false">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <ImageView fx:id="imgWarning" fitHeight="20.0" fitWidth="20.0" layoutX="121.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" visible="false">
+        <ImageView fx:id="imgWarning" fitHeight="20.0" fitWidth="20.0" layoutX="119.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <image>
                 <Image url="@pics/prohibited_icon.png" />
             </image>

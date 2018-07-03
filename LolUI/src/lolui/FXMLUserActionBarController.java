@@ -19,9 +19,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
@@ -29,6 +29,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import loldal.model.Admin;
 
 /**
  * FXML Controller class
@@ -77,9 +78,14 @@ public class FXMLUserActionBarController implements Initializable {
 
     @FXML
     private MenuButton accountMenu;
+    
+    @FXML MenuItem itemChangePassword;
+    
+    @FXML MenuItem itemCreateNewAdmin;
 
     private static boolean loggedIn;
-
+    private static Admin currentAdmin;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ScaleTransition st = new ScaleTransition();
@@ -92,8 +98,19 @@ public class FXMLUserActionBarController implements Initializable {
         st.setDuration(Duration.seconds(1));
         st.setToX(-1500);
         st.play();
-
+        
+        
     }
+
+    public static Admin getCurrentAdmin() {
+        return currentAdmin;
+    }
+
+    public static void setCurrentAdmin(Admin currentAdmin) {
+        FXMLUserActionBarController.currentAdmin = currentAdmin;
+    }
+    
+    
 
     public void fadeInAnimation() {
         FadeTransition ft = new FadeTransition(Duration.millis(1000), imgTournament);
@@ -197,7 +214,7 @@ public class FXMLUserActionBarController implements Initializable {
     }
 
     @FXML
-    public void handleImageAction(MouseEvent event) throws IOException {
+    public void handleLoginAction() throws IOException {
         lblTournament.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
         lblTeams.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
         lblPlayer.setStyle("-fx-border-color: orange; -fx-border-width: 0px; -fx-border-radius: 5px;-fx-font-weight: bold");
@@ -212,6 +229,7 @@ public class FXMLUserActionBarController implements Initializable {
             accountMenu.setVisible(true);
             this.carregaPainelAdmin();
         }
+        
     }
 
     public void prepareStage(Parent root) {
@@ -229,6 +247,11 @@ public class FXMLUserActionBarController implements Initializable {
 
         if (loggedIn) {
             accountMenu.setVisible(true);
+            if(currentAdmin != null){
+                this.accountMenu.setText("Welcome, " + currentAdmin.getUsername());
+            }else{
+                this.accountMenu.setText("Welcome, STUB");
+            }
             this.carregaPainelAdmin();
         }
     }
@@ -239,9 +262,10 @@ public class FXMLUserActionBarController implements Initializable {
         this.btnTournamentsClicked();
         loggedIn = false;
         accountMenu.setVisible(false);
-
+        currentAdmin = null;
+        
     }
-
+    
     public void carregaPainelAdmin() {
         System.out.println("NO METODO carregaPainelAdmin");
         try {
@@ -255,6 +279,20 @@ public class FXMLUserActionBarController implements Initializable {
 
     public static void setLoggedIn(boolean bool) {
         loggedIn = bool;
-        System.out.println("loggedIn: " + loggedIn);
+    }
+    
+    @FXML
+    public void handleChangePasswordAction() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLChangeAdminPassword.fxml"));
+        Parent root = loader.load();
+        FXMLChangeAdminPasswordController controller = loader.getController();
+        this.prepareStage(root);
+    }
+    
+    public void handleCreateNewAdmindAction() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLCreateNewAdmin.fxml"));
+        Parent root = loader.load();
+        FXMLCreateNewAdminController controller = loader.getController();
+        this.prepareStage(root);
     }
 }

@@ -87,7 +87,7 @@
                         </ImageView>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4">
                             <children>
-                                <ImageView fx:id="imgAdmin" fitHeight="75.0" fitWidth="75.0" layoutX="122.0" layoutY="86.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="imgAdmin" fitHeight="75.0" fitWidth="75.0" layoutX="122.0" layoutY="86.0" onMouseClicked="#handleLoginAction" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/admin.png" />
                                     </image>
@@ -95,9 +95,9 @@
                                         <Cursor fx:constant="HAND" />
                                     </cursor>
                                 </ImageView>
-                                <MenuButton fx:id="accountMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" text="Welcome, admin" textAlignment="CENTER" textFill="#dba000" visible="false">
+                                <MenuButton fx:id="accountMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" textAlignment="CENTER" textFill="#dba000" visible="false">
                                     <items>
-                                        <MenuItem mnemonicParsing="false" text="Create new Admin">
+                                        <MenuItem fx:id="itemCreateNewAdmin" mnemonicParsing="false" onAction="#handleCreateNewAdmindAction" text="Create new Admin">
                                             <graphic>
                                                 <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
@@ -106,7 +106,7 @@
                                                 </ImageView>
                                             </graphic>
                                         </MenuItem>
-                                        <MenuItem mnemonicParsing="false" text="Change Password">
+                                        <MenuItem fx:id="itemChangePassword" mnemonicParsing="false" onAction="#handleChangePasswordAction" text="Change Password">
                                             <graphic>
                                                 <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>

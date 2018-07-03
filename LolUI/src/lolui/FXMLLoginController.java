@@ -90,7 +90,12 @@ public class FXMLLoginController implements Initializable {
     @FXML
     public void loginSuccessefull() throws IOException {
 //       if(checkLoginAccount()){
-        if (loginSTUB()) {
+//        if (loginSTUB()) {
+//            FXMLUserActionBarController.setLoggedIn(true);
+//            this.closePopUp();
+//        }
+        
+        if(checkLoginAccount()){
             FXMLUserActionBarController.setLoggedIn(true);
             this.closePopUp();
         }
@@ -101,8 +106,6 @@ public class FXMLLoginController implements Initializable {
         boolean checkUser = false;
         String user = username.getText();
         String pass = password.getText();
-
-        System.out.println(user);
 
         List<Admin> admins = AdminServices.listaAdmins();
 
@@ -120,6 +123,7 @@ public class FXMLLoginController implements Initializable {
                     lineUser.setStyle(null);
                     lblWarning.setVisible(false);
                     imgWarning.setVisible(false);
+                    FXMLUserActionBarController.setCurrentAdmin(a);
                 }
             }
 
