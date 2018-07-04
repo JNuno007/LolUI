@@ -247,11 +247,7 @@ public class FXMLUserActionBarController implements Initializable {
 
         if (loggedIn) {
             accountMenu.setVisible(true);
-            if(currentAdmin != null){
-                this.accountMenu.setText("Welcome, " + currentAdmin.getUsername());
-            }else{
-                this.accountMenu.setText("Welcome, STUB");
-            }
+            this.accountMenu.setText("Welcome, " + currentAdmin.getUsername());
             this.carregaPainelAdmin();
         }
     }

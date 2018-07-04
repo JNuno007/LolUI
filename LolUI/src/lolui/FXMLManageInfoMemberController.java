@@ -8,6 +8,7 @@ package lolui;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -47,6 +48,8 @@ import javafx.stage.StageStyle;
 import javax.imageio.ImageIO;
 import lolbll.EquipaServices;
 import lolbll.HibernateBLL;
+import lolbll.ImagesMemberServices;
+import lolbll.ImagesTeamServices;
 import lolbll.MembroEquipaServices;
 import lolbll.PosicaoServices;
 import loldal.model.Equipa;
@@ -190,6 +193,7 @@ public class FXMLManageInfoMemberController implements Initializable {
         try {
             File file = new File(".\\src\\lolui\\pics\\players\\" + txtNewNamePlayer.getText() + ".png");
             ImageIO.write(SwingFXUtils.fromFXImage(imgNewPicPlayer.getImage(), null), "png", file);
+            ImagesMemberServices.addToMap(me.getNome(), file.toURI().toURL().toString());
         } catch (IOException ex) {
             Logger.getLogger(FXMLCreateNewMemberController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -385,11 +389,17 @@ public class FXMLManageInfoMemberController implements Initializable {
     }
     
     public void atribuirCurrentPic(Membroequipa m){
-        if (getClass().getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
-            imgCurrentPicPlayer.setImage(new Image(getClass().getResourceAsStream("pics/players/" + m.getNome() + ".png")));
-            imgNewPicPlayer.setImage(new Image(getClass().getResourceAsStream("pics/players/" + m.getNome() + ".png")));
-        } else {
-            imgCurrentPicPlayer.setImage(new Image(getClass().getResourceAsStream("pics/players/unknown.png")));
+        
+        if(ImagesMemberServices.existsOnMap(m.getNome())){
+            imgCurrentPicPlayer.setImage(new Image(ImagesMemberServices.getOriginalPath(m.getNome())));
+            imgNewPicPlayer.setImage(new Image(ImagesMemberServices.getOriginalPath(m.getNome())));
+        }else{
+            if (getClass().getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
+                imgCurrentPicPlayer.setImage(new Image(getClass().getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+                imgNewPicPlayer.setImage(new Image(getClass().getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+            } else {
+                imgCurrentPicPlayer.setImage(new Image(getClass().getResourceAsStream("pics/players/unknown.png")));
+            }
         }
     }
     
@@ -403,11 +413,17 @@ public class FXMLManageInfoMemberController implements Initializable {
     }
     
     public void atribuirCurrentTeamlogoPlayer(Membroequipa m) {
-        if (m.getEquipa() != null && getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png") != null) {
-            this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
-            imgNewTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
-        } else {
-            this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/unknown.png")));
+        
+        if(ImagesTeamServices.existsOnMap(m.getEquipa().getNome())){
+            this.imgCurrentTeamLogoPlayer.setImage(new Image(ImagesTeamServices.getOriginalPath(m.getEquipa().getNome())));
+            imgNewTeamLogoPlayer.setImage(new Image(ImagesTeamServices.getOriginalPath(m.getEquipa().getNome())));
+        }else{
+            if (m.getEquipa() != null && getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png") != null) {
+                this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
+                imgNewTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
+            } else {
+                this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/unknown.png")));
+            }
         }
     }
     
@@ -626,7 +642,7 @@ public class FXMLManageInfoMemberController implements Initializable {
         }
     }
     
-    public void gravarMembroEquipa() {
+    public void gravarMembroEquipa() throws MalformedURLException, IOException {
         me.setPais(pais);
         me.setNome(nome);
         me.setIdade(age);
@@ -639,12 +655,12 @@ public class FXMLManageInfoMemberController implements Initializable {
     }
     
     @FXML
-    public void saveOnClick() {
+    public void saveOnClick() throws MalformedURLException, IOException {
         this.save();
         HibernateBLL.clearCache();
     }
     
-    public void save() {
+    public void save() throws MalformedURLException, IOException {
         try {
             this.verificaMembroEquipa();
             this.getUserInput();

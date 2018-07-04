@@ -44,6 +44,7 @@ import javafx.stage.StageStyle;
 import javax.imageio.ImageIO;
 import lolbll.EquipaServices;
 import lolbll.HibernateBLL;
+import lolbll.ImagesTeamServices;
 import lolbll.MembroEquipaServices;
 import loldal.model.Equipa;
 import loldal.model.Membroequipa;
@@ -310,10 +311,14 @@ public class FXMLManageInfoTeamController implements Initializable {
     
     
     public void setPreviousTeamLogo(Equipa equipa){
-        if (getClass().getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png") != null) {
-            this.previousTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png")));
-        } else {
-            this.previousTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+        if(ImagesTeamServices.existsOnMap(equipa.getNome())){
+            this.previousTeamLogo.setImage(new Image(ImagesTeamServices.getOriginalPath(equipa.getNome())));
+        }else{
+            if (getClass().getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png") != null) {
+                this.previousTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png")));
+            } else {
+                this.previousTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+            }
         }
     }
     
@@ -350,10 +355,14 @@ public class FXMLManageInfoTeamController implements Initializable {
     }
     
     public void setNewTeamLogo(Equipa equipa){
-        if (getClass().getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png") != null) {
-            this.newTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png")));
-        } else {
-            this.newTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+        if(ImagesTeamServices.existsOnMap(equipa.getNome())){
+            this.newTeamLogo.setImage(new Image(ImagesTeamServices.getOriginalPath(equipa.getNome())));
+        }else{
+            if (getClass().getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png") != null) {
+                this.newTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + equipa.getSigla().toLowerCase() + ".png")));
+            } else {
+                this.newTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+            }
         }
     }
     
@@ -723,6 +732,7 @@ public class FXMLManageInfoTeamController implements Initializable {
         try {
             File file = new File(".\\src\\lolui\\pics\\teams\\" + initials.toLowerCase() + ".png");
             ImageIO.write(SwingFXUtils.fromFXImage(newTeamLogo.getImage(), null), "png", file);
+            ImagesTeamServices.addToMap(equipaAtual.getNome(), file.toURI().toURL().toString());
         } catch (IOException ex) {
             Logger.getLogger(FXMLCreateNewMemberController.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -89,12 +89,6 @@ public class FXMLLoginController implements Initializable {
 
     @FXML
     public void loginSuccessefull() throws IOException {
-//       if(checkLoginAccount()){
-//        if (loginSTUB()) {
-//            FXMLUserActionBarController.setLoggedIn(true);
-//            this.closePopUp();
-//        }
-        
         if(checkLoginAccount()){
             FXMLUserActionBarController.setLoggedIn(true);
             this.closePopUp();
@@ -143,9 +137,4 @@ public class FXMLLoginController implements Initializable {
 
         return loggedUser;
     }
-
-    public boolean loginSTUB() {
-        return true;
-    }
-
 }
