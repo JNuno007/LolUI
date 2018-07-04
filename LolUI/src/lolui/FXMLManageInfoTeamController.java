@@ -8,6 +8,7 @@ package lolui;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
@@ -15,6 +16,8 @@ import java.util.ResourceBundle;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
@@ -27,6 +30,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -73,6 +77,7 @@ public class FXMLManageInfoTeamController implements Initializable {
     @FXML private ImageView changeSupportImg;
     @FXML private TextField newName;
     @FXML private TextField newInitials;
+    @FXML private TextField searchBar;
     @FXML private Label previousName;
     @FXML private Label previousInitials;
     @FXML private Label coachLbl;
@@ -82,6 +87,7 @@ public class FXMLManageInfoTeamController implements Initializable {
     @FXML private Label adcLbl;
     @FXML private Label supportLbl;
     @FXML private Button btnSelectImage;
+    @FXML private ComboBox cbAtivo;
 
     private FileChooser fileChooser;
     private File fileImagem;
@@ -101,7 +107,14 @@ public class FXMLManageInfoTeamController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.listarEquipas();
+        this.pesquisarNaLista();
         this.atribuirElementos();
+        
+        cbAtivo.getItems().addAll(
+          "All", "Active", "Inactive"      
+        );
+        
+        cbAtivo.getSelectionModel().selectFirst();
         
         btnSelectImage.setOnAction(
                 new EventHandler<ActionEvent>() {
@@ -116,6 +129,49 @@ public class FXMLManageInfoTeamController implements Initializable {
             }
         });
         
+    }
+    
+    @FXML
+    public void filtraComboBoxes(){
+        if(cbAtivo.getValue()!= null){
+            if(cbAtivo.getValue().equals("Active")){
+                listaPesquisa = EquipaServices.listaEquipasAtivas();
+                this.preencherListViewFiltrada();
+            }
+            if(cbAtivo.getValue().equals("Inactive")){
+                listaPesquisa = EquipaServices.listaEquipasInativas();
+                this.preencherListViewFiltrada();
+            }
+        }
+    }
+    
+    public void preencherListViewFiltrada(){
+        Comparator<Equipa> comparator = Comparator.comparing(m -> m.getNome());
+        Stream<Equipa> membroStream = listaPesquisa.stream().sorted(comparator);
+        List<Equipa> listaOrdenada = membroStream.collect(Collectors.toList());
+        equipasObs = FXCollections.observableArrayList(listaOrdenada);
+        this.listViewEquipas.setItems(equipasObs);
+    }
+    
+    public void pesquisarNaLista() {
+        searchBar.setOnKeyReleased((event) -> {
+            List<Equipa> temp = new ArrayList<>();
+            String texto = searchBar.getText();
+            if (texto.isEmpty()) {
+                equipasObs = FXCollections.observableArrayList(listaPesquisa);
+                this.listViewEquipas.setItems(equipasObs);
+                temp.clear();
+            } else {
+                for (Equipa eq : listaPesquisa) {
+                    if (eq.getNome().toLowerCase().contains(texto.toLowerCase())) {
+                        temp.add(eq);
+                    }
+                }
+                equipasObs = FXCollections.observableArrayList(temp);
+                this.listViewEquipas.setItems(equipasObs);
+            }
+
+        });
     }
 
     @FXML
@@ -220,7 +276,7 @@ public class FXMLManageInfoTeamController implements Initializable {
     public void listarEquipas() {
         // -- CRIAR MÉTODO NA BLL
         listaPesquisa = EquipaServices.listaEquipas();
-        listaPesquisa.sort(Comparator.comparing((equipa) -> equipa.getNome()));
+        listaPesquisa.sort(Comparator.comparing((equipa) -> equipa.getNome().toLowerCase()));
         equipasObs = FXCollections.observableArrayList(listaPesquisa);
         this.listViewEquipas.setItems(equipasObs);
     }
@@ -228,7 +284,6 @@ public class FXMLManageInfoTeamController implements Initializable {
      public void atribuirElementos() {
         this.listViewEquipas.getSelectionModel().selectedItemProperty().addListener((observable) -> {
             equipaAtual = (Equipa) listViewEquipas.getSelectionModel().getSelectedItem();
-            System.out.println(equipaAtual.getMembroequipas());
             if (equipaAtual != null) {
                 //Atribuir Elementos Atuais
                 this.pais = null;
@@ -710,7 +765,7 @@ public class FXMLManageInfoTeamController implements Initializable {
         }
 
         //gravar equipa na DB
-        EquipaServices.saveEquipa(equipaAtual);
+        EquipaServices.updateEquipa(equipaAtual);
     }
     
     @FXML

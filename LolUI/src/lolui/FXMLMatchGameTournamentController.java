@@ -1871,7 +1871,7 @@ public class FXMLMatchGameTournamentController implements Initializable {
         this.gravaEstatisticasMembroEquipa2(jogo);
         
         encontro.getRonda().getTorneio().setEstado("COMECADO");
-        TorneioServices.saveTorneio(encontro.getRonda().getTorneio());
+        TorneioServices.updateTorneio(encontro.getRonda().getTorneio());
         
         //Fazer método que verifique se a ronda está terminada
         /*

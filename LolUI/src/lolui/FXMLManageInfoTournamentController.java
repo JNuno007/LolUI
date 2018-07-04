@@ -750,10 +750,10 @@ public class FXMLManageInfoTournamentController implements Initializable {
             encontros.get(2).setEquipaByEquipa2(this.equipaLabel(lblMatch3RedTeam));
             encontros.get(3).setEquipaByEquipa1(this.equipaLabel(lblMatch4BlueTeam));
             encontros.get(3).setEquipaByEquipa2(this.equipaLabel(lblMatch4RedTeam));
-            EncontroServices.saveEncontro(encontros.get(0));
-            EncontroServices.saveEncontro(encontros.get(1));
-            EncontroServices.saveEncontro(encontros.get(2));
-            EncontroServices.saveEncontro(encontros.get(3));
+            EncontroServices.updateEncontro(encontros.get(0));
+            EncontroServices.updateEncontro(encontros.get(1));
+            EncontroServices.updateEncontro(encontros.get(2));
+            EncontroServices.updateEncontro(encontros.get(3));
         }
         if(rb16Teams.isSelected()){
             encontros.get(0).setEquipaByEquipa1(this.equipaLabel(lblMatch1BlueTeam));
@@ -772,14 +772,14 @@ public class FXMLManageInfoTournamentController implements Initializable {
             encontros.get(6).setEquipaByEquipa2(this.equipaLabel(lblMatch7RedTeam));
             encontros.get(7).setEquipaByEquipa1(this.equipaLabel(lblMatch8BlueTeam));
             encontros.get(7).setEquipaByEquipa2(this.equipaLabel(lblMatch8RedTeam));
-            EncontroServices.saveEncontro(encontros.get(0));
-            EncontroServices.saveEncontro(encontros.get(1));
-            EncontroServices.saveEncontro(encontros.get(2));
-            EncontroServices.saveEncontro(encontros.get(3));
-            EncontroServices.saveEncontro(encontros.get(4));
-            EncontroServices.saveEncontro(encontros.get(5));
-            EncontroServices.saveEncontro(encontros.get(6));
-            EncontroServices.saveEncontro(encontros.get(7));
+            EncontroServices.updateEncontro(encontros.get(0));
+            EncontroServices.updateEncontro(encontros.get(1));
+            EncontroServices.updateEncontro(encontros.get(2));
+            EncontroServices.updateEncontro(encontros.get(3));
+            EncontroServices.updateEncontro(encontros.get(4));
+            EncontroServices.updateEncontro(encontros.get(5));
+            EncontroServices.updateEncontro(encontros.get(6));
+            EncontroServices.updateEncontro(encontros.get(7));
         }
         
     }

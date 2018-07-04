@@ -635,7 +635,7 @@ public class FXMLManageInfoMemberController implements Initializable {
         if (equipa != null) {
             me.setEquipa(equipa);
         }
-        MembroEquipaServices.criarMembroEquipa(me);
+        MembroEquipaServices.updateMembroEquipa(me);
     }
     
     @FXML

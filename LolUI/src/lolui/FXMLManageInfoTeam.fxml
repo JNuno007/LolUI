@@ -42,7 +42,7 @@
                                 <Image url="@pics/lupa.png" />
                             </image>
                         </ImageView>
-                  <ComboBox layoutX="225.0" layoutY="13.0" maxHeight="35.0" maxWidth="200.0" minHeight="35.0" minWidth="200.0" prefHeight="35.0" prefWidth="200.0" />
+                  <ComboBox fx:id="cbAtivo" layoutX="225.0" layoutY="13.0" maxHeight="35.0" maxWidth="200.0" minHeight="35.0" minWidth="200.0" onAction="#filtraComboBoxes" prefHeight="35.0" prefWidth="200.0" />
                     </children>
                 </Pane>
                 <GridPane GridPane.columnIndex="1">
