@@ -37,6 +37,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -89,6 +90,7 @@ public class FXMLManageInfoTeamController implements Initializable {
     @FXML private Label supportLbl;
     @FXML private Button btnSelectImage;
     @FXML private ComboBox cbAtivo;
+    @FXML private BorderPane mainBorderPane;
 
     private FileChooser fileChooser;
     private File fileImagem;
@@ -107,6 +109,10 @@ public class FXMLManageInfoTeamController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        this.mainBorderPane.getStyleClass().add("borderPane");
+        this.newName.getStyleClass().add("textInput");
+        this.newInitials.getStyleClass().add("textInput");
+        
         this.listarEquipas();
         this.pesquisarNaLista();
         this.atribuirElementos();

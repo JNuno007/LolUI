@@ -11,7 +11,6 @@ import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,7 +48,6 @@ import lolbll.EncontroServices;
 import lolbll.EquipaServices;
 import lolbll.EquipaTorneioServices;
 import lolbll.HibernateBLL;
-import lolbll.RegiaoServices;
 import lolbll.TorneioServices;
 import loldal.model.Encontro;
 import loldal.model.Equipa;
@@ -194,7 +192,10 @@ public class FXMLManageInfoTournamentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        this.txtFullName.getStyleClass().add("textInput");
+        this.txtInitials.getStyleClass().add("textInput");
+        this.spinPrize.getStyleClass().add("textInput");
+        
         parentBorderPane.getStyleClass().add("borderPane");
         comboType.getItems().addAll("Country", "Region", "All");
         comboType.getSelectionModel().selectLast();

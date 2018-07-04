@@ -137,7 +137,8 @@ public class FXMLManageInfoMemberController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        this.txtNewNamePlayer.getStyleClass().add("textInput");
+        this.spinnerNewAge.getStyleClass().add("textInput");
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(15, 99, 15);
         spinnerNewAge.setValueFactory(valueFactory);
         parentBorderPane.getStyleClass().add("borderPane");

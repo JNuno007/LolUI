@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/manageInfoTeam_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageInfoTeamController">
+<BorderPane fx:id="mainBorderPane" maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/manageInfoTeam_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageInfoTeamController">
     <center>
         <GridPane BorderPane.alignment="CENTER">
             <columnConstraints>
