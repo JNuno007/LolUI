@@ -1884,6 +1884,7 @@ public class FXMLMatchGameTournamentController implements Initializable {
     public void gravaEstatisticasMembroEquipa1(Jogo jogo){
         for(Membroequipa me: (Set<Membroequipa>)encontro.getEquipaByEquipa1().getMembroequipas()){
             Estatisticasmembrojogo est = new Estatisticasmembrojogo();
+            
             if(me.getPosicao()!=null && me.getPosicao().getSigla().equals("TOP")){
                 est.setMembroequipa(me);
                 est.setJogo(jogo);
@@ -1893,6 +1894,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setDeaths(new BigDecimal(Integer.parseInt(this.spinDeathsBlueTeamTop.getText())));
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSBlueTeamTop.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
+                
+                JogoServices.addAssistsEquipa1(jogo, Integer.parseInt(this.spinAssistsBlueTeamTop.getText()));
+                JogoServices.addDeathsEquipa1(jogo, Integer.parseInt(this.spinDeathsBlueTeamTop.getText()));
+                JogoServices.addKillsEquipa1(jogo, Integer.parseInt(this.spinKillsBlueTeamTop.getText()));
                 
                 for(Item it: listItemBlueTeamTop){
                     Build build = new Build();
@@ -1926,6 +1931,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSBlueTeamJng.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
                 
+                JogoServices.addAssistsEquipa1(jogo, Integer.parseInt(this.spinAssistsBlueTeamJng.getText()));
+                JogoServices.addDeathsEquipa1(jogo, Integer.parseInt(this.spinDeathsBlueTeamJng.getText()));
+                JogoServices.addKillsEquipa1(jogo, Integer.parseInt(this.spinKillsBlueTeamJng.getText()));
+                
                 for(Item it: listItemBlueTeamJng){
                     Build build = new Build();
                     build.setItem(it);
@@ -1957,6 +1966,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setDeaths(new BigDecimal(Integer.parseInt(this.spinDeathsBlueTeamMid.getText())));
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSBlueTeamMid.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
+                
+                JogoServices.addAssistsEquipa1(jogo, Integer.parseInt(this.spinAssistsBlueTeamMid.getText()));
+                JogoServices.addDeathsEquipa1(jogo, Integer.parseInt(this.spinDeathsBlueTeamMid.getText()));
+                JogoServices.addKillsEquipa1(jogo, Integer.parseInt(this.spinKillsBlueTeamMid.getText()));
                 
                 for(Item it: listItemBlueTeamMid){
                     Build build = new Build();
@@ -1990,6 +2003,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSBlueTeamAdc.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
                 
+                JogoServices.addAssistsEquipa1(jogo, Integer.parseInt(this.spinAssistsBlueTeamAdc.getText()));
+                JogoServices.addDeathsEquipa1(jogo, Integer.parseInt(this.spinDeathsBlueTeamAdc.getText()));
+                JogoServices.addKillsEquipa1(jogo, Integer.parseInt(this.spinKillsBlueTeamAdc.getText()));
+                
                 for(Item it: listItemBlueTeamAdc){
                     Build build = new Build();
                     build.setItem(it);
@@ -2021,6 +2038,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setDeaths(new BigDecimal(Integer.parseInt(this.spinDeathsBlueTeamSup.getText())));
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSBlueTeamSup.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
+                
+                JogoServices.addAssistsEquipa1(jogo, Integer.parseInt(this.spinAssistsBlueTeamSup.getText()));
+                JogoServices.addDeathsEquipa1(jogo, Integer.parseInt(this.spinDeathsBlueTeamSup.getText()));
+                JogoServices.addKillsEquipa1(jogo, Integer.parseInt(this.spinKillsBlueTeamSup.getText()));
                 
                 for(Item it: listItemBlueTeamSup){
                     Build build = new Build();
@@ -2060,6 +2081,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSRedTeamTop.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
                 
+                JogoServices.addAssistsEquipa2(jogo, Integer.parseInt(this.spinAssistsRedTeamTop.getText()));
+                JogoServices.addDeathsEquipa2(jogo, Integer.parseInt(this.spinDeathsRedTeamTop.getText()));
+                JogoServices.addKillsEquipa2(jogo, Integer.parseInt(this.spinKillsRedTeamTop.getText()));
+                
                 for(Item it: listItemRedTeamTop){
                     Build build = new Build();
                     build.setItem(it);
@@ -2091,6 +2116,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setDeaths(new BigDecimal(Integer.parseInt(this.spinDeathsRedTeamJng.getText())));
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSRedTeamJng.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
+                
+                JogoServices.addAssistsEquipa2(jogo, Integer.parseInt(this.spinAssistsRedTeamJng.getText()));
+                JogoServices.addDeathsEquipa2(jogo, Integer.parseInt(this.spinDeathsRedTeamJng.getText()));
+                JogoServices.addKillsEquipa2(jogo, Integer.parseInt(this.spinKillsRedTeamJng.getText()));
                 
                 for(Item it: listItemRedTeamJng){
                     Build build = new Build();
@@ -2124,6 +2153,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSRedTeamMid.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
                 
+                JogoServices.addAssistsEquipa2(jogo, Integer.parseInt(this.spinAssistsRedTeamMid.getText()));
+                JogoServices.addDeathsEquipa2(jogo, Integer.parseInt(this.spinDeathsRedTeamMid.getText()));
+                JogoServices.addKillsEquipa2(jogo, Integer.parseInt(this.spinKillsRedTeamMid.getText()));
+                
                 for(Item it: listItemRedTeamMid){
                     Build build = new Build();
                     build.setItem(it);
@@ -2156,6 +2189,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSRedTeamAdc.getText())));               
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
                 
+                JogoServices.addAssistsEquipa2(jogo, Integer.parseInt(this.spinAssistsRedTeamAdc.getText()));
+                JogoServices.addDeathsEquipa2(jogo, Integer.parseInt(this.spinDeathsRedTeamAdc.getText()));
+                JogoServices.addKillsEquipa2(jogo, Integer.parseInt(this.spinKillsRedTeamAdc.getText()));
+                
                 for(Item it: listItemRedTeamAdc){
                     Build build = new Build();
                     build.setItem(it);
@@ -2187,6 +2224,10 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 est.setDeaths(new BigDecimal(Integer.parseInt(this.spinDeathsRedTeamSup.getText())));
                 est.setCs(new BigDecimal(Integer.parseInt(this.spinCSRedTeamSup.getText())));
                 EstatisticasMembroJogoServices.saveEstatisticasMembroJogo(est);
+                
+                JogoServices.addAssistsEquipa2(jogo, Integer.parseInt(this.spinAssistsRedTeamSup.getText()));
+                JogoServices.addDeathsEquipa2(jogo, Integer.parseInt(this.spinDeathsRedTeamSup.getText()));
+                JogoServices.addKillsEquipa2(jogo, Integer.parseInt(this.spinKillsRedTeamSup.getText()));
                 
                 for(Item it: listItemRedTeamSup){
                     Build build = new Build();

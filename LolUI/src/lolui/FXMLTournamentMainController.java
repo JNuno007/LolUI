@@ -813,6 +813,7 @@ public class FXMLTournamentMainController implements Initializable {
         controller.setTeamSigla(siglaEq1, siglaEq2);
         controller.setTeamMemberNames(eq1, eq2);
         controller.setTeamsStats(en, 0);
+        controller.atribuirWinners(en);
     }
 
     public Encontro getEncontroByGripPane(int nronda, int nencontro) {

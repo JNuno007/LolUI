@@ -406,10 +406,18 @@ public class FXMLTeamsMainController extends Application implements Initializabl
                 totAssists += j.getAssistsequipa2().intValue();
                 totDeaths += j.getDeathequipa2().intValue();
             }
+            
+            if(totDeaths == 0){
+                kdaRatio = (float) (totKills + totAssists);
 
-            kdaRatio = (float) (totKills + totAssists) / totDeaths;
+                this.lblKDA.setText(df2.format(kdaRatio));
+            }else{
+                kdaRatio = (float) (totKills + totAssists) / totDeaths;
 
-            this.lblKDA.setText(df2.format(kdaRatio));
+                this.lblKDA.setText(df2.format(kdaRatio));
+            }
+
+                
         }
 
     }

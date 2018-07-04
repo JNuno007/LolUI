@@ -41,6 +41,14 @@ public class FXMLPopUpTeamController implements Initializable {
     private ImageView imgLogoEquipa1;
     @FXML
     private ImageView imgLogoEquipa2;
+    
+    // -- ImageViews das Equipas que ganharam os jogos
+    
+    @FXML private ImageView imgWinnerGame1;
+    @FXML private ImageView imgWinnerGame2;
+    @FXML private ImageView imgWinnerGame3;
+    @FXML private ImageView imgWinnerGame4;
+    @FXML private ImageView imgWinnerGame5;
 
     // -- Resultados das Equipas no Encontro
     @FXML
@@ -361,6 +369,10 @@ public class FXMLPopUpTeamController implements Initializable {
     private ImageView imgRunaEquipa2Adc;
     @FXML
     private ImageView imgRunaEquipa2Sup;
+    
+    //Labels Kills Deaths Assists
+    @FXML private Label lblKDABlueTeam;
+    @FXML private Label lblKDARedTeam;
 
     @FXML
     private ImageView imgBack;
@@ -474,6 +486,11 @@ public class FXMLPopUpTeamController implements Initializable {
 
             Equipa eq1 = jg.getEquipaByEquipa1();
             Equipa eq2 = jg.getEquipaByEquipa2();
+            
+            // -- Labels de KILLS DEATHS E ASSISTS
+            
+            lblKDABlueTeam.setText(jg.getKillsequipa1().toString()+"/"+jg.getDeathsequipa1().toString()+"/"+jg.getAssistsequipa1().toString());
+            lblKDARedTeam.setText(jg.getKillsequipa2().toString()+"/"+jg.getDeathequipa2().toString()+"/"+jg.getAssistsequipa2().toString());
 
             // -- Receber as estatisticas do jogo correto
             List<Estatisticasmembrojogo> estatisticas = new ArrayList<>();
@@ -650,6 +667,52 @@ public class FXMLPopUpTeamController implements Initializable {
             img6.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(5).getItem().toString().toLowerCase() + ".png")));
         } else {
             img6.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+        }
+    }
+    
+    public void atribuirWinners(Encontro encontro){
+        List<Jogo> jogos = new ArrayList<>();
+        jogos.addAll(encontro.getJogos());
+        jogos.sort(Comparator.comparing((jogo) -> jogo.getId()));
+        
+        if(jogos.size()>0){
+            this.atribuirImageWinner(jogos.get(0), imgWinnerGame1);
+        }else{
+            imgWinnerGame1.setVisible(false);
+        }
+        if(jogos.size()>1){
+            this.atribuirImageWinner(jogos.get(1), imgWinnerGame2);
+        }else{
+            imgWinnerGame2.setVisible(false);
+        }
+        if(jogos.size()>2){
+            this.atribuirImageWinner(jogos.get(2), imgWinnerGame3);
+        }else{
+            imgWinnerGame3.setVisible(false);
+        }
+        if(jogos.size()>3){
+            this.atribuirImageWinner(jogos.get(3), imgWinnerGame4);
+        }else{
+            imgWinnerGame4.setVisible(false);
+        }
+        if(jogos.size()>4){
+            this.atribuirImageWinner(jogos.get(4), imgWinnerGame5);
+        }else{
+            imgWinnerGame5.setVisible(false);
+        }
+    }
+    
+    public void atribuirImageWinner(Jogo jogo, ImageView img){
+        Equipa eq = jogo.getEquipaByVencedor();
+        
+        if(ImagesTeamServices.existsOnMap(eq.getNome())){
+            img.setImage(new Image(ImagesTeamServices.getOriginalPath(eq.getNome())));
+        }else{
+            if (FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png") != null) {
+                img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png")));
+            } else {
+                img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/unknown.png")));
+            }
         }
     }
 
