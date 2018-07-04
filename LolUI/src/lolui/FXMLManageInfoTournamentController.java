@@ -729,9 +729,8 @@ public class FXMLManageInfoTournamentController implements Initializable {
         t.setDatafim(dataInicioTorneio);
         t.setPremio(new BigDecimal(prizepool));
         this.eliminaEquipasTorneioOriginais();
-        this.atribuiEquipaEncontros();
         this.adicionaEquipasTorneio();
-        
+        this.atribuiEquipaEncontros();
     }
     
     public void atribuiEquipaEncontros(){

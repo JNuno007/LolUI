@@ -19,6 +19,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import lolbll.ImagesTeamServices;
 import loldal.model.Build;
 import loldal.model.Encontro;
 import loldal.model.Equipa;
@@ -378,15 +379,25 @@ public class FXMLPopUpTeamController implements Initializable {
     }
 
     public void setLogoTeams(Equipa eq1, Equipa eq2) {
-        if (FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq1.getSigla().toLowerCase() + ".png") != null) {
-            this.imgLogoEquipa1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq1.getSigla().toLowerCase() + ".png")));
-        } else {
-            this.imgLogoEquipa1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/unknown.png")));
+        
+        if(ImagesTeamServices.existsOnMap(eq1.getNome())){
+            this.imgLogoEquipa1.setImage(new Image(ImagesTeamServices.getOriginalPath(eq1.getNome())));
+        }else{
+            if (FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq1.getSigla().toLowerCase() + ".png") != null) {
+                this.imgLogoEquipa1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq1.getSigla().toLowerCase() + ".png")));
+            } else {
+                this.imgLogoEquipa1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/unknown.png")));
+            }
         }
-        if (FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq2.getSigla().toLowerCase() + ".png") != null) {
-            this.imgLogoEquipa2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq2.getSigla().toLowerCase() + ".png")));
-        } else {
-            this.imgLogoEquipa2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/unknown.png")));
+        
+        if(ImagesTeamServices.existsOnMap(eq2.getNome())){
+            this.imgLogoEquipa2.setImage(new Image(ImagesTeamServices.getOriginalPath(eq2.getNome())));
+        }else{
+            if (FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq2.getSigla().toLowerCase() + ".png") != null) {
+                this.imgLogoEquipa2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/" + eq2.getSigla().toLowerCase() + ".png")));
+            } else {
+                this.imgLogoEquipa2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/teams/unknown.png")));
+            }
         }
     }
 

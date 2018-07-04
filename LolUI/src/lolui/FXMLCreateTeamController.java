@@ -8,6 +8,7 @@ package lolui;
 import java.io.File;
 import lolui.exceptions.InsertEquipaDBException;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.List;
@@ -37,6 +38,7 @@ import javafx.stage.StageStyle;
 import javax.imageio.ImageIO;
 import lolbll.EquipaServices;
 import lolbll.HibernateBLL;
+import lolbll.ImagesTeamServices;
 import loldal.model.Equipa;
 import loldal.model.Membroequipa;
 import loldal.model.Pais;
@@ -307,7 +309,7 @@ public class FXMLCreateTeamController implements Initializable {
         }
     }
 
-    public void gravarEquipa() {
+    public void gravarEquipa() throws MalformedURLException {
         int contPlayers = 0;
         //criar Equipa e inserir os dados da equipa
         Equipa equipa = new Equipa();
@@ -331,6 +333,7 @@ public class FXMLCreateTeamController implements Initializable {
                 equipa.setAtivo(false);
             }
         }
+        ImagesTeamServices.addToMap(teamName, fileImagem.toURI().toURL().toString());
         //gravar equipa na DB
         EquipaServices.saveEquipa(equipa);
     }

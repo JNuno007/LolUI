@@ -28,6 +28,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import lolbll.ImagesMemberServices;
+import lolbll.ImagesTeamServices;
 import lolbll.MembroEquipaServices;
 import loldal.model.Champion;
 import loldal.model.Estatisticasmembrojogo;
@@ -116,10 +118,15 @@ public class FXMLPlayersMainController implements Initializable {
     //Obter Player selecionado
     //Arranjar o nick do player para ir buscar a imagem
     public void atribuirImagemPlayer(Membroequipa me) {
-        if (FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png") != null) {
-            imgTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")));
-        } else {
-            imgTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+        
+        if(ImagesMemberServices.existsOnMap(me.getNome())){
+            imgTop.setImage(new Image(ImagesMemberServices.getOriginalPath(me.getNome())));
+        }else{
+           if (FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png") != null) {
+                imgTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")));
+            } else {
+                imgTop.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+            } 
         }
     }
 
@@ -132,10 +139,14 @@ public class FXMLPlayersMainController implements Initializable {
     }
 
     public void atribuirTeamPlayer(Membroequipa me) {
-        if (me.getEquipa() != null && FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png") != null) {
-            this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png")));
-        } else {
-            this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/unknown.png")));
+        if(me.getEquipa() != null && ImagesTeamServices.existsOnMap(me.getEquipa().getNome())){
+            this.imgTeamLogo.setImage(new Image(ImagesTeamServices.getOriginalPath(me.getEquipa().getNome())));
+        }else{
+            if (me.getEquipa() != null && FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png") != null) {
+                this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png")));
+            } else {
+                this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/unknown.png")));
+            }
         }
     }
 

@@ -22,6 +22,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import lolbll.EquipaServices;
+import lolbll.ImagesTeamServices;
 import loldal.model.Equipa;
 import loldal.model.Membroequipa;
 
@@ -121,10 +122,10 @@ public class FXMLTeamSelectionController implements Initializable {
         int row = 0;
 
         for (Equipa eq : equipas) {
-
-            if (FXMLCountrySelectionController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png") != null) {
+            
+            if(ImagesTeamServices.existsOnMap(eq.getNome())){
                 ImageView image = new ImageView();
-                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png")));
+                image.setImage(new Image(ImagesTeamServices.getOriginalPath(eq.getNome())));
 
                 image.setFitHeight(50);
                 image.setFitWidth(75);
@@ -135,6 +136,22 @@ public class FXMLTeamSelectionController implements Initializable {
                 if (column == 6) {
                     column = 0;
                     row++;
+                }
+            }else{
+                if (FXMLCountrySelectionController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png") != null) {
+                    ImageView image = new ImageView();
+                    image.setImage(new Image(LolUI.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png")));
+
+                    image.setFitHeight(50);
+                    image.setFitWidth(75);
+
+                    gridPane.add(image, column, row);
+                    column++;
+
+                    if (column == 6) {
+                        column = 0;
+                        row++;
+                    }
                 }
             }
         }
@@ -192,9 +209,9 @@ public class FXMLTeamSelectionController implements Initializable {
 
         for (Equipa eq : list) {
 
-            if (FXMLCountrySelectionController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png") != null) {
+            if(ImagesTeamServices.existsOnMap(eq.getNome())){
                 ImageView image = new ImageView();
-                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png")));
+                image.setImage(new Image(ImagesTeamServices.getOriginalPath(eq.getNome())));
 
                 image.setFitHeight(50);
                 image.setFitWidth(75);
@@ -205,6 +222,22 @@ public class FXMLTeamSelectionController implements Initializable {
                 if (column == 6) {
                     column = 0;
                     row++;
+                }
+            }else{
+                if (FXMLCountrySelectionController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png") != null) {
+                    ImageView image = new ImageView();
+                    image.setImage(new Image(LolUI.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png")));
+
+                    image.setFitHeight(50);
+                    image.setFitWidth(75);
+
+                    gridPane.add(image, column, row);
+                    column++;
+
+                    if (column == 6) {
+                        column = 0;
+                        row++;
+                    }
                 }
             }
         }

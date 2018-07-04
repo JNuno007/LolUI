@@ -21,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import lolbll.ImagesMemberServices;
 import lolbll.MembroEquipaServices;
 import loldal.model.Membroequipa;
 
@@ -98,9 +99,9 @@ public class FXMLPlayerSelectionController implements Initializable {
 
         for (Membroequipa m : listaGrid) {
 
-            if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
+            if(ImagesMemberServices.existsOnMap(m.getNome())){
                 ImageView image = new ImageView();
-                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+                image.setImage(new Image(ImagesMemberServices.getOriginalPath(m.getNome())));
 
                 image.setFitHeight(50);
                 image.setFitWidth(75);
@@ -111,6 +112,22 @@ public class FXMLPlayerSelectionController implements Initializable {
                 if (column == 6) {
                     column = 0;
                     row++;
+                }
+            }else{
+                if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
+                    ImageView image = new ImageView();
+                    image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+
+                    image.setFitHeight(50);
+                    image.setFitWidth(75);
+
+                    gridPane.add(image, column, row);
+                    column++;
+
+                    if (column == 6) {
+                        column = 0;
+                        row++;
+                    }
                 }
             }
         }
@@ -142,10 +159,10 @@ public class FXMLPlayerSelectionController implements Initializable {
         int row = 0;
 
         for (Membroequipa m : listaGrid) {
-
-            if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
+            
+            if(ImagesMemberServices.existsOnMap(m.getNome())){
                 ImageView image = new ImageView();
-                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+                image.setImage(new Image(ImagesMemberServices.getOriginalPath(m.getNome())));
 
                 image.setFitHeight(50);
                 image.setFitWidth(75);
@@ -156,6 +173,22 @@ public class FXMLPlayerSelectionController implements Initializable {
                 if (column == 6) {
                     column = 0;
                     row++;
+                }
+            }else{
+                if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + m.getNome() + ".png") != null) {
+                    ImageView image = new ImageView();
+                    image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + m.getNome() + ".png")));
+
+                    image.setFitHeight(50);
+                    image.setFitWidth(75);
+
+                    gridPane.add(image, column, row);
+                    column++;
+
+                    if (column == 6) {
+                        column = 0;
+                        row++;
+                    }
                 }
             }
         }
@@ -228,10 +261,10 @@ public class FXMLPlayerSelectionController implements Initializable {
         this.limpaGrid();
 
         for (Membroequipa me : list) {
-
-            if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png") != null) {
+            
+            if(ImagesMemberServices.existsOnMap(me.getNome())){
                 ImageView image = new ImageView();
-                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")));
+                image.setImage(new Image(ImagesMemberServices.getOriginalPath(me.getNome())));
 
                 image.setFitHeight(50);
                 image.setFitWidth(75);
@@ -242,6 +275,22 @@ public class FXMLPlayerSelectionController implements Initializable {
                 if (column == 6) {
                     column = 0;
                     row++;
+                }
+            }else{
+                if (FXMLPlayerSelectionController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png") != null) {
+                    ImageView image = new ImageView();
+                    image.setImage(new Image(LolUI.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")));
+
+                    image.setFitHeight(50);
+                    image.setFitWidth(75);
+
+                    gridPane.add(image, column, row);
+                    column++;
+
+                    if (column == 6) {
+                        column = 0;
+                        row++;
+                    }
                 }
             }
         }

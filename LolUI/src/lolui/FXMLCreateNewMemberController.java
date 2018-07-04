@@ -9,6 +9,7 @@ import lolui.exceptions.InsertMembroEquipaDBException;
 import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -41,6 +42,7 @@ import javafx.stage.StageStyle;
 import javax.imageio.ImageIO;
 import lolbll.EquipaServices;
 import lolbll.HibernateBLL;
+import lolbll.ImagesMemberServices;
 import lolbll.MembroEquipaServices;
 import lolbll.PosicaoServices;
 import loldal.model.Equipa;
@@ -238,7 +240,7 @@ public class FXMLCreateNewMemberController implements Initializable {
         }
 
     }
-    public void save(){
+    public void save() throws MalformedURLException{
         try {
             this.verificaMembroEquipa();
             this.getUserInput();
@@ -261,7 +263,7 @@ public class FXMLCreateNewMemberController implements Initializable {
     }
 
     @FXML
-    public void saveOnClick() {
+    public void saveOnClick() throws MalformedURLException {
         this.save();
         HibernateBLL.clearCache();
     }
@@ -292,7 +294,7 @@ public class FXMLCreateNewMemberController implements Initializable {
         }
     }
 
-    public void gravarMembroEquipa() {
+    public void gravarMembroEquipa() throws MalformedURLException {
         Membroequipa m = new Membroequipa();
         m.setPais(pais);
         m.setNome(txtUsername.getText());
@@ -308,6 +310,7 @@ public class FXMLCreateNewMemberController implements Initializable {
             equipa.getMembroequipas().add(m);
             EquipaServices.saveEquipa(equipa);
         }
+        ImagesMemberServices.addToMap(m.getNome(), fileImagem.toURI().toURL().toString());
         MembroEquipaServices.criarMembroEquipa(m);
     }
 

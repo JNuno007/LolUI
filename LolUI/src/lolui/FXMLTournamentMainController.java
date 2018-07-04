@@ -32,6 +32,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import lolbll.ImagesTeamServices;
 import lolbll.TorneioServices;
 import loldal.model.Encontro;
 import loldal.model.Equipa;
@@ -533,10 +534,15 @@ public class FXMLTournamentMainController implements Initializable {
     }
 
     public void atribuirLogo(Equipa eq, ImageView img) {
-        if (FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png") != null) {
-            img.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png")));
-        } else {
-            img.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+        
+        if(ImagesTeamServices.existsOnMap(eq.getNome())){
+            img.setImage(new Image(ImagesTeamServices.getOriginalPath(eq.getNome())));
+        }else{
+            if (FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png") != null) {
+                img.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + eq.getSigla().toLowerCase() + ".png")));
+            } else {
+                img.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+            }
         }
     }
 
