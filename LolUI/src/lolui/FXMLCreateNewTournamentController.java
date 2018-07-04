@@ -313,7 +313,7 @@ public class FXMLCreateNewTournamentController implements Initializable {
         Parent root = loader.load();
         FXMLTeamSelectionController controller = loader.getController();
 
-        controller.preencheGridEquipasFiltrada(listaFiltrada);
+        controller.preencheGridEquipasFiltrada(this.listaFiltradaDisponiveis());
         //Metodo para preencher a Janela de PopUp
         this.prepareTeamStage(event, root, controller);
     }
@@ -336,6 +336,17 @@ public class FXMLCreateNewTournamentController implements Initializable {
             this.insereListaSelecionada(event, equipa);
 //            System.out.println(this.equipa.getNome());
         }
+    }
+    
+    public List<Equipa> listaFiltradaDisponiveis(){
+        List<Equipa> temp = new ArrayList<>();
+        
+        for(Equipa eq: listaFiltrada){
+            if(!listaEquipasSelecionadas.contains(eq)){
+                temp.add(eq);
+            }
+        }
+        return temp;
     }
 
     public void insereListaSelecionada(MouseEvent event, Equipa equipa) {
@@ -1078,7 +1089,6 @@ public class FXMLCreateNewTournamentController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("Your new member was created!");
             alert.showAndWait();
-            HibernateBLL.clearCache();
             this.closePopUp();
         } catch (InsertTournamentDBException ex) {
             Alert alert = new Alert(Alert.AlertType.WARNING);

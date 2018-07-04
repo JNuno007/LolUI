@@ -87,6 +87,34 @@ public class FXMLChampionSelectionController implements Initializable {
         this.selecionaChampion();
     }
     
+    public void preencheGridChampions(List<Champion> list) {
+        champions = list;
+
+        int column = 0;
+        int row = 0;
+
+        for (Champion c : champions) {
+
+            if (FXMLChampionSelectionController.class.getResourceAsStream("pics/champs/" + c.getNome().toLowerCase() + ".png") != null) {
+                ImageView image = new ImageView();
+                image.setImage(new Image(LolUI.class.getResourceAsStream("pics/champs/" + c.getNome().toLowerCase() + ".png")));
+
+                image.setFitHeight(50);
+                image.setFitWidth(75);
+
+                gridPane.add(image, column, row);
+                column++;
+
+                if (column == 6) {
+                    column = 0;
+                    row++;
+                }
+            }
+        }
+        listaFiltrada = champions;
+        this.selecionaChampion();
+    }
+    
     public void pesquisarNaLista() {
         searchBar.setOnKeyReleased((event) -> {
             List<Champion> temp = new ArrayList<>();

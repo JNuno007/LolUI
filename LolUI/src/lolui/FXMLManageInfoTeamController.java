@@ -730,7 +730,6 @@ public class FXMLManageInfoTeamController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("Your new team was created!");
             alert.showAndWait();
-            HibernateBLL.clearCache();
             this.closePopUp();
         } catch (InsertEquipaDBException ex) {
             Alert alert = new Alert(Alert.AlertType.WARNING);

@@ -20,7 +20,7 @@
     <top>
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="680.0" layoutY="28.0" text="Create Team" textFill="WHITE">
+                <Label layoutX="656.0" layoutY="20.0" text="Create New Team" textFill="WHITE">
                     <font>
                         <Font size="24.0" />
                     </font>

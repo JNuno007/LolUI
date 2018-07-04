@@ -245,7 +245,7 @@
     <top>
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="612.0" layoutY="17.0" text="Change Team Information" textFill="WHITE">
+                <Label layoutX="635.0" layoutY="17.0" text="Manage Team Details" textFill="WHITE">
                     <font>
                         <Font size="24.0" />
                     </font>

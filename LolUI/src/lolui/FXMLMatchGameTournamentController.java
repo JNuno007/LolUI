@@ -46,6 +46,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lolbll.BuildServices;
+import lolbll.ChampionServices;
 import lolbll.EncontroServices;
 import lolbll.EstatisticasMembroJogoServices;
 import lolbll.HibernateBLL;
@@ -924,7 +925,7 @@ public class FXMLMatchGameTournamentController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLChampionSelection.fxml"));
         Parent root = loader.load();
         FXMLChampionSelectionController controller = loader.getController();
-        controller.preencheGridChampions();
+        controller.preencheGridChampions(this.listaFiltradaChampions());
         //Metodo para preencher a Janela de PopUp
         this.prepareChampionStage(root, controller, tab, player);
     }
@@ -1173,6 +1174,17 @@ public class FXMLMatchGameTournamentController implements Initializable {
             }
         }
         System.out.println(champsSelecionados);
+    }
+    
+    public List<Champion> listaFiltradaChampions(){
+        List<Champion> champions = ChampionServices.getListChampions();
+        List<Champion> temp = new ArrayList<>();
+        for(Champion c: champions){
+            if(!champsSelecionados.contains(c)){
+                temp.add(c);
+            }
+        }
+        return temp;
     }
 
     @FXML
@@ -1780,7 +1792,6 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 alert.setHeaderText("Operation Successfull");
                 alert.setContentText("Your new member was created!");
                 alert.showAndWait();
-                HibernateBLL.clearCache();
                 this.closePopUp();
             } catch (IOException ex) {
                 Logger.getLogger(FXMLMatchGameTournamentController.class.getName()).log(Level.SEVERE, null, ex);
@@ -1806,7 +1817,6 @@ public class FXMLMatchGameTournamentController implements Initializable {
                     alert2.setHeaderText("Operation Successfull");
                     alert2.setContentText("The match was created!");
                     alert2.showAndWait();
-                    HibernateBLL.clearCache();
                     this.closePopUp();
                 } catch (IOException ex1) {
                     Logger.getLogger(FXMLMatchGameTournamentController.class.getName()).log(Level.SEVERE, null, ex1);

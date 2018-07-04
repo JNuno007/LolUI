@@ -249,7 +249,6 @@ public class FXMLCreateNewMemberController implements Initializable {
             alert.setHeaderText("Operation Successfull");
             alert.setContentText("Your new member was created!");
             alert.showAndWait();
-            HibernateBLL.clearCache();
             this.closePopUp();
         } catch (InsertMembroEquipaDBException e) {
             //Dialog

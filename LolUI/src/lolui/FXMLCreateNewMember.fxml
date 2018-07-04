@@ -24,7 +24,7 @@
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
                 <Line endX="1500.0" layoutY="60.0" stroke="ORANGE" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Creating new member" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Create New Member" textFill="WHITE">
                     <font>
                         <Font size="24.0" />
                     </font>

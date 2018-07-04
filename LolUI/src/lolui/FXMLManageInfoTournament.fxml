@@ -25,7 +25,7 @@
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
                 <Line endX="1500.0" layoutY="60.0" stroke="ORANGE" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Manage member information" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Manage Tournament Details" textFill="WHITE">
                     <font>
                         <Font size="24.0" />
                     </font>
@@ -100,10 +100,13 @@
                             <children>
                                 <AnchorPane prefHeight="100.0" prefWidth="200.0">
                                     <children>
-                                        <ImageView fitHeight="40.0" fitWidth="84.0" layoutX="446.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fitHeight="40.0" fitWidth="84.0" layoutX="446.0" layoutY="7.0" onMouseClicked="#saveOnClick" pickOnBounds="true" preserveRatio="true">
                                             <image>
                                                 <Image url="@pics/save.png" />
                                             </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                                         </ImageView>
                                     </children>
                                 </AnchorPane>
@@ -268,7 +271,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                                 </ImageView>
-                                <Label fx:id="lblMatch1BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <Label fx:id="lblMatch1BlueTeam" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                                 <Label fx:id="lblMatch8RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
                                 <Label fx:id="lblMatch7RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
                                 <Label fx:id="lblMatch6RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />

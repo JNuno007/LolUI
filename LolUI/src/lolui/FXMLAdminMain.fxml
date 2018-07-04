@@ -28,7 +28,7 @@
                         <Image url="@pics/admin/team.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="169.0" layoutY="489.0" prefHeight="62.0" prefWidth="161.0" text="Team Config" textAlignment="CENTER" textFill="WHITE">
+                <Label layoutX="166.0" layoutY="490.0" prefHeight="62.0" prefWidth="168.0" text="Manage Team" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -42,7 +42,7 @@
                         <Image url="@pics/admin/tourn_logo.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="132.0" layoutY="491.0" prefHeight="62.0" prefWidth="237.0" text="Tournament Config" textAlignment="CENTER" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="490.0" prefHeight="62.0" prefWidth="258.0" text="Manage Tournament" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -56,7 +56,7 @@
                         <Image url="@pics/admin/player.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="170.0" layoutY="491.0" prefHeight="62.0" prefWidth="161.0" text="Player Config" textAlignment="CENTER" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="490.0" prefHeight="62.0" prefWidth="181.0" text="Manage Player" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font size="26.0" />
                     </font>
@@ -82,7 +82,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#manageInfoTeamAction" prefHeight="82.0" prefWidth="336.0" text="Manage Info" GridPane.rowIndex="3">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#manageInfoTeamAction" prefHeight="82.0" prefWidth="336.0" text="Manage Details" GridPane.rowIndex="3">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
@@ -92,7 +92,7 @@
                                 <Image url="@pics/admin/team_short.png" />
                             </image>
                         </ImageView>
-                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="161.0" text="Team Config" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
+                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="167.0" text="Manage Team" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -120,7 +120,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#manageInfoMemberAction" prefHeight="82.0" prefWidth="336.0" text="Manage Info" GridPane.rowIndex="3">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#manageInfoMemberAction" prefHeight="82.0" prefWidth="336.0" text="Manage Details" GridPane.rowIndex="3">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
@@ -130,7 +130,7 @@
                                 <Image url="@pics/admin/player_short.png" />
                             </image>
                         </ImageView>
-                        <Label prefHeight="62.0" prefWidth="161.0" text="Player Config" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
+                        <Label prefHeight="62.0" prefWidth="177.0" text="Manage Player" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -158,7 +158,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#manageInfoTournamentAction" prefHeight="82.0" prefWidth="336.0" text="Manage Info" GridPane.rowIndex="3">
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#manageInfoTournamentAction" prefHeight="82.0" prefWidth="336.0" text="Manage Details" GridPane.rowIndex="3">
                             <cursor>
                                 <Cursor fx:constant="HAND" />
                             </cursor>
@@ -173,7 +173,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </Button>
-                        <Label prefHeight="62.0" prefWidth="237.0" text="Tournament Config" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
+                        <Label prefHeight="62.0" prefWidth="246.0" text="Manage Tournament" textAlignment="CENTER" textFill="WHITE" GridPane.valignment="BOTTOM">
                             <font>
                                 <Font size="26.0" />
                             </font>
