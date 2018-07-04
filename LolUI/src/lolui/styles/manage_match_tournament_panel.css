@@ -50,6 +50,9 @@ and open the template in the editor.
     -fx-background-color: rgba(0, 0, 0, 0.2);
 }
 
-/*.text-input{
+.text-input{
     -fx-background-color: transparent;
-}*/
+    -fx-border-color: orange;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-text-fill: orange;
+}
