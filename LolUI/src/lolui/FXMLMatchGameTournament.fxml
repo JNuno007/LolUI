@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="parentBorderPane" maxHeight="500.0" maxWidth="1400.0" minHeight="500.0" minWidth="1400.0" prefHeight="500.0" prefWidth="1400.0" stylesheets="@styles/manage_match_tournament_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLMatchGameTournamentController">
+<BorderPane fx:id="parentBorderPane" maxHeight="500.0" maxWidth="1400.0" minHeight="500.0" minWidth="1400.0" prefHeight="500.0" prefWidth="1400.0" stylesheets="@styles/match_game_tournament_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLMatchGameTournamentController">
     <center>
         <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>

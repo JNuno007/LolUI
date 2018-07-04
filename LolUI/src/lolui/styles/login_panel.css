@@ -42,7 +42,9 @@ Button:hover{
     -fx-border-width: 3px;
 }
 
-.text-input, .text-input:focused { -fx-prompt-text-fill:darkgray; }
+.text-input, .text-input:focused {
+    -fx-prompt-text-fill:darkgray;
+}
 
 Label{
     -fx-text-fill: white;

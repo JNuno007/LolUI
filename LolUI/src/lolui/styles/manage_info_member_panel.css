@@ -143,3 +143,7 @@ Button:hover{
 .scroll-bar > .decrement-button:hover{
     -fx-background-color: transparent;
 }
+
+.text-input, .text-input:focused {
+    -fx-prompt-text-fill:darkgray;
+}

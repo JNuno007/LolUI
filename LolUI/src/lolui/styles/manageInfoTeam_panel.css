@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : joaoc
 */
 
-BorderPane{
+.borderPane{
     -fx-background-image: url('../pics/wallpaper.jpg');
     -fx-border-color: orange;
     -fx-border-width: 2px;
@@ -142,4 +142,8 @@ Button:hover{
 .scroll-bar > .increment-button:hover,
 .scroll-bar > .decrement-button:hover{
     -fx-background-color: transparent;
+}
+
+.text-input, .text-input:focused {
+    -fx-prompt-text-fill:darkgray;
 }
