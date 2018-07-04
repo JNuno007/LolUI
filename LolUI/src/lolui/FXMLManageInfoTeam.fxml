@@ -92,7 +92,7 @@
                                         <Image url="@pics/teams/skt.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="btnSelectImage" layoutX="179.0" layoutY="252.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="116.0" text="Change Image" />
+                                <Button fx:id="btnSelectImage" layoutX="146.0" layoutY="253.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="182.0" text="Change Image" />
                                 <Label layoutX="32.0" layoutY="37.0" text="New Information" textAlignment="CENTER" textFill="WHITE">
                                     <font>
                                         <Font size="18.0" />

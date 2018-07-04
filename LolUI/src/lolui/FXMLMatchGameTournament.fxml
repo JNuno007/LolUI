@@ -581,26 +581,26 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                    <TextField fx:id="spinCSBlueTeamTop" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinCSBlueTeamJng" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinCSBlueTeamMid" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinCSBlueTeamAdc" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinCSBlueTeamSup" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-                                    <TextField fx:id="spinKillsBlueTeamTop" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinKillsBlueTeamJng" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinKillsBlueTeamMid" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinKillsBlueTeamAdc" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinKillsBlueTeamSup" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-                                    <TextField fx:id="spinDeathsBlueTeamTop" GridPane.columnIndex="11" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinDeathsBlueTeamJng" GridPane.columnIndex="11" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinDeathsBlueTeamMid" GridPane.columnIndex="11" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinDeathsBlueTeamAdc" GridPane.columnIndex="11" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinDeathsBlueTeamSup" GridPane.columnIndex="11" GridPane.rowIndex="5" />
-                                    <TextField fx:id="spinAssistsBlueTeamTop" GridPane.columnIndex="12" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinAssistsBlueTeamJng" GridPane.columnIndex="12" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinAssistsBlueTeamMid" GridPane.columnIndex="12" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinAssistsBlueTeamAdc" GridPane.columnIndex="12" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinAssistsBlueTeamSup" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinCSBlueTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinKillsBlueTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinDeathsBlueTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinAssistsBlueTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinCSBlueTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinKillsBlueTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinDeathsBlueTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinAssistsBlueTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinCSBlueTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinKillsBlueTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinDeathsBlueTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinAssistsBlueTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinCSBlueTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinKillsBlueTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinDeathsBlueTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinAssistsBlueTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinCSBlueTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinKillsBlueTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinDeathsBlueTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinAssistsBlueTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
                                             </children>
                                         </GridPane>
                                     </children>
@@ -1166,26 +1166,26 @@
                                                         <Font size="18.0" />
                                                     </font>
                                                 </Label>
-                                    <TextField fx:id="spinCSRedTeamTop" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinCSRedTeamJng" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinCSRedTeamMid" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinCSRedTeamAdc" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinCSRedTeamSup" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-                                    <TextField fx:id="spinKillsRedTeamTop" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinKillsRedTeamJng" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinKillsRedTeamMid" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinKillsRedTeamAdc" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinKillsRedTeamSup" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-                                    <TextField fx:id="spinDeathsRedTeamTop" GridPane.columnIndex="11" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinDeathsRedTeamJng" GridPane.columnIndex="11" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinDeathsRedTeamMid" GridPane.columnIndex="11" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinDeathsRedTeamAdc" GridPane.columnIndex="11" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinDeathsRedTeamSup" GridPane.columnIndex="11" GridPane.rowIndex="5" />
-                                    <TextField fx:id="spinAssistsRedTeamTop" GridPane.columnIndex="12" GridPane.rowIndex="1" />
-                                    <TextField fx:id="spinAssistsRedTeamJng" GridPane.columnIndex="12" GridPane.rowIndex="2" />
-                                    <TextField fx:id="spinAssistsRedTeamMid" GridPane.columnIndex="12" GridPane.rowIndex="3" />
-                                    <TextField fx:id="spinAssistsRedTeamAdc" GridPane.columnIndex="12" GridPane.rowIndex="4" />
-                                    <TextField fx:id="spinAssistsRedTeamSup" GridPane.columnIndex="12" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinCSRedTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinCSRedTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinCSRedTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinCSRedTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinCSRedTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinKillsRedTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinKillsRedTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinKillsRedTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinKillsRedTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinKillsRedTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinDeathsRedTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinDeathsRedTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinDeathsRedTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinDeathsRedTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinDeathsRedTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+                                    <TextField fx:id="spinAssistsRedTeamTop" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+                                    <TextField fx:id="spinAssistsRedTeamJng" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+                                    <TextField fx:id="spinAssistsRedTeamMid" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="3" />
+                                    <TextField fx:id="spinAssistsRedTeamAdc" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
+                                    <TextField fx:id="spinAssistsRedTeamSup" alignment="CENTER" maxHeight="25.0" maxWidth="60.0" minHeight="25.0" minWidth="60.0" prefHeight="25.0" prefWidth="60.0" GridPane.columnIndex="12" GridPane.rowIndex="5" />
                                             </children>
                                         </GridPane>
                                     </children>

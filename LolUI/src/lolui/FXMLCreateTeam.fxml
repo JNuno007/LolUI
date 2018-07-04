@@ -85,7 +85,7 @@
                             <bottom>
                                 <AnchorPane prefHeight="278.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <GridPane layoutX="300.0" layoutY="14.0">
+                                        <GridPane layoutX="267.0" layoutY="14.0">
                                             <columnConstraints>
                                                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
                                             </columnConstraints>
@@ -99,7 +99,7 @@
                                                         <Image url="@pics/players/unknown.png" />
                                                     </image>
                                                 </ImageView>
-                                                <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Select Team Image" GridPane.rowIndex="1" />
+                                                <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="216.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="216.0" text="Select Team Image" GridPane.rowIndex="1" />
                                             </children>
                                         </GridPane>
                                         <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">

@@ -14,3 +14,132 @@ and open the template in the editor.
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
 }
+
+Button{
+    -fx-background-color:rgba(0,0,0,0.1);
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: orange;
+
+}
+
+Button:hover{
+    -fx-background-color:rgba(0,0,0,0.4);
+    -fx-font-weight: bold;
+    -fx-border-width: 3px;
+}
+
+.tab-pane .tab-header-area .tab-header-background{
+    -fx-opacity: 0;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-focus-color: #ff9900;
+    -fx-focus-faint-color: #ff9900;
+}
+
+
+.tab .tab-label { 
+    -fx-pref-width: 100;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ff9900;
+    -fx-font-size: 15px;
+}
+
+.list-view{
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:even{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: #dba000;
+    -fx-font-size: 20px;
+}
+
+.list-view .list-cell:odd{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: #dba000;
+    -fx-font-size: 20px;
+}
+
+.list-view .list-cell:even:selected{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-border-color: orange;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:odd:selected{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-border-color: orange;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:even:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:odd:hover{
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-alignment: CENTER;
+    -fx-text-fill: orange;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+
+
+.list-view .scroll-bar:vertical{
+    -fx-background-color: transparent;
+    -fx-color: #dba000;
+}
+
+.list-view .scroll-bar:vertical .thumb:hover{
+    -fx-color: orange;
+}
+
+.list-view .scroll-bar:vertical .thumb:selected{
+    -fx-color: orange;
+}
+
+.list-view .thumb{
+    -fx-color: #dba000;
+}
+
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: orange;
+}
+
+.scroll-bar > .increment-button:hover,
+.scroll-bar > .decrement-button:hover{
+    -fx-background-color: transparent;
+}

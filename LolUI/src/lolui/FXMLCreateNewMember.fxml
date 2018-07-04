@@ -88,7 +88,7 @@
                                         </ImageView>
                                     </children>
                                 </AnchorPane>
-                                <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="170.0" minHeight="35.0" minWidth="170.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" text="Select Personal Image" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                                <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="247.0" minHeight="35.0" minWidth="170.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="247.0" text="Select Personal Image" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
                                 <ImageView fx:id="playerPicSelected" fitHeight="153.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
                                     <image>
                                         <Image url="@pics/players/unknown.png" />
@@ -251,13 +251,13 @@
                                         </AnchorPane>
                                     </children>
                                 </GridPane>
-                                <Button layoutX="326.0" layoutY="321.0" maxWidth="125.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="125.0" text="Choose a Team" />
-                                <ImageView fx:id="imgNewTeamLogoPlayer" fitHeight="45.0" fitWidth="45.0" layoutX="264.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+                                <Button layoutX="316.0" layoutY="319.0" maxWidth="157.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="157.0" text="Choose a Team" />
+                                <ImageView fx:id="imgNewTeamLogoPlayer" fitHeight="45.0" fitWidth="45.0" layoutX="254.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/teams/unknown.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fx:id="info" fitHeight="15.0" fitWidth="15.0" layoutX="461.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="info" fitHeight="15.0" fitWidth="15.0" layoutX="481.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/info.png" />
                                     </image>

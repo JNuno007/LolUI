@@ -212,8 +212,8 @@
                                 <GridPane layoutX="57.0" layoutY="141.0" prefHeight="154.0" prefWidth="386.0">
                                     <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.40009765625" minWidth="10.0" prefWidth="198.8000244140625" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="10.0" prefWidth="65.1999755859375" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="10.0" prefWidth="124.59999999999997" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="10.0" prefWidth="51.800073242187466" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="10.0" prefWidth="136.5999267578125" />
                                     </columnConstraints>
                                     <rowConstraints>
                                         <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="76.60001220703126" vgrow="SOMETIMES" />
@@ -231,7 +231,7 @@
                                                 <Image url="@pics/teams/unknown.png" />
                                             </image>
                                         </ImageView>
-                                        <Button maxHeight="35.0" maxWidth="120.0" minHeight="35.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="120.0" text="Change Team" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                                        <Button maxHeight="35.0" maxWidth="136.0" minHeight="35.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="136.0" text="Change Team" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
                                     </children>
                                 </GridPane>
                             </children>
