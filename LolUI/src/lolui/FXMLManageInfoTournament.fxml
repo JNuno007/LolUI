@@ -88,7 +88,7 @@
                         </AnchorPane>
                     </bottom>
                 </BorderPane>
-                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                <BorderPane fx:id="paneDireita" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="2">
                     <bottom>
                         <GridPane maxHeight="54.0" maxWidth="750.0" minHeight="40.0" minWidth="400.0" prefHeight="54.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                             <columnConstraints>
@@ -335,7 +335,12 @@
                            <font>
                               <Font size="18.0" />
                            </font></Label>
-                        <Line endX="100.0" endY="380.0" startX="100.0" stroke="#ffa500" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                        <Line fx:id="line16" endX="100.0" endY="380.0" startX="100.0" stroke="#ffa500" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Line>
+                        <Line fx:id="line8" endX="-100.0" startX="-100.0" startY="180.0" stroke="#ff9d00" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                            <GridPane.margin>
                               <Insets top="10.0" />
                            </GridPane.margin>
@@ -344,7 +349,7 @@
                         </GridPane>
                     </center>
                 </BorderPane>
-                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                <BorderPane fx:id="paneCentro" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1">
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                             <children>
@@ -383,7 +388,7 @@
                                         <Insets left="10.0" right="10.0" />
                                     </GridPane.margin>
                                 </TextField>
-                                <ComboBox fx:id="comboType" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" prefWidth="150.0" promptText="Type" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                <ComboBox fx:id="comboType" maxHeight="35.0" maxWidth="175.0" minHeight="35.0" minWidth="175.0" prefHeight="35.0" prefWidth="175.0" promptText="Type" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                     <GridPane.margin>
                                         <Insets right="10.0" />
                                     </GridPane.margin>
@@ -392,17 +397,17 @@
                            <center>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <RadioButton fx:id="rb8Teams" layoutX="103.0" layoutY="9.0" mnemonicParsing="false" onAction="#showList">
+                                    <RadioButton fx:id="rb8Teams" layoutX="94.0" layoutY="4.0" mnemonicParsing="false" onAction="#showList" onMouseClicked="#grid8selected">
                                        <toggleGroup>
                                           <ToggleGroup fx:id="toggle" />
                                        </toggleGroup>
                                     </RadioButton>
-                                    <RadioButton fx:id="rb16Teams" layoutX="198.0" layoutY="9.0" mnemonicParsing="false" onAction="#showList" toggleGroup="$toggle" />
-                                    <Label layoutX="169.0" layoutY="34.0" text="16 Teams" textFill="WHITE">
+                                    <RadioButton fx:id="rb16Teams" layoutX="189.0" layoutY="4.0" mnemonicParsing="false" onAction="#showList" onMouseClicked="#grid16selected" toggleGroup="$toggle" />
+                                    <Label layoutX="160.0" layoutY="29.0" text="16 Teams" textFill="WHITE">
                                        <font>
                                           <Font size="18.0" />
                                        </font></Label>
-                                    <Label layoutX="79.0" layoutY="34.0" text="8 Teams" textFill="WHITE">
+                                    <Label layoutX="70.0" layoutY="29.0" text="8 Teams" textFill="WHITE">
                                        <font>
                                           <Font size="18.0" />
                                        </font></Label>
@@ -431,7 +436,7 @@
                               <Font size="18.0" />
                            </font>
                                 </Label>
-                        <DatePicker fx:id="dataInicio" editable="false" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="150.0" promptText="Begin Date" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                        <DatePicker fx:id="dataInicio" editable="false" maxHeight="35.0" maxWidth="175.0" minHeight="35.0" minWidth="175.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="175.0" promptText="Begin Date" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                            <GridPane.margin>
                               <Insets right="10.0" />
                            </GridPane.margin>

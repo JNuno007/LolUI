@@ -98,7 +98,6 @@ public class FXMLUserActionBarController implements Initializable {
 //        this.labelchangePass = new Label();
         ScaleTransition st = new ScaleTransition();
         
-        System.out.println(loggedIn);
 
         fadeInAnimation();
 

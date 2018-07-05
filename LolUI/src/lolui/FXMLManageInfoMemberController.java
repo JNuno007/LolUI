@@ -100,6 +100,8 @@ public class FXMLManageInfoMemberController implements Initializable {
     @FXML private ImageView imgNewTeamLogoPlayer;
     @FXML private TextField txtNewNamePlayer;
     @FXML private Spinner<Integer> spinnerNewAge;
+    @FXML private BorderPane paneCentro;
+    @FXML private BorderPane paneDireita;
     
     //Variáveis para o Membro
     
@@ -396,6 +398,7 @@ public class FXMLManageInfoMemberController implements Initializable {
                 this.atribuirNewNomePlayer(me);
                 this.atribuirNewAgePlayer(me);
                 this.atribuirCurrentPosicaoPlayer(me);
+                this.mostraCentroEdireita();
             }
         });
     }
@@ -699,5 +702,10 @@ public class FXMLManageInfoMemberController implements Initializable {
         }
     }
     
+    @FXML
+    public void mostraCentroEdireita(){
+        this.paneCentro.setVisible(true);
+        this.paneDireita.setVisible(true);
+    }
     
 }

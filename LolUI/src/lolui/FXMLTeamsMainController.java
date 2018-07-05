@@ -411,14 +411,15 @@ public class FXMLTeamsMainController extends Application implements Initializabl
             
             if(totDeaths == 0){
                 kdaRatio = (float) (totKills + totAssists);
-
-                this.lblKDA.setText(df2.format(kdaRatio));
             }else{
                 kdaRatio = (float) (totKills + totAssists) / totDeaths;
-
-                this.lblKDA.setText(df2.format(kdaRatio));
             }
-
+                            
+            if(kdaRatio == 0){
+                this.lblKDA.setText("0");
+            }else{
+                this.lblKDA.setText(df2.format(kdaRatio));
+        }
                 
         }
 

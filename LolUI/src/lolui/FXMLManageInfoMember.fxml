@@ -89,7 +89,7 @@
                         </AnchorPane>
                     </bottom>
                 </BorderPane>
-                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                <BorderPane fx:id="paneDireita" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="2">
                     <bottom>
                         <GridPane maxHeight="54.0" maxWidth="750.0" minHeight="40.0" minWidth="400.0" prefHeight="54.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                             <columnConstraints>
@@ -243,7 +243,7 @@
                         </AnchorPane>
                     </top>
                 </BorderPane>
-                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                <BorderPane fx:id="paneCentro" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1">
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                             <children>

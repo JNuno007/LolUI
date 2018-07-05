@@ -24,6 +24,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import lolbll.SpellServices;
 
 /**
  *
@@ -41,7 +42,9 @@ public class FXMLMainScreenController implements Initializable {
     private ImageView logo;
 
     Scene scene;
-
+    
+    
+    
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException {
         //loadMainScreen(event);
@@ -49,6 +52,8 @@ public class FXMLMainScreenController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        SpellServices.getListaSpells();
+        
         TranslateTransition transition = new TranslateTransition();
         ScaleTransition st = new ScaleTransition();
 
@@ -64,22 +69,28 @@ public class FXMLMainScreenController implements Initializable {
         st.setByX(-0.5f);
         st.setByY(-0.5f);
 
-        ParallelTransition pt = new ParallelTransition(logo, transition, st);
-        pt.play();
-        pt.setOnFinished((ActionEvent event) -> {
-            Parent root = null;
-            try {
-                root = FXMLLoader.load(getClass().getResource("FXMLUserActionBar.fxml"));
-            } catch (IOException ex) {
-                Logger.getLogger(FXMLMainScreenController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) logo.getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        });
-        //transition.setAutoReverse(true);
-        //transition.setCycleCount(2);
+        
+        
+//        this.logo.setOnMouseClicked((event) -> {
+            ParallelTransition pt = new ParallelTransition(logo, transition, st);
+            pt.play();
+            pt.setOnFinished((ActionEvent evento) -> {
+                Parent root = null;
+                try {
+                    root = FXMLLoader.load(getClass().getResource("FXMLUserActionBar.fxml"));
+                } catch (IOException ex) {
+                    Logger.getLogger(FXMLMainScreenController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) logo.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            });
+//        });
+        
+        
+//        transition.setAutoReverse(true);
+//        transition.setCycleCount(2);
 
     }
 

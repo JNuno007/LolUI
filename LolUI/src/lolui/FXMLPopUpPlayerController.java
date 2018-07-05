@@ -210,10 +210,18 @@ public class FXMLPopUpPlayerController implements Initializable {
             totAssists += stat.getAssists().intValue();
             totDeaths += stat.getDeaths().intValue();
         }
-
-        kdaRatio = (float) (totKills + totAssists) / totDeaths;
-
-        this.lblKDA.setText(df2.format(kdaRatio));
+        if(totDeaths == 0){
+            kdaRatio = (float) totKills + totAssists;
+        }else{
+            kdaRatio = (float) (totKills + totAssists) / totDeaths;
+        }
+        
+        if(kdaRatio == 0){
+            this.lblKDA.setText("0");
+        }else{
+            this.lblKDA.setText(df2.format(kdaRatio));
+        }
+        
         this.lblKKDDAA.setText(totKills + "/" + totDeaths + "/" + totAssists);
     }
 

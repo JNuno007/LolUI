@@ -43,6 +43,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.shape.Line;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -169,6 +170,12 @@ public class FXMLManageInfoTournamentController implements Initializable {
     private Label lblMatch8BlueTeam;
     @FXML
     private Label lblMatch8RedTeam;
+    
+    @FXML private BorderPane paneCentro;
+    @FXML private BorderPane paneDireita;
+    @FXML private Line line8;
+    @FXML private Line line16;
+    
 
     private List<Torneio> listaPesquisa;
 
@@ -197,6 +204,8 @@ public class FXMLManageInfoTournamentController implements Initializable {
         this.searchBar.getStyleClass().add("searchBar");
         parentBorderPane.getStyleClass().add("borderPane");
         comboType.getItems().addAll("Country", "Region", "All");
+        this.line8.setVisible(false);
+        this.line16.setVisible(false);
         comboType.getSelectionModel().selectLast();
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(20000, 25000000, 20000, 20000);
         spinPrize.setValueFactory(valueFactory);
@@ -216,6 +225,12 @@ public class FXMLManageInfoTournamentController implements Initializable {
                 this.setDate(t);
                 this.setTeamList(t);
                 this.setListas(t);
+                if(t.getEquipatorneios().size() == 8){
+                    this.grid8selected();
+                }else{
+                    this.grid16selected();
+                }
+                this.mostraCentroEdireita();
             }
         });
     }
@@ -815,5 +830,24 @@ public class FXMLManageInfoTournamentController implements Initializable {
             et.setClassificacao("Unassigned");
             EquipaTorneioServices.saveEquipaTorneio(et);
         }
+    }
+    
+    @FXML
+    public void mostraCentroEdireita(){
+        this.paneCentro.setVisible(true);
+        this.paneDireita.setVisible(true);
+    }
+    
+    @FXML
+    public void grid8selected(){
+        this.line8.setVisible(true);
+        this.line16.setVisible(false);
+    }
+    
+    @FXML
+    public void grid16selected(){
+        this.line8.setVisible(false);
+        this.line16.setVisible(true);
+       
     }
 }
