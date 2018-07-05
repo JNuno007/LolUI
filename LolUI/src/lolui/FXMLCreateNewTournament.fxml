@@ -29,9 +29,9 @@
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
                 <Line endX="1500.0" layoutY="60.0" stroke="ORANGE" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Create New Tournament" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="8.0" prefHeight="18.0" prefWidth="556.0" text="Create New Tournament" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="36.0" />
                     </font>
                 </Label>
             </children>
@@ -91,7 +91,10 @@
                                                 <Font size="24.0" />
                                             </font>
                                         </Label>
-                                        <Label alignment="TOP_CENTER" layoutX="59.0" layoutY="47.0" prefHeight="11.0" prefWidth="149.0" text="Prizepool" textFill="WHITE" />
+                                        <Label alignment="TOP_CENTER" layoutX="59.0" layoutY="47.0" prefHeight="11.0" prefWidth="149.0" text="Prizepool" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                 </Pane>
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
@@ -127,8 +130,14 @@
                                        </toggleGroup>
                                     </RadioButton>
                                     <RadioButton fx:id="rb16Teams" layoutX="292.0" layoutY="14.0" mnemonicParsing="false" onAction="#filtraGridPaneSelecaoEquipas" toggleGroup="$toggle" />
-                                    <Label layoutX="276.0" layoutY="39.0" text="16 Teams" textFill="WHITE" />
-                                    <Label layoutX="184.0" layoutY="39.0" text="8 Teams" textFill="WHITE" />
+                                    <Label layoutX="264.0" layoutY="39.0" text="16 Teams" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
+                                    <Label layoutX="173.0" layoutY="39.0" text="8 Teams" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
                                  </children>
                               </AnchorPane>
                            </center>
@@ -143,8 +152,11 @@
                         </DatePicker>
                         <Label alignment="TOP_CENTER" prefHeight="11.0" prefWidth="149.0" text="Type" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                            <GridPane.margin>
-                              <Insets right="45.0" top="-10.0" />
+                              <Insets right="45.0" top="-15.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
                         </Label>
                             </children>
                         </GridPane>
@@ -160,9 +172,9 @@
                             <children>
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                     <children>
-                                        <Label alignment="CENTER" layoutX="207.0" layoutY="6.0" prefHeight="27.0" prefWidth="335.0" text="Tournament information" textFill="WHITE">
+                                        <Label alignment="CENTER" layoutX="207.0" layoutY="3.0" prefHeight="27.0" prefWidth="335.0" text="Tournament information" textFill="WHITE">
                                             <font>
-                                                <Font size="18.0" />
+                                                <Font size="24.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -183,9 +195,9 @@
                             <children>
                                 <Pane prefHeight="200.0" prefWidth="200.0">
                                     <children>
-                                        <Label alignment="CENTER" layoutX="209.0" layoutY="7.0" prefHeight="27.0" prefWidth="333.0" text="Add teams to the tournament" textFill="WHITE">
+                                        <Label alignment="CENTER" layoutX="209.0" layoutY="3.0" prefHeight="27.0" prefWidth="333.0" text="Add teams to the tournament" textFill="WHITE">
                                             <font>
-                                                <Font size="18.0" />
+                                                <Font size="24.0" />
                                             </font>
                                         </Label>
                                     </children>

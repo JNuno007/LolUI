@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -14,6 +15,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="parentBorderPane" maxHeight="500.0" maxWidth="1400.0" minHeight="500.0" minWidth="1400.0" prefHeight="500.0" prefWidth="1400.0" stylesheets="@styles/match_game_tournament_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLMatchGameTournamentController">
@@ -1194,14 +1196,12 @@
                         </Tab>
                     </tabs>
                 </TabPane>
-                <GridPane layoutX="50.0" layoutY="50.0" maxWidth="1300.0" minWidth="1300.0" prefHeight="123.0" prefWidth="1300.0">
+                <GridPane layoutX="50.0" layoutY="71.0" maxWidth="1300.0" minWidth="1300.0" prefHeight="102.0" prefWidth="1300.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.39996337890625" minWidth="10.0" prefWidth="213.39996337890625" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.5999755859375" minWidth="10.0" prefWidth="71.80003662109374" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="337.4666442871094" minWidth="10.0" prefWidth="337.4666442871094" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.20001220703125" minWidth="10.0" prefWidth="106.99998474121094" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
@@ -1210,15 +1210,27 @@
                     </rowConstraints>
                     <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-                        <ComboBox fx:id="cbWinner" prefHeight="26.0" prefWidth="198.0" promptText="Winner" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                        <ComboBox fx:id="cbWinner" prefHeight="26.0" prefWidth="198.0" promptText="Winner" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                      <children>
-                        <Label fx:id="lblRound" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="12.0" prefHeight="35.0" prefWidth="185.0" text="Round" textAlignment="CENTER" textFill="WHITE" />
+                        <Label fx:id="lblRound" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="12.0" prefHeight="35.0" prefWidth="185.0" text="Round" textAlignment="CENTER" textFill="#ffaa00">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children></Pane>
-                  <Label fx:id="lblTournament" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="250.0" text="Tournament" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.valignment="CENTER" />
-                  <Label fx:id="lblGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="185.0" text="Game" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5" />
+                  <Label fx:id="lblTournament" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="320.0" text="Tournament" textAlignment="CENTER" textFill="#ffaa00" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="lblGame" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="185.0" text="Game" textAlignment="CENTER" textFill="#ffaa00" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Line endX="950.0" startX="-100.0" stroke="#ff9e00" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                  </Line>
                     </children>
                 </GridPane>
             <GridPane layoutX="467.0" layoutY="14.0" prefHeight="35.0" prefWidth="466.0">
@@ -1231,7 +1243,7 @@
                <children>
                       <Label fx:id="lblMatch" text="Add Game Information" textFill="WHITE" GridPane.halignment="CENTER">
                           <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font size="36.0" />
                           </font>
                       </Label>
                </children>

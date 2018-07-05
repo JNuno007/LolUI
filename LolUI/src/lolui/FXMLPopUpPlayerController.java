@@ -166,18 +166,21 @@ public class FXMLPopUpPlayerController implements Initializable {
 
         if (top3Champs.size() > 2 && FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(2).getNome().toLowerCase() + ".png") != null) {
             this.imgTopChamp1.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(2).getNome().toLowerCase() + ".png")));
+            Tooltip.install(this.imgTopChamp1, new Tooltip(top3Champs.get(2).getNome()));
         } else {
             this.imgTopChamp1.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
         }
 
         if (top3Champs.size() > 1 && FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(1).getNome().toLowerCase() + ".png") != null) {
             this.imgTopChamp2.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(1).getNome().toLowerCase() + ".png")));
+            Tooltip.install(this.imgTopChamp2, new Tooltip(top3Champs.get(1).getNome()));
         } else {
             this.imgTopChamp2.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
         }
 
         if (top3Champs.size() > 0 && FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(0).getNome().toLowerCase() + ".png") != null) {
             this.imgTopChamp3.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(0).getNome().toLowerCase() + ".png")));
+            Tooltip.install(this.imgTopChamp3, new Tooltip(top3Champs.get(0).getNome()));
         } else {
             this.imgTopChamp3.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
         }
@@ -243,11 +246,11 @@ public class FXMLPopUpPlayerController implements Initializable {
 
     @FXML
     public void setInfoKDA() {
-        Tooltip.install(this.imgInfoKDA, new Tooltip("KDA\nENORME"));
+        Tooltip.install(this.imgInfoKDA, new Tooltip("KDA\n(Kills + Assists / Deaths)"));
     }
 
     @FXML
     public void setInfoKKDDAA() {
-        Tooltip.install(this.imgInfoKKDDAA, new Tooltip("KKDDAA\nENORME"));
+        Tooltip.install(this.imgInfoKKDDAA, new Tooltip("KK/DD/AA\n(Total Kills / Total Deaths / Total Assists)"));
     }
 }

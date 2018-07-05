@@ -20,9 +20,9 @@
     <top>
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="656.0" layoutY="20.0" text="Create New Team" textFill="WHITE">
+                <Label layoutX="609.0" layoutY="8.0" text="Create New Team" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="36.0" />
                     </font>
                 </Label>
                 <Line endX="1500.0" layoutY="70.0" stroke="ORANGE" />
@@ -46,9 +46,9 @@
                                 <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                                     <children>
                                         <TextField fx:id="txtUsername" alignment="CENTER" layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
-                                        <Label layoutX="304.0" layoutY="14.0" text="Team Information" textFill="WHITE">
+                                        <Label layoutX="280.0" layoutY="14.0" text="Team Information" textFill="WHITE">
                                             <font>
-                                                <Font size="18.0" />
+                                                <Font size="24.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -83,11 +83,11 @@
                                     <children>
                                         <GridPane layoutX="267.0" layoutY="14.0">
                                             <columnConstraints>
-                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
                                             </columnConstraints>
                                             <rowConstraints>
                                                 <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
                                                 <ImageView fx:id="teamLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
@@ -95,7 +95,7 @@
                                                         <Image url="@pics/players/unknown.png" />
                                                     </image>
                                                 </ImageView>
-                                                <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="216.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="216.0" text="Select Team Image" GridPane.rowIndex="1" />
+                                    <Button fx:id="btnSelectImage" mnemonicParsing="false" prefHeight="43.0" prefWidth="195.0" text="Select Team Image" GridPane.rowIndex="1" />
                                             </children>
                                         </GridPane>
                                         <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="224.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
@@ -114,9 +114,9 @@
                             <top>
                                 <AnchorPane prefHeight="50.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <Label layoutX="287.0" layoutY="11.0" text="Select Team Members" textFill="WHITE">
+                                        <Label layoutX="258.0" layoutY="7.0" text="Select Team Members" textFill="WHITE">
                                             <font>
-                                                <Font size="18.0" />
+                                                <Font size="24.0" />
                                             </font>
                                         </Label>
                                     </children>

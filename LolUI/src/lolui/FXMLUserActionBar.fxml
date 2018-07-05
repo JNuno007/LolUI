@@ -95,7 +95,7 @@
                                         <Cursor fx:constant="HAND" />
                                     </cursor>
                                 </ImageView>
-                                <MenuButton fx:id="accountMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" textAlignment="CENTER" textFill="#dba000" visible="false">
+                                <MenuButton fx:id="accountMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="43.0" prefWidth="274.0" textAlignment="CENTER" textFill="#dba000" visible="false">
                                     <items>
                                         <MenuItem fx:id="itemCreateNewAdmin" mnemonicParsing="false" onAction="#handleCreateNewAdmindAction" text="Create new Admin">
                                             <graphic>
@@ -126,7 +126,7 @@
                                         </MenuItem>
                                     </items>
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="18.0" />
                                     </font>
                                 </MenuButton>
                             </children>

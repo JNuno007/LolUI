@@ -50,3 +50,13 @@ MenuItem{
     -fx-background-color: orange;
 }
 
+.menu-button .arrow{
+    -fx-background-color: orange;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.menu-button > .menu-item{
+    -fx-max-width: 200px;
+    -fx-min-width: 200px;
+}

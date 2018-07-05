@@ -62,24 +62,24 @@
                                         <Image url="@pics/teams/skt.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="previousName" layoutX="248.0" layoutY="46.0" text="South Korean Telecom" textFill="WHITE">
+                                <Label fx:id="previousName" layoutX="72.0" layoutY="124.0" text="South Korean Telecom" textFill="#ff9500">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="18.0" />
                                     </font>
                                 </Label>
-                                <Label fx:id="previousInitials" layoutX="248.0" layoutY="78.0" text="SKT" textFill="WHITE">
+                                <Label fx:id="previousInitials" layoutX="247.0" layoutY="52.0" prefHeight="27.0" prefWidth="55.0" text="SKT" textFill="WHITE">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="18.0" />
                                     </font>
                                 </Label>
-                                <ImageView fx:id="previousCountry" fitHeight="50.0" fitWidth="50.0" layoutX="248.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="previousCountry" fitHeight="10.0" fitWidth="10.0" layoutX="247.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/countries/br.png" />
                                     </image>
                                 </ImageView>
-                                <Label layoutX="171.0" layoutY="1.0" text="Current Information" textAlignment="CENTER" textFill="WHITE">
+                                <Label layoutX="142.0" layoutY="2.0" text="Current Information" textAlignment="CENTER" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -102,12 +102,12 @@
                                               <Image url="@pics/teams/skt.png" />
                                           </image>
                                       </ImageView>
-                                      <Button fx:id="btnSelectImage" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="182.0" text="Change Image" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                              <Button fx:id="btnSelectImage" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="43.0" prefWidth="180.0" text="Change Image" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                            </children>
                         </GridPane>
-                                <Label layoutX="168.0" layoutY="37.0" text="New Information" textAlignment="CENTER" textFill="WHITE">
+                                <Label layoutX="146.0" layoutY="22.0" text="New Information" textAlignment="CENTER" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                                 <Line endX="310.0" layoutX="131.0" layoutY="14.0" startX="-100.0" stroke="#e29d09" strokeWidth="2.0" />
@@ -121,9 +121,9 @@
                     <top>
                         <Pane prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="188.0" layoutY="12.0" text="Team Members" textFill="WHITE">
+                                <Label layoutX="168.0" layoutY="2.0" text="Team Members" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -177,12 +177,30 @@
                                         <Image url="@pics/positions/strategy.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="junglerLbl" alignment="CENTER" prefHeight="35.0" prefWidth="350.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <Label fx:id="topLbl" alignment="CENTER" prefHeight="35.0" prefWidth="313.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" />
-                                <Label fx:id="midLbl" alignment="CENTER" prefHeight="35.0" prefWidth="369.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                <Label fx:id="adcLbl" alignment="CENTER" prefHeight="35.0" prefWidth="347.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                <Label fx:id="supportLbl" alignment="CENTER" prefHeight="35.0" prefWidth="343.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                <Label fx:id="coachLbl" alignment="CENTER" prefHeight="35.0" prefWidth="355.0" text="[Coach not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                <Label fx:id="junglerLbl" alignment="CENTER" prefHeight="35.0" prefWidth="350.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="topLbl" alignment="CENTER" prefHeight="35.0" prefWidth="313.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="midLbl" alignment="CENTER" prefHeight="35.0" prefWidth="369.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="adcLbl" alignment="CENTER" prefHeight="35.0" prefWidth="347.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="supportLbl" alignment="CENTER" prefHeight="35.0" prefWidth="343.0" text="[Player not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="coachLbl" alignment="CENTER" prefHeight="35.0" prefWidth="355.0" text="[Coach not assigned]" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                                 <ImageView fx:id="changeTopImg" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#selectMemberAction" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                                     <image>
                                         <Image url="@pics/exchange.png" />
@@ -271,9 +289,9 @@
     <top>
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="635.0" layoutY="17.0" text="Manage Team Details" textFill="WHITE">
+                <Label layoutX="578.0" layoutY="8.0" text="Manage Team Details" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="36.0" />
                     </font>
                 </Label>
                 <Line endX="1500.0" layoutY="70.0" stroke="ORANGE" />

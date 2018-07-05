@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -25,9 +24,9 @@
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
                 <Line endX="1500.0" layoutY="60.0" stroke="ORANGE" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Manage Member Details" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="8.0" prefHeight="18.0" prefWidth="556.0" text="Manage Member Details" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="36.0" />
                     </font>
                 </Label>
             </children>
@@ -48,9 +47,9 @@
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="202.0" layoutY="6.0" text="Member list" textFill="WHITE">
+                                <Label layoutX="187.0" layoutY="3.0" text="Member list" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -115,7 +114,7 @@
                     <center>
                         <AnchorPane prefHeight="476.0" prefWidth="458.0" BorderPane.alignment="CENTER">
                             <children>
-                                <GridPane layoutX="101.0" layoutY="245.0" prefHeight="173.0" prefWidth="298.0">
+                                <GridPane layoutX="101.0" layoutY="309.0" prefHeight="110.0" prefWidth="298.0">
                                     <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -124,18 +123,9 @@
                                     <rowConstraints>
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
-                                        <Label alignment="CENTER" text="Role" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
-                                            <font>
-                                                <Font size="14.0" />
-                                            </font>
-                                            <GridPane.margin>
-                                                <Insets bottom="10.0" />
-                                            </GridPane.margin>
-                                        </Label>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                             <children>
                                                 <RadioButton fx:id="rbTop" layoutX="16.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClick">
                                        <toggleGroup>
@@ -148,7 +138,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbMid" layoutX="18.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClick" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="45.0" pickOnBounds="true" preserveRatio="true">
@@ -158,7 +148,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                                             <children>
                                                 <RadioButton fx:id="rbAdc" layoutX="18.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClick" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="45.0" pickOnBounds="true" preserveRatio="true">
@@ -168,7 +158,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbJungler" layoutX="16.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClick" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="41.0" pickOnBounds="true" preserveRatio="true">
@@ -178,7 +168,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="74.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                        <AnchorPane prefHeight="74.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbSup" layoutX="18.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClick" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="45.0" pickOnBounds="true" preserveRatio="true">
@@ -188,7 +178,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbCoach" layoutX="18.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onRadioButtonClick" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
@@ -200,16 +190,19 @@
                                         </AnchorPane>
                                     </children>
                                 </GridPane>
-                                <Spinner fx:id="spinnerNewAge" layoutX="55.0" layoutY="59.0" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="73.0" prefHeight="35.0" prefWidth="73.0" />
-                                <Label layoutX="14.0" layoutY="68.0" prefHeight="0.0" prefWidth="30.0" text="Age" textFill="WHITE" />
+                                <Spinner fx:id="spinnerNewAge" layoutX="101.0" layoutY="59.0" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="73.0" prefHeight="35.0" prefWidth="73.0" />
+                                <Label layoutX="55.0" layoutY="70.0" prefHeight="27.0" prefWidth="42.0" text="Age" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                                 <TextField fx:id="txtNewNamePlayer" alignment="CENTER" layoutX="55.0" layoutY="14.0" maxHeight="35.0" maxWidth="390.0" minHeight="35.0" minWidth="325.0" prefHeight="35.0" prefWidth="390.0" promptText="Nickname" />
-                                <Button layoutX="294.0" layoutY="59.0" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="35.0" prefWidth="150.0" text="Country" />
+                                <Button layoutX="294.0" layoutY="59.0" maxHeight="40.0" maxWidth="150.0" minHeight="40.0" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="40.0" prefWidth="150.0" text="Country" />
                                 <ImageView fx:id="imgNewCountryPlayer" fitHeight="35.0" fitWidth="50.0" layoutX="236.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
-                                <GridPane layoutX="57.0" layoutY="141.0" prefHeight="154.0" prefWidth="386.0">
+                                <GridPane layoutX="57.0" layoutY="141.0" prefHeight="136.0" prefWidth="395.0">
                                     <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.40009765625" minWidth="10.0" prefWidth="198.8000244140625" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="10.0" prefWidth="51.800073242187466" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="10.0" prefWidth="136.5999267578125" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.40009765625" minWidth="10.0" prefWidth="235.8" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="0.0" prefWidth="0.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.4000244140625" minWidth="10.0" prefWidth="151.19990234375" />
                                     </columnConstraints>
                                     <rowConstraints>
                                         <RowConstraints maxHeight="76.60001220703126" minHeight="10.0" prefHeight="76.60001220703126" vgrow="SOMETIMES" />
@@ -221,24 +214,29 @@
                                                 <Image url="@pics/players/unknown.png" />
                                             </image>
                                         </ImageView>
-                                        <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="195.0" minHeight="35.0" minWidth="170.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="195.0" text="Change Personal Image" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                                        <Button fx:id="btnSelectImage" maxHeight="40.0" maxWidth="235.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="235.0" text="Change Personal Image" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
                                         <ImageView fx:id="imgNewTeamLogoPlayer" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                                             <image>
                                                 <Image url="@pics/teams/unknown.png" />
                                             </image>
                                         </ImageView>
-                                        <Button maxHeight="35.0" maxWidth="136.0" minHeight="35.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="136.0" text="Change Team" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                                        <Button maxHeight="40.0" maxWidth="151.0" minHeight="40.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="40.0" prefWidth="151.0" text="Change Team" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
                                     </children>
                                 </GridPane>
+                                  <Label alignment="CENTER" layoutX="178.0" layoutY="277.0" prefHeight="27.0" prefWidth="144.0" text="Select a Role:" textFill="WHITE">
+                                      <font>
+                                          <Font size="18.0" />
+                                      </font>
+                                  </Label>
                             </children>
                         </AnchorPane>
                     </center>
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="182.0" layoutY="6.0" text="New information" textFill="WHITE">
+                                <Label layoutX="161.0" layoutY="3.0" text="New information" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -249,9 +247,9 @@
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="171.0" text="Current information" textFill="WHITE">
+                                <Label layoutX="145.0" layoutY="2.0" text="Current information" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -265,14 +263,14 @@
                                         <Image url="@pics/players/Faker.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="lblCurrentNamePlayer" layoutX="151.0" layoutY="198.0" text="Faker" textFill="WHITE">
+                                <Label fx:id="lblCurrentNamePlayer" layoutX="151.0" layoutY="198.0" text="Faker" textFill="#ff9500">
                                     <font>
                                         <Font size="18.0" />
                                     </font>
                                 </Label>
                                 <Label fx:id="lblCurrentAgePlayer" layoutX="349.0" layoutY="48.0" text="22 yearls old" textFill="WHITE">
                                     <font>
-                                        <Font size="14.0" />
+                                        <Font size="18.0" />
                                     </font>
                                 </Label>
                                 <ImageView fx:id="imgCurrentPositionPlayer" fitHeight="60.0" fitWidth="60.0" layoutX="349.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">

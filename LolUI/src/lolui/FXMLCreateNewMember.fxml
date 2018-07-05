@@ -24,9 +24,9 @@
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
                 <Line endX="1500.0" layoutY="60.0" stroke="ORANGE" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Create New Member" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="8.0" prefHeight="18.0" prefWidth="556.0" text="Create New Member" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="36.0" />
                     </font>
                 </Label>
             </children>
@@ -67,8 +67,11 @@
                                 <Pane GridPane.rowIndex="2">
                                     <children>
                                         <Spinner fx:id="spinnerAge" layoutX="201.0" layoutY="16.0" maxHeight="35.0" maxWidth="154.0" minHeight="35.0" minWidth="79.0" prefHeight="35.0" prefWidth="91.0" />
-                                        <Label layoutX="163.0" layoutY="25.0" prefHeight="0.0" prefWidth="30.0" text="Age" textFill="WHITE" />
-                                        <Button layoutX="396.0" layoutY="16.0" maxHeight="35.0" maxWidth="154.0" minHeight="35.0" minWidth="154.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="35.0" prefWidth="154.0" text="Country" />
+                                        <Label layoutX="149.0" layoutY="23.0" prefHeight="27.0" prefWidth="41.0" text="Age" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Button alignment="CENTER" layoutX="396.0" layoutY="16.0" maxHeight="40.0" maxWidth="154.0" minHeight="40.0" minWidth="154.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="40.0" prefWidth="154.0" text="Country" />
                                         <ImageView fx:id="countrySelected" fitHeight="35.0" fitWidth="50.0" layoutX="337.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
                                     </children>
                                 </Pane>
@@ -84,12 +87,12 @@
                                         </ImageView>
                                     </children>
                                 </AnchorPane>
-                                <Button fx:id="btnSelectImage" maxHeight="35.0" maxWidth="247.0" minHeight="35.0" minWidth="170.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="247.0" text="Select Personal Image" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
                                 <ImageView fx:id="playerPicSelected" fitHeight="153.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
                                     <image>
                                         <Image url="@pics/players/unknown.png" />
                                     </image>
                                 </ImageView>
+                        <Button fx:id="btnSelectImage" alignment="CENTER" maxHeight="40.0" maxWidth="220.0" minHeight="40.0" minWidth="220.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="40.0" prefWidth="220.0" text="Select Personal Image" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
                             </children>
                         </GridPane>
                     </center>
@@ -104,9 +107,9 @@
                             <children>
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                     <children>
-                                        <Label alignment="CENTER" layoutX="207.0" layoutY="6.0" prefHeight="27.0" prefWidth="335.0" text="Member information" textFill="WHITE">
+                                        <Label alignment="CENTER" layoutX="207.0" layoutY="3.0" prefHeight="27.0" prefWidth="335.0" text="Member information" textFill="WHITE">
                                             <font>
-                                                <Font size="18.0" />
+                                                <Font size="24.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -127,9 +130,9 @@
                             <children>
                                 <Pane prefHeight="200.0" prefWidth="200.0">
                                     <children>
-                                        <Label alignment="CENTER" layoutX="209.0" layoutY="7.0" prefHeight="27.0" prefWidth="333.0" text="Aditional information" textFill="WHITE">
+                                        <Label alignment="CENTER" layoutX="209.0" layoutY="3.0" prefHeight="27.0" prefWidth="333.0" text="Aditional information" textFill="WHITE">
                                             <font>
-                                                <Font size="18.0" />
+                                                <Font size="24.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -164,7 +167,7 @@
                     <center>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                             <children>
-                                <GridPane layoutX="226.0" layoutY="99.0" prefHeight="138.0" prefWidth="298.0">
+                                <GridPane layoutX="226.0" layoutY="134.0" prefHeight="104.0" prefWidth="298.0">
                                     <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -173,15 +176,9 @@
                                     <rowConstraints>
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                                     <children>
-                                        <Label alignment="CENTER" text="Select a Role:" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
-                                            <font>
-                                                <Font size="14.0" />
-                                            </font>
-                                        </Label>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                             <children>
                                                 <RadioButton fx:id="rbTop" layoutX="34.0" layoutY="11.0" mnemonicParsing="false">
                                                     <toggleGroup>
@@ -195,7 +192,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbMid" layoutX="31.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="59.0" pickOnBounds="true" preserveRatio="true">
@@ -205,7 +202,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                                             <children>
                                                 <RadioButton fx:id="rbAdc" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
@@ -215,7 +212,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbJungler" layoutX="34.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="61.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
@@ -225,7 +222,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbSup" layoutX="31.0" layoutY="14.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="59.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
@@ -235,7 +232,7 @@
                                                 </ImageView>
                                             </children>
                                         </AnchorPane>
-                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                             <children>
                                                 <RadioButton fx:id="rbCoach" layoutX="38.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="70.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
@@ -247,9 +244,8 @@
                                         </AnchorPane>
                                     </children>
                                 </GridPane>
-                                <Button layoutX="316.0" layoutY="319.0" maxWidth="157.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="157.0" text="Choose a Team" />
                                 <ImageView fx:id="imgNewTeamLogoPlayer" fitHeight="45.0" fitWidth="45.0" layoutX="254.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
-                                <ImageView fx:id="info" fitHeight="15.0" fitWidth="15.0" layoutX="481.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="info" fitHeight="15.0" fitWidth="15.0" layoutX="485.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/info.png" />
                                     </image>
@@ -257,6 +253,12 @@
                                         <Cursor fx:constant="HAND" />
                                     </cursor>
                                 </ImageView>
+                                  <Label alignment="CENTER" layoutX="291.0" layoutY="98.0" prefHeight="27.0" prefWidth="167.0" text="Select a Role:" textFill="WHITE">
+                                      <font>
+                                          <Font size="18.0" />
+                                      </font>
+                                  </Label>
+                        <Button alignment="CENTER" layoutX="289.0" layoutY="317.0" maxHeight="40.0" maxWidth="170.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="40.0" prefWidth="170.0" text="Choose a Team" />
                             </children>
                         </AnchorPane>
                     </center>

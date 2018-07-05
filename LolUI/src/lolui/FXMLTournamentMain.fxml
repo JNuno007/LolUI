@@ -36,7 +36,7 @@
                     <children>
                         <TextField fx:id="searchBar" alignment="CENTER" layoutX="188.0" layoutY="18.0" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" promptText="Search" stylesheets="@styles/tournament_panel.css">
                             <font>
-                                <Font size="16.0" />
+                                <Font size="18.0" />
                             </font>
                         </TextField>
                         <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="195.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
@@ -84,9 +84,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R4E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R4E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R4E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R4E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -114,9 +123,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R3E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R3E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R3E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R3E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -144,9 +162,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R3E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R3E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -174,9 +201,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -204,9 +240,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -234,9 +279,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -264,9 +318,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -294,9 +357,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E8Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E8Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E8Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E8Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -324,9 +396,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E7Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E7Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E7Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E7Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -354,9 +435,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E6Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E6Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E6Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E6Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -384,9 +474,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E5Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E5Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E5Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E5Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -414,9 +513,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -444,9 +552,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -474,9 +591,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -504,9 +630,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT16R1E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT16R1E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -543,9 +678,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E4Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E4Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -573,9 +717,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E3Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E3Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -603,9 +756,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -633,9 +795,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R1E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R1E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -663,9 +834,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R2E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R2E2Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R2E2Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -693,9 +873,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R2E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R2E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R2E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
@@ -723,9 +912,18 @@
                                                 <Image url="@pics/lol.png" />
                                             </image>
                                         </ImageView>
-                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R3E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                        <Label fx:id="lblT8R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <Label alignment="CENTER" text="vs" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R3E1Eq1" text="2" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                                        <Label fx:id="lblT8R3E1Eq2" text="3" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                                     </children>
                                     <cursor>
                                         <Cursor fx:constant="HAND" />

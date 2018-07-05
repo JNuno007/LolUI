@@ -25,9 +25,9 @@
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
                 <Line endX="1500.0" layoutY="60.0" stroke="ORANGE" />
-                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="17.0" prefHeight="18.0" prefWidth="556.0" text="Manage Tournament Details" textFill="WHITE">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="472.0" layoutY="8.0" prefHeight="18.0" prefWidth="556.0" text="Manage Tournament Details" textFill="WHITE">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="36.0" />
                     </font>
                 </Label>
             </children>
@@ -48,9 +48,9 @@
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="202.0" layoutY="6.0" text="Member list" textFill="WHITE">
+                                <Label layoutX="187.0" layoutY="3.0" text="Member list" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -116,16 +116,16 @@
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="132.0" layoutY="6.0" text="Add teams to the tournament" textFill="WHITE">
+                                <Label layoutX="92.0" layoutY="3.0" text="Add teams to the tournament" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
                         </AnchorPane>
                     </top>
                     <center>
-                        <GridPane BorderPane.alignment="CENTER">
+                        <GridPane prefHeight="402.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.4000244140625" minWidth="10.0" prefWidth="199.4000244140625" />
@@ -133,14 +133,14 @@
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
                                 <ImageView fx:id="imgMatch4BlueTeam" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#createTeamAction" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
@@ -271,22 +271,75 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                                 </ImageView>
-                                <Label fx:id="lblMatch1BlueTeam" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch8RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch7RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch6RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch5RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch4RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch3RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch2RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch1RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch8BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch7BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch6BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch5BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch4BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch3BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-                                <Label fx:id="lblMatch2BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <Label fx:id="lblMatch1BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch8RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch7RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch6RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch5RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch4RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch3RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch2RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch1RedTeam" text="Label" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch8BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch7BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch6BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch5BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch4BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch3BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                                <Label fx:id="lblMatch2BlueTeam" text="Label" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Line endX="100.0" endY="380.0" startX="100.0" stroke="#ffa500" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Line>
                             </children>
                         </GridPane>
                     </center>
@@ -295,9 +348,9 @@
                     <top>
                         <AnchorPane prefHeight="40.0" prefWidth="500.0" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="152.0" layoutY="6.0" text="Tournament information" textFill="WHITE">
+                                <Label layoutX="120.0" layoutY="3.0" text="Tournament information" textFill="WHITE">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -345,8 +398,14 @@
                                        </toggleGroup>
                                     </RadioButton>
                                     <RadioButton fx:id="rb16Teams" layoutX="198.0" layoutY="9.0" mnemonicParsing="false" onAction="#showList" toggleGroup="$toggle" />
-                                    <Label layoutX="182.0" layoutY="34.0" text="16 Teams" textFill="WHITE" />
-                                    <Label layoutX="90.0" layoutY="34.0" text="8 Teams" textFill="WHITE" />
+                                    <Label layoutX="169.0" layoutY="34.0" text="16 Teams" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
+                                    <Label layoutX="79.0" layoutY="34.0" text="8 Teams" textFill="WHITE">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
                                  </children>
                               </AnchorPane>
                            </center>
@@ -366,8 +425,11 @@
                                 </Label>
                                 <Label text="Prizepool" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                                     <GridPane.margin>
-                                        <Insets bottom="5.0" left="70.0" />
+                                        <Insets left="60.0" />
                                     </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
                                 </Label>
                         <DatePicker fx:id="dataInicio" editable="false" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="150.0" promptText="Begin Date" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                            <GridPane.margin>
@@ -383,8 +445,11 @@
                         </ImageView>
                         <Label alignment="CENTER" prefHeight="18.0" prefWidth="133.0" text="Type" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                            <GridPane.margin>
-                              <Insets right="20.0" top="-7.0" />
+                              <Insets right="20.0" top="-15.0" />
                            </GridPane.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
                         </Label>
                             </children>
                         </GridPane>

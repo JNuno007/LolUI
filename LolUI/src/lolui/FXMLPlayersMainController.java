@@ -25,6 +25,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -64,6 +65,10 @@ public class FXMLPlayersMainController implements Initializable {
     private ImageView imgChamp3;
     @FXML
     private ImageView imgPosition;
+    @FXML
+    private ImageView imgInfoKDA;
+    @FXML
+    private ImageView imgInfoKKDDAA;
 
     //Labels
     @FXML
@@ -252,18 +257,21 @@ public class FXMLPlayersMainController implements Initializable {
 
             if (top3Champs.size() > 2 && FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(2).getNome().toLowerCase() + ".png") != null) {
                 topOne.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(2).getNome().toLowerCase() + ".png")));
+                Tooltip.install(this.topOne, new Tooltip(top3Champs.get(2).getNome()));
             } else {
                 topOne.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
             }
 
             if (top3Champs.size() > 1 && FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(1).getNome().toLowerCase() + ".png") != null) {
                 topTwo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(1).getNome().toLowerCase() + ".png")));
+                Tooltip.install(this.topTwo, new Tooltip(top3Champs.get(1).getNome()));
             } else {
                 topTwo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
             }
 
             if (top3Champs.size() > 0 && FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(0).getNome().toLowerCase() + ".png") != null) {
                 topThree.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/champs/" + top3Champs.get(0).getNome().toLowerCase() + ".png")));
+                Tooltip.install(this.topThree, new Tooltip(top3Champs.get(0).getNome()));
             } else {
                 topThree.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
             }
@@ -295,6 +303,16 @@ public class FXMLPlayersMainController implements Initializable {
             result.add(highest.poll());
         }
         return result;
+    }
+            
+            @FXML
+    public void setInfoKDA() {
+        Tooltip.install(this.imgInfoKDA, new Tooltip("KDA\n(Kills + Assists / Deaths)"));
+    }
+
+    @FXML
+    public void setInfoKKDDAA() {
+        Tooltip.install(this.imgInfoKKDDAA, new Tooltip("KK/DD/AA\n(Total Kills / Total Deaths / Total Assists)"));
     }
 
 }
