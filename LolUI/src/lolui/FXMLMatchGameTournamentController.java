@@ -1811,7 +1811,7 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Success");
                 alert.setHeaderText("Operation Successfull");
-                alert.setContentText("Your new member was created!");
+                alert.setContentText("The match was created!");
                 alert.showAndWait();
                 this.closePopUp();
             } catch (IOException ex) {
