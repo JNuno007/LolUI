@@ -92,7 +92,7 @@
                                         <Image url="@pics/countries/kr.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fx:id="imgTeamLogo" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <ImageView fx:id="imgTeamLogo" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                     <image>
                                         <Image url="@pics/teams/skt.png" />
                                     </image>
@@ -100,15 +100,10 @@
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <children>
-                                        <Label fx:id="lblKDA" layoutY="16.0" text="2.75" textFill="WHITE">
+                                        <Label fx:id="lblKDA" alignment="CENTER_RIGHT" layoutX="-7.0" layoutY="11.0" prefHeight="27.0" prefWidth="116.0" text="2.75" textFill="WHITE">
                                  <font>
                                     <Font size="18.0" />
                                  </font></Label>
-                              <ImageView fx:id="imgInfoKDA" fitHeight="15.0" fitWidth="15.0" layoutX="100.0" layoutY="22.0" onMouseEntered="#setInfoKDA" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@pics/info.png" />
-                                 </image>
-                              </ImageView>
                                     </children>
                                 </AnchorPane>
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
@@ -125,22 +120,30 @@
                               <Insets right="30.0" top="15.0" />
                            </GridPane.margin>
                         </Line>
-                        <Label fx:id="lblKKDDAA" text="12/02/11" textFill="WHITE" GridPane.columnIndex="1">
+                        <Label fx:id="lblKKDDAA" alignment="TOP_RIGHT" prefHeight="27.0" prefWidth="139.0" text="12/02/11" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                            <font>
                               <Font size="18.0" />
-                           </font></Label>
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin></Label>
                         <Line endX="-100.0" startX="-100.0" startY="125.0" stroke="#ff8800" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                            <GridPane.margin>
                               <Insets right="30.0" top="15.0" />
                            </GridPane.margin>
                         </Line>
-                        <ImageView fx:id="imgInfoKKDDAA" fitHeight="15.0" fitWidth="15.0" onMouseEntered="#setInfoKKDDAA" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                        <ImageView fx:id="imgInfoKKDDAA" fitHeight="15.0" fitWidth="15.0" onMouseEntered="#setInfoKKDDAA" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                            <image>
                               <Image url="@pics/info.png" />
                            </image>
                            <GridPane.margin>
-                              <Insets right="45.0" />
+                              <Insets />
                            </GridPane.margin>
+                        </ImageView>
+                        <ImageView fx:id="imgInfoKDA" fitHeight="15.0" fitWidth="15.0" onMouseEntered="#setInfoKDA" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@pics/info.png" />
+                           </image>
                         </ImageView>
                             </children>
                         </GridPane>

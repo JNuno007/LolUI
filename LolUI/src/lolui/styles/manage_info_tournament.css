@@ -289,8 +289,8 @@ Button:hover{
  
 .date-picker .cell {
     -fx-background-color: transparent;
-    -fx-pref-width:25px ;
-    -fx-pref-height:25px ;
+    -fx-pref-width:30px ;
+    -fx-pref-height:30px ;
 }
 
 .date-picker .cell:hover {
@@ -300,8 +300,8 @@ Button:hover{
     -fx-border-color: orange;
     -fx-border-weight:1px;
     -fx-border-radius: 5px;
-    -fx-pref-width:25px ;
-    -fx-pref-height:25px ;
+    -fx-pref-width:30px ;
+    -fx-pref-height:30px ;
 }
 
 .date-picker .cell:hover:focused {
@@ -311,8 +311,8 @@ Button:hover{
     -fx-border-color: orange;
     -fx-border-weight:1px;
     -fx-border-radius: 5px;
-    -fx-pref-width:25px ;
-    -fx-pref-height:25px ;
+    -fx-pref-width:30px ;
+    -fx-pref-height:30px ;
 }
 
 .date-picker .cell:focused {
@@ -322,8 +322,8 @@ Button:hover{
     -fx-border-color: orange;
     -fx-border-weight:1px;
     -fx-border-radius: 5px;
-    -fx-pref-width:25px ;
-    -fx-pref-height:25px ;
+    -fx-pref-width:30px ;
+    -fx-pref-height:30px ;
 }
 
 .date-picker-popup  {

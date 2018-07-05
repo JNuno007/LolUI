@@ -14,6 +14,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
 import javafx.animation.ScaleTransition;
 import javafx.application.Application;
 import javafx.beans.property.SimpleObjectProperty;
@@ -31,6 +32,7 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -158,6 +160,11 @@ public class FXMLTeamsMainController extends Application implements Initializabl
     private TableColumn<Encontro, String> torneioTIG;
     @FXML
     private TableColumn<Encontro, Ronda> rondaTIG;
+    @FXML private ImageView throphy;
+    @FXML private ImageView infoKDA;
+    @FXML private ImageView coachImage;
+    @FXML private Label coachName;
+    @FXML private Label coachTitle;
 
     private List<Equipa> teams;
     private ObservableList<Equipa> teamsObs;
@@ -220,9 +227,39 @@ public class FXMLTeamsMainController extends Application implements Initializabl
                 this.atribuirKDA(eq);
                 this.initializeResultsTables(eq);
                 this.initializeIncomingGamesTables(eq);
+                this.atribuirCoach(eq);
                 this.borderRight.setVisible(true);
             }
         });
+    }
+    
+    public void atribuirCoach(Equipa eq){
+        boolean existeCoach = false;
+        for(Membroequipa me: (Set<Membroequipa>)eq.getMembroequipas()){
+            if(me.getPosicao() == null){
+                existeCoach = true;
+                if(ImagesMemberServices.existsOnMap(me.getNome())){
+                    coachImage.setImage(new Image(ImagesTeamServices.getOriginalPath(me.getNome())));
+                }else{
+                   if (FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png") != null) {
+                        coachImage.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/" + me.getNome() + ".png")));
+                    } else {
+                        coachImage.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/players/unknown.png")));
+                    } 
+                }
+                coachName.setText(me.getNome());
+                
+            }
+        }
+        if(existeCoach){
+            coachImage.setVisible(true);
+            coachName.setVisible(true);
+            coachTitle.setVisible(true);
+        }else{
+            coachImage.setVisible(false);
+            coachName.setVisible(false);
+            coachTitle.setVisible(false);
+        }
     }
 
     public void atribuirLogo(Equipa eq) {
@@ -708,4 +745,13 @@ public class FXMLTeamsMainController extends Application implements Initializabl
         scaleTransition.playFromStart();
     }
 
+    @FXML
+    public void hoverTrophies(){
+        Tooltip.install(this.throphy, new Tooltip("Number of Trophies"));
+    }
+    
+    @FXML
+    public void hoverDKA(){
+        Tooltip.install(this.infoKDA, new Tooltip("(Kills + Assists) / Deaths"));
+    }
 }

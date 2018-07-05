@@ -24,6 +24,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
@@ -317,5 +318,56 @@ public class FXMLUserActionBarController implements Initializable {
         Parent root = loader.load();
         FXMLCreateNewAdminController controller = loader.getController();
         this.prepareStage(root);
+    }
+    
+    
+    public void animateImagesOnEnter(ImageView image) {
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), image);
+        scaleTransition.setFromX(1f);
+        scaleTransition.setFromY(1f);
+        scaleTransition.setToX(1.1f);
+        scaleTransition.setToY(1.1f);
+        scaleTransition.playFromStart();
+    }
+    
+    public void animateImagesOnExit(ImageView image) {
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(100), image);
+        scaleTransition.setFromX(1.1f);
+        scaleTransition.setFromY(1.1f);
+        scaleTransition.setToX(1f);
+        scaleTransition.setToY(1f);
+        scaleTransition.playFromStart();
+    }
+    
+    @FXML
+    public void eventoEnterImagens(MouseEvent event){
+        if(event.getSource().toString().contains(this.imgTournament.getId())){
+            this.animateImagesOnEnter(imgTournament);
+        }
+        if(event.getSource().toString().contains(this.imgTeams.getId())){
+            this.animateImagesOnEnter(imgTeams);
+        }
+        if(event.getSource().toString().contains(this.imgAdmin.getId())){
+            this.animateImagesOnEnter(imgAdmin);
+        }
+        if(event.getSource().toString().contains(this.imgPlayer.getId())){
+            this.animateImagesOnEnter(imgPlayer);
+        }
+    }
+    
+    @FXML
+    public void eventoExitImagens(MouseEvent event){
+        if(event.getSource().toString().contains(this.imgTournament.getId())){
+            this.animateImagesOnExit(imgTournament);
+        }
+        if(event.getSource().toString().contains(this.imgTeams.getId())){
+            this.animateImagesOnExit(imgTeams);
+        }
+        if(event.getSource().toString().contains(this.imgAdmin.getId())){
+            this.animateImagesOnExit(imgAdmin);
+        }
+        if(event.getSource().toString().contains(this.imgPlayer.getId())){
+            this.animateImagesOnExit(imgPlayer);
+        }
     }
 }
