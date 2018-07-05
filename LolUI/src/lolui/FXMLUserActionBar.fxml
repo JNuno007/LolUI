@@ -95,9 +95,9 @@
                                         <Cursor fx:constant="HAND" />
                                     </cursor>
                                 </ImageView>
-                                <MenuButton fx:id="accountMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="20.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="43.0" prefWidth="274.0" textAlignment="CENTER" textFill="#dba000" visible="false">
+                                <MenuButton fx:id="accountMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="20.0" maxHeight="45.0" maxWidth="275.0" minHeight="45.0" minWidth="275.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="275.0" textAlignment="CENTER" textFill="#dba000" visible="false">
                                     <items>
-                                        <MenuItem fx:id="itemCreateNewAdmin" mnemonicParsing="false" onAction="#handleCreateNewAdmindAction" text="Create new Admin">
+                                        <MenuItem fx:id="itemCreateNewAdmin" mnemonicParsing="false" onAction="#handleCreateNewAdmindAction" text="Create New Admin">
                                             <graphic>
                                                 <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
@@ -115,7 +115,7 @@
                                                 </ImageView>
                                             </graphic>
                                         </MenuItem>
-                                        <MenuItem mnemonicParsing="false" onAction="#logout" text="Log Out">
+                                        <MenuItem fx:id="itemLogOut" mnemonicParsing="false" onAction="#logout" text="Log Out">
                                             <graphic>
                                                 <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>

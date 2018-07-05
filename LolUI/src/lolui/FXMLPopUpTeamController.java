@@ -18,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import lolbll.ImagesTeamServices;
 import loldal.model.Build;
@@ -376,6 +377,8 @@ public class FXMLPopUpTeamController implements Initializable {
 
     @FXML
     private ImageView imgBack;
+    
+    @FXML private Pane buildPane;
 
     private Encontro encontro;
 
@@ -729,7 +732,6 @@ public class FXMLPopUpTeamController implements Initializable {
 
     @FXML
     public void atualizaStats(MouseEvent event) {
-
         if (event.getSource() == btnJogo1) {
             this.setTeamsStats(encontro, 0);
         }

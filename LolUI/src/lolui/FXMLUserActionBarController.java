@@ -22,6 +22,8 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Line;
@@ -80,16 +82,22 @@ public class FXMLUserActionBarController implements Initializable {
     private MenuButton accountMenu;
     
     @FXML MenuItem itemChangePassword;
-    
     @FXML MenuItem itemCreateNewAdmin;
+    @FXML MenuItem itemLogOut;
+//    private Label labelLogOut;
+//    private Label labelchangePass;
+//    private Label labelCreateAdmin;
 
     private static boolean loggedIn;
     private static Admin currentAdmin;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+//        this.labelCreateAdmin = new Label();
+//        this.labelLogOut = new Label();
+//        this.labelchangePass = new Label();
         ScaleTransition st = new ScaleTransition();
-
+        
         System.out.println(loggedIn);
 
         fadeInAnimation();
@@ -243,11 +251,31 @@ public class FXMLUserActionBarController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgAdmin.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
 
         if (loggedIn) {
             accountMenu.setVisible(true);
             this.accountMenu.setText("Welcome, " + currentAdmin.getUsername());
+//            this.labelLogOut.setText("Log Out");
+//            this.labelLogOut.prefWidthProperty().bind(this.accountMenu.widthProperty().subtract(43));
+//            this.itemLogOut.setGraphic(labelLogOut);
+//            
+//            
+//            this.labelCreateAdmin.setText("Create New Admin");
+//            this.labelCreateAdmin.prefWidthProperty().bind(this.accountMenu.widthProperty().subtract(43));
+//            this.itemCreateNewAdmin.setGraphic(labelCreateAdmin);
+//            
+//            Image troca = new Image(LolUI.class.getResourceAsStream("pics/exchange.png"));
+//            ImageView c = new ImageView(troca);
+//            c.fitWidthProperty().setValue(10);
+//            c.fitHeightProperty().setValue(10);
+//            this.labelchangePass.prefWidthProperty().bind(this.accountMenu.widthProperty().subtract(43));
+//            this.itemChangePassword.setGraphic(c);
             this.carregaPainelAdmin();
         }
     }

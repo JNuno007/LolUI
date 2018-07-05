@@ -15,8 +15,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -32,6 +30,8 @@ import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -257,6 +257,12 @@ public class FXMLCreateNewTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (controller.getPaisSelected() != null) {
             imgCountryRegionSelected.setImage(controller.getCountryImageSelected());
@@ -293,6 +299,11 @@ public class FXMLCreateNewTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (controller.getRegiaoSelected() != null) {
             imgCountryRegionSelected.setImage(controller.getRegionImageSelected());
@@ -329,6 +340,11 @@ public class FXMLCreateNewTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent evento) -> {
+            if (KeyCode.ESCAPE == evento.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (controller.getEquipaSelected() != null) {
 //            imgNewTeamLogoPlayer.setImage(controller.getTeamImageSelected());

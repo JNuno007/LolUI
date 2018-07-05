@@ -39,6 +39,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -472,6 +474,12 @@ public class FXMLManageInfoTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent evento) -> {
+            if (KeyCode.ESCAPE == evento.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (controller.getEquipaSelected() != null) {
             this.equipa = controller.getEquipaSelected();

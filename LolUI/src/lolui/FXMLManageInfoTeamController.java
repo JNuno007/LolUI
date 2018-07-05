@@ -36,8 +36,11 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -91,6 +94,8 @@ public class FXMLManageInfoTeamController implements Initializable {
     @FXML private Button btnSelectImage;
     @FXML private ComboBox cbAtivo;
     @FXML private BorderPane mainBorderPane;
+    @FXML private GridPane paneCentro;
+    @FXML private BorderPane paneDireita;
 
     private FileChooser fileChooser;
     private File fileImagem;
@@ -272,6 +277,11 @@ public class FXMLManageInfoTeamController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (controller.getPaisSelected() != null) {
             newCountry.setImage(controller.getCountryImageSelected());
@@ -292,6 +302,7 @@ public class FXMLManageInfoTeamController implements Initializable {
         this.listViewEquipas.getSelectionModel().selectedItemProperty().addListener((observable) -> {
             equipaAtual = (Equipa) listViewEquipas.getSelectionModel().getSelectedItem();
             if (equipaAtual != null) {
+                this.mostraCentroEdireita();
                 //Atribuir Elementos Atuais
                 this.pais = null;
                 System.out.println("Pais: " + pais);
@@ -577,6 +588,11 @@ public class FXMLManageInfoTeamController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         //TODO
         if (controller.getMembroSelected() != null) {
@@ -815,5 +831,10 @@ public class FXMLManageInfoTeamController implements Initializable {
             alert.setContentText("Please contact support");
             alert.showAndWait();
         }
+    }
+    
+    public void mostraCentroEdireita(){
+        this.paneCentro.setVisible(true);
+        this.paneDireita.setVisible(true);
     }
 }

@@ -36,6 +36,8 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -649,6 +651,12 @@ public class FXMLMatchGameTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (tab == 0) {
             this.limpaListaBuild(tab, player);
@@ -838,6 +846,12 @@ public class FXMLMatchGameTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
 //        if (controller.getItemSelected() != null) {
 //            imgNewCountryPlayer.setImage(controller.getCountryImageSelected());
@@ -936,6 +950,12 @@ public class FXMLMatchGameTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
 //        if (controller.getItemSelected() != null) {
 //            imgNewCountryPlayer.setImage(controller.getCountryImageSelected());
@@ -1204,6 +1224,12 @@ public class FXMLMatchGameTournamentController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
 //        if (controller.getItemSelected() != null) {
 //            imgNewCountryPlayer.setImage(controller.getCountryImageSelected());

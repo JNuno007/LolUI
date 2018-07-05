@@ -55,7 +55,6 @@ public class FXMLRegionSelectionController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         mainPane.setCenter(gridPane);
         this.pesquisarNaLista();
     } 

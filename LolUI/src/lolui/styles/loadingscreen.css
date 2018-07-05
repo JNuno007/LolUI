@@ -56,7 +56,3 @@ MenuItem{
     -fx-font-weight: normal;
 }
 
-.menu-button > .menu-item{
-    -fx-max-width: 200px;
-    -fx-min-width: 200px;
-}

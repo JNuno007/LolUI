@@ -33,6 +33,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
@@ -83,6 +85,9 @@ public class FXMLCreateNewMemberController implements Initializable {
 
     @FXML
     private Button btnSelectImage;
+    
+    @FXML
+    private Button btnChooseTeam;
 
     private FileChooser fileChooser;
 
@@ -195,6 +200,11 @@ public class FXMLCreateNewMemberController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (controller.getEquipaSelected()!= null) {
             imgNewTeamLogoPlayer.setImage(controller.getTeamImageSelected());
@@ -232,6 +242,11 @@ public class FXMLCreateNewMemberController implements Initializable {
         stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(this.imgBack.getScene().getWindow());
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
+            if (KeyCode.ESCAPE == event.getCode()) {
+                stage.close();
+            }
+        });
         stage.showAndWait();
         if (controller.getPaisSelected() != null) {
             countrySelected.setImage(controller.getCountryImageSelected());
@@ -335,5 +350,11 @@ public class FXMLCreateNewMemberController implements Initializable {
         if (!rbTop.isSelected() && !rbAdc.isSelected() && !rbMid.isSelected() && !rbJungler.isSelected() && !rbSup.isSelected() && !rbCoach.isSelected()) {
             throw new InsertMembroEquipaDBException("No role choosed");
         }
+    }
+    
+    @FXML
+    public void mostraBotaoChooseTeam(){
+        this.info.setVisible(true);
+        this.btnChooseTeam.setVisible(true);
     }
 }

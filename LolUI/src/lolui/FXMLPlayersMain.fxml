@@ -49,7 +49,7 @@
                 </Pane>
             </top>
         </BorderPane>
-        <BorderPane fx:id="borderRight" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+        <BorderPane fx:id="borderRight" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1">
             <top>
                 <Pane prefHeight="194.0" prefWidth="726.0" BorderPane.alignment="CENTER">
                     <children>

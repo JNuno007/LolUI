@@ -15,7 +15,7 @@
 
 <BorderPane maxHeight="600.0" maxWidth="1400.0" minHeight="600.0" minWidth="1400.0" prefHeight="600.0" prefWidth="1400.0" stylesheets="@styles/popup_teams.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLPopUpTeamController">
     <top>
-        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <Pane prefHeight="278.0" prefWidth="1396.0" BorderPane.alignment="CENTER">
             <children>
                 <ImageView fx:id="imgLogoEquipa1" fitHeight="120.0" fitWidth="180.0" layoutX="391.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -87,6 +87,45 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
+            <GridPane layoutX="435.0" layoutY="209.0" prefHeight="55.0" prefWidth="521.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="imgWinnerGame1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@pics/teams/msf.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgWinnerGame2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@pics/teams/msf.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgWinnerGame3" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@pics/teams/msf.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgWinnerGame4" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@pics/teams/msf.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgWinnerGame5" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@pics/teams/msf.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
             </children>
         </Pane>
     </top>
@@ -97,9 +136,9 @@
                 <Pane prefHeight="200.0" prefWidth="200.0" />
                 <Pane prefHeight="200.0" prefWidth="200.0" />
                 <Pane prefHeight="200.0" prefWidth="200.0" />
-                <Pane prefHeight="200.0" prefWidth="200.0">
+                <Pane fx:id="buildPane" prefHeight="312.0" prefWidth="1396.0">
                     <children>
-                        <GridPane layoutX="190.0" layoutY="154.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="494.0">
+                        <GridPane layoutX="189.0" layoutY="73.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="494.0">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="35.0" />
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
@@ -124,319 +163,131 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <ImageView fx:id="imgEquipa1TopChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/champs/corki.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1JunglerChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/champs/brand.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1MidChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/champs/braum.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1AdcChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/champs/blitzcrank.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1SupChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/champs/azir.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1TopItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/dagger.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1JunglerItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/bilgewater%20cutlass.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1MidItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/kindlegem.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1AdcItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/hextech%20revolver.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1SupItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1TopItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/brawler's%20gloves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1JunglerItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/dagger.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1MidItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1AdcItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/fiendish%20codex.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1SupItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/berserker's%20greaves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1TopItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/hextech%20revolver.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1JunglerItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/brawler's%20gloves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1MidItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/berserker's%20greaves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1AdcItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/bilgewater%20cutlass.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1SupItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/hextech%20revolver.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1TopItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/fiendish%20codex.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1JunglerItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/kindlegem.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1MidItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1AdcItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/righteous%20glory.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgEquipa1TopChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1JunglerChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1MidChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1AdcChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1SupChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1TopItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1JunglerItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1MidItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1AdcItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1SupItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1TopItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1JunglerItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1MidItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1AdcItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1SupItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1TopItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1JunglerItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1MidItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1AdcItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1SupItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1TopItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1JunglerItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1MidItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1AdcItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                                 <ImageView fx:id="imgEquipa1SupItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                     <image>
                                         <Image url="@pics/items/daed%20man's%20plate.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fx:id="imgEquipa1TopItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/ancient%20coin.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1JunglerItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgEquipa1TopItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1JunglerItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                 <ImageView fx:id="imgEquipa1MidItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                     <image>
                                         <Image url="@pics/items/doran's%20ring%20.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fx:id="imgEquipa1AdcItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/phantom%20dancer.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1SupItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/ancient%20coin.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1TopItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/archangel's%20staff.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1JunglerItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/ardent%20censer.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1MidItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa1AdcItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/bramble%20vest.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgEquipa1AdcItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1SupItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1TopItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1JunglerItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1MidItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgEquipa1AdcItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
                                 <ImageView fx:id="imgEquipa1SupItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                     <image>
                                         <Image url="@pics/items/bloodrazor.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="lblCSEquipa1Top" text="320" textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                <Label fx:id="lblCSEquipa1Top" text=" " textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa1Jungler" text="290" textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Label fx:id="lblCSEquipa1Jungler" text=" " textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa1Mid" text="50" textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                <Label fx:id="lblCSEquipa1Mid" text=" " textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa2Adc" text="22" textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <Label fx:id="lblCSEquipa2Adc" text=" " textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa1Sup" text="175" textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                <Label fx:id="lblCSEquipa1Sup" text=" " textFill="WHITE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa1Top" text="25/2/15" textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                <Label fx:id="lblKDAEquipa1Top" text=" " textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa1Jungler" text="13/9/7" textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <Label fx:id="lblKDAEquipa1Jungler" text=" " textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa1Mid" text="1/5/40" textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                <Label fx:id="lblKDAEquipa1Mid" text=" " textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa1Adc" text="3/10/15" textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                <Label fx:id="lblKDAEquipa1Adc" text=" " textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa1Sup" text="5/7/9" textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                <Label fx:id="lblKDAEquipa1Sup" text=" " textFill="WHITE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <ImageView fx:id="imgRunaEquipa1Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/aether%20wisp.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa1Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/dash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa1Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/aether%20wisp.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa1Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/dash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa1Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/items/aether%20wisp.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa1Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/flash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa1Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/ignite.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa1Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/exhaust.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa1Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/ghost.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa1Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/flash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa1Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/ghost.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa1Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/exhaust.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa1Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/flash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa1Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/exhaust.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa1Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                                    <image>
-                                        <Image url="@pics/spells/ignite.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgRunaEquipa1Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgRunaEquipa1Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgRunaEquipa1Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgRunaEquipa1Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="imgRunaEquipa1Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img1SpellEquipa1Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img1SpellEquipa1Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img1SpellEquipa1Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img1SpellEquipa1Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img1SpellEquipa1Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img2SpellEquipa1Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img2SpellEquipa1Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img2SpellEquipa1Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img2SpellEquipa1Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                                <ImageView fx:id="img2SpellEquipa1Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
                             </children>
                         </GridPane>
-                        <Label fx:id="lblEquipa1NomeTop" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="11.0" layoutY="163.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text="Huni" textAlignment="RIGHT" textFill="WHITE">
+                        <Label fx:id="lblEquipa1NomeTop" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="82.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text=" " textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa1NomeJungler" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="11.0" layoutY="198.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text="Faker" textAlignment="RIGHT" textFill="WHITE">
+                        <Label fx:id="lblEquipa1NomeJungler" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="117.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text=" " textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa1NomeMid" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="11.0" layoutY="234.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text="Cenas" textAlignment="RIGHT" textFill="WHITE">
+                        <Label fx:id="lblEquipa1NomeMid" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="153.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text=" " textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa1NomeAdc" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="11.0" layoutY="271.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text="Coisa" textAlignment="RIGHT" textFill="WHITE">
+                        <Label fx:id="lblEquipa1NomeAdc" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="190.0" maxHeight="20.0" maxWidth="165.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text=" " textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa1NomeSup" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="11.0" layoutY="306.0" maxHeight="165.0" maxWidth="100.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text="eTal" textAlignment="RIGHT" textFill="WHITE">
+                        <Label fx:id="lblEquipa1NomeSup" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="225.0" maxHeight="165.0" maxWidth="100.0" minHeight="20.0" minWidth="165.0" prefHeight="20.0" prefWidth="165.0" text=" " textAlignment="RIGHT" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <GridPane layoutX="703.0" layoutY="154.0" prefHeight="182.0" prefWidth="501.0">
+                        <GridPane layoutX="702.0" layoutY="73.0" prefHeight="182.0" prefWidth="501.0">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="-Infinity" prefWidth="51.066668701171864" />
                                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="41.40001220703124" minWidth="10.0" prefWidth="41.40001220703124" />
@@ -461,319 +312,131 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <ImageView fx:id="imgEquipa2TopChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@pics/champs/corki.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2JunglerChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/champs/brand.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2MidChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/champs/braum.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2AdcChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/champs/blitzcrank.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2SupChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/champs/azir.png" />
-                                    </image>
-                                </ImageView>
-                                <Label fx:id="lblCSEquipa2Top" text="320" textFill="WHITE" GridPane.columnIndex="1">
+                                <ImageView fx:id="imgEquipa2TopChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+                                <ImageView fx:id="imgEquipa2JunglerChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                                <ImageView fx:id="imgEquipa2MidChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+                                <ImageView fx:id="imgEquipa2AdcChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+                                <ImageView fx:id="imgEquipa2SupChamp" fitHeight="30.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+                                <Label fx:id="lblCSEquipa2Top" text=" " textFill="WHITE" GridPane.columnIndex="1">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa2Jungler" text="290" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label fx:id="lblCSEquipa2Jungler" text=" " textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa2Mid" text="50" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <Label fx:id="lblCSEquipa2Mid" text=" " textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa1Adc" text="22" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <Label fx:id="lblCSEquipa1Adc" text=" " textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblCSEquipa2Sup" text="175" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                <Label fx:id="lblCSEquipa2Sup" text=" " textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa2Top" text="25/2/15" textFill="WHITE" GridPane.columnIndex="2">
+                                <Label fx:id="lblKDAEquipa2Top" text=" " textFill="WHITE" GridPane.columnIndex="2">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa2Jungler" text="13/9/7" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <Label fx:id="lblKDAEquipa2Jungler" text=" " textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa2Mid" text="1/5/40" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                <Label fx:id="lblKDAEquipa2Mid" text=" " textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa2Adc" text="3/10/15" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                <Label fx:id="lblKDAEquipa2Adc" text=" " textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <Label fx:id="lblKDAEquipa2Sup" text="5/7/9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                <Label fx:id="lblKDAEquipa2Sup" text=" " textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
                            <font>
                               <Font size="16.0" />
                            </font></Label>
-                                <ImageView fx:id="imgEquipa2TopItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
-                                    <image>
-                                        <Image url="@pics/items/archangel's%20staff.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2JunglerItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/items/ardent%20censer.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2MidItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/items/caulfield's%20warhammer.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2AdcItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/items/bramble%20vest.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgEquipa2TopItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+                                <ImageView fx:id="imgEquipa2JunglerItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                <ImageView fx:id="imgEquipa2MidItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                <ImageView fx:id="imgEquipa2AdcItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                                 <ImageView fx:id="imgEquipa2SupItem1" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                     <image>
                                         <Image url="@pics/items/bloodrazor.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fx:id="imgEquipa2TopItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
-                                    <image>
-                                        <Image url="@pics/items/ancient%20coin.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2JunglerItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgEquipa2TopItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+                                <ImageView fx:id="imgEquipa2JunglerItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                                 <ImageView fx:id="imgEquipa2MidItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                     <image>
                                         <Image url="@pics/items/doran's%20ring%20.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fx:id="imgEquipa2AdcItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/items/phantom%20dancer.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2SupItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/items/ancient%20coin.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2TopItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
-                                    <image>
-                                        <Image url="@pics/items/fiendish%20codex.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2JunglerItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/items/kindlegem.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2MidItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2AdcItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/items/righteous%20glory.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgEquipa2AdcItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                <ImageView fx:id="imgEquipa2SupItem2" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                <ImageView fx:id="imgEquipa2TopItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+                                <ImageView fx:id="imgEquipa2JunglerItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                <ImageView fx:id="imgEquipa2MidItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                <ImageView fx:id="imgEquipa2AdcItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
                                 <ImageView fx:id="imgEquipa2SupItem3" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4">
                                     <image>
                                         <Image url="@pics/items/daed%20man's%20plate.png" />
                                     </image>
                                 </ImageView>
-                                <ImageView fx:id="imgEquipa2TopItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6">
-                                    <image>
-                                        <Image url="@pics/items/hextech%20revolver.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2JunglerItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/items/brawler's%20gloves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2MidItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/items/berserker's%20greaves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2AdcItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/items/bilgewater%20cutlass.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2SupItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/items/hextech%20revolver.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2TopItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7">
-                                    <image>
-                                        <Image url="@pics/items/brawler's%20gloves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2JunglerItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/items/dagger.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2MidItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2AdcItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/items/fiendish%20codex.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2SupItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/items/berserker's%20greaves.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2TopItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8">
-                                    <image>
-                                        <Image url="@pics/items/dagger.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2JunglerItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/items/bilgewater%20cutlass.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2MidItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/items/kindlegem.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2AdcItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/items/hextech%20revolver.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgEquipa2SupItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/items/control%20ward.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa2Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10">
-                                    <image>
-                                        <Image url="@pics/spells/ghost.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa2Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/spells/exhaust.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa2Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/spells/flash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa2Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/spells/exhaust.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img1SpellEquipa2Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/spells/ignite.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa2Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11">
-                                    <image>
-                                        <Image url="@pics/spells/flash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa2Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/spells/ignite.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa2Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/spells/exhaust.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa2Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/spells/ghost.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="img2SpellEquipa2Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/spells/flash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa2Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13">
-                                    <image>
-                                        <Image url="@pics/items/aether%20wisp.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa2Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="1">
-                                    <image>
-                                        <Image url="@pics/spells/dash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa2Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="2">
-                                    <image>
-                                        <Image url="@pics/items/aether%20wisp.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa2Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="3">
-                                    <image>
-                                        <Image url="@pics/spells/dash.png" />
-                                    </image>
-                                </ImageView>
-                                <ImageView fx:id="imgRunaEquipa2Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="4">
-                                    <image>
-                                        <Image url="@pics/items/aether%20wisp.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgEquipa2TopItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+                                <ImageView fx:id="imgEquipa2JunglerItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                <ImageView fx:id="imgEquipa2MidItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                <ImageView fx:id="imgEquipa2AdcItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                <ImageView fx:id="imgEquipa2SupItem4" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                <ImageView fx:id="imgEquipa2TopItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" />
+                                <ImageView fx:id="imgEquipa2JunglerItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                <ImageView fx:id="imgEquipa2MidItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                <ImageView fx:id="imgEquipa2AdcItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                <ImageView fx:id="imgEquipa2SupItem5" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                <ImageView fx:id="imgEquipa2TopItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" />
+                                <ImageView fx:id="imgEquipa2JunglerItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                                <ImageView fx:id="imgEquipa2MidItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                                <ImageView fx:id="imgEquipa2AdcItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                                <ImageView fx:id="imgEquipa2SupItem6" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                                <ImageView fx:id="img1SpellEquipa2Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" />
+                                <ImageView fx:id="img1SpellEquipa2Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                                <ImageView fx:id="img1SpellEquipa2Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                                <ImageView fx:id="img1SpellEquipa2Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+                                <ImageView fx:id="img1SpellEquipa2Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+                                <ImageView fx:id="img2SpellEquipa2Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" />
+                                <ImageView fx:id="img2SpellEquipa2Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                                <ImageView fx:id="img2SpellEquipa2Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+                                <ImageView fx:id="img2SpellEquipa2Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+                                <ImageView fx:id="img2SpellEquipa2Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+                                <ImageView fx:id="imgRunaEquipa2Top" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" />
+                                <ImageView fx:id="imgRunaEquipa2Jungler" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+                                <ImageView fx:id="imgRunaEquipa2Mid" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="2" />
+                                <ImageView fx:id="imgRunaEquipa2Adc" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="3" />
+                                <ImageView fx:id="imgRunaEquipa2Sup" fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="13" GridPane.rowIndex="4" />
                             </children>
                         </GridPane>
-                        <Label fx:id="lblEquipa2NomeTop" layoutX="1221.0" layoutY="159.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text="Huni" textFill="WHITE">
+                        <Label fx:id="lblEquipa2NomeTop" layoutX="1220.0" layoutY="78.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text=" " textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa2NomeJungler" layoutX="1221.0" layoutY="195.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text="Faker" textFill="WHITE">
+                        <Label fx:id="lblEquipa2NomeJungler" layoutX="1220.0" layoutY="114.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text=" " textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa2NomeMid" layoutX="1221.0" layoutY="231.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text="Cenas" textFill="WHITE">
+                        <Label fx:id="lblEquipa2NomeMid" layoutX="1220.0" layoutY="150.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text=" " textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa2NomeAdc" layoutX="1221.0" layoutY="271.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text="Coisa" textFill="WHITE">
+                        <Label fx:id="lblEquipa2NomeAdc" layoutX="1220.0" layoutY="190.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text=" " textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <Label fx:id="lblEquipa2NomeSup" layoutX="1221.0" layoutY="308.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text="eTal" textFill="WHITE">
+                        <Label fx:id="lblEquipa2NomeSup" layoutX="1220.0" layoutY="227.0" maxWidth="165.0" minWidth="165.0" prefHeight="17.0" prefWidth="165.0" text=" " textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                        <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="32.0" layoutY="342.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="31.0" layoutY="261.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@pics/back.png" />
                             </image>
@@ -781,55 +444,16 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </ImageView>
-                  <Label fx:id="lblKDABlueTeam" alignment="CENTER" layoutX="191.0" layoutY="114.0" prefHeight="17.0" prefWidth="493.0" text="45/14/05" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="lblKDABlueTeam" alignment="CENTER" layoutX="190.0" layoutY="33.0" prefHeight="17.0" prefWidth="493.0" text=" " textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblKDARedTeam" alignment="CENTER" layoutX="703.0" layoutY="114.0" prefHeight="17.0" prefWidth="493.0" text="45/14/05" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="lblKDARedTeam" alignment="CENTER" layoutX="702.0" layoutY="33.0" prefHeight="17.0" prefWidth="493.0" text=" " textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <GridPane layoutX="433.0" layoutY="26.0" prefHeight="55.0" prefWidth="521.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <ImageView fx:id="imgWinnerGame1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <image>
-                              <Image url="@pics/teams/msf.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fx:id="imgWinnerGame2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <image>
-                              <Image url="@pics/teams/msf.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fx:id="imgWinnerGame3" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <image>
-                              <Image url="@pics/teams/msf.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fx:id="imgWinnerGame4" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <image>
-                              <Image url="@pics/teams/msf.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fx:id="imgWinnerGame5" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-                           <image>
-                              <Image url="@pics/teams/msf.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </GridPane>
                     </children>
                 </Pane>
             </children>
