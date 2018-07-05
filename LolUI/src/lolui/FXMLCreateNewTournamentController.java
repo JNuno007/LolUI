@@ -1103,7 +1103,7 @@ public class FXMLCreateNewTournamentController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Operation Successfull");
-            alert.setContentText("Your new member was created!");
+            alert.setContentText("Your new tournament was created!");
             alert.showAndWait();
             this.closePopUp();
         } catch (InsertTournamentDBException ex) {
