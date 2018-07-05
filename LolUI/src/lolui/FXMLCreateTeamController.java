@@ -282,7 +282,6 @@ public class FXMLCreateTeamController implements Initializable {
     @FXML
     public void saveOnClick() {
         this.save();
-        HibernateBLL.clearCache();
     }
 
     public void save() {
@@ -291,6 +290,7 @@ public class FXMLCreateTeamController implements Initializable {
             this.getUserInput();
             this.gravarEquipa();
             this.gravarImagemDir();
+            HibernateBLL.clearCache();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Operation Successfull");

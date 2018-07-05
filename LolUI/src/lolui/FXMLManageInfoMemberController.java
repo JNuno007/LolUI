@@ -676,7 +676,6 @@ public class FXMLManageInfoMemberController implements Initializable {
     @FXML
     public void saveOnClick() throws MalformedURLException, IOException {
         this.save();
-        HibernateBLL.clearCache();
     }
     
     public void save() throws MalformedURLException, IOException {
@@ -686,6 +685,7 @@ public class FXMLManageInfoMemberController implements Initializable {
             this.gravarMembroEquipa();
             this.gravarImagemDir();
             EquipaServices.atualizarEstadoEquipa();
+            HibernateBLL.clearCache();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Operation Successfull");

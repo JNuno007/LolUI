@@ -261,6 +261,7 @@ public class FXMLCreateNewMemberController implements Initializable {
             this.getUserInput();
             this.gravarMembroEquipa();
             this.gravarImagemDir();
+            HibernateBLL.clearCache();
             Alert alert = new Alert(AlertType.CONFIRMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Operation Successfull");
@@ -280,7 +281,6 @@ public class FXMLCreateNewMemberController implements Initializable {
     @FXML
     public void saveOnClick() throws MalformedURLException {
         this.save();
-        HibernateBLL.clearCache();
     }
 
     public void getUserInput() {
