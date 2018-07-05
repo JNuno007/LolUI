@@ -98,8 +98,6 @@ and open the template in the editor.
     -fx-font-weight: bold;
 }
 
-
-
 .list-view .scroll-bar:vertical{
     -fx-background-color: transparent;
     -fx-color: #dba000;

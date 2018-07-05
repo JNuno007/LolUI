@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="718.0" stylesheets="@styles/loadingscreen.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLPopUpPlayerController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="718.0" stylesheets="@styles/popup_players.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLPopUpPlayerController">
     <left>
-        <AnchorPane prefHeight="499.0" prefWidth="686.0" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="492.0" prefWidth="720.0" BorderPane.alignment="CENTER">
             <children>
                 <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="438.0" onMouseClicked="#closePopUp" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -22,7 +22,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </ImageView>
-                <GridPane layoutX="42.0" layoutY="24.0" prefHeight="150.0" prefWidth="664.0">
+                <GridPane layoutX="42.0" layoutY="24.0" prefHeight="150.0" prefWidth="664.0" stylesheets="@styles/popup_players.css">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.20001220703125" minWidth="10.0" prefWidth="199.00001220703126" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.20001220703125" minWidth="10.0" prefWidth="166.59999999999997" />

@@ -8,11 +8,60 @@ and open the template in the editor.
     Author     : joaoc
 */
 
+.root{
+    -fx-border-color:orange;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-image: url('../pics/wallpaper.jpg');
+}
+
 .scroll-pane > .viewport {
     -fx-background-color: transparent;
 }
 
 .scroll-pane {
-    -fx-background-image: url('../pics/wallpaper.jpg');
+    -fx-background-color:transparent;
+}
+
+.scroll-pane .scroll-bar:vertical{
+    -fx-background-color: transparent;
+    -fx-color: #dba000;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb:hover{
+    -fx-color: orange;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb:selected{
+    -fx-color: orange;
+}
+
+.scroll-pane .thumb{
+    -fx-color: #dba000;
+}
+
+.scroll-pane .scroll-bar > .increment-button > .increment-arrow,
+.scroll-pane .scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: orange;
+}
+
+.scroll-pane .scroll-bar > .increment-button:hover,
+.scroll-pane .scroll-bar > .decrement-button:hover{
+    -fx-background-color: transparent;
+}
+
+Button{
+    -fx-background-color:rgba(0,0,0,0.1);
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: orange;
+
+}
+
+Button:hover{
+    -fx-background-color:rgba(0,0,0,0.4);
+    -fx-font-weight: bold;
+    -fx-border-width: 3px;
 }
 

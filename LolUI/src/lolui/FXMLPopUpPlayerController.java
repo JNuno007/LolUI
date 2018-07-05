@@ -67,10 +67,11 @@ public class FXMLPopUpPlayerController implements Initializable {
     private Label lblKKDDAA;
     @FXML
     private Label lblKDA;
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+       
     }
 
     @FXML
