@@ -699,7 +699,7 @@ public class FXMLTournamentMainController implements Initializable {
         Stage stage = new Stage();
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setResizable(false);
-        stage.setY(350);
+        stage.setY(280);
         stage.setX(225);
         stage.getIcons().add(new Image(LolUI.class.getResourceAsStream("pics/lol.png")));
         stage.setScene(scene);

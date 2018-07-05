@@ -303,6 +303,7 @@ Button:hover{
     -fx-border-radius: 5px;
     -fx-pref-width:30px ;
     -fx-pref-height:30px ;
+    -fx-font-size: 13px;
 }
 
 .date-picker .cell:hover:focused {
@@ -314,6 +315,7 @@ Button:hover{
     -fx-border-radius: 5px;
     -fx-pref-width:30px ;
     -fx-pref-height:30px ;
+    -fx-font-size: 13px;
 }
 
 .date-picker .cell:focused {
@@ -325,6 +327,7 @@ Button:hover{
     -fx-border-radius: 5px;
     -fx-pref-width:30px ;
     -fx-pref-height:30px ;
+    -fx-font-size: 13px;
 }
 
 .date-picker-popup  {
