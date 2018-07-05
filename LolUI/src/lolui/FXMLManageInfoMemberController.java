@@ -137,8 +137,7 @@ public class FXMLManageInfoMemberController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        this.txtNewNamePlayer.getStyleClass().add("textInput");
-        this.spinnerNewAge.getStyleClass().add("textInput");
+        this.searchBar.getStyleClass().add("searchBar");
         SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(15, 99, 15);
         spinnerNewAge.setValueFactory(valueFactory);
         parentBorderPane.getStyleClass().add("borderPane");
@@ -414,16 +413,20 @@ public class FXMLManageInfoMemberController implements Initializable {
     }
     
     public void atribuirCurrentTeamlogoPlayer(Membroequipa m) {
-        
-        if(ImagesTeamServices.existsOnMap(m.getEquipa().getNome())){
-            this.imgCurrentTeamLogoPlayer.setImage(new Image(ImagesTeamServices.getOriginalPath(m.getEquipa().getNome())));
-            imgNewTeamLogoPlayer.setImage(new Image(ImagesTeamServices.getOriginalPath(m.getEquipa().getNome())));
+        if(m.getEquipa() == null){
+            imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/unknown.png")));
+            imgNewTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/unknown.png")));
         }else{
-            if (m.getEquipa() != null && getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png") != null) {
-                this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
-                imgNewTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
-            } else {
-                this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/unknown.png")));
+            if(ImagesTeamServices.existsOnMap(m.getEquipa().getNome())){
+                this.imgCurrentTeamLogoPlayer.setImage(new Image(ImagesTeamServices.getOriginalPath(m.getEquipa().getNome())));
+                imgNewTeamLogoPlayer.setImage(new Image(ImagesTeamServices.getOriginalPath(m.getEquipa().getNome())));
+            }else{
+                if (m.getEquipa() != null && getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png") != null) {
+                    this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
+                    imgNewTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/" + m.getEquipa().getSigla().toLowerCase() + ".png")));
+                } else {
+                    this.imgCurrentTeamLogoPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/unknown.png")));
+                }
             }
         }
     }
@@ -455,7 +458,7 @@ public class FXMLManageInfoMemberController implements Initializable {
         if(m.getPosicao()!=null){
             this.imgCurrentPositionPlayer.setImage(new Image(getClass().getResourceAsStream("pics/positions/" + m.getPosicao().toString().toLowerCase() + ".png")));
         }else{
-            this.imgCurrentPositionPlayer.setImage(new Image(getClass().getResourceAsStream("pics/teams/unknown.png")));
+            this.imgCurrentPositionPlayer.setImage(new Image(getClass().getResourceAsStream("pics/positions/strategy.png")));
         }
     }
     

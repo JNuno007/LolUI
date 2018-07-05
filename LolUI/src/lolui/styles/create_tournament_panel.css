@@ -68,3 +68,172 @@ Button:hover{
     /* interpolate color between yellow and red based on first color brightness */
     -fx-background-color: transparent;
 }
+
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 1px;
+    -fx-text-fill: orange; 
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: orange;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: orange;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-text-fill: orange;
+    -fx-font-size: 16px;
+    -fx-border-color: transparent;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell:hover:selected {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-border-color: transparent;
+    -fx-font-weight: normal;
+}
+
+.combo-box .arrow{
+    -fx-background-color: orange;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.radio-button .radio {
+    -fx-border-width: 2px;
+    -fx-border-color: orange;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: transparent;
+}
+.radio-button -radio:armed {
+    -fx-background-color: transparent;
+}
+.radio-button .dot {
+    -fx-mark-color: orange;
+}
+
+.date-picker{
+    -fx-background-color:transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+
+.date-picker > .text-field {
+    -fx-background-color:transparent;
+}
+
+.date-picker:focused > .text-field,
+.date-picker > .text-field:focused {
+    -fx-background-color:transparent;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color:transparent;
+}
+
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color:orange;
+    -fx-font-size: 30px;
+}
+
+.date-picker .combo-box {
+    -fx-background-color: red;
+}
+
+.date-picker .text-field{
+-fx-background-radius:0px ;
+-fx-border-color: transparent;
+}
+
+ .date-picker .button {
+-fx-background-color: transparent;
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+ .date-picker .button:hover {
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+.date-picker .button .arrow:pressed {
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+}
+ 
+.date-picker .cell {
+    -fx-background-color: transparent;
+    -fx-pref-width:25px ;
+    -fx-pref-height:25px ;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: orange;
+    -fx-padding: 2px;
+    -fx-border-color: orange;
+    -fx-border-weight:1px;
+    -fx-border-radius: 5px;
+    -fx-pref-width:25px ;
+    -fx-pref-height:25px ;
+}
+
+.date-picker .cell:hover:focused {
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+    -fx-padding: 2px;
+    -fx-border-color: orange;
+    -fx-border-weight:1px;
+    -fx-border-radius: 5px;
+    -fx-pref-width:25px ;
+    -fx-pref-height:25px ;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color: orange;
+    -fx-text-fill: black;
+    -fx-padding: 2px;
+    -fx-border-color: orange;
+    -fx-border-weight:1px;
+    -fx-border-radius: 5px;
+    -fx-pref-width:25px ;
+    -fx-pref-height:25px ;
+}
+
+.date-picker-popup  {
+    -fx-border-color: orange;
+    -fx-border-radius: 2px; 
+    -fx-background-color: transparent;
+}

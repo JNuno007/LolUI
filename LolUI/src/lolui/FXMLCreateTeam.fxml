@@ -45,7 +45,7 @@
                             <top>
                                 <AnchorPane prefHeight="100.0" prefWidth="750.0" BorderPane.alignment="CENTER">
                                     <children>
-                                        <TextField fx:id="txtUsername" layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
+                                        <TextField fx:id="txtUsername" alignment="CENTER" layoutX="121.0" layoutY="68.0" prefHeight="35.0" prefWidth="508.0" promptText="Name" />
                                         <Label layoutX="304.0" layoutY="14.0" text="Team Information" textFill="WHITE">
                                             <font>
                                                 <Font size="18.0" />
@@ -66,16 +66,12 @@
                                     <children>
                                         <Pane prefHeight="111.0" prefWidth="375.0">
                                             <children>
-                                                <TextField fx:id="txtInitials" layoutX="122.0" layoutY="57.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
+                                                <TextField fx:id="txtInitials" alignment="CENTER" layoutX="122.0" layoutY="57.0" prefHeight="35.0" prefWidth="193.0" promptText="Initials" />
                                             </children>
                                         </Pane>
                                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                             <children>
-                                                <ImageView fx:id="countrySelected" fitHeight="35.0" fitWidth="50.0" layoutX="43.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
-                                                    <image>
-                                                        <Image url="@pics/countries/ar.png" />
-                                                    </image>
-                                                </ImageView>
+                                                <ImageView fx:id="countrySelected" fitHeight="35.0" fitWidth="50.0" layoutX="43.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
                                                 <Button layoutX="110.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="35.0" prefWidth="135.0" text="Country" />
                                             </children>
                                         </Pane>
@@ -217,49 +213,31 @@
                                         <Button fx:id="btnSup" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                         <Button fx:id="btnCoach" mnemonicParsing="false" onMouseClicked="#selectMemberAction" prefHeight="35.0" prefWidth="250.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                         <ImageView fx:id="imgTop" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                                            <image>
-                                                <Image url="@pics/positions/top.png" />
-                                            </image>
                                             <GridPane.margin>
                                                 <Insets left="15.0" />
                                             </GridPane.margin>
                                         </ImageView>
                                         <ImageView fx:id="imgJng" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                            <image>
-                                                <Image url="@pics/positions/top.png" />
-                                            </image>
                                             <GridPane.margin>
                                                 <Insets left="15.0" />
                                             </GridPane.margin>
                                         </ImageView>
                                         <ImageView fx:id="imgMid" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                            <image>
-                                                <Image url="@pics/positions/top.png" />
-                                            </image>
                                             <GridPane.margin>
                                                 <Insets left="15.0" />
                                             </GridPane.margin>
                                         </ImageView>
                                         <ImageView fx:id="imgAdc" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                                            <image>
-                                                <Image url="@pics/positions/top.png" />
-                                            </image>
                                             <GridPane.margin>
                                                 <Insets left="15.0" />
                                             </GridPane.margin>
                                         </ImageView>
                                         <ImageView fx:id="imgSup" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                                            <image>
-                                                <Image url="@pics/positions/top.png" />
-                                            </image>
                                             <GridPane.margin>
                                                 <Insets left="15.0" />
                                             </GridPane.margin>
                                         </ImageView>
                                         <ImageView fx:id="imgCoach" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                                            <image>
-                                                <Image url="@pics/positions/top.png" />
-                                            </image>
                                             <GridPane.margin>
                                                 <Insets left="15.0" />
                                             </GridPane.margin>

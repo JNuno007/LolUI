@@ -148,7 +148,7 @@ Button:hover{
     -fx-prompt-text-fill:darkgray;
 }
 
-.textInput{
+.text-input{
     -fx-background-color: transparent;
     -fx-border-color: orange;
     -fx-border-width: 0px 0px 1px 0px;
@@ -160,9 +160,6 @@ Button:hover{
     -fx-background-color: orange;
 }
 
-.spinner{
-    -fx-background-color: transparent;
-}
 
 .spinner .increment-arrow-button,
 .spinner .decrement-arrow-button {
@@ -175,10 +172,94 @@ Button:hover{
     -fx-background-color: transparent;
 }
 
+.spinner{
+    -fx-background-color: transparent;
+}
+
+
 .spinner .increment-arrow-button:hover:pressed,
 .spinner .decrement-arrow-button:hover:pressed,
 .spinner .increment-arrow-button:pressed,
 .spinner .decrement-arrow-button:pressed {
     /* interpolate color between yellow and red based on first color brightness */
     -fx-background-color: transparent;
+}
+
+.searchBar{
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 1px;
+    -fx-text-fill: orange;
+}
+
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 1px;
+    -fx-text-fill: orange; 
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: orange;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: orange;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-text-fill: orange;
+    -fx-font-size: 16px;
+    -fx-border-color: transparent;
+    -fx-font-weight: normal;
+}
+
+.combo-box-popup .list-view .list-cell:hover:selected {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-border-color: transparent;
+    -fx-font-weight: normal;
+}
+
+.combo-box .arrow{
+    -fx-background-color: orange;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+
+.radio-button .radio {
+    -fx-border-width: 2px;
+    -fx-border-color: orange;
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: transparent;
+}
+.radio-button -radio:armed {
+    -fx-background-color: transparent;
+}
+.radio-button .dot {
+    -fx-mark-color: orange;
 }

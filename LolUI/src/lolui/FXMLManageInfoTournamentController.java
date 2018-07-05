@@ -192,10 +192,7 @@ public class FXMLManageInfoTournamentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        this.txtFullName.getStyleClass().add("textInput");
-        this.txtInitials.getStyleClass().add("textInput");
-        this.spinPrize.getStyleClass().add("textInput");
-        
+        this.searchBar.getStyleClass().add("searchBar");
         parentBorderPane.getStyleClass().add("borderPane");
         comboType.getItems().addAll("Country", "Region", "All");
         comboType.getSelectionModel().selectLast();

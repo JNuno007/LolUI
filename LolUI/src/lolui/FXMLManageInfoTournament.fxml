@@ -20,7 +20,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="parentBorderPane" maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/manage_info_member_panel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageInfoTournamentController">
+<BorderPane fx:id="parentBorderPane" maxHeight="600.0" maxWidth="1500.0" minHeight="600.0" minWidth="1500.0" prefHeight="600.0" prefWidth="1500.0" stylesheets="@styles/manage_info_tournament.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lolui.FXMLManageInfoTournamentController">
     <top>
         <AnchorPane maxHeight="70.0" maxWidth="1500.0" minHeight="70.0" minWidth="1500.0" prefHeight="70.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
             <children>
@@ -320,12 +320,12 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <TextField fx:id="txtFullName" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" promptText="Full name">
+                                <TextField fx:id="txtFullName" alignment="CENTER" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" promptText="Full name">
                                     <GridPane.margin>
                                         <Insets left="10.0" right="10.0" />
                                     </GridPane.margin>
                                 </TextField>
-                                <TextField fx:id="txtInitials" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" promptText="Short name" GridPane.columnIndex="1">
+                                <TextField fx:id="txtInitials" alignment="CENTER" maxHeight="35.0" minHeight="35.0" prefHeight="35.0" promptText="Short name" GridPane.columnIndex="1">
                                     <GridPane.margin>
                                         <Insets left="10.0" right="10.0" />
                                     </GridPane.margin>
@@ -339,19 +339,19 @@
                            <center>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <children>
-                                    <RadioButton fx:id="rb8Teams" layoutX="68.0" layoutY="14.0" mnemonicParsing="false" onAction="#showList">
+                                    <RadioButton fx:id="rb8Teams" layoutX="103.0" layoutY="9.0" mnemonicParsing="false" onAction="#showList">
                                        <toggleGroup>
                                           <ToggleGroup fx:id="toggle" />
                                        </toggleGroup>
                                     </RadioButton>
-                                    <RadioButton fx:id="rb16Teams" layoutX="163.0" layoutY="14.0" mnemonicParsing="false" onAction="#showList" toggleGroup="$toggle" />
-                                    <Label layoutX="185.0" layoutY="14.0" text="16 Teams" textFill="WHITE" />
-                                    <Label layoutX="93.0" layoutY="14.0" text="8 Teams" textFill="WHITE" />
+                                    <RadioButton fx:id="rb16Teams" layoutX="198.0" layoutY="9.0" mnemonicParsing="false" onAction="#showList" toggleGroup="$toggle" />
+                                    <Label layoutX="182.0" layoutY="34.0" text="16 Teams" textFill="WHITE" />
+                                    <Label layoutX="90.0" layoutY="34.0" text="8 Teams" textFill="WHITE" />
                                  </children>
                               </AnchorPane>
                            </center>
                                 </BorderPane>
-                                <Spinner fx:id="spinPrize" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" prefHeight="35.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                <Spinner fx:id="spinPrize" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
                                     <GridPane.margin>
                                         <Insets left="10.0" />
                                     </GridPane.margin>
@@ -366,15 +366,26 @@
                                 </Label>
                                 <Label text="Prizepool" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                                     <GridPane.margin>
-                                        <Insets bottom="5.0" left="50.0" />
+                                        <Insets bottom="5.0" left="70.0" />
                                     </GridPane.margin>
                                 </Label>
-                        <DatePicker fx:id="dataInicio" nodeOrientation="RIGHT_TO_LEFT" promptText="Begin Date" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                        <DatePicker fx:id="dataInicio" editable="false" maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="150.0" promptText="Begin Date" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></DatePicker>
                         <ImageView fx:id="imgCountryRegion" fitHeight="39.0" fitWidth="69.0" pickOnBounds="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </ImageView>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="133.0" text="Type" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets right="20.0" top="-7.0" />
+                           </GridPane.margin>
+                        </Label>
                             </children>
                         </GridPane>
                     </center>

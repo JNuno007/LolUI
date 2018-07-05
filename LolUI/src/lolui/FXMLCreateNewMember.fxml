@@ -69,11 +69,7 @@
                                         <Spinner fx:id="spinnerAge" layoutX="201.0" layoutY="16.0" maxHeight="35.0" maxWidth="154.0" minHeight="35.0" minWidth="79.0" prefHeight="35.0" prefWidth="91.0" />
                                         <Label layoutX="163.0" layoutY="25.0" prefHeight="0.0" prefWidth="30.0" text="Age" textFill="WHITE" />
                                         <Button layoutX="396.0" layoutY="16.0" maxHeight="35.0" maxWidth="154.0" minHeight="35.0" minWidth="154.0" mnemonicParsing="false" onMouseClicked="#createCountryAction" prefHeight="35.0" prefWidth="154.0" text="Country" />
-                                        <ImageView fx:id="countrySelected" fitHeight="35.0" fitWidth="50.0" layoutX="337.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@pics/countries/ar.png" />
-                                            </image>
-                                        </ImageView>
+                                        <ImageView fx:id="countrySelected" fitHeight="35.0" fitWidth="50.0" layoutX="337.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
                                     </children>
                                 </Pane>
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
@@ -187,7 +183,7 @@
                                         </Label>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                             <children>
-                                                <RadioButton fx:id="rbTop" layoutX="39.0" layoutY="11.0" mnemonicParsing="false">
+                                                <RadioButton fx:id="rbTop" layoutX="34.0" layoutY="11.0" mnemonicParsing="false">
                                                     <toggleGroup>
                                                         <ToggleGroup fx:id="toggle" />
                                                     </toggleGroup>
@@ -201,8 +197,8 @@
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                             <children>
-                                                <RadioButton fx:id="rbMid" layoutX="39.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggle" />
-                                                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="59.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                                <RadioButton fx:id="rbMid" layoutX="31.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$toggle" />
+                                                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="59.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
                                                         <Image url="@pics/positions/mid.png" />
                                                     </image>
@@ -211,8 +207,8 @@
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                             <children>
-                                                <RadioButton fx:id="rbAdc" layoutX="40.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$toggle" />
-                                                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="65.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                <RadioButton fx:id="rbAdc" layoutX="38.0" layoutY="10.0" mnemonicParsing="false" toggleGroup="$toggle" />
+                                                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
                                                         <Image url="@pics/positions/adc.png" />
                                                     </image>
@@ -221,7 +217,7 @@
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                                             <children>
-                                                <RadioButton fx:id="rbJungler" layoutX="39.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggle" />
+                                                <RadioButton fx:id="rbJungler" layoutX="34.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="61.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
                                                         <Image url="@pics/positions/jng.png" />
@@ -231,7 +227,7 @@
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                             <children>
-                                                <RadioButton fx:id="rbSup" layoutX="40.0" layoutY="14.0" mnemonicParsing="false" toggleGroup="$toggle" />
+                                                <RadioButton fx:id="rbSup" layoutX="31.0" layoutY="14.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="59.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
                                                         <Image url="@pics/positions/sup.png" />
@@ -241,7 +237,7 @@
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                             <children>
-                                                <RadioButton fx:id="rbCoach" layoutX="39.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggle" />
+                                                <RadioButton fx:id="rbCoach" layoutX="38.0" layoutY="11.0" mnemonicParsing="false" toggleGroup="$toggle" />
                                                 <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="70.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                                                     <image>
                                                         <Image url="@pics/positions/strategy.png" />
@@ -252,11 +248,7 @@
                                     </children>
                                 </GridPane>
                                 <Button layoutX="316.0" layoutY="319.0" maxWidth="157.0" minHeight="35.0" minWidth="125.0" mnemonicParsing="false" onMouseClicked="#createTeamAction" prefHeight="35.0" prefWidth="157.0" text="Choose a Team" />
-                                <ImageView fx:id="imgNewTeamLogoPlayer" fitHeight="45.0" fitWidth="45.0" layoutX="254.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@pics/teams/unknown.png" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fx:id="imgNewTeamLogoPlayer" fitHeight="45.0" fitWidth="45.0" layoutX="254.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
                                 <ImageView fx:id="info" fitHeight="15.0" fitWidth="15.0" layoutX="481.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@pics/info.png" />
