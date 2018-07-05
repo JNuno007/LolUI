@@ -291,6 +291,7 @@ Button:hover{
     -fx-background-color: transparent;
     -fx-pref-width:30px ;
     -fx-pref-height:30px ;
+    -fx-font-size: 13px;
 }
 
 .date-picker .cell:hover {
