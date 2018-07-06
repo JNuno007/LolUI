@@ -148,6 +148,12 @@ and open the template in the editor.
 .table-view .column-header {
     -fx-background-color: transparent;
     -fx-alignment: CENTER;
+    -fx-font-weight: normal;
+}
+
+
+.table-view .column-header .table-arrow {
+    -fx-background-color: transparent;
 }
 
 .table-column{

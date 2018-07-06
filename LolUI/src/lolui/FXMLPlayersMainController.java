@@ -18,6 +18,7 @@ import java.util.PriorityQueue;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import javafx.animation.ScaleTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -29,6 +30,7 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.util.Duration;
 import lolbll.ImagesMemberServices;
 import lolbll.ImagesTeamServices;
 import lolbll.MembroEquipaServices;
@@ -146,11 +148,14 @@ public class FXMLPlayersMainController implements Initializable {
     public void atribuirTeamPlayer(Membroequipa me) {
         if(me.getEquipa() != null && ImagesTeamServices.existsOnMap(me.getEquipa().getNome())){
             this.imgTeamLogo.setImage(new Image(ImagesTeamServices.getOriginalPath(me.getEquipa().getNome())));
+            this.imgTeamLogo.setVisible(true);
         }else{
             if (me.getEquipa() != null && FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png") != null) {
                 this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/" + me.getEquipa().getSigla().toLowerCase() + ".png")));
+                this.imgTeamLogo.setVisible(true);
             } else {
                 this.imgTeamLogo.setImage(new Image(FXMLPlayersMainController.class.getResourceAsStream("pics/teams/unknown.png")));
+                this.imgTeamLogo.setVisible(false);
             }
         }
     }
@@ -323,4 +328,23 @@ public class FXMLPlayersMainController implements Initializable {
         Tooltip.install(this.imgInfoKKDDAA, new Tooltip("KK/DD/AA\n(Total Kills / Total Deaths / Total Assists)"));
     }
 
+    @FXML
+    public void animateImagesOnEnter() {
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(200), this.imgTop);
+        scaleTransition.setFromX(1f);
+        scaleTransition.setFromY(1f);
+        scaleTransition.setToX(1.1f);
+        scaleTransition.setToY(1.1f);
+        scaleTransition.playFromStart();
+    }
+
+    @FXML
+    public void animateImagesOnExit() {
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(100), this.imgTop);
+        scaleTransition.setFromX(1.1f);
+        scaleTransition.setFromY(1.1f);
+        scaleTransition.setToX(1f);
+        scaleTransition.setToY(1f);
+        scaleTransition.playFromStart();
+    }
 }

@@ -31,7 +31,7 @@
     <children>
         <BorderPane prefHeight="200.0" prefWidth="200.0">
             <center>
-                <ListView fx:id="listaEquipas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                <ListView fx:id="listaEquipas" maxWidth="650.0" minWidth="650.0" prefHeight="525.0" prefWidth="650.0" BorderPane.alignment="CENTER" />
             </center>
             <GridPane.margin>
                 <Insets right="25.0" />
@@ -53,7 +53,7 @@
                 </Pane>
             </top>
         </BorderPane>
-        <BorderPane fx:id="borderRight" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+        <BorderPane fx:id="borderRight" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1">
             <top>
                 <Pane prefHeight="198.0" prefWidth="726.0" BorderPane.alignment="CENTER">
                     <children>

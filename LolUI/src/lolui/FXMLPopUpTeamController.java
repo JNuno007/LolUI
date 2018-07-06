@@ -602,7 +602,7 @@ public class FXMLPopUpTeamController implements Initializable {
         if (FXMLPopUpTeamController.class.getResourceAsStream("pics/champs/" + est.getChampion().getNome().toLowerCase() + ".png") != null) {
             img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/champs/" + est.getChampion().getNome().toLowerCase() + ".png")));
         } else {
-            img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
     }
 
@@ -621,13 +621,13 @@ public class FXMLPopUpTeamController implements Initializable {
         if (FXMLPopUpTeamController.class.getResourceAsStream("pics/spells/" + spells.get(0).getSpell().getNome().toLowerCase() + ".png") != null) {
             img1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/spells/" + spells.get(0).getSpell().getNome().toLowerCase() + ".png")));
         } else {
-            img1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
 
         if (FXMLPopUpTeamController.class.getResourceAsStream("pics/spells/" + spells.get(1).getSpell().getNome().toLowerCase() + ".png") != null) {
             img2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/spells/" + spells.get(1).getSpell().getNome().toLowerCase() + ".png")));
         } else {
-            img2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
     }
 
@@ -639,37 +639,37 @@ public class FXMLPopUpTeamController implements Initializable {
         if (builds.size() > 0 && FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(0).getItem().toString().toLowerCase() + ".png") != null) {
             img1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(0).getItem().toString().toLowerCase() + ".png")));
         } else {
-            img1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img1.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
 
         if (builds.size() > 1 && FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(1).getItem().toString().toLowerCase() + ".png") != null) {
             img2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(1).getItem().toString().toLowerCase() + ".png")));
         } else {
-            img2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img2.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
 
         if (builds.size() > 2 && FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(2).getItem().toString().toLowerCase() + ".png") != null) {
             img3.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(2).getItem().toString().toLowerCase() + ".png")));
         } else {
-            img3.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img3.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
 
         if (builds.size() > 3 && FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(3).getItem().toString().toLowerCase() + ".png") != null) {
             img4.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(3).getItem().toString().toLowerCase() + ".png")));
         } else {
-            img4.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img4.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
 
         if (builds.size() > 4 && FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(4).getItem().toString().toLowerCase() + ".png") != null) {
             img5.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(4).getItem().toString().toLowerCase() + ".png")));
         } else {
-            img5.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img5.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
 
         if (builds.size() > 5 && FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(5).getItem().toString().toLowerCase() + ".png") != null) {
             img6.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/items/" + builds.get(5).getItem().toString().toLowerCase() + ".png")));
         } else {
-            img6.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img6.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
     }
     
@@ -726,7 +726,7 @@ public class FXMLPopUpTeamController implements Initializable {
         if (FXMLPopUpTeamController.class.getResourceAsStream("pics/runes/" + runas.get(0).getRuna().toString().toLowerCase() + ".png") != null) {
             img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/runes/" + runas.get(0).getRuna().toString().toLowerCase() + ".png")));
         } else {
-            img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/players/unknown.png")));
+            img.setImage(new Image(FXMLPopUpTeamController.class.getResourceAsStream("pics/item.png")));
         }
     }
 

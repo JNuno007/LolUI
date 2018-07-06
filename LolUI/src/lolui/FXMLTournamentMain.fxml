@@ -26,7 +26,7 @@
     <children>
         <BorderPane prefHeight="200.0" prefWidth="200.0">
             <center>
-                <ListView fx:id="listaTorneios" prefHeight="200.0" prefWidth="200.0" stylesheets="@styles/tournament_panel.css" BorderPane.alignment="CENTER" />
+                <ListView fx:id="listaTorneios" maxWidth="650.0" minWidth="650.0" prefHeight="200.0" prefWidth="650.0" stylesheets="@styles/tournament_panel.css" BorderPane.alignment="CENTER" />
             </center>
             <GridPane.margin>
                 <Insets right="25.0" />

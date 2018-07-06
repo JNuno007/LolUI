@@ -325,7 +325,10 @@ public class FXMLCreateNewMemberController implements Initializable {
             equipa.getMembroequipas().add(m);
             EquipaServices.atualizarEstadoEquipa();
         }
-        ImagesMemberServices.addToMap(m.getNome(), fileImagem.toURI().toURL().toString());
+        if(fileImagem != null){
+            ImagesMemberServices.addToMap(m.getNome(), fileImagem.toURI().toURL().toString());
+        }
+        
         MembroEquipaServices.criarMembroEquipa(m);
     }
 

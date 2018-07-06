@@ -345,7 +345,10 @@ public class FXMLCreateTeamController implements Initializable {
                 equipa.setAtivo(false);
             }
         }
-        ImagesTeamServices.addToMap(teamName, fileImagem.toURI().toURL().toString());
+        if(fileImagem != null){
+            ImagesTeamServices.addToMap(teamName, fileImagem.toURI().toURL().toString());
+        }
+        
         //gravar equipa na DB
         EquipaServices.saveEquipa(equipa);
     }
