@@ -1265,7 +1265,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </ImageView>
-                <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="1314.0" layoutY="-8.0" onMouseClicked="#saveOnClick" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="imgSave" fitHeight="47.0" fitWidth="47.0" layoutX="1314.0" layoutY="-8.0" onMouseClicked="#saveOnClick" onMouseEntered="#hoverSaveButton" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@pics/save.png" />
                     </image>

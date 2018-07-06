@@ -28,6 +28,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -92,6 +93,9 @@ public class FXMLCreateNewTournamentController implements Initializable {
 
     @FXML
     private ImageView imgCountryRegionSelected;
+    
+    @FXML
+    private ImageView imgSave;
 
     @FXML
     private TextField txtFullName;
@@ -1123,5 +1127,9 @@ public class FXMLCreateNewTournamentController implements Initializable {
             }
         }
         return eq;
+    }
+    
+    @FXML public void hoverSaveButton(){
+        Tooltip.install(imgSave, new Tooltip("Save"));
     }
 }

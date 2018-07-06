@@ -61,6 +61,9 @@ public class FXMLCreateNewMemberController implements Initializable {
 
     @FXML
     private ImageView imgBack;
+    
+    @FXML
+    private ImageView imgSave;
 
     @FXML
     private BorderPane parentBorderPane;
@@ -359,5 +362,9 @@ public class FXMLCreateNewMemberController implements Initializable {
     public void mostraBotaoChooseTeam(){
         this.info.setVisible(true);
         this.btnChooseTeam.setVisible(true);
+    }
+    
+    @FXML public void hoverSaveButton(){
+        Tooltip.install(imgSave, new Tooltip("Save"));
     }
 }

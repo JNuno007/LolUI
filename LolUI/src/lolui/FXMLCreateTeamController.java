@@ -27,6 +27,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -106,6 +107,9 @@ public class FXMLCreateTeamController implements Initializable {
 
     @FXML
     private ImageView imgCoach;
+    
+    @FXML
+    private ImageView imgSave;
 
     @FXML
     private Button btnSelectImage;
@@ -397,6 +401,10 @@ public class FXMLCreateTeamController implements Initializable {
         if (pais == null) {
             throw new InsertEquipaDBException("Choose the team's country");
         }
+    }
+    
+    @FXML public void hoverSaveButton(){
+        Tooltip.install(imgSave, new Tooltip("Save"));
     }
 
 }

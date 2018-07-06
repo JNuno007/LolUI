@@ -34,6 +34,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -78,6 +79,9 @@ public class FXMLMatchGameTournamentController implements Initializable {
 
     @FXML
     private ImageView imgBack;
+    
+    @FXML
+    private ImageView imgSave;
 
     @FXML
     private BorderPane parentBorderPane;
@@ -2317,4 +2321,7 @@ public class FXMLMatchGameTournamentController implements Initializable {
                 Integer.parseInt(this.spinDeathsRedTeamAdc.getText()) + Integer.parseInt(this.spinDeathsRedTeamSup.getText()));
     }
     
+    @FXML public void hoverSaveButton(){
+        Tooltip.install(imgSave, new Tooltip("Save"));
+    }
 }

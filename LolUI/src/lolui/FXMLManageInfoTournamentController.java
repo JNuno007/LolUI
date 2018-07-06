@@ -70,6 +70,9 @@ public class FXMLManageInfoTournamentController implements Initializable {
 
     @FXML
     private ImageView imgBack;
+    
+    @FXML
+    private ImageView imgSave;
 
     @FXML
     private BorderPane parentBorderPane;
@@ -849,5 +852,9 @@ public class FXMLManageInfoTournamentController implements Initializable {
         this.line8.setVisible(false);
         this.line16.setVisible(true);
        
+    }
+    
+    @FXML public void hoverSaveButton(){
+        Tooltip.install(imgSave, new Tooltip("Save"));
     }
 }

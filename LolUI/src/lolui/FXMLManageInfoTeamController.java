@@ -34,6 +34,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -65,6 +66,7 @@ public class FXMLManageInfoTeamController implements Initializable {
     @FXML private ImageView imgBack;
     @FXML private ListView listViewEquipas;
     @FXML private ImageView previousTeamLogo;
+    @FXML private ImageView imgSave;
     @FXML private ImageView previousCountry;
     @FXML private ImageView newTeamLogo;
     @FXML private ImageView newCountry;
@@ -836,5 +838,9 @@ public class FXMLManageInfoTeamController implements Initializable {
     public void mostraCentroEdireita(){
         this.paneCentro.setVisible(true);
         this.paneDireita.setVisible(true);
+    }
+    
+    @FXML public void hoverSaveButton(){
+        Tooltip.install(imgSave, new Tooltip("Save"));
     }
 }
